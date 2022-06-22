@@ -1,0 +1,16 @@
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+
+div.versionadded, div.versionchanged {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 7px;
+  background-color: rgba(40,167,70,0.1);
+  border: 1px solid #eed3d7;
+  border-radius: .5rem;
+}
+
+div.versionadded p, div.versionchanged p {
+  display: inline;
+}
