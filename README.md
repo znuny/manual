@@ -1,9 +1,9 @@
 # Znuny Documentation README
 
-The branches `production` and `staging` are deployed on with every push.
+The branches `main` and `staging` are deployed on with every push.
 
-- Branch `production` is available at https://doc.znuny.org/manual/ after the deployment
-- Branch `staging` is available at https://doc.internal.znuny.org/ after the deployment
+- Branch `main` is available at https://doc.znuny.org/manual/ after the deployment
+- Branch `staging` is only internal available
 
 ## Requirements
 
@@ -32,10 +32,6 @@ For H1..H6, we have the following conventions.
 '^' for Sub-subsections
 
 '.' for sub-sub-subsections.
-
-### Specials
-
-Use [Mermaid](https://mermaid-js.github.io/mermaid) to create graphs whenever needed. Check the documentaion of [sphinxcontrib.mermaid](https://github.com/mgaitan/sphinxcontrib-mermaid) for details.
 
 ### ALT Tags
 
@@ -148,7 +144,8 @@ Each section of the manual has its purpose. Please adhere to the structure and o
 
 #### Mermaid Graph
 
-Use [Mermaid](https://mermaid-js.github.io/mermaid) to create graphs whenever needed. 
+Use [Mermaid](https://mermaid-js.github.io/mermaid) to create graphs whenever needed.
+
 
 Here a simple top down example.
 
