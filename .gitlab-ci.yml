@@ -49,3 +49,12 @@ deploy-live:
     - ssh-keyscan $DEPLOY_HOST  >> $HOME/.ssh/known_hosts
     - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc.public/
 
+github-sync:
+  stage: deploy
+  only: 
+    - main
+  except:
+    - merge_requests
+  script:
+    - /usr/bin/sync_repo.sh git@github.com:znuny/manual.git
+
