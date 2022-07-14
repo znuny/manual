@@ -39,7 +39,7 @@ deploy-staging:
 deploy-live:
   stage: deploy
   only: 
-    - production
+    - main
   except:
     - merge_requests
   script:
