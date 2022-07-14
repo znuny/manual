@@ -1,6 +1,6 @@
 Manage User Access
 ##################
-.. _PageNavigation admin_usermanagemnt_index
+.. _PageNavigation admin_usermanagemnt_index:
 
 Managing access to the system with modules found in the system administration.
 

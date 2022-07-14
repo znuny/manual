@@ -82,10 +82,10 @@ The installation from source takes some more steps. If there are more file to re
 	mv /opt/otrs/var/article/* /opt/znuny-6.1.1/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
-	for f in $(find /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.1.1/; done
+	for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.1.1/; done
 
 	# Restore modified and custom cron job
-	for f in $(find /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.1.1/var/cron/; done
+	for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.1.1/var/cron/; done
 
 	# Delete the old symlink
 	rm /opt/otrs
