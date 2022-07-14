@@ -1,6 +1,6 @@
 Activity Dialogs
 ################
-.. _ActivityDialog:
+.. _PageNavigation processmanagement_activitiydialogs:
 
 Activity dialogs allow user input collection. This input is documented to the process for use by the practitioner and used by customers, in statistics, by business intelligence tools, and a wide variety of other applications.
 

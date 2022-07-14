@@ -339,7 +339,7 @@ Database Structure
 
 Znuny relies on a relational database for persistent storage. The model is moderately large and contains the following tables per default.
 
-Below you is a list of all tables. The relationship model is at `GitHUB <https://github.com/znuny/Znuny/blob/rel-6_2-dev/development/diagrams/Database/OTRSDatabaseDiagram.png>`_.
+Below you is a list of all tables. The relationship model is at `GitHub <https://github.com/znuny/Znuny/blob/dev/development/diagrams/Database/znuny_database.png>`_.
 
 * acl
 * acl_sync
