@@ -1,6 +1,27 @@
 Agent Dashboards
 ################
+
 .. _PageNavigation agentinterface_dashboards_index:
+
+Recent Mentions
+***************
+
+In the recent mentions dashboard, you will see a list of all tickets you're mentioned in.
+
+.. image:: images/agent_ticket_mention_dashboard.png
+    :alt: Agent Ticket Mentions
+
+**You can filter between:**
+
+* Locked Tickets
+* In My Queues
+* In My Services
+* All Tickets
+
+.. seealso::
+
+    Read more in :ref:`Ticket Mentions View <PageNavigation_agentinterface_ticketviews_ticketmention_index>`
+
 
 Customer Information Center
 ***************************

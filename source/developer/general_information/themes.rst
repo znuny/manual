@@ -5,7 +5,7 @@ Theming
 Own Themes
 ===========
 
-You can create your own themes so as to use the layout you like in the OTRS web frontend. To create custom themes, you should customize the output templates to your needs. More information on the syntax and structure of output templates can be found in the :ref:`templating section <HowItWorks Templating>`.
+You can create your own themes so as to use the layout you like in the OTRS web frontend. To create custom themes, you should customize the output templates to your needs.
 
 As an example, perform the following steps to create a new theme called "Company":
 

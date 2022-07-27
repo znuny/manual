@@ -170,7 +170,7 @@ Each user interface has a set of handles. The handles call the *Action* modules,
 
 A typical handle looks like this.
 
-`http://otrs.example.com/otrs/index.pl?Action=Module <>`_
+``http://znuny.example.com/otrs/index.pl?Action=Module``
 
 
 Front-end Modules

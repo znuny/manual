@@ -1,5 +1,6 @@
 Provider
 ########
+.. _PageNavigation admin_webservices_provider_index:
 
 HTTP-Header Authentication 
 **************************

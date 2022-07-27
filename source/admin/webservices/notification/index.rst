@@ -42,7 +42,7 @@ In the user preferences, `Notification Settings`, the web service notifications 
 Webservice Notification Request
 *******************************
 
-A separate request is executed for each recipient of the ticket notification, regardless of whether it is a regular or an additional recipient. The request contains all data of the invoker (use :ref:`Ticket::Generic<Invoker Ticket Generic>`). And, as mentioned earlier details about the the recipient. 
+A separate request is executed for each recipient of the ticket notification, regardless of whether it is a regular or an additional recipient. The request contains all data of the invoker (use :ref:`Ticket::Generic <PageNavigation admin_webservices_invoker_index>`). And, as mentioned earlier details about the the recipient. 
 
 Use the debugger to learn more about the data which is passed to the invoker.
 

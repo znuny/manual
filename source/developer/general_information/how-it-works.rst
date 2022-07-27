@@ -1558,7 +1558,7 @@ Since this file is processed last, the string translation here wins. To add a sp
 Translate Strings
 ===================
 
-Znuny uses Weblate to manage the translation process. Please see :ref:`this section <HowItWorks Transalte>` for details.
+Znuny uses Weblate to manage the translation process.
 
 Apply Translations
 ===================
@@ -1826,7 +1826,7 @@ Lines starting with a # at the beginning of will not be shown in the html output
 
 One common use case is the filling of a table with dynamic data:
 
-.. code-block:: html
+.. code-block::
 
    <table class="DataTable">
          <thead>
@@ -1908,31 +1908,31 @@ For details, please refer to the POD of ``Kernel::Output::HTML::Layout``.
 [% WRAPPER JSOnDocumentComplete %]...[% END %]      
    Marks JavaScript code which should be executed after all CSS, JavaScript and other external content has been loaded and the basic JavaScript initialization was finished. Again, let's look at an example:
 
-      .. code-block:: html
+.. code-block::
 
-         <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="MoveTicketToQueue" class="Validate PreventMultipleSubmits" id="MoveTicketToQueue">
-               <input type="hidden" name="Action"       value="[% Env("Action") %]"/>
-               <input type="hidden" name="Subaction"    value="MoveTicket"/>
+    <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="MoveTicketToQueue" class="Validate PreventMultipleSubmits" id="MoveTicketToQueue">
+        <input type="hidden" name="Action"       value="[% Env("Action") %]"/>
+        <input type="hidden" name="Subaction"    value="MoveTicket"/>
 
-               ...
+        ...
 
-               <div class="Content">
-                  <fieldset class="TableLike FixedLabel">
-                     <label class="Mandatory" for="DestQueueID"><span class="Marker">*</span> [% Translate("New Queue") | html %]:</label>
-                     <div class="Field">
-                           [% Data.MoveQueuesStrg %]
-                           <div id="DestQueueIDError" class="TooltipErrorMessage" ><p>[% Translate("This field is required.") | html %]</p></div>
-                           <div id="DestQueueIDServerError" class="TooltipErrorMessage"><p>[% Translate("This field is required.") | html %]</p></div>
-         [% WRAPPER JSOnDocumentComplete %]
-         <script type="text/javascript">
-               $('#DestQueueID').bind('change', function (Event) {
-                  $('#NoSubmit').val('1');
-                  Core.AJAX.FormUpdate($('#MoveTicketToQueue'), 'AJAXUpdate', 'DestQueueID', ['NewUserID', 'OldUserID', 'NewStateID', 'NewPriorityID' [% Data.DynamicFieldNamesStrg %]]);
-               });
-         </script>
-         [% END %]
-                              </div>
-                              <div class="Clear"></div>
+        <div class="Content">
+            <fieldset class="TableLike FixedLabel">
+                <label class="Mandatory" for="DestQueueID"><span class="Marker">*</span> [% Translate("New Queue") | html %]:</label>
+                <div class="Field">
+                    [% Data.MoveQueuesStrg %]
+                    <div id="DestQueueIDError" class="TooltipErrorMessage" ><p>[% Translate("This field is required.") | html %]</p></div>
+                    <div id="DestQueueIDServerError" class="TooltipErrorMessage"><p>[% Translate("This field is required.") | html %]</p></div>
+    [% WRAPPER JSOnDocumentComplete %]
+    <script type="text/javascript">
+        $('#DestQueueID').bind('change', function (Event) {
+            $('#NoSubmit').val('1');
+            Core.AJAX.FormUpdate($('#MoveTicketToQueue'), 'AJAXUpdate', 'DestQueueID', ['NewUserID', 'OldUserID', 'NewStateID', 'NewPriorityID' [% Data.DynamicFieldNamesStrg %]]);
+        });
+    </script>
+    [% END %]
+                        </div>
+                        <div class="Clear"></div>
                            
 This snippet creates a small form and puts an ``onchange`` handler on the ``<select>`` element which triggers an AJAX based form update.
 
@@ -1945,7 +1945,8 @@ Using a Template File
 
 Ok, but how to actually process a template file and generate the result? This is really simple:
 
-.. code-block:: perl
+.. code-block::
+    
    # render AdminState.tt
    $Output .= $Kernel::OM->Get('Kernel::Output::HTML::Layout')->Output(
          TemplateFile => 'AdminState',

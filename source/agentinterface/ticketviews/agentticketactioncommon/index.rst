@@ -21,6 +21,47 @@ Using the CKEditor is mostly self-explanatory. Your administrator can add additi
 * superscript
 * paste from word
 
+.. versionadded:: 6.4
+
+    Mentions and Text Snippet.
+
+Mention Someone
+~~~~~~~~~~~~~~~
+.. _PageNavigation_agentinterface_ticketviews_agentticketactioncommon_mentions:
+
+In the CKEditor, it's now possible to mention a single or group of users. Unlike notifying a user via a note or putting yourself on a watch list, a user or group can be mentioned inline.
+
+A user mention is done by prefixing with a single '@'. A group mention is prefixed by two  '@@'.
+
+**Example: Single User**
+
+Please talk to @sbeasley about this issue.
+
+**Example: User Group**
+
+This is important for the @@developers team.
+
+This will result in the user *sbeasley*, or in the second example all users of the developers group, getting a notification. The user then has read permissions on the ticket, just as with the watcher module. Additionally, any mentioned user will see a mention toolbar icon, and see the tickets in the agent dashboard.
+
+All those receiving a text body with a mention will have a ``mailto:`` link to directly contact the mentioned person via e-mail.
+
+.. image:: images/mentions_animation.gif
+    :alt: Animated GIF Mention Function
+
+
+Use a Snippet
+~~~~~~~~~~~~~
+.. _PageNavigation ticketviews_agentticketactioncommon_snippet:
+
+In order to trigger a text snippet, just prefix your text with `##` and type at least three characters. If a match is found in the text, name, or comment of a configured snippet, you can select if from the list. This applies the snippet in-line. You can add as many snippets as desired. They are also combinable with text templates.
+
+Snippets are available on a queue-by-queue basis. You may therefore not have a snippet available for use.
+
+.. image:: images/snippet_animation.gif
+    :alt: Snippet Usage Animation
+
+
+
 State Options
 *************
 
@@ -50,7 +91,7 @@ A lock requirement is configurable on all screens. The system configuration opti
 
 Example:
 
-You would see https://znuny.example.com/otrs/index.pl?Action=AgentTicketPriority;TicketID=1 in the status bar, or by right-clicking the link and copying the URL.
+You would see ``https://znuny.example.com/otrs/index.pl?Action=AgentTicketPriority;TicketID=1`` in the status bar, or by right-clicking the link and copying the URL.
 
 The name of the screen seen in the **Action** parameter is AgentTicketPriority.
 

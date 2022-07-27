@@ -74,14 +74,14 @@ Additional to that, the attachment layout block needs to be replaced:
 
 Replace it with this code:
 
-.. code-block:: programlisting
+.. code-block::
 
    push @{ $Param{AttachmentList} }, $Attachment;
                         
 
 If the module where you want to integrate multi upload supports standard templates, make sure to add a section to have a human readable file size format right after the attachments of the selected template have been loaded (see e.g. ``AgentTicketPhone`` for reference):
 
-.. code-block:: perl
+.. code-block::
 
    for my $Attachment (@TicketAttachments) {
          $Attachment->{Filesize} = $LayoutObject->HumanReadableDataSize(
@@ -100,7 +100,7 @@ Administration Navigation Breadcrumbs
 
 All admin modules should have a breadcrumb. The breadcrumb only needs to be added on the ``.tt`` template file and should be placed right after the h1 headline on top of the file. Additionally, the headline should receive the class ``InvisibleText`` to make it only *visible* for screen readers.
 
-.. code-block:: html
+.. code-block::
 
    <div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst">
          <h1 class="InvisibleText">[% Translate("Name of your module") | html %]</h1>
@@ -137,7 +137,7 @@ levels of your admin module (e.g. ``Subaction``\ s):
 
 Admin modules in OTRS 6 should not only have a *Save* button, but also a *Save and finish* button. *Save* should leave the user on the same edit page after saving, *Save and finish* should lead back to the overview of the entity the user is currently working on. Please see existing OTRS admin screens for reference.
 
-.. code-block:: html
+.. code-block::
 
    <div class="Field SpacingTop SaveButtons">
          <button class="Primary CallForAction" id="SubmitAndContinue" type="submit" value="[% Translate("Save") | html %]"><span>[% Translate("Save") | html %]</span></button>
@@ -155,7 +155,7 @@ XML File Format
 
 Framework 6 uses a new `XML configuration file format :ref:<HowItWorks ConfigMechanism>` and the location of configuration files moved from ``Kernel/Config/Files`` to ``Kernel/Config/Files/XML``. To convert existing XML configuration files to the new format and location, you can use the following tool:
 
-.. code-block:: screen
+.. code-block::
 
    bin/otrs.Console.pl Dev::Tools::Migrate::ConfigXMLStructure --source-directory Kernel/Config/Files
    Migrating configuration XML files...
@@ -313,7 +313,7 @@ First, make sure to create a new template file under ``Kernel/Output/JavaScript/
 
 Then, add your HTML to the template file, making sure to use placeholders for any variables you might need:
 
-.. code-block:: javascript
+.. code-block::
 
    <div id="{{ DivID }}" class="CSSClass">
          {{ DivText | Translate }}
@@ -346,7 +346,7 @@ User Permissions
 
 User permissions were stored in the session and passed to the ``LayoutObject`` as attributes, which were then in turn accessed to determine user permissions like 
 
-.. code-block:: screen
+.. code-block::
 
    ``if ($LayoutObject->{'UserIsGroup[admin]'}) { ... }``.
 
@@ -583,9 +583,9 @@ In addition, attachment data is not returned any more, please use combination of
 
 * ``ArticleAttachmentIndex()``
 * ``ArticleAttachment()``
-* 
+
 .. note::
-   
+
    ``ArticleAttachmentIndex()`` parameters and behavior has changed. Instead of old strip parameter use combination of new ``ExcludePlainText``, ``ExcludeHTMLBody`` and ``ExcludeInline``.
 
 As an example, here is how to get all article and attachment data in the same hash:

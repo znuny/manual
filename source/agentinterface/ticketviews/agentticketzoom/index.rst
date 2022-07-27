@@ -56,7 +56,7 @@ The ticket menu items are in clusters by default, and the clusters are configura
   * :ref:`Free Fields <PageNavigation ticketviews_agentticketfreetext>`
   * :ref:`Link <PageNavigation ticketviews_agentticketlink>`
   * :ref:`Merge <PageNavigation ticketviews_agentticketmerge>`
-  * :ref:`New Appointment <PageNavigation calendarviews_AppointmentCreate>`
+  * :ref:`New Appointment <PageNavigation agentinterface_appointments_index>`
 
 
 Un-Clustered Items
@@ -70,8 +70,8 @@ Un-Clustered Items
 
 
 * :ref:`Priority <PageNavigation ticketviews_agentticketpriority>` - Change the priority.
-* :ref:`Pending <PageNavigation ticketviews_agentticketpending>` - Set the ticket to pending.
-* :ref:`Close <PageNavigation ticketviews_agentticketclose>` - Close the ticket.
+* :ref:`Pending <PageNavigation ticketviews_agentticketreminder>` - Set the ticket to pending.
+* :ref:`Close <PageNavigation ticketviews_agentticketactionclose>` - Close the ticket.
 
 
 Optional items
@@ -79,7 +79,7 @@ Optional items
 
 There may be many optional menu items based on your installed packages.
 
-* :ref:`Process <PageNavigation ticketviews_agentticketprocess>` - Enroll ticket in a process.
+- Enroll ticket in a process.
 
 .. note::
 
@@ -130,3 +130,41 @@ To respond to tickets, you can use one of other options.
 
 .. image:: images/menu_article_resend.png
     :alt: Resend Article Image
+
+Information Widgets
+*******************
+
+On the right-hand side of each ticket, there is a set of widgets which provide different information.
+
+
+Ticket Data
+===========
+
+Displays current ticket data including dynamic fields.
+
+.. image:: images/ticket_data_widget.png
+    :alt: Ticket Data Widget Image
+
+Customer User
+=============
+
+Shows information about the customer user and customer.
+
+.. image:: images/customer_data_widget.png
+    :alt: Customer Data Widget Image
+
+Link Object
+===========
+
+If the ``ViewMode`` is not set to *Complex*, a list of linked ticket will appear in the widget on the right side.
+
+.. image:: images/link_object_widget.png
+    :alt: Link Data Widget Image
+
+Mentions
+========
+
+A list of users which are mentioned in this ticket are visible. Users on the mention list can be removed by the owner or responsible of the ticket.
+
+.. image:: images/agent_ticket_mention_widget.png
+    :alt: Mention Data Widget Image

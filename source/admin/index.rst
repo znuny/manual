@@ -35,11 +35,13 @@ The general rules are:
    :maxdepth: 2
 
    usermanagement/index
-   automation/index
+   communication/index
    authentication/index
-   dynamicfields/index
    email/index
-   processmanagement/index
+   security/index
+   dynamicfields/index
    ticketattributerelations/index
+   automation/index
+   processmanagement/index
    webservices/index
 

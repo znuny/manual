@@ -69,6 +69,7 @@ Some fields have considerations or additional options to be made.
 
 Article Field
 ~~~~~~~~~~~~~
+.. _PageNavigation admin_processmanagement_activitydialogs_article_field:
 
 **Extra options are available:**
 
@@ -76,12 +77,23 @@ Channel
     Designate the communication channel.
 Visible for Customer
     Dictates if this field should be visible in the customer front-end or not.
+Text Template
+    Choose the text templates to be available in the activity dialog for this article.
+Auto fill
+    Apply the template automatically. (Requires one only be selected.)
 Time Units
     Dictates if the time units are: shown, optional, or mandatory.
 
+.. image:: images/article_process_dialog_setting.gif
+    :alt: Article Settings GIF
+
+.. seealso::
+
+    For more information see :ref:`Communication Template <PageNavigation admin_communication_templates_index>`
+
 .. note:: 
     
-    Adding a default value or the article field as hidden is not possible.
+    Adding a default value or the article field as hidden is not possible, use a transition action for this.
 
 State Field
 ~~~~~~~~~~~
@@ -120,4 +132,4 @@ Attachments
     The attachments field presents a dropdown list of all attachments in the ticket. Select transition actions can use the attachments during the transition. :ref:`TicketCreate <TransitionAction TicketCreate>`.
 
 .. image:: images/attachments_dialog.png
-    :alt: Dialog Image
+    :alt: Dialog Attachment Image

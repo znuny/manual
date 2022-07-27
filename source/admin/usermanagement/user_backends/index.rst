@@ -87,6 +87,11 @@ Example Synchronization Backend
 
     `AuthSyncBackend in Defaults.pm <https://github.com/znuny/Znuny/blob/dev/Kernel/Config/Defaults.pm#L522>`_
 
+.. versionadded:: 6.4
+
+    LDAP nested group search in the *AuthSyncModule*. ``$Self->{'AuthSyncModule::LDAP::NestedGroupSearch'} = 1;``.
+
+
 Customer User
 *************
 

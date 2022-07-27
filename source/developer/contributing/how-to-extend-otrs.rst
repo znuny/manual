@@ -11,13 +11,14 @@ To get started let's program a module, as an add-on, that displays a text: "Hell
 
 Firstly create a directory structure for your ``Hello World`` package.
 
-.. code-block:: screen
+.. code-block::
+
     mkdir -p ~/src/HelloWorld
     cd ~/src/HelloWorld
 
 In this directory, create all needed framework directories. Each module should at least contain the following directories:                        
 
-.. code-block:: screen
+.. code-block::
 
     mkdir -p Kernel/System
     mkdir -p Kernel/Modules

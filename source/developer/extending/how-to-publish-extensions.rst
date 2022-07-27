@@ -26,7 +26,7 @@ The repository must contain an index file. The package manager then reads this i
 
 Generate a package index using the ``Dev::Package::RepositoryIndex`` console command.
 
-.. code:: screen
+.. code-block::
 
    shell> bin/otrs.Console.pl Dev::Package::RepositoryIndex /path/to/repository/ > /path/to/repository/repo_name.xml
                         
@@ -44,32 +44,33 @@ Using the command line, you can install or upgrade a package locally or from a r
 
 .. note::
    
-   Use this format instead of the local path for installation or upgrading modules from remote repositories https://host.example.org/path/to/:package.opm).
+   Use this format instead of the local path for installation or upgrading modules from remote repositories ``https://host.example.org/path/to/:package.opm``.
 
 Important Commands
 ===================
 
 **Installing packages**
 
-.. code:: screen
+.. code::
 
    shell> bin/otrsConsole.pl Admin::Package::Install /path/to/package.opm
 
 **Uninstall packages**
 
-.. code:: screen
+.. code::
 
    shell> bin/otrsConsole.pl Admin::Package::Uninstall /path/to/package.opm
 
 **Upgrade packages**
 
-.. code:: screen
+.. code::
 
    shell> bin/otrsConsole.pl Admin::Package::Upgrade /path/to/package.opm
 
 **List packages**
 
-.. code:: screen
+.. code::
+   
    shell> bin/otrsConsole.pl Admin::Package::List
 
 
@@ -78,7 +79,7 @@ Full Command Listing
 
 .. note:: 
    
-   Use ``bun/otrs.Console.pl <C>OMMAND> --help `` for all usage options.
+   Use ``bun/otrs.Console.pl <COMMAND> --help`` for all usage options.
 
 
 +------------------------------------+--------------------------------------------------------------+
