@@ -6,7 +6,7 @@ Project Contribution
 
 The Znuny project is sponsored by `Znuny GmbH <https://znuny.com>`_. Partners of the `OTTER Alliance <https://www.otter-alliance.de/en/die-allianz.html>`_ also contribute regularly to the code-base. While many in our community may not need or want commercial support, which largely contributes to funding the project, they may want to contribute code. The community happily looks forward to every pull request, and we want to ensure you have all guidelines necessary to get your contributions quickly merged. Your hard work is invaluable for the project, and therefore we have worked hard to be clear about the submission process and requirements.
 
-The easiest way to send your contributions to the project's developer team is by creating a "pull request" in GitHub. Please take a look at the instructions on `GitHub Support <https://docs.github.com/en>`_, specifically about `Pull requests <https://https://docs.github.com/en/pull-requests>`_. and `Forking a repository <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_
+The easiest way to send your contributions to the project's developer team is by creating a "pull request" in GitHub. Please take a look at the instructions on `GitHub Support <https://docs.github.com/en>`_, specifically about `Pull requests <https://docs.github.com/en/pull-requests>`_. and `Forking a repository <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_
 
 Contributions are heartily welcome. Please carefully read: :ref:`guidelines for developers <Contributions DeveloperGuidelines>` and commit before you commit!
 

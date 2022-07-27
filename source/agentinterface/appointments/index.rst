@@ -1,6 +1,8 @@
 Calendar Events
 ###############
 
+.. _PageNavigation agentinterface_appointments_index:
+
 Summary
 *******
 
@@ -101,14 +103,3 @@ Description
 
 Link
     Optionally link created tickets to the appointment.
-
-
-System Configurations
-=====================
-
-Here is a list of system configuration options for appointments.
-
-.. toctree::
-   :maxdepth: 1
-
-   configuration

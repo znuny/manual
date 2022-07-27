@@ -1,11 +1,65 @@
+General Configuration
+#####################
 .. _Webservices Configuration:
 
-Configuration
-#############
+Some information is specific to all web services, and we will discuss the parts of a web service here in more detail.
+
+Adding A Webservice
+*******************
+
+Each service requires an endpoint. The endpoint is determined by 
+
+* Configured ``FQDN``
+* Configured ``ScriptAlias``
+* Web Service Name
+
+A default endpoint for a webservice named Service would be:
+
+``https://znuny.example.com/otrs/nph-genericinterface.pl/Webservice/Service``
+
+For REST, we will create a routing later in the transport section.
+
+For SOAP, the name of the Operation or Invoker will be the SOAP Action.
+
+General Settings
+****************
+
+The general settings are:
+
+Name
+	The name of the webservice. This will be the endpoint.
+Description
+	A short description for the administrator about the purpose of the web service.
+Remote system
+	Appeared to input the name of the remote system using the web service. Not required and not as part of the configuration.
+Debug threshold
+	The level of debug information to be locked to the generic interface locking system.
+Valid
+	The validity of the web service.
+
+Type Of Webservice
+******************
+
+The software can act as a consumer (:ref:`Invoker <PageNavigation admin_webservices_invoker_index>`) or provider (:ref:`Requester <PageNavigation admin_webservices_provider_index>`)
+
+You must choose:
+
+Network Transport
+	Choose HTTP::REST or HTTP::SOAP.
+Error Handling Module
+	Choose an error handling module.
+Operation
+	Choose the operation module for use by the consumer of the service.
+Invoker
+	Choose the invoker module used to consume a webservice.
+
+
+Payload Options
+***************
 
 .. _Setting XSLT force array:
 
-XSLT force array tags
+XSLT Force Array Tags
 *********************
 
 There is a new config option "force array for tags" for the outgoind request data when using XSLT mappings. This option defines which XML elements will be converted to arrays when the data is converted to JSON. By default, this happens only when the same element occurs more than once on the same level. This is needed because some web services expect arrays in the request.
@@ -57,7 +111,7 @@ With the value **label** for this setting the JSON will look like this:
 
 A practical use for this can be found in the outgoing XSLT mapping of the :ref:`MS Teams example<Example Web Service MS Teams>`.
 
-System Configuration data in web service configuration
+System Configuration Data In Web Service Configuration
 ******************************************************
 
 Setting defined in the System Configuration can be used in the web service configuration. There are two ways to use them. 

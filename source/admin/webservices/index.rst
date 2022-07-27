@@ -1,4 +1,4 @@
-Web services
+Web Services
 ############
 
 The web service feature in Znuny adds improvements to the functionality of the GenericInterface and to ease the handling.
@@ -11,12 +11,13 @@ Overview
    :maxdepth: 2
 
    config/index
+   transport/index
    provider/index
    requester/index
    invoker/index
-   examples/index
-   notification/index
    specials/index
+   notification/index
+   examples/index
 
 
 .. add new files to list above to include them in toc

@@ -23,6 +23,7 @@ Available Screens
    agentticketfreetext/index
    agenttickethistory/index
    agentticketlock/index
+   agentticketlink/index
    agentticketmerge/index
    agentticketmove/index
    agentticketnote/index
@@ -37,4 +38,5 @@ Available Screens
    agentticketresponsible/index
    agentticketsearch/index
    agentticketwatcher/index
+   ticketmention/index
    agentticketzoom/index

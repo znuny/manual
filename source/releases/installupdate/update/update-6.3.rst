@@ -119,7 +119,7 @@ Execute the migration script
 
   Changes made to release 6.3.4 may require you to reconfigure some generic agents. You will be warned here in this step.
 
-  (see :ref:`Breaking Changes <BreakingChange rel-6.3.4>`!)
+  (see :ref:`Breaking Changes <BreakingChange rel-6.3.1>`!)
 
 Missing Dynamic Field Objects
 =============================

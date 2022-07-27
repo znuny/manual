@@ -108,7 +108,26 @@ Export and import settings using the function provided in the left sidebar.
 Vendor-Specific Documentation
 *****************************
 
-As each setup is specific to your vender, please read more about setting up a token at the vendor site.
+.. important::
+    
+    Redirect URI: The redirect_uri for Znuny is built from the system variables in the following manner:
+    
+    ${HttpType}://${FQDN}/${ScriptAlias}/get-oauth2-token-by-authorization-code.pl 
+    
+    i.e.
+    
+    https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl 
+
+
+As each setup is specific to your vendor, please read more about setting up a token at the vendor site.
 
 * `Microsoft <https://docs.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth>`_
 * `Google <https://developers.google.com/gmail/api/auth/about-auth#:~:text=Gmail%20uses%20the%20OAuth%202.0%20protocol%20for%20authenticating,for%20your%20app.%20Why%20use%20Google%20for%20authentication%3F>`_
+
+
+.. versionadded:: 6.4
+
+    Starting in this release, we've added a special switch to conform to Microsoft's requirement for POP3 and OAuth2. This is pre-configured for the hosts listed in the `Microsoft KBA <https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353>`_. Hosts that need a separate info about authentication method and token (instead of both in one line) can be added to the system configuration option. ``MailAccount::POP3::Auth::SplitOAuth2MethodAndToken::Hosts``
+    
+    Most commonly needed for Office 365 and Outlook.
+        

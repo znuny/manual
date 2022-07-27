@@ -1,15 +1,14 @@
-Invoker
-###############################
-
-.. _Invoker Ticket Generic:
+Invokers
+########
+.. _PageNavigation admin_webservices_invoker_index:
 
 Ticket::Generic
-###############
+****************
 
 This invoker prepares the ticket which is used in the operations of a requester.
 
 Request data
-~~~~~~~~~~~~
+============
 Depending on the event which calls the invoker the data might differ.
 Summarized, the invoker provides:
 
@@ -21,7 +20,7 @@ Summarized, the invoker provides:
 
 
 Response handling
-~~~~~~~~~~~~~~~~~
+=================
 
 By modifying the response with inbound mapping, e.g. with XSLT, it is possible to change ticket data.
 
@@ -88,9 +87,8 @@ These element are available, if not mentioned value is the new value:
 
 ..
 
-
 Jq in event conditions
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 .. note:: To use this feature Jq and the CPAN Module Jq must be installed.
 
@@ -102,8 +100,6 @@ Jq in event conditions
 ..
 
 This optional feature is usefull to check substructures and also arrays in ticket event conditions. For more detail on valid Jq expressions check the `documentation <https://stedolan.github.io/jq/>`_.
-
-
 
 In the conditions, all values can then be accessed which are also sent via the Generic Invoker.
 
@@ -118,9 +114,8 @@ In the conditions, all values can then be accessed which are also sent via the G
          :width: 100%
          :alt: Example Jq condition
 
-
 Encode binary fields
-~~~~~~~~~~~~~~~~~~~~
+====================
 
 To handle binary data of the invoker data in the mapping it is possible to encode fields with base64. This configuration is done in the system configuration with the setting **GenericInterface::Invoker::Ticket::Generic::PrepareRequest::Base64EncodedFields**.
 
@@ -129,38 +124,28 @@ To handle binary data of the invoker data in the mapping it is possible to encod
 - If a field is an array, each element is encoded.
 - Fields that do not exist or cannot be base-64 encoded will be ignored without error message.
 
-
 Example: The body of all articles and the city of the customer company should be base64 encoded:
 `Articles->Body;CustomerCompany->CustomerCompanyCity`
-
 
 .. _Remove fields in ticket invoker:
 
 Remove fields
-~~~~~~~~~~~~~
+==============
+
 To prevent certain fields to be populated into the request data it is possible to remove them in the invoker. This is usefull to deal with sensitive data. The system configuration **GenericInterface::Invoker::Ticket::Generic::PrepareRequest::OmittedFields** has the same configuration like the option which encodes fields. Fields that do not exist are ignored without an error message.
 
 Example: The recipients of all articles will be removed:
 `Articles->To;Articles->Cc;Articles->Bcc`
 
-
-######
-
-
 Generic::Tunnel
-###############
+***************
 
 Sometime the event data should only be passed with a requester. This invoker take the data without any modifcation to the mapping section, nothing is changed or added.
-
-
-
-
-
 
 .. _Invoker example data:
 
 Example data invoker Ticket::Generic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=====================================
 
 .. code-block:: JSON
 	:caption: Invoker data before outbound mapping
@@ -488,7 +473,7 @@ Example data invoker Ticket::Generic
 
 .. 
 
-.. code-block:: JSON
+.. code-block::
 	:caption: Data for the event ArticleCreate
 	:name: Data for the event ArticleCreate
 
@@ -886,4 +871,3 @@ Example data invoker Ticket::Generic
 	}
 
 ..
-
