@@ -21,6 +21,7 @@ Snippet
 
 Hour of templates in the software empowers standardized communications and enables quick turnaround time. This feature has now been extended to include text snippets! Snippets can be used In conjunction with current templates and in any queue where they are assigned. Now you are not only limited to the template created by the administrator but you can also extend the template by using these text snippets.
 
+
 .. image:: /agentinterface/ticketviews/agentticketactioncommon/images/snippet_animation.gif
     :alt: Snippet Example GIF
 
