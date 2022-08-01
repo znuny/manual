@@ -8,13 +8,14 @@ Update to 6.4
 
 A Step-by-Step explanation on how to update to Znuny 6.4.
 
-Please make sure your current system is at least at version:
+.. important:: 
+  
+  Please make sure your current system is at the latest patchlevel version of 6.3, this is 6.3.4
 
-- Znuny 6.3.x
 
 We do not support direct updates from any version of OTRS, ((OTRS)) Community Edition, Znuny LTS or before 6.3
 
-For updates from OTRS, ((OTRS)) Community Edition, or Znuny LTS contact `Znuny GmbH <https://znuny.com>`_ or the experts of your choice for assistance.
+For updates from OTRS, ((OTRS)) Community Edition, or Znuny LTS contact `Znuny GmbH <https://www.znuny.com>`_ or the experts of your choice for assistance.
 
 Preparations
 ************
@@ -57,7 +58,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block::
 
   # Update to Znuny 6.4 (RHEL 7 / CentOS 7)
-  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.4.1-01.noarch.rpm
+  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.4.2-01.noarch.rpm
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
@@ -78,23 +79,23 @@ The installation from source takes some more steps. If there are more file to re
   tar xfz znuny-latest-6.4.tar.gz
 
   # Set permissions
-  /opt/znuny-6.4.1/bin/otrs.SetPermissions.pl
+  /opt/znuny-6.4.2/bin/otrs.SetPermissions.pl
 
   # Restore Kernel/Config.pm, articles, etc.
-  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.4.1/Kernel/
-  mv /opt/otrs/var/article/* /opt/znuny-6.4.1/var/article/
+  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.4.2/Kernel/
+  mv /opt/otrs/var/article/* /opt/znuny-6.4.2/var/article/
 
   # Restore dotfiles from the homedir to the new directory
-  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.1/; done
+  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.2/; done
 
   # Restore modified and custom cron job
-  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.1/var/cron/; done
+  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.2/var/cron/; done
 
   # Delete the old symlink
   rm /opt/otrs
 
   # Create a symlink 
-  ln -s /opt/znuny-6.4.1 /opt/otrs
+  ln -s /opt/znuny-6.4.2 /opt/otrs
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
@@ -114,10 +115,6 @@ Update All Packages
 
 **Framework Updates:**
 (For 6.3 to 6.4)
-
-.. important:: 
-  
-  Upgrade to 6.3.4 first, then upgrade to 6.4.1 using the instructions above.
 
 You have two options:
 

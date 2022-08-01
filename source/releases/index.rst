@@ -18,6 +18,7 @@ Overview
 .. toctree::
    :maxdepth: 2
 
+   6_4_2/index
    6_4_1/index
    6_3_4/index
    6_3_3/index
