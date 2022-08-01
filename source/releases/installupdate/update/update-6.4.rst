@@ -60,7 +60,6 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
   # Update to Znuny 6.4 (RHEL 7 / CentOS 7)
   yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.4.2-01.noarch.rpm
 
-
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
 
