@@ -7,9 +7,9 @@ All New
 Mentions
 ========
 
-Other users now can be referenced/mentioned in rich text editor and will be notified about it. A mention is quicker that creating an note to inform an agent, and doses not replace this functionality. There is a new dashboard widget and overview for agents to view their mentions.
+Other users now can be referenced/mentioned in the rich text editor and will be notified about it. A mention is quicker than creating a note to inform an agent and does not replace this functionality. There is a new dashboard widget and overview for agents to view their mentions.
 
-They can also remove themselves from the mention list at any time.
+They can also remove themselves from the mentioned list at any time.
 
 Check out the full feature set in the documentation.
 
@@ -19,7 +19,7 @@ Check out the full feature set in the documentation.
 Snippet
 =======
 
-Hour of templates in the software empowers standardized communications and enables quick turnaround time. This feature has Now been extended to include text snippets! Snippets can be used In conjunction with current templates and in any queue where they are assigned. Now you are not only limited to the template created by the administrator but you can also extend the template by using these text snippets.
+Hour of templates in the software empowers standardized communications and enables quick turnaround time. This feature has now been extended to include text snippets! Snippets can be used In conjunction with current templates and in any queue where they are assigned. Now you are not only limited to the template created by the administrator but you can also extend the template by using these text snippets.
 
 .. image:: /agentinterface/ticketviews/agentticketactioncommon/images/snippet_animation.gif
     :alt: Snippet Example GIF
