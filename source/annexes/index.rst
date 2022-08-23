@@ -12,3 +12,4 @@ List of annexes.
    permissions/index
    event_reference/index
    entity_management/index
+   placeholders/index
