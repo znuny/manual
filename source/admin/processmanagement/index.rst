@@ -1,8 +1,8 @@
 Process Management
 ##################
+.. _PageNavigation admin_processmanagement_index:
 
-This document describes the changed and added functionality in Znuny.
-The web service feature in Znuny adds improvements to the functionality of the GenericInterface and to ease the handling.
+This chapter covers using process management to create executable workflows from your business processes.
 
 Overview
 
