@@ -17,7 +17,6 @@ We do not support direct updates from any version of OTRS, ((OTRS)) Community Ed
 
 For updates from OTRS, ((OTRS)) Community Edition, or Znuny LTS contact `Znuny GmbH <https://www.znuny.com>`_ or the experts of your choice for assistance.
 
-
 Preparations
 ************
 
