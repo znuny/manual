@@ -1,5 +1,6 @@
 Managing Communication
 ######################
+.. _PageNavigation admin_communication_index:
 
 In this chapter of our documentation, we will discuss the tools and administration modules available to you as a System Administrator for managing your communications.
 
