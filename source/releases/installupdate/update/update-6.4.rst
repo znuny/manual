@@ -9,7 +9,7 @@ Update to 6.4
 A Step-by-Step explanation on how to update to Znuny 6.4.
 
 .. important:: 
-  
+
   Please make sure your current system is at the latest patchlevel version of 6.3, this is 6.3.4
 
 
@@ -58,7 +58,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block::
 
   # Update to Znuny 6.4 (RHEL 7 / CentOS 7)
-  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.4.2-01.noarch.rpm
+  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.4.3-01.noarch.rpm
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
@@ -79,23 +79,23 @@ The installation from source takes some more steps. If there are more file to re
   tar xfz znuny-latest-6.4.tar.gz
 
   # Set permissions
-  /opt/znuny-6.4.2/bin/otrs.SetPermissions.pl
+  /opt/znuny-6.4.3/bin/otrs.SetPermissions.pl
 
   # Restore Kernel/Config.pm, articles, etc.
-  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.4.2/Kernel/
-  mv /opt/otrs/var/article/* /opt/znuny-6.4.2/var/article/
+  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.4.3/Kernel/
+  mv /opt/otrs/var/article/* /opt/znuny-6.4.3/var/article/
 
   # Restore dotfiles from the homedir to the new directory
-  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.2/; done
+  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.3/; done
 
   # Restore modified and custom cron job
-  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.2/var/cron/; done
+  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.3/var/cron/; done
 
   # Delete the old symlink
   rm /opt/otrs
 
   # Create a symlink 
-  ln -s /opt/znuny-6.4.2 /opt/otrs
+  ln -s /opt/znuny-6.4.3 /opt/otrs
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
