@@ -39,7 +39,7 @@ Module Screens:
 .. toctree::
    :maxdepth: 3
 
-   appointments/index
+   calendarscreens/index
 
 Toolbars:
 

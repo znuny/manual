@@ -1,5 +1,6 @@
 Event Reference
 ################
+.. _PageNavigation annexes_event_reference_index_event_reference:
 
 In this annex, you find a list of all events recorded by the system. These events appear in multiple areas of the software as a dropdown selection field, including but not limited to generic agents and a . As these.Events are not usable in all areas of the software, they are listed according to their functionality.
 
@@ -42,6 +43,10 @@ The table of events is for a default installation. Other events may be included 
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 || ArticleEmailSendingError           || Every time sending a mail fails.                                                                         || :ref:`a <EventIndex FrontEnd>`, :ref:`b <EventIndex FrontEnd>` |
 ||                                    || Should only be used with extreme caution, as this can cause a loopback and/or mail flood.                ||                                                                |
++-------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+| ArticleCreateTransmissionError      | Whan email transmission fails during an article create.                                                   | :ref:`a <EventIndex FrontEnd>`, :ref:`b <EventIndex FrontEnd>`  |
++-------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+| ArticleUpdateTransmissionError      | When email transmission fails during an article update.                                                   | :ref:`a <EventIndex FrontEnd>`, :ref:`b <EventIndex FrontEnd>`  |
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 || ArticleDynamicFieldUpdate          || When a dynamic field of type article is set to a new value.                                              || :ref:`a <EventIndex FrontEnd>`, :ref:`b <EventIndex FrontEnd>` |
 ||                                    ||                                                                                                          ||                                                                |

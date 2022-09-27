@@ -1,9 +1,8 @@
 Web Services
 ############
+.. _PageNavigation admin_webservices_index:
 
-The web service feature in Znuny adds improvements to the functionality of the GenericInterface and to ease the handling.
-
-This document covers the added functionality and provide examples for configuration and web services.
+This chapter covers creating web services using the generic interface.
 
 Overview
 
