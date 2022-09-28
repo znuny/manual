@@ -1,21 +1,12 @@
-Calendar Events
-###############
-
+Adding Calendar Events
+#######################
 .. _PageNavigation agentinterface_appointments_index:
-
-Summary
-*******
-
-You may create calendar events in Znuny. Read about the built-in functions of the calendar in the `OTRS Documentation <https://doc.znuny.org/doc/manual/admin/6.0/en/html/index.html>`_.
-
-For Znuny specific functions, please see the documentation below.
 
 Appointment Create Screen
 **************************
 
 .. image:: images/AppointmentMask.png
     :alt: Appointment Mask
-
 
 Ticket Creation
 ===============
