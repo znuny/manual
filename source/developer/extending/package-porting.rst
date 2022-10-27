@@ -155,6 +155,10 @@ XML File Format
 
 Framework 6 uses a new `XML configuration file format :ref:<HowItWorks ConfigMechanism>` and the location of configuration files moved from ``Kernel/Config/Files`` to ``Kernel/Config/Files/XML``. To convert existing XML configuration files to the new format and location, you can use the following tool:
 
+.. warning:: 
+   
+   This console command is only available in Znuny LTS 6.0.
+
 .. code-block::
 
    bin/otrs.Console.pl Dev::Tools::Migrate::ConfigXMLStructure --source-directory Kernel/Config/Files

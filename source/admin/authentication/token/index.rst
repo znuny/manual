@@ -4,17 +4,58 @@ OAuth2 Token Administration
 
 .. versionadded:: 6.3
 
-It is possible to administer OAuth tokens in the administration area. Tokens added to the system are used by the :ref:`PostMaster Mail Account <PageNavigation email_postmaster_mail_account>` module for email authentication.
+   It is possible to administer OAuth tokens in the administration area. Tokens added to the system are used by the :ref:`PostMaster Mail Account <PageNavigation email_postmaster_mail_account>` module for email authentication.
 
-As this is an advanced task, you're required to understand how to configure your provider's service.
+   As this is an advanced task, you're required to understand how to configure your provider's service.
+
+OAuth Flow Support
+******************
+
+We support code grant type, or auth code flow, which enables a client application to obtain authorized access to protected resources like web APIs. The auth code flow requires an user-agent that supports redirection from the authorization server back to your application.
 
 More background information about OAuth on `Wikipedia <https://en.wikipedia.org/wiki/OAuth>`_
 
+Token Usage
+***********
+
+Tokens can currently be used by
+
+* PostMaster Mail Accounts
+* Web Service Invokers
+
+.. versionadded:: 6.4
+
+    It is now possible to use the tokens in ::ref:`an Invoker <AuthenticationMethod generic_interface_invoker>`.
+
+Application Registration
+************************
+
+An application registration is requried to access resources via OAuth2. Upon registration, you should receive:
+
+* ClientID
+* Client Secret
+* Endpoint(s)
+
+Microsoft and IMAP/POP
+======================
+
+Microsoft has switch off basic authentication for IMAP and POP protocols and moved to "Modern Authentication" (which is OAuth 2.0 token based auth) This has many benefits and improvements:
+
+* OAuth access tokens have a limited usable lifetime
+* are specific to the applications and resources they are issued
+* can’t be re-used
+
+`Read more on Microsoft's site <https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth>`_
+
+An Example Microsoft App
+========================
+
+In our Blog, we outlined an `example setup <https://www.znuny.org/en/blog/modern-authentication-with-microsoft>`_
 
 Adding a Token
 **************
 
-Adding a token will generates a YAML configuration in the database. This file has a specific format depending upon the provider and can be exported, modified, and imported as needed by the configuration or for migration (:ref:`see below <PageNavigation authenticate_token_index_backup_and_migration>`). We include basic formatting templates for the email providers, Google and Microsoft (Common, Consumer, and Organization). The configuration is all done comfortably in the web interface, and you may generate as many service tokens as needed for your accounts. 
+Adding a token will generates a YAML configuration in the database. This file has a specific format depending upon the provider and can be exported, modified, and imported as needed by the configuration or for migration (:ref:`see below <PageNavigation authenticate_token_index_backup_and_migration>`). We include basic formatting templates for the email providers, Google and Microsoft. The configuration is all done comfortably in the web interface, and you may generate as many service tokens as needed for your accounts. 
 
 .. important::
 
@@ -118,16 +159,8 @@ Vendor-Specific Documentation
     
     https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl 
 
-
-As each setup is specific to your vendor, please read more about setting up a token at the vendor site.
-
-* `Microsoft <https://docs.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth>`_
-* `Google <https://developers.google.com/gmail/api/auth/about-auth#:~:text=Gmail%20uses%20the%20OAuth%202.0%20protocol%20for%20authenticating,for%20your%20app.%20Why%20use%20Google%20for%20authentication%3F>`_
-
-
 .. versionadded:: 6.4
 
     Starting in this release, we've added a special switch to conform to Microsoft's requirement for POP3 and OAuth2. This is pre-configured for the hosts listed in the `Microsoft KBA <https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353>`_. Hosts that need a separate info about authentication method and token (instead of both in one line) can be added to the system configuration option. ``MailAccount::POP3::Auth::SplitOAuth2MethodAndToken::Hosts``
     
-    Most commonly needed for Office 365 and Outlook.
-        
+    Most commonly needed for Office365.
