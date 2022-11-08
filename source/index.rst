@@ -32,6 +32,7 @@ Table of Contents
    agentinterface/index
    admin/index
    console/index
+   itsmfeatures/index
    developer/index
    annexes/index
    glossary/index

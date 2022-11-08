@@ -44,4 +44,5 @@ The general rules are:
    automation/index
    processmanagement/index
    webservices/index
+   packagemanagement/index
 

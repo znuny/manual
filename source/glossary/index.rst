@@ -17,3 +17,6 @@ Agent interface
 
 Customer interface
     This interface allows customers to submit and reply to requests and start processes.
+
+OPM
+    Used as the short form of a package or add-on which can be installed in the system.
