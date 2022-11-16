@@ -85,7 +85,6 @@ There may be many optional menu items based on your installed packages.
 
     Only available when at least one process is active whose start activities initial dialog is accessible by the agent.
 
-
 Article Menu
 ============
 .. _PageNavigation ticketviews_agentticketzoom_articlemenu:
@@ -130,6 +129,24 @@ To respond to tickets, you can use one of other options.
 
 .. image:: images/menu_article_resend.png
     :alt: Resend Article Image
+
+Communications Table
+********************
+
+In each ticket, there is a table showing all articles in the ticket. Articles can be shown individually, or they may all be viewed at once using the cog wheel to change back and forth. Once set, the setting is persistent and applies to all tickets.
+
+.. image:: images/article_view_type.png
+    :alt: View Type Setting Image
+
+.. note:: 
+
+    Viewing all articles will mark all articles and the ticket as read, which may not be desirable.
+
+If ``Ticket::Frontend::TicketArticleFilter`` activated, you may also use the article filter to show only specific article types from specific senders. This may also be made persistent.
+
+.. image:: images/article_filter.png
+    :alt: Article Filter Text
+
 
 Information Widgets
 *******************

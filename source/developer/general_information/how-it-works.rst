@@ -40,7 +40,15 @@ XML Configuration Files
 =======================
 .. _HowItWorks XMLFiles:
 
-XML files define user configurable options for use in the GUI. These are specially formatted. To convert an older XML format, you can use 'otrs.Console.pl Dev::Tools::Migrate::ConfigXMLStructure' command. The file ``Kernel/Config/Files/ZZZAAuto.pm`` is a cached Perl version of the XML that contains all settings with their current values. Generation happens during a system deployment. Manual redeployment is performed with ``bin/otrs.Console.pl Maint::Config::Rebuild``.
+XML files define user configurable options for use in the GUI. These are specially formatted. 
+
+.. note:: 
+   
+   To convert an older XML format, you can use 'otrs.Console.pl Dev::Tools::Migrate::ConfigXMLStructure' command. 
+
+   This console command is only available in Znuny LTS 6.0.
+
+The file ``Kernel/Config/Files/ZZZAAuto.pm`` is a cached Perl version of the XML that contains all settings with their current values. Generation happens during a system deployment. Manual redeployment is performed with ``bin/otrs.Console.pl Maint::Config::Rebuild``.
 
 .. note::
     ``Kernel/Config/Files/ZZZAuto.pm`` does not exist anymore. It's now merged with ``Kernel/Config/Files/ZZZAAuto.pm``. Remove ``Kernel/Config/Files/Backups/ZZZAutoOTRS5.pm`` after a successful update.
