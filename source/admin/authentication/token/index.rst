@@ -87,6 +87,14 @@ Client ID
 Client secret
     Your client secret. (The application’s own password.)
 
+.. versionadded:: 6.4.4
+
+    URL *
+        Enter the endpoints required for authorization, token, and token refresh.
+
+    Scope
+        Add the scope for the token.
+
 Validity
     The validity of the setting.
 

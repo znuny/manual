@@ -58,6 +58,6 @@ OAuth
 .. image:: images/auth_oauth.png
     :alt: OAuth Settings Image
 
-.. versionadded:: v6.4.3
+.. versionadded:: 6.4.3
 
     OAuth2 Token authentication
