@@ -43,7 +43,7 @@ Create a backup of the database, the application and all data, especially the at
 New Required Modules
 ********************
 
-Due to the integration of Znuny4OTRS-ExcelStats, please ensure the installation of the following perl modules.
+If you want to use the JSON web token support (JWT) for web servivces please ensure the installation of the following Perl modules:
 
 * Crypt::JWT - optional, only when JSON web token support should be used
 * Crypt::OpenSSL::X509 - optional, only when using JWT with X509 certificates
@@ -58,7 +58,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block::
 
   # Update to Znuny 6.4 (RHEL 7 / CentOS 7)
-  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.4.3-01.noarch.rpm
+  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.4.4-01.noarch.rpm
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
@@ -79,23 +79,23 @@ The installation from source takes some more steps. If there are more file to re
   tar xfz znuny-latest-6.4.tar.gz
 
   # Set permissions
-  /opt/znuny-6.4.3/bin/otrs.SetPermissions.pl
+  /opt/znuny-6.4.4/bin/otrs.SetPermissions.pl
 
   # Restore Kernel/Config.pm, articles, etc.
-  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.4.3/Kernel/
-  mv /opt/otrs/var/article/* /opt/znuny-6.4.3/var/article/
+  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.4.4/Kernel/
+  mv /opt/otrs/var/article/* /opt/znuny-6.4.4/var/article/
 
   # Restore dotfiles from the homedir to the new directory
-  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.3/; done
+  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.4/; done
 
   # Restore modified and custom cron job
-  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.3/var/cron/; done
+  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.4.4/var/cron/; done
 
   # Delete the old symlink
   rm /opt/otrs
 
   # Create a symlink 
-  ln -s /opt/znuny-6.4.3 /opt/otrs
+  ln -s /opt/znuny-6.4.4 /opt/otrs
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
@@ -156,3 +156,15 @@ Restart everything
 
   # Start your local MTA, mostly Postfix, sometimes Exim or Sendmail
   systemctl start postfix
+
+Post Update Changes
+********************
+
+ACLs
+~~~~
+
+.. versionadded:: 6.4.4
+
+  If you use an ACL which Matches or Limits ``Ticket => NewOwner``, the behavior has changed to use the login and not display name of the user.
+
+
