@@ -13,3 +13,4 @@ List of annexes.
    event_reference/index
    entity_management/index
    placeholders/index
+   navigation/index
