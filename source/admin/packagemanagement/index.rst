@@ -86,7 +86,7 @@ Packages may not sometimes be properly installed get corrupted or have changes m
 File Management
 ===============
 
-If a package is not completely installed or has a modified file you will see a red X (1) next to the file name by clicking on this you will be able to get to this screen which will show you a diff of the file and the changes that have been made so that you can restore these if necessary. Restoring is done by reinstalling the package. This will not affect the database data or any other settings within your system. you can also download individual files by clicking on the disk (2) icon on the right-hand side.
+If a package is not completely installed or has a modified file you will see a red X (1) next to the file name, by clicking on this you will be able to get to this screen which will show you a diff of the file and the changes that have been made so that you can restore these if necessary. Restoring is done by reinstalling the package. This will not affect the database data or any other settings within your system. You can also download individual files by clicking on the disk (2) icon on the right-hand side.
 
 .. image:: images/file_diff.png
     :alt: File Diff Image
