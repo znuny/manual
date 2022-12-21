@@ -11,7 +11,7 @@ Lastly, there is also system views which can appear in the toolbar area.
     
     Toolbars can also be included in many add-on features like FAQ or ITSM packages.
 
-.. image:: imags/user_toolbars.png
+.. image:: images/user_toolbars.png
    :alt:  Toolbar image
 
 

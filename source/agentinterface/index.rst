@@ -47,6 +47,7 @@ Toolbars:
    :maxdepth: 3
 
    toolbars/index
+   activitymenu/index
 
 Special Views:
 

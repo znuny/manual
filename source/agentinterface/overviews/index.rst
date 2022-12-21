@@ -22,6 +22,20 @@ Widgets can be rearranged by dragging and dropping using the widget title. There
 
     Widgets may only be moved top to bottom, not left to right.
 
+Dashboard Focus
+===============
+
+.. versionadded:: 7.0
+   Dashboard Focus
+
+
+.. image:: images/dashlet_focus.png
+   :alt:  Dashboard Buttons Image
+
+
+It is possible to focus on just one dashboard module, by clicking on one of the dashboard module names at the top.
+
+
 Widget Settings
 ===============
 
@@ -118,7 +132,6 @@ Using the :fa:`cog` at the upper right of any view screen will allow you to set 
 
 .. image:: images/view_settings.gif
     :alt: Animated Settings Image
-
 
 All Overviews
 *************
