@@ -11,8 +11,29 @@ Lastly, there is also system views which can appear in the toolbar area.
     
     Toolbars can also be included in many add-on features like FAQ or ITSM packages.
 
+.. image:: imags/user_toolbars.png
+   :alt:  Toolbar image
 
-User Overviews
+
+Overviews
+*********
+
+.. table::
+  :widths: 6
+
+  +-------------------+-----------------+
+  | :fa:`exclamation` | Escalation View |
+  +-------------------+-----------------+
+  | :fa:`list-ol`     | Status View     |
+  +-------------------+-----------------+
+  | :fa:`folder`      | Queue View      |
+  +-------------------+-----------------+
+  | :fa:`wrench`      | Service View    |
+  +-------------------+-----------------+
+  | :fa:`comment`     | Mention View    |
+  +-------------------+-----------------+
+
+Personal Views
 **************
 
 The user toolbars include:
@@ -32,8 +53,8 @@ The user toolbars include:
 
 
 
-Quick Access
-************
+Actions
+*******
 
 The quick access icons include
 
@@ -48,23 +69,6 @@ The quick access icons include
   | :fa:`sitemap`  | New Process Ticket |
   +----------------+--------------------+
 
-System Views
-************
-
-.. table::
-  :widths: 6
-
-  +-------------------+-----------------+
-  | :fa:`exclamation` | Escalation View |
-  +-------------------+-----------------+
-  | :fa:`list-ol`     | Status View     |
-  +-------------------+-----------------+
-  | :fa:`folder`      | Queue View      |
-  +-------------------+-----------------+
-  | :fa:`wrench`      | Service View    |
-  +-------------------+-----------------+
-  | :fa:`comment`     | Mention View    |
-  +-------------------+-----------------+
 
 Search Toolbars
 ***************
