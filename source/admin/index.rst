@@ -35,6 +35,7 @@ The general rules are:
    :maxdepth: 2
 
    usermanagement/index
+   servicemanagement/index
    communication/index
    authentication/index
    email/index

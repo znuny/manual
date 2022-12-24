@@ -29,6 +29,7 @@ Table of Contents
    releases/installupdate/install
    releases/installupdate/update
    releases/index
+   generalinformation/index
    agentinterface/index
    admin/index
    console/index

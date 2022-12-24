@@ -1148,7 +1148,7 @@ To make using post output filters easier, there is also a mechanism to request H
 
 This will cause the block ``CustomerTable`` in ``AgentTicketZoom.tt`` to be wrapped in HTML comments each time it is rendered:
 
-.. code-block:: html
+.. code-block::
 
     <!--HookStartCustomerTable-->
     ... block output ...
@@ -5311,7 +5311,7 @@ In this section an Admin Dialog template for the password Dynamic Field is shown
 
 This is common header that can be found in common modules.
 
-.. code-block:: html
+.. code-block::
 
     <div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst">
         <h1>[% Translate("Dynamic Fields") | html %] - [% Translate(Data.ObjectTypeName) | html %]: [% Translate(Data.Mode) | html %] [% Translate(Data.FieldTypeName) | html %] [% Translate("Field") | html %]</h1>
@@ -5336,7 +5336,7 @@ This is common header that can be found in common modules.
 
 This part of the code has the main box and also the actions side bar. No modifications are needed in this section.
 
-.. code-block:: html
+.. code-block::
 
         <div class="ContentColumn">
             <form action="[% Env("CGIHandle") %]" method="post" class="Validate PreventMultipleSubmits">
@@ -5349,7 +5349,7 @@ This part of the code has the main box and also the actions side bar. No modific
 
 In this section of the code is defined the right part of the dialog. Notice that the value of the ``Action`` hidden input must match with the name of the Admin Dialog.
 
-.. code-block:: html
+.. code-block::
 
     <div class="WidgetSimple">
         <div class="Header">
@@ -5418,7 +5418,7 @@ In this section of the code is defined the right part of the dialog. Notice that
 
 This first widget contains the common form attributes for the Dynamic Fields. For consistency with other Dynamic Fields is recommended to leave this part of the code unchanged.
 
-.. code-block:: html
+.. code-block::
 
     <div class="WidgetSimple">
         <div class="Header">
@@ -5459,7 +5459,7 @@ This first widget contains the common form attributes for the Dynamic Fields. Fo
 
 The second widget has the Dynamic Field specific form attributes. This is the place where new attributes can be set and it could use JavaScript and AJAX technologies to make it more easy or friendly for the end user.
 
-.. code-block:: html
+.. code-block::
 
                 <fieldset class="TableLike">
                     <div class="Field SpacingTop">
