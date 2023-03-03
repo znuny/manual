@@ -49,6 +49,8 @@ These element are available, if not mentioned value is the new value:
 - OTRS_TicketPrioritySet
 - OTRS_TicketHistoryAdd - Requires subelements HistoryType and HistoryComment
 - OTRS_TicketArticleAdd - Supports subelements IsVisibleForCustomer, Body, Subject, MimeType, From, SenderType, Charset, HistoryType, HistoryComment and many more. Check the `API <https://doc.znuny.org/doc/api/otrs/6.0/Perl/Kernel/System/Ticket/Article/Backend/MIMEBase.pm.html>`_ for mode details.
+- OTRS_AsynchronousInvokerExecution - Parameter are the WebserviceID, the Invoker name and Data with additional values. This invoker will be called. OTRS_AsynchronousInvokerExecution must be an array.
+- OTRS_TicketArticleCreateEvent - A comma-separated list of ArticleIDs is passed as the value. For each ArticleID the ArticleCreate event is triggered in order to process them again in the web service.
 
 
 .. code-block:: XML
@@ -84,8 +86,31 @@ These element are available, if not mentioned value is the new value:
         	</xsl:copy>
     	</xsl:template>
 	</xsl:transform>
-
 ..
+
+.. code-block:: XML
+	:caption: Running an Invoker:
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+					xmlns:date="http://exslt.org/dates-and-times" 
+					extension-element-prefixes="date">
+    	<xsl:output method="xml" encoding="utf-8" indent="yes"/>
+    	<xsl:template match="RootElement">
+        	<xsl:copy>
+						<OTRS_AsynchronousInvokerExecution>
+							<WebserviceID>1</WebserviceID>
+							<Invoker>Update External Ticket</Invoker>
+							<Data>         
+								<Value1>data</Value1>
+								<Value2>data</Value2>
+								</Data>
+						</OTRS_AsynchronousInvokerExecution>
+        	</xsl:copy>
+    	</xsl:template>
+	</xsl:transform>
+.. 
+
 
 Jq in event conditions
 ======================
