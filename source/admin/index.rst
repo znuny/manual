@@ -46,4 +46,5 @@ The general rules are:
    processmanagement/index
    webservices/index
    packagemanagement/index
+   system_configuration/index
 

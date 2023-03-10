@@ -107,3 +107,23 @@ Executed code or changes to the database structure will be seen in this section.
 
 .. image:: images/code_block.png
     :alt: Code Block Images
+
+Package Prerequisites
+*********************
+
+.. versionadded:: 6.5
+  Dependency Validation
+
+It's possible that some packages have dependancies. In such case, the dependencies are checked prior to installation.
+
+Missing Dependency
+==================
+
+.. image:: images/missing_dep.png
+   :alt:  Image of Missing Dependency
+
+Dependency Met
+==============
+
+.. image:: images/met_dep.png
+   :alt:  Image of Met Dependency

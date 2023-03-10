@@ -12,3 +12,4 @@ If you are updating over multiple versions, please know that you must update to 
    update/update-6.2
    update/update-6.3
    update/update-6.4
+   update/update-6.5

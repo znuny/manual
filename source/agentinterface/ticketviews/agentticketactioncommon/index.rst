@@ -2,13 +2,21 @@ Common Features
 ###############
 .. _PageNavigation ticketviews_agentticketactioncommon:
 
+
 Article Options
 ***************
 
 .. image:: images/common_options.png
     :alt: Article Common Image
 
-An article may be attached to a ticket. Any time this is an option you must enter a subject and a body. You may add images in-line and other attachments via the upload feature. These may be dragged and dropped or you may select the attachments by browsing (Just click on the attachment icon :fa:`download`.)
+An article may be attached to a ticket. Whenever this option is available, you must enter a subject and a body. You are welcome to add images and other attachments via the upload feature. Alternatively, you can drag and drop the attachments by clicking on the attachment icon :fa:`download`
+
+
+.. versionadded:: 6.5
+   Attachment filename length limitation.
+
+   This setting can be used to limit the name of the file to be uploaded. By default it's 50 ``Ticket::Frontend::AgentTicketZoom::DisplayedAttachmentFilenameMaxLength``
+
 
 Editor Options
 ==============

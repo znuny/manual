@@ -73,6 +73,14 @@ Article Field
 
 **Extra options are available:**
 
+Subject
+  Pre-define a subject.
+Body
+  Pre-define a body.
+
+.. image:: images/activity_dialog_article_subject_body.png
+   :alt:  Image for Adding Subject and Body Text
+
 Channel
     Designate the communication channel.
 Visible for Customer
@@ -92,7 +100,7 @@ Time Units
     For more information see :ref:`Communication Template <PageNavigation admin_communication_templates_index>`
 
 .. note:: 
-    
+
     Adding a default value or the article field as hidden is not possible, use a transition action for this.
 
 State Field
@@ -100,9 +108,9 @@ State Field
 
 PendingTime
     This field should accompany the State field when *pending auto* or *pending reminder* state types are allowed.
-    
+
 .. note::
-    
+
     The default value, an offset, is an integer (seconds) for this field.
 
 CustomerID Field

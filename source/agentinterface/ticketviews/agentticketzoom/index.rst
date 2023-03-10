@@ -120,6 +120,7 @@ To respond to tickets, you can use one of other options.
 * Reply - Reply to sender.
 * Reply all - Reply to sender and all Cc: recipients.
 * Message Log - Jump to the communication log.
+* Transfer notice - Copy an article to a linked ticket.
 
 .. note::
 

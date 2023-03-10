@@ -44,10 +44,10 @@ The installation via RPM
 .. code-block::
 
   # Znuny LTS (modify version to latest see: https://download.znuny.org/releases/RPMS/rhel/7/)
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.0.40-01.noarch.rpm
+  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.1-01.noarch.rpm
 
-  # Znuny 6.3
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.3.1-01.noarch.rpm
+  # Znuny 6.5
+  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.1-01.noarch.rpm
 
 
 Install From Source
@@ -59,13 +59,13 @@ The installation from the source takes some more steps:
 
   # Download Znuny
   cd /opt
-  wget https://download.znuny.org/releases/znuny-latest-6.0.tar.gz  
+  wget https://download.znuny.org/releases/znuny-latest-6.5.tar.gz  
 
   # Extract
-  tar xfz znuny-latest-6.0.tar.gz
+  tar xfz znuny-latest-6.5.tar.gz
 
   # Create a symlink 
-  sudo ln -s /opt/znuny-6.0.38 /opt/otrs
+  sudo ln -s /opt/znuny-6.5.1 /opt/otrs
 
   # Add user for RHEL/CentOS
   useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs
@@ -100,7 +100,6 @@ to complete the missing ones.
 
   cpanm JavaScript::Minifier::XS CSS::Minifier::XS
 
-  yum remove -y gcc
 
 **Ubuntu / Debian**
 

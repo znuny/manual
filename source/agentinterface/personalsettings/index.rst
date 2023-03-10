@@ -21,6 +21,9 @@ There are three groups of settings to choose from.
 
 User Profile :fa:`user`
 
+.. image:: images/personal_menu_profile.png
+    :alt: Personal Menu Image
+
 Change Avatar
     Here you see your Gravatar image and instructions on how to change it.
 Change Password
@@ -30,7 +33,11 @@ Change Time Zone
 Out of Office
     Here you set your next active out of office period.
 
+
 Notification Settings :fa:`envelope`
+
+.. image:: images/personal_menu_notification.png
+    :alt: Personal Menu Image
 
 My Queue
     Select which queues you will work in.
@@ -43,8 +50,13 @@ Appointment Notifications
 
 Miscellaneous Settings :fa:`cog`
 
+.. image:: images/personal_menu_misc.png
+    :alt: Personal Menu Image
+
 Skin
     Which css design will you use.
+
+
 Overview Refresh Time
     How often should your overview refresh.
 Screen After New Ticket

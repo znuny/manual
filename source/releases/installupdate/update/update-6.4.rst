@@ -27,7 +27,6 @@ Check if every add-on you are using is available for version 6.4.
 Create a backup of the database, the application and all data, especially the attachments.
 
 .. code-block::
-  
   :caption: **Stop all services**
 
   # Stop the webserver

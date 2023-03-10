@@ -197,13 +197,13 @@ Console Commands
 
 Here you find the list of new console commands, added over the releases.
 
-Console commands help automate processes using scripts to manage Znuny, without using a GUI. 
+Console commands help automate processes using scripts to manage Znuny, without using a GUI.
 
-Commands are parameter of the console: 
+Commands are parameter of the console:
 
 ``bin/otrs.Console.pl <COMMAND>``
 
-Most of the commands take multiple parameters. 
+Most of the commands take multiple parameters.
 
 .. note::   We keep adding commands to the documentation with every release. This list can be incomplete. To get an overview of available commands, call ``bin/otrs.Console.pl`` without any parameter as the application user (znuny or otrs).
 
@@ -213,4 +213,3 @@ Most of the commands take multiple parameters.
    admin
    development
    maintenance
-

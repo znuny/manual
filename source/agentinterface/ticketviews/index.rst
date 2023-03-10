@@ -27,6 +27,7 @@ Available Screens
    agentticketmerge/index
    agentticketmove/index
    agentticketnote/index
+   agentticketnotetolinkedticket/index
    agentticketowner/index
    agentticketpending/index
    agentticketphoneinbound/index
