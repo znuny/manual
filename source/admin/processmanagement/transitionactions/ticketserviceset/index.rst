@@ -10,10 +10,6 @@ With this module you can set the service of a ticket.
 
 The name of the transition action is :ref:`TicketServiceSet <TransitionAction TicketServiceSet>` and should be used in combination with :ref:`TicketSLASet <TransitionAction TicketSLASet>`.
 
-.. image:: images/TicketServiceSet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

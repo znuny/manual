@@ -140,7 +140,7 @@ Executing transition action on other tickets
 
 With the parameters ``ForeignTicketID`` or ``ForeignTicketNumber``, it is possible to execute a transition action module on behalf of another ticket. 
 
-The example shows how the owner the ticket contained in the variable <OTRS_TICKET_DynamicField_MainTicketNumber> is set to *root@localhost* (UserID 1).
+The example shows how to close a parent ticket.
 
 .. image:: images/ForeignTicketNumber1.png
          :width: 100%
