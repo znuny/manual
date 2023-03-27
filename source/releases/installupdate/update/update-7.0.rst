@@ -8,12 +8,9 @@ This documentation explains how to update to the Znuny 7.0 release.
 
 Please note that your current system needs to be a:
 
-- ((OTRS)) Community Edition 6.0.x,
-- OTRS 6.0.x or 
-- Znuny LTS 6.0.x
+- Znuny LTS 6.5.x
 
-to perform the update. We do not support direct updates from  any version of OTRS or ((OTRS)) Community Edition before 6.0.
-
+to perform the update. We do not support direct updates from any version of Znuny LTS 6.5.
 
 Preparations
 ~~~~~~~~~~~~
@@ -111,7 +108,7 @@ Execute the migration script
 Update installed packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Packages for Znuny LTS (6.0.x) are not compatible with Znuny 7.0 and have to be updated.
+.. note:: Packages for Znuny LTS (6.5.x) are not compatible with Znuny 7.0 and have to be updated.
 
 
 .. code-block::
@@ -138,4 +135,3 @@ Restart everything
 	systemctl start postfix
 
 ..
-

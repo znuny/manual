@@ -2,7 +2,7 @@ Installation
 ############
 .. PageNavigation installupdate_install:
 
-To install Znuny or Znuny LTS you need:
+To install Znuny you need:
 
 - A database of your choice (MySQL, MariaDB, Postgresql)
 - MySQL 8 or newer requires Znuny 6.1 or newer
@@ -43,11 +43,8 @@ The installation via RPM
 
 .. code-block::
 
-  # Znuny LTS (modify version to latest see: https://download.znuny.org/releases/RPMS/rhel/7/)
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.0.40-01.noarch.rpm
-
-  # Znuny 6.3
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.3.1-01.noarch.rpm
+  # Znuny 7.0.1
+  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.1-01.noarch.rpm
 
 
 Install From Source
@@ -59,13 +56,13 @@ The installation from the source takes some more steps:
 
   # Download Znuny
   cd /opt
-  wget https://download.znuny.org/releases/znuny-latest-6.0.tar.gz  
+  wget https://download.znuny.org/releases/znuny-latest-7.0.tar.gz  
 
   # Extract
-  tar xfz znuny-latest-6.0.tar.gz
+  tar xfz znuny-latest-7.0.tar.gz
 
   # Create a symlink 
-  sudo ln -s /opt/znuny-6.0.38 /opt/otrs
+  sudo ln -s /opt/znuny-7.0.1 /opt/otrs
 
   # Add user for RHEL/CentOS
   useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs
