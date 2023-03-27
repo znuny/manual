@@ -3,7 +3,7 @@
 Scheduled Tasks (Generic Agent)
 ###############################
 
-It's very helpful to be able to automatically perform tasks at any given time or when other actions occur within the system. The generic agent provides you with such flexibility.
+It's very helpful to automatically perform tasks at any given time or when other actions occur within the system. The generic agent provides you with such flexibility.
 
 Programming a generic agent to run a scheduled task is available via the web interface.
 
