@@ -14,12 +14,12 @@ You will need, in addition to the underlying programs and paths:
 * Public key(s) of the recipient(s)
 * Passwords for importing private keys
 
-It is possible to administer PGP or S/MIME keys and certificates in the administration area. 
+It is possible to administer PGP or S/MIME keys and certificates in the administration area.
 
 
 .. note::
 
-    A keyring, for PGP, or certificates and keys, for S/MIME, may be manually loaded to the system. After doing so, you must delete the cache. 
+    A keyring, for PGP, or certificates and keys, for S/MIME, may be manually loaded to the system. After doing so, you must delete the cache.
 
 PGP
 ***
@@ -27,7 +27,7 @@ PGP
 Pretty Good Privacy (PGP) is an encryption program that provides cryptographic privacy and authentication for data communication. PGP is used for signing, encrypting, and decrypting texts, e-mails, etc.
 
 .. important::
-    
+
     Setup requires a valid tool for reading and managing the PGP Keyring. The software only provides the front-end for uploading and using the keys.
 
 To enable PGP for use, you must enable or configure the following options:
@@ -42,7 +42,7 @@ Acceptable File Format For Public And Private Key:
 Generally a ''.key'' file. See ane (example) content.
 
 .. code::
-    
+
     # Valid Public Key Content
 
     -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -57,7 +57,7 @@ Generally a ''.key'' file. See ane (example) content.
 
     lQWGBGLX69EBDADgLc4Po64Kx9D80VZnMOWsOR
     .......
-    
+
     -----END PGP PRIVATE KEY BLOCK-----
 
 To add public and private keys, navigate to the administration module for PGP.
@@ -84,7 +84,7 @@ Acceptable Formats For Certs And Key
 * .DER - DER-encoded certificate
 * .PEM - Base64 encoded certificate wrapped in -----BEGIN CERTIFICATE-----" and -----END CERTIFICATE-----
 
-To enable S/MIME for use, you must enable and/or configure the options: 
+To enable S/MIME for use, you must enable and/or configure the options:
 
 * ``SMIME`` - Activates SMIME in the front-end.
 * ``SMIME::Bin`` - Location to S/MIME binary.
@@ -98,12 +98,11 @@ To enable S/MIME for use, you must enable and/or configure the options:
 .. image:: images/smime_warning.png
     :alt: S/MIME Warning image
 
-
 To add public and private keys and certificates navigate to the administration module for S/MIME.
 
 * Click on Add Private Key.
 * Select your key.
-  
+
 Once uploaded, you can download the keys by clicking on their HASH. Additionally, you can download the fingerprint as a text file.
 
 Additionally you can View a Certificate and Manage Certificate Relations.
@@ -112,9 +111,8 @@ Additionally you can View a Certificate and Manage Certificate Relations.
 
     When adding your private key, you must enter the password. This will allow all queue users to encrypt and decrypt messages without entering the password.
 
-
 .. note::
-    
+
     When uploading private keys, you will be asked for your password.
 
 .. versionadded:: 6.4
