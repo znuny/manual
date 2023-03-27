@@ -14,7 +14,7 @@ The already know types for conditions `String`, `Regular expression` and `Transi
 
 The types ``==`` and ``!=`` work for all data types, ``>``, ``>=``, ``<`` and ``<=`` are only usefull with numbers and date / date time values.
 
-.. image:: images/ConditionTypes.png
+.. image:: images/condition_types.gif
          :width: 100%
          :alt: Available condition types
 
