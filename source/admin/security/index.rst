@@ -62,15 +62,8 @@ Generally a ''.key'' file. See ane (example) content.
 
 To add public and private keys, navigate to the administration module for PGP.
 
-.. image:: images/pgp_admin_badge.png
-    :alt: Admin PGP Badge
-
-
 * Click on Add PGP Key.
 * Select your key.
-
-.. image:: images/pgp_admin_overview.png
-    :alt: Admin PGP Overview
 
 Once uploaded, you can download the keys by clicking on their ID. Additionally, you can download the fingerprint as a text file.
 
@@ -108,30 +101,12 @@ To enable S/MIME for use, you must enable and/or configure the options:
 
 To add public and private keys and certificates navigate to the administration module for S/MIME.
 
-.. image:: images/smime_admin_badge.png
-    :alt: Admin S/MIME Badge
-
-
 * Click on Add Private Key.
 * Select your key.
-
-.. image:: images/smime_admin_overview.png
-    :alt: Admin S/MIME Overview
-
+  
 Once uploaded, you can download the keys by clicking on their HASH. Additionally, you can download the fingerprint as a text file.
 
-View a Certificate:
-
-.. image:: images/certificate.png
-    :alt: Certificate Image
-
-
-Manage Certificate Relations:
-
-.. image:: images/certificate-plus.png
-    :alt: Certificate Plus Image
-
-Here you can add private signing certificates and their chain certs.
+Additionally you can View a Certificate and Manage Certificate Relations.
 
 .. note::
 
