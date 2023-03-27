@@ -17,7 +17,7 @@ Schedule e-mail collection from any number of accounts by adding them to the sys
 
 Search for this module in the administrator panel.
 
-.. image:: images/postmaster_mail_account_module.png
+.. image:: images/postmaster_mail_account_badge.png
     :alt: Admin Add Account Image
     :align: center
 
