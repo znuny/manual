@@ -10,10 +10,6 @@ With this module you can set the state of a ticket.
 
 The name of the transition action is :ref:`TicketStateSet <TransitionAction TicketStateSet>`.
 
-.. image:: images/TicketStateSet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

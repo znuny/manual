@@ -8,11 +8,7 @@ Summary
 
 Use this transition action to set trigger a web service invoker. This will allow the software to consume a web service an work with any response during a trasition.
 
-The name of the transition action is :ref:`ExecuteInvoker <TransitionAction ExecuteInvoker>` 
-
-.. image:: images/webservice_TA_ExecuteInvoker.png
-         :width: 100%
-         :alt: Example transition action
+The name of the transition action is :ref:`ExecuteInvoker <TransitionAction ExecuteInvoker>`
 
 Transition Action Module Configuration
 **************************************

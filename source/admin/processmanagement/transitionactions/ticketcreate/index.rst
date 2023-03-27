@@ -10,10 +10,6 @@ This action allows you to create a new ticket.
 
 The name of the transition action is :ref:`TicketCreate <TransitionAction TicketCreate>`
 
-.. image:: images/TicketCreate.png
-         :width: 100%
-         :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

@@ -10,10 +10,6 @@ With this module you can set the customer user of a ticket.
 
 The name of the transition action is :ref:`TicketLockSet <TransitionAction TicketLockSet>`
 
-.. image:: images/TicketLockSet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

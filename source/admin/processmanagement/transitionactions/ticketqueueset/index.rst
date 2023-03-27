@@ -10,10 +10,6 @@ With this module you can set the queue a ticket.
 
 The name of the transition action is :ref:`TicketQueueSet <TransitionAction TicketQueueSet>`
 
-.. image:: images/TicketQueueSet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

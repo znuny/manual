@@ -10,10 +10,6 @@ Use this action to update an appointment from within a process.
 
 The name of the transition action is :ref:`AppointmentUpdate <TransitionAction AppointmentUpdate>`
 
-.. image:: images/appointment_update.png
-         :width: 100%
-         :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

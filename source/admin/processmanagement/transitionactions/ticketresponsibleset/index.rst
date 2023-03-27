@@ -10,10 +10,6 @@ With this module you can set the responsible for a ticket.
 
 The name of the transition action is :ref:`TicketResponsibleSet <TransitionAction TicketResponsibleSet>`
 
-.. image:: images/TicketResponsibleSet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

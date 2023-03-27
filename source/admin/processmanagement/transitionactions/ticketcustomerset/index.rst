@@ -10,10 +10,6 @@ With this module you can set the customer user of a ticket.
 
 The name of the transition action is :ref:`TicketCustomerSet <TransitionAction TicketCustomerSet>`
 
-.. image:: images/TicketCustomerSet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

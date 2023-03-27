@@ -10,10 +10,6 @@ Use this action to create an appointment from within a process.
 
 The name of the transition action is :ref:`AppointmentCreate <TransitionAction AppointmentCreate>`
 
-.. image:: images/AppointmentCreate.png
-         :width: 100%
-         :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

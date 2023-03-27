@@ -12,7 +12,7 @@ Some ITSM packages are required to use this transition action:
 * ITSMCore
 * ITSMConfigurationManagement
 
-These can be downloaded from the `ITSM Repository for Znuny <https://download.znuny.org/releases/itsm/packages6x/>`_
+These can be downloaded from the `ITSM Repository for Znuny <https://download.znuny.org/releases/itsm/packages7/>`_
 
 Summary
 *******
@@ -20,11 +20,6 @@ Summary
 Use this action to update configuration item(s).
 
 The name of the transition action is :ref:`ConfigItemUpdate <TransitionAction ConfigItemUpdate>`
-
-.. image:: images/ConfigItemUpdate.png
-         :width: 100%
-         :alt: Example transition action
-
 
 Transition Action Module Configuration
 **************************************

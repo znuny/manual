@@ -8,16 +8,11 @@ Summary
 
 Use this action to delete a dynamic field.
 
-The name of the transition action is :ref:`DynamicFieldRemove <TransitionAction DynamicFieldRemove>` 
+The name of the transition action is :ref:`DynamicFieldRemove <TransitionAction DynamicFieldRemove>`
 
-.. note:: 
+.. note::
 
-   This transition action will delete the field from a ticket completly and not clear the value. To clear a value, you can use :ref:`DynamicFieldSet <TransitionAction DynamicFieldSet>` 
-
-.. image:: images/DynamicFieldRemove.png
-  :alt: Example transition action
-  :width: 100%
-
+  This transition action will delete the field from a ticket completly and not clear the value. To clear a value, you can use :ref:`DynamicFieldSet <TransitionAction DynamicFieldSet>`
 
 Transition Action Module Configuration
 **************************************

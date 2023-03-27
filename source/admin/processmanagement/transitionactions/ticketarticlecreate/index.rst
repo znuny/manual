@@ -8,12 +8,7 @@ Summary
 
 This module allows you to create a ticket article.
 
-The name of the transition action is :ref:`TicketArticleCreate <TransitionAction TicketArticleCreate>` 
-    
-
-.. image:: images/TicketArticleCreate.png
-         :width: 100%
-         :alt: Example transition action
+The name of the transition action is :ref:`TicketArticleCreate <TransitionAction TicketArticleCreate>`
 
 Transition Action Module Configuration
 **************************************

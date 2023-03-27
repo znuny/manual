@@ -10,10 +10,6 @@ With this module you can set the ticket type.
 
 The name of the transition action is :ref:`TicketTypeSet <TransitionAction TicketTypeSet>`.
 
-.. image:: images/TicketTypeSet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

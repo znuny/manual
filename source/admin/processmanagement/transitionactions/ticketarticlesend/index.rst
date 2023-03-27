@@ -1,7 +1,7 @@
 .. _TransitionAction ArticleSend:
 
-Send an Article 
-################
+Send an Article
+###############
 
 Summary
 *******
@@ -9,10 +9,6 @@ Summary
 This action allows you to send an article via email.
 
 The name of the transition action is :ref:`ArticleSend <TransitionAction ArticleSend>`
-
-.. image:: images/ArticleSend.png
-         :width: 100%
-         :alt: Example transition action
 
 Transition Action Module Configuration
 **************************************

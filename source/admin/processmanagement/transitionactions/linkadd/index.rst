@@ -8,16 +8,11 @@ Summary
 
 This module allows you to link object together.
 
-The name of the transition action is :ref:`LinkAdd <TransitionAction LinkAdd>` 
+The name of the transition action is :ref:`LinkAdd <TransitionAction LinkAdd>`
 
-.. note:: 
+.. note::
 
-    The objects can be any object and not just tickets. Every available object and link type can be used. 
-    
-
-.. image:: images/LinkAdd.png
-         :width: 100%
-         :alt: Example transition action
+    The objects can be any object and not just tickets. Every available object and link type can be used.
 
 .. warning:: 
 

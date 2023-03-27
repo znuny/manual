@@ -10,10 +10,6 @@ Use this module to set the pending time of a ticket.
 
 The name of the transition action is :ref:`DynamicFieldPendingTimeSet <TransitionAction DynamicFieldPendingTimeSet>` 
 
-.. image:: images/DynamicFieldPendingTimeSet.png
-         :width: 100%
-         :alt: Example transition action
-
 .. note:: Example Results
 
    The screenshot depicts setting the state to pending auto close+ two days after the date set in "DeliverDate".

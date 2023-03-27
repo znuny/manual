@@ -10,10 +10,6 @@ With this module you can set the service level agreement (SLA) of a ticket.
 
 The name of the transition action is :ref:`TicketSLASet <TransitionAction TicketSLASet>` and should be used in combination with :ref:`TicketServiceSet <TransitionAction TicketServiceSet>`.
 
-.. image:: images/TicketSLASet.png
-    :width: 100%
-    :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 

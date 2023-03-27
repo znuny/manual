@@ -10,10 +10,6 @@ A transition action to control a ticket's watching agents. The watcher(s) can be
 
 The name of the transition action is :ref:`TicketWatchSet <TransitionAction TicketWatchSet>`.
 
-.. image:: images/TicketWatchSet.png
-         :width: 100%
-         :alt: Example transition action
-
 Transition Action Module Configuration
 **************************************
 
@@ -28,12 +24,6 @@ Transition Action Module Configuration
 +------------------+----------------+-----------------------------------------------+------------------------+
 | UserLogin        | root@localhost | One or more valid user login                  | yes, for (Un)Subscribe |
 +------------------+----------------+-----------------------------------------------+------------------------+
-
-**Unsubscribe All Example:**
-
-.. image:: images/UnsubscribeAll.png
-         :width: 100%
-         :alt: Example transition action
 
 .. note:: Multiple Values
 

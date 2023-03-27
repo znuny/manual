@@ -1,6 +1,6 @@
 .. _TransitionAction AppointmentRemove:
 
-Remove an Appointment 
+Remove an Appointment
 #####################
 
 Summary
@@ -9,10 +9,6 @@ Summary
 Use this action to remove (delete) an appointment from within a process.
 
 The name of the transition action is :ref:`AppointmentRemove <TransitionAction AppointmentRemove>`
-
-.. image:: images/appointment_remove.png
-         :width: 100%
-         :alt: Example transition action
 
 Transition Action Module Configuration
 **************************************

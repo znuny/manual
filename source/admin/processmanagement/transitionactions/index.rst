@@ -5,6 +5,8 @@ Transition Actions
 .. image:: images/process_management_transition_action_add.png
     :alt: Process Management Transition Action Add Image
 
+Adding a transition action is always similar, only the attributes will change. See the following list for the individual needed attributes.
+
 Overview
 
 .. toctree::

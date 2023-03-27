@@ -6,18 +6,13 @@ Incrementing a Dynamic Field Value
 Summary
 ********
 
-Use this action to increase or decrease a numerical value saved to a text field. 
+Use this action to increase or decrease a numerical value saved to a text field.
 
-The name of the transition action is :ref:`DynamicFieldIncrement <TransitionAction DynamicFieldIncrement>` 
+The name of the transition action is :ref:`DynamicFieldIncrement <TransitionAction DynamicFieldIncrement>`.
 
 .. note::
 
    This transition action is designed for fields of the type Text. Don't expect a valid result when using a dropdown, for example.
-
-.. image:: images/DynamicFieldIncement.png
-  :alt: Example transition action
-  :width: 100%
-
 
 Transition Action Module Configuration
 **************************************
