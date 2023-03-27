@@ -52,10 +52,10 @@ An Example Microsoft App
 
 In our Blog, we outlined an `example setup <https://www.znuny.org/en/blog/modern-authentication-with-microsoft>`_
 
-Adding a Token
+Token Settings
 **************
 
-Adding a token will generates a YAML configuration in the database. This file has a specific format depending upon the provider and can be exported, modified, and imported as needed by the configuration or for migration (:ref:`see below <PageNavigation authenticate_token_index_backup_and_migration>`). We include basic formatting templates for the email providers, Google and Microsoft. The configuration is all done comfortably in the web interface, and you may generate as many service tokens as needed for your accounts. 
+Adding a token will generates a YAML configuration in the database. This file has a specific format depending upon the provider and can be exported, modified, and imported as needed by the configuration or for migration (:ref:`see below <PageNavigation authenticate_token_index_backup_and_migration>`). We include basic formatting templates for the email providers, Google and Microsoft. The configuration is all done comfortably in the web interface, and you may generate as many service tokens as needed for your accounts.
 
 .. important::
 
@@ -64,7 +64,7 @@ Adding a token will generates a YAML configuration in the database. This file ha
     You can set this using the command-line as follows:
 
     .. code-block::
-    
+
         [otrs@host ~]$ bin/otrs.Console.pl Admin::Config::Update --setting-name HttpType --value https
 
     Alternatively, you can search for *HttpType* in the system configuration and set it there.
@@ -109,17 +109,6 @@ Expired token
 Expired refresh token
     Shows a notification for admins below the top menu if the OAuth2 refresh token has expired.
 
-Edit a Token
-************
-
-You can edit the token at any time.
-
-.. image:: images/oauth2_admin_edit.png
-    :alt: Image Edit Token
-
-.. note:: 
-    
-    The template type is permanent once the token is saved.
 
 Token Overview
 **************
@@ -129,6 +118,10 @@ It the token overview, it is necessary to manually request a new token upon toke
 .. image:: images/oauth2_admin_overview.png
     :alt: Image Token Notification
 
+Edit a Token
+************
+
+Select any token from the overview to edit a token.
 
 Token Notifications
 *******************
@@ -138,8 +131,8 @@ In the notification area, you receive notifications if a token or refresh token 
 .. image:: images/oauth2_admin_notification.png
     :alt: Image Token Notification
 
-.. note:: 
-    
+.. note::
+
     When a refresh token expires, you must generate a new one with your service provider.
 
 Backup and Migration
@@ -158,17 +151,17 @@ Vendor-Specific Documentation
 *****************************
 
 .. important::
-    
+
     Redirect URI: The redirect_uri for Znuny is built from the system variables in the following manner:
-    
+
     ${HttpType}://${FQDN}/${ScriptAlias}/get-oauth2-token-by-authorization-code.pl 
-    
+
     i.e.
-    
+
     https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl 
 
 .. versionadded:: 6.4
 
     Starting in this release, we've added a special switch to conform to Microsoft's requirement for POP3 and OAuth2. This is pre-configured for the hosts listed in the `Microsoft KBA <https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353>`_. Hosts that need a separate info about authentication method and token (instead of both in one line) can be added to the system configuration option. ``MailAccount::POP3::Auth::SplitOAuth2MethodAndToken::Hosts``
-    
+
     Most commonly needed for Office365.
