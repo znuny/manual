@@ -8,6 +8,9 @@ Example configuration for a web service to notify agents about new tickets by us
 Requirements
 ~~~~~~~~~~~~
 
+Mattermost Webhook
+++++++++++++++++++
+
 Before you start, you need a webhook. See the Mattermost manual [#f1]_ how to create one. Keep the Webhook URL.
 
 Enable the setting ``PreferencesGroups###MattermostUsername`` in the system configuration and agent's are able to maintain their Mattermost username in the user preferences:
@@ -15,6 +18,37 @@ Enable the setting ``PreferencesGroups###MattermostUsername`` in the system conf
 .. image:: images/userpreferences.png
          :width: 100%
          :alt: View of the Notication Settings in the Personal Preferences
+
+Mattermost Username Preference
+++++++++++++++++++++++++++++++
+
+You will need to add the following, or similar, XML Config to your system.
+
+.. code-block::
+    <?xml version="1.0" encoding="utf-8" ?>
+        <otrs_config version="2.0" init="Application">
+               <Setting Name="PreferencesGroups###Mattermost Username" Required="1" Valid="1">
+                <Description Translatable="1">Enter your matter most username.</Description>
+                <Navigation>Frontend::Agent::View::Preferences</Navigation>
+                <Value>
+                    <Hash>
+                        <Item Key="Module">Kernel::Output::HTML::Preferences::Generic</Item>
+                        <Item Key="PreferenceGroup">Miscellaneous</Item>
+                        <Item Key="Label" Translatable="1">Mattermost Username</Item>
+                        <Item Key="Desc" Translatable="1">This your Mattermost Username.</Item>
+                        <Item Key="Key" Translatable="1">Mattermost Username</Item>
+                        <Item Key="Block">Input</Item>
+                        <Item Key="Data">[% Env("MattermostUsername") %]</Item>
+                        <Item Key="PrefKey">MattermostUsername</Item>
+                        <Item Key="Prio">7000</Item>
+                        <Item Key="Active">1</Item>
+                    </Hash>
+                </Value>
+            </Setting>
+        
+        </otrs_config>
+
+Once you add this, and rebuild the configruation, your users will be able to set the preference.
 
 Import and Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
