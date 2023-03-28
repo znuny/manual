@@ -8,7 +8,7 @@ Summary
 
 With this module you can set the priority a ticket.
 
-The name of the transition action is :ref:`TicketPrioritySet <TransitionAction TicketPrioritySet>.
+The name of the transition action is :ref:`TicketPrioritySet <TransitionAction TicketPrioritySet>`.
 
 Transition Action Module Configuration
 **************************************

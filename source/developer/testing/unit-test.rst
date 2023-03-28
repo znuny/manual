@@ -155,13 +155,13 @@ You also need to have an instance of the OTRS web frontend running on the FQDN t
 
 To run your tests, just use
 
-.. code-block:: screen
+.. code-block::
 
    # Run Calendar Test
    bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar
 
 
-.. code-block:: screen
+.. code-block::
 
    shell:/opt/otrs> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar
    +-------------------------------------------------------------------+
@@ -176,7 +176,7 @@ To run your tests, just use
 
 You can even run several tests at once, just supply additional test arguments to the command:
 
-.. code-block:: screen
+.. code-block::
 
    shell:/opt/otrs> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar --test Appointment
    +-------------------------------------------------------------------+
@@ -235,8 +235,7 @@ The framework provides API for unit testing that was used in the previous exampl
    
 
 ``IsNot()``
-   This function tests whether the given scalar variables are
-unequal.
+   This function tests whether the given scalar variables are unequal.
 
 .. code-block:: perl
 

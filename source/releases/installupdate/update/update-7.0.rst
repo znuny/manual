@@ -17,12 +17,12 @@ Preparations
 
 Before the update can started we need to perform some tasks to prepare the update.
 
-Check if every add-on your are using is available for version 7.0. You don't have to care on packages which are already integrated, see the list of them in the :ref:`release notes<Integrated features 7.0>`.
+Check if every add-on your are using is available for version 7.0. You don't have to care on packages which are already integrated, see the list of them in the :ref:`release notes <Integrated features 7.0>`.
 
 Create a backup of the database, the application and all data, especially the attachments.
 
 
-.. code-block:: 
+.. code-block::
 	:caption: **Stop all services**
 
 	# Stop the webserver

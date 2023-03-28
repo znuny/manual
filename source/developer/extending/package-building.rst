@@ -342,7 +342,7 @@ Build Package
 
 To build a package from the specification file, do the following.
 
-.. code-block:: screen
+.. code-block::
 
    shell> bin/otrs.Console.pl Dev::Package::Build /path/to/example.sopm /tmp
    Building package...

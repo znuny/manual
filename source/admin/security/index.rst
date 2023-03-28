@@ -95,9 +95,6 @@ To enable S/MIME for use, you must enable and/or configure the options:
 
     Configuration errors will be shown to the administrator.
 
-.. image:: images/smime_warning.png
-    :alt: S/MIME Warning image
-
 To add public and private keys and certificates navigate to the administration module for S/MIME.
 
 * Click on Add Private Key.

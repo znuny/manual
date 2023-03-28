@@ -96,7 +96,7 @@ The possibility to execute system command (CMD) was removed for security reasons
 
 **Example Module**
 
-.. code:: perl
+.. code-block:
 
   # --
   # Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
@@ -150,7 +150,7 @@ The possibility to execute system command (CMD) was removed for security reasons
 
 **Example Parameters Available for Use:**
 
-.. code:: perl
+.. code-block:
 
   VAR1 = {
            'EscalationTimeSearchType' => '',

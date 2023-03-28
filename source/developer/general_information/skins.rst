@@ -19,7 +19,7 @@ Skin loading
 
 It is important to note that the "default" skin will *always* be loaded *first*. If the agent selected another skin than the "default" one, then the other one will be loaded only *after* the default skin. By "loading" here we mean that OTRS will put tags into the HTML content which cause the CSS files to be loaded by the browser. Let's see an example of this:
 
-.. code:: html
+.. code-block:
 
    <link rel="stylesheet" href="/otrs-web/skins/Agent/default/css-cache/CommonCSS_179376764084443c181048401ae0e2ad.css" />
    <link rel="stylesheet" href="/otrs-web/skins/Agent/ivory/css-cache/CommonCSS_e0783e0c2445ad9cc59c35d6e4629684.css" />
@@ -27,7 +27,7 @@ It is important to note that the "default" skin will *always* be loaded *first*.
 
 Here it can clearly be seen that the default skin is loaded first, and then the custom skin specified by the agent. In this example, we see the result of the activated loader (``Loader::Enabled`` set to 1), which gathers all CSS files, concatenates and minifies them and serves them as one chunk to the browser. This saves bandwidth and also reduces the number of HTTP requests. Let's see the same example with the Loader turned off:
 
-.. code:: html
+.. code-block:
 
    <link rel="stylesheet" href="/otrs-web/skins/Agent/default/css/Core.Reset.css" />
    <link rel="stylesheet" href="/otrs-web/skins/Agent/default/css/Core.Default.css" />
@@ -158,7 +158,7 @@ To make this configuration active, we need to navigate to the SysConfig module i
 
 In conclusion: to create a new skin in OTRS, we had to place the new logo file, and create one CSS and one XML file, resulting in three new files:
 
-.. code:: screen
+.. code-block:
 
    Kernel/Config/Files/CustomSkin.xml
    var/httpd/htdocs/skins/Agent/custom/img/custom-logo.png

@@ -34,7 +34,7 @@ If you are not familiar with GitHub, forking is as easy as a click of your mouse
    Please replace ``git@github.com:znuny/Znuny.git`` with your own repository. If you complete the commands as below, you will just have a copy of the source code and will not be able to push branches or make pull requests based upon this clone. For more information about forking and working with GitHub see the section `Quick Start <https://docs.github.com/en/get-started/quickstart>`_ in the GitHub documentation.
 
 
-.. code-block:: screen
+.. code-block::
 
    # for git dev
    shell> git clone git@github.com:znuny/Znuny.git -b dev
@@ -56,7 +56,7 @@ Module Tools Checkout
 
 Check out ``module-tools`` (from GitHub) for your development environment. It contains useful tools for developers.
 
-.. code-block:: screen
+.. code-block::
 
    shell> git clone git@github.com:Znuny/module-tools.git
 
@@ -78,7 +78,7 @@ Link the FAQ
 
 Link the modules source to the framework.
 
-.. code:: screen
+.. code-block:
 
    shell> ~/src/module-tools/link.pl ~/src/FAQ/ ~/src/otrs/
 
@@ -88,7 +88,7 @@ Link the modules source to the framework.
 
 Rebuild the configuration files to complete integration in Znuny.
 
-.. code:: screen
+.. code-block:
 
    shell> ~/src/otrs/bin/otrs.Console.pl Maint::Config::Rebuild
 
@@ -98,7 +98,7 @@ Rebuild the configuration files to complete integration in Znuny.
 
    **Example:**
 
-   .. code:: screen
+   .. code-block:
 
       shell> ~/src/module-tools/DatabaseInstall.pl -m FAQ.sopm -a install
       shell> ~/src/module-tools/CodeInstall.pl -m FAQ.sopm -a install
@@ -106,7 +106,7 @@ Rebuild the configuration files to complete integration in Znuny.
 
 To remove links from Znuny enter the following command:
 
-.. code-block:: screen
+.. code-block::
 
    shell> ~/src/module-tools/remove_links.pl ~/src/otrs/
 

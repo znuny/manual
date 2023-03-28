@@ -217,7 +217,8 @@ These are, for example:
 Command Frontend (CMD)
 **********************
 .. _PageNavigation system_architecture_CMD:
-:ref:`- jump top - <PageNavigation system_architecture>` 
+
+:ref:`- jump top - <PageNavigation system_architecture>`
 
 The CMD front-end are used by non-humans and have access to all framework objects except the ``LayoutObject``.
 
@@ -227,7 +228,7 @@ Additional CMD modules are all those contained under the ``bin``` directory. Mos
 
 Generic Interface Modules
 *************************
-:ref:`- jump top - <PageNavigation system_architecture>` 
+:ref:`- jump top - <PageNavigation system_architecture>`
 
 Generic interface modules are under ``Kernel/GenericInterface/*``. Different generic interface modules are used to handle each part of a web service provider or consumer request to the system.
 
