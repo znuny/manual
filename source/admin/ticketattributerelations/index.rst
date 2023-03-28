@@ -22,7 +22,7 @@ Supported attributes:
 
 This module can be found in the admin area:
 
-.. image:: images/ticketattributerelations.png
+.. image:: images/ticket_attribute_relations_admin_badge.png
          :name: attribute_relations_admin
          :width: 30%
 
