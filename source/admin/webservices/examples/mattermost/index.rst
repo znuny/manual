@@ -25,6 +25,7 @@ Mattermost Username Preference
 You will need to add the following, or similar, XML Config to your system.
 
 .. code-block::
+
     <?xml version="1.0" encoding="utf-8" ?>
         <otrs_config version="2.0" init="Application">
                <Setting Name="PreferencesGroups###Mattermost Username" Required="1" Valid="1">
@@ -45,7 +46,6 @@ You will need to add the following, or similar, XML Config to your system.
                     </Hash>
                 </Value>
             </Setting>
-        
         </otrs_config>
 
 Once you add this, and rebuild the configruation, your users will be able to set the preference.
