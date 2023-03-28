@@ -19,7 +19,7 @@ Configuration
 
 Multiple transport methods can be used in one ticket notification, or just e-mail or just a web service. The availabel settings should be easy to understand:
 
-.. image:: images/webservice_notification_configuration.png         
+.. image:: images/webservice_notification.png
          :width: 100%
          :alt: Configuration web service transport
 
