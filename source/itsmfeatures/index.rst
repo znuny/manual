@@ -48,14 +48,6 @@ Then navigate to the package manager and update the online repository to install
 1. GeneralCatalog
 2. ITSMCore
 
-.. image:: images/itsm_feature_list.png
-    :alt: ITSM Feature List Image
-
-Alternatively, you can install the bundle in just one click, if the repository is configured for this.
-
-.. image:: images/itsm_bundle.png
-    :alt: ITSM Bundle Image
-
 .. note::
     
     Installing from the Bundle resolves dependencies themselves.
