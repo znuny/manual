@@ -12,6 +12,9 @@ Please note that your current system needs to be a:
 
 to perform the update. We do not support direct updates from any version of Znuny LTS 6.5.
 
+IMPORTANT: The base settings have been changed to reflect the new product name. This means, that you may either switch to the new user znuny and new base dir /opt/znuny, or keep your old settings.
+If you decied to change, you'll need to create the new user, and modify your Config.pm setings before continuing. This upgrading instruction now uses <HOME_DIR> and <APP_USER>
+
 Preparations
 ~~~~~~~~~~~~
 
@@ -35,10 +38,9 @@ Create a backup of the database, the application and all data, especially the at
 
 	# Remove crontab, stop daemon
 	su -c 'bin/Cron.sh stop' - otrs
-	su -c 'bin/otrs.Daemon.pl stop' - otrs
+	su -c 'bin/znuny.Daemon.pl stop' - otrs
 
 ..
-
 
 Update via RPM
 ~~~~~~~~~~~~~~
@@ -53,7 +55,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 	yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.1-01.noarch.rpm
 
 	# Check for missing modules and add required modules
-	/opt/otrs/bin/otrs.CheckModules.pl --all
+	<HOME_DIR>/bin/znuny.CheckModules.pl --all
 
 .. 
 
@@ -72,26 +74,28 @@ The installation from source takes some more steps. If there are more file to re
 	tar xfz znuny-latest-7.0.tar.gz
 
 	# Set permissions
-	/opt/znuny-7.0.1/bin/otrs.SetPermissions.pl
+	# If you intend on keeping the previous user, then run this command.
+	# The new default user is znuny
+	/opt/znuny-7.0.1/bin/znuny.SetPermissions.pl --znuny-user <APP_USER>
 
 	# Restore Kernel/Config.pm, articles, etc.
-	cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-7.0.1/Kernel/
-	mv /opt/otrs/var/article/* /opt/znuny-7.0.1/var/article/
+	cp -av <HOME_DIR>/Kernel/Config.pm /opt/znuny-7.0.1/Kernel/
+	mv <HOME_DIR>/var/article/* /opt/znuny-7.0.1/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
-	for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.1/; done
+	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.1/; done
 
 	# Restore modified and custom cron job
-	for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.1/var/cron/; done
+	for f in $(find -L <HOME_DIR>/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.1/var/cron/; done
 
 	# Delete the old symlink
-	rm /opt/otrs
+	rm /opt/<HOME_DIR>
 	
 	# Create a symlink 
-	ln -s /opt/znuny-7.0.1 /opt/otrs
+	ln -s /opt/znuny-7.0.1 /opt/<HOME_DIR>
 
 	# Check for missing modules and add required modules
-	/opt/otrs/bin/otrs.CheckModules.pl --all
+	<HOME_DIR>/bin/znuny.CheckModules.pl --all
 
 ..
 
@@ -100,8 +104,8 @@ Execute the migration script
 
 .. code-block::
 
-    su - otrs
-    scripts/MigrateToZnuny6_1.pl
+    su - <APP_USER>
+    scripts/MigrateToZnuny7_0.pl
 
 ..
 
@@ -113,8 +117,8 @@ Update installed packages
 
 .. code-block::
 
-    su - otrs
-    bin/otrs.Console.pl Admin::Package::UpgradeAll
+    su - <APP_USER>
+    bin/znuny.Console.pl Admin::Package::UpgradeAll
 
 ..
 

@@ -4628,7 +4628,7 @@ To create this new Dynamic Field we will create 4 files: a Configuration File (X
 
 .. code-block:: shell
 
-    $HOME (e. g. /opt/otrs/)
+    $HOME (e. g. /opt/znuny/)
     |
     ...
     |--/Kernel/
@@ -5935,7 +5935,7 @@ To illustrate this process a new Dynamic Field functionality extension for the f
 
 .. code-block:: perl
 
-    $HOME (e. g. /opt/otrs/)
+    $HOME (e. g. /opt/znuny/)
     |
     ...
     |--/Kernel/

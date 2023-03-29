@@ -163,34 +163,34 @@ To run your tests, just use
 
 .. code-block::
 
-   shell:/opt/otrs> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar
+   shell:/opt/znuny> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar
    +-------------------------------------------------------------------+
-   /opt/otrs/scripts/test/Calendar.t:
+   /opt/znuny/scripts/test/Calendar.t:
    +-------------------------------------------------------------------+
    .................................................................................................
    =====================================================================
    yourhost ran tests in 2s
    All 97 tests passed.
-   shell:/opt/otrs>
+   shell:/opt/znuny>
    
 
 You can even run several tests at once, just supply additional test arguments to the command:
 
 .. code-block::
 
-   shell:/opt/otrs> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar --test Appointment
+   shell:/opt/znuny> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar --test Appointment
    +-------------------------------------------------------------------+
-   /opt/otrs/scripts/test/Calendar.t:
+   /opt/znuny/scripts/test/Calendar.t:
    +-------------------------------------------------------------------+
    .................................................................................................
    +-------------------------------------------------------------------+
-   /opt/otrs/scripts/test/Calendar/Appointment.t:
+   /opt/znuny/scripts/test/Calendar/Appointment.t:
    +-------------------------------------------------------------------+
    ..................................................................................................................
    =====================================================================
    yourhost ran tests in 5s
    All 212 tests passed.
-   shell:/opt/otrs>
+   shell:/opt/znuny>
    
 
 If you execute ``bin/otrs.Console.pl Dev::UnitTest::Run`` without any argument, it will run all tests found in the system. Please note that this can take some time to finish.
@@ -386,7 +386,7 @@ This method returns ``undef`` in case the test database is not configured. If it
       DatabaseXMLString => $XML,# (optional) OTRS database XML schema to execute
          # or
       DatabaseXMLFiles => [     # (optional) List of XML files to load and execute
-         '/opt/otrs/scripts/database/otrs-schema.xml',
-         '/opt/otrs/scripts/database/otrs-initial_insert.xml',
+         '/opt/znuny/scripts/database/otrs-schema.xml',
+         '/opt/znuny/scripts/database/otrs-initial_insert.xml',
       ],
    );

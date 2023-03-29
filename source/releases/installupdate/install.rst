@@ -18,7 +18,7 @@ To install Znuny you need:
 Basics
 ******
 
-Some basic packages are needed to get going. 
+Some basic packages are needed to get going.
 This includes the web server, database (MariaDB in this case), cpanminus to install additional
 Perl modules and TAR to extract the source.
 
@@ -56,35 +56,35 @@ The installation from the source takes some more steps:
 
   # Download Znuny
   cd /opt
-  wget https://download.znuny.org/releases/znuny-latest-7.0.tar.gz  
+  wget https://download.znuny.org/releases/znuny-latest-7.0.tar.gz
 
   # Extract
   tar xfz znuny-latest-7.0.tar.gz
 
-  # Create a symlink 
-  sudo ln -s /opt/znuny-7.0.1 /opt/otrs
+  # Create a symlink
+  sudo ln -s /opt/znuny-7.0.1 /opt/znuny
 
   # Add user for RHEL/CentOS
-  useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs
+  useradd -d /opt/znuny -c 'Znuny user' -g apache -s /bin/bash -M -N znuny
 
   # Add user for Debian/Ubuntu
-  useradd -d /opt/otrs -c 'Znuny user' -g www-data -s /bin/bash -M -N otrs
+  useradd -d /opt/znuny -c 'Znuny user' -g www-data -s /bin/bash -M -N znuny
 
   # Copy Default Config
-  cp /opt/otrs/Kernel/Config.pm.dist /opt/otrs/Kernel/Config.pm
+  cp /opt/znuny/Kernel/Config.pm.dist /opt/znuny/Kernel/Config.pm
 
   # Set permissions
-  /opt/otrs/bin/otrs.SetPermissions.pl
+  /opt/znuny/bin/znuny.SetPermissions.pl
 
   # As otrs User - Rename default cronjobs
-  su - otrs
-  cd /opt/otrs/var/cron
+  su - znuny
+  cd /opt/znuny/var/cron
   for foo in *.dist; do cp $foo `basename $foo .dist`; done
 
 Install Required Perl Modules
 *****************************
 
-Based on your distribution there are several different was to install the needed modules. 
+Based on your distribution there are several different was to install the needed modules.
 
 **CentOS / Red Hat**
 
@@ -124,17 +124,17 @@ Create a new file for the mysql config:
 
 .. code-block::
 
-	/etc/mysql/mariadb.conf.d/50-znuny_config.cnf
+  /etc/mysql/mariadb.conf.d/50-znuny_config.cnf
 
 .. code-block::
 
-	[client]
-	max_allowed_packet=256M
+  [client]
+  max_allowed_packet=256M
 
-	[mysqld]
-	innodb_file_per_table
-	innodb_log_file_size = 256M
-	max_allowed_packet=256M
+  [mysqld]
+  innodb_file_per_table
+  innodb_log_file_size = 256M
+  max_allowed_packet=256M
 
 .. important::
 
@@ -166,11 +166,11 @@ Enable MPM prefork module:
 
 **Ubuntu / Debian**
 
-To enable the Znuny Apache config you need to create a symlink to our sample config. 
+To enable the Znuny Apache config you need to create a symlink to our sample config.
 
 .. code-block:: bash
 
-  ln -s /opt/otrs/scripts/apache2-httpd.include.conf /etc/apache2/conf-available/zzz_znuny.conf
+  ln -s /opt/znuny/scripts/apache2-httpd.include.conf /etc/apache2/conf-available/zzz_znuny.conf
 
 
 Enable the needed Apache modules:
@@ -225,5 +225,5 @@ Switch to the otrs user:
 
 .. code-block:: bash
 
-  su - otrs
+  su - <APP_USER>
   bin/Cron.sh start

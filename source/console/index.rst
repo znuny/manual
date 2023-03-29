@@ -101,7 +101,7 @@ To test this functionality, rename the distribution example file.
 
 .. code-block:: shell
 
-    su - otrs
+    su - <APP_USER>
     cd var/stats/formatdefinition/excel 
     cp 10001.example.yml.dist 10001.yml
 

@@ -186,14 +186,14 @@ Client Certificate
 
 .. note::
 
-    An example ``/opt/otrs/var/certificates/SOAP/certificate.pem``
+    An example ``/opt/znuny/var/certificates/SOAP/certificate.pem``
 
 Client Certificate Key
     The full path and name of the SSL client certificate key file (if not already included in certificate file).
 
 .. note::
 
-    An example ``/opt/otrs/var/certificates/SOAP/key.pem``
+    An example ``/opt/znuny/var/certificates/SOAP/key.pem``
 
 Client Certificate Key Password
     The password to open the SSL certificate if the key is encrypted.
@@ -203,14 +203,14 @@ Certification Authority (CA) Certificate
 
 .. note::
 
-    An example ``/opt/otrs/var/certificates/SOAP/CA/ca.pem``
+    An example ``/opt/znuny/var/certificates/SOAP/CA/ca.pem``
 
 Certification Authority (CA) Directory
     The full path of the certification authority directory where the CA certificates are stored in the file system.
 
 .. note::
 
-    An example ``/opt/otrs/var/certificates/SOAP/CA``
+    An example ``/opt/znuny/var/certificates/SOAP/CA``
 
 Authentication Options
 ======================
