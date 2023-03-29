@@ -78,7 +78,7 @@ Pending State
 
 If a pending or pending auto type state is selected a date-time selector appears.
 
-.. image:: images/state_pending_component.png
+.. image:: images/state_pending_component.gif
     :alt: Pending State Time Selection Image
 
 

@@ -7,14 +7,10 @@ Sometimes communications do not reach their destination. In this case, an unwant
 Select *Miscellaneous* then *Merge* from the :ref:`ticket menu <PageNavigation ticketviews_agentticketzoom_ticketmenu>`.
 
 In this screen you can select a target ticket for the merge. Optionally you can also send a message to the customer informing them that you have merged this into another ticket.
-
-.. image:: images/agent_merge_full.png
-    :alt: Agent Ticket Merge Image
-
+Initially only tickets from the customer are shown. You may remove this filter for more results.
 You can filter for ticket number or ticket title. Initially, only open tickets for the currently selected customer are searched.
 
-
-.. image:: images/agent_merge_filter.png
+.. image:: images/merge_filter_function.gif
     :alt: Agent Ticket Merge Image
 
 .. warning::

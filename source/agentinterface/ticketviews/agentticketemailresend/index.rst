@@ -12,20 +12,14 @@ Resending an e-mail after hard failure opens the :ref:`agent ticket compose <Pag
 
 .. note::
 
-    A message failure warning will be visible before a hard failure happens. The amount of retries is configurable. Contact your administrator for more information.
+    A warning appears before a hard failure happens. The amount of retries is configurable. Contact your administrator for more information.
 
-Soft Failure
+Message Area
 ************
 
-.. image:: images/resend_attempt_notification.png
+.. image:: images/resend_info.png
 
-Hard Failure
-*************
-
-A hard failure results in a notification. The article menu *Resend* then appears.
-
-.. image:: images/resend_failure_notification.png
-    :alt: Resend Hard Failure Image
+After a hard failure results in a notification. The article menu *Resend* then appears.
 
 .. note::
 

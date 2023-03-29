@@ -18,7 +18,14 @@ Dropdown
 
 New Window
     Configurable by the administrator.
-    
+
+This will show the queue as a menu item.
+
+.. image:: images/agent_ticket_move_menu.png
+    :alt: Agent Ticket Move Menu Image
+
+You can then add a note. when moving.
+
 .. image:: images/agent_ticket_move.png
     :alt: Agent Ticket Move Image
 

@@ -14,16 +14,13 @@ Configure Search
 
 By default, a full-text search is performed. You may add individual attributes to the search to refine your search.
 
-.. image:: images/add_search_term.gif
-    :alt: Adding a Search Term GIF
-
 
 Search Profiles
 ***************
 
 Create a search profile before searching to quickly load options or perform a quick search using the toolbar, if configured.
 
-.. image:: images/add_search_profile.gif
+.. image:: images/search_profile.gif
     :alt: Add Search Profile GIF
 
 Update a Profile
