@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 #
 # 
+
+import time
+
 source_suffix = '.rst'
 
 master_doc = 'index'
 
 # General information about the project.
 project = u'Znuny'
-copyright = u'2021-2022, Znuny Project'
+copyright = u'2021-%s, Znuny Project' % time.strftime("%Y")
 author = u'The Znuny Community and Team'
 
 
@@ -16,7 +19,7 @@ author = u'The Znuny Community and Team'
 #release = u'1.0'
 
 
-language = None
+language = 'en'
 
 extensions = [
     'sphinx_copybutton',
