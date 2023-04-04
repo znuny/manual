@@ -15,3 +15,4 @@ List of annexes.
    entity_management/index
    placeholders/index
    navigation/index
+   x_headers/index
