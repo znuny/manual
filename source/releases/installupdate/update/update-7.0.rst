@@ -10,7 +10,7 @@ Please note that your current system needs to be a:
 
 - Znuny LTS 6.5.x
 
-to perform the update. We do not support direct updates from any version of Znuny LTS 6.5.
+to perform the update. We do not support direct updates from any version before Znuny LTS 6.5.
 
 IMPORTANT: The base settings have been changed to reflect the new product name. This means, that you may either switch to the new user znuny and new base dir /opt/znuny, or keep your old settings.
 If you decied to change, you'll need to create the new user, and modify your Config.pm setings before continuing. This upgrading instruction now uses <HOME_DIR> and <APP_USER>
