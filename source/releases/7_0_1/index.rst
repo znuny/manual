@@ -1,16 +1,16 @@
-6.4.4
+7.0.1
 #####
 
 **Release Information:**
 
 +---------------------+-------------------------------------------------------------+
-| Release Date        | 23-NOV-2022                                                 |
+| Release Date        | 29-MAR-2023                                                 |
 +---------------------+-------------------------------------------------------------+
-| Release Type        | Patchlevel                                                  |
+| Release Type        | Feature                                                     |
 +---------------------+-------------------------------------------------------------+
-| Download            | `<https://download.znuny.org/releases/znuny-6.4.4.tar.gz>`_ |
+| Download            | `<https://download.znuny.org/releases/znuny-7.0.1.tar.gz>`_ |
 +---------------------+-------------------------------------------------------------+
-| GitHub              | `<https://github.com/znuny/Znuny/tree/rel-6_4_4>`_          |
+| GitHub              | `<https://github.com/znuny/Znuny/tree/rel-7_0_1>`_          |
 +---------------------+-------------------------------------------------------------+
 
 .. toctree::

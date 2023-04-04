@@ -23,10 +23,10 @@ build:
   script:
     - make html SPHINXBUILD=sphinx-build
 
-deploy-staging:
+deploy-znuny:
   stage: deploy
   only: 
-    - staging
+    - znuny
   except:
     - merge_requests
   script:
@@ -34,25 +34,12 @@ deploy-staging:
     - eval $(ssh-agent -s)
     - echo "$DEPLOY_PRIVATE_KEY" | ssh-add -
     - ssh-keyscan $DEPLOY_HOST  >> $HOME/.ssh/known_hosts
-    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc.internal/
-
-deploy-live:
-  stage: deploy
-  only: 
-    - main
-  except:
-    - merge_requests
-  script:
-    - test -d $HOME/.ssh || mkdir $HOME/.ssh
-    - eval $(ssh-agent -s)
-    - echo "$DEPLOY_PRIVATE_KEY" | ssh-add -
-    - ssh-keyscan $DEPLOY_HOST  >> $HOME/.ssh/known_hosts
-    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc.public/
+    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc/znuny
 
 github-sync:
   stage: deploy
   only: 
-    - main
+    - znuny
   except:
     - merge_requests
   script:
