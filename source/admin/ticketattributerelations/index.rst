@@ -41,10 +41,8 @@ Add new relation
 ********************************************
 
 In order to add a new relation, an Excel sheet must first be created.
-In our example we want to restrict a Dynamic Field after the Queue selection.
-The selection of the Dynamic Field then influences the selection of a second field.
+In our example we want to restrict a Dynamic Field ("Question1") after the queue selection.
 
-In our example the Queue influences the selection of the Dynamic Field "Question1".
 The appropriate structure in Excel is as follows:
 
 .. image:: images/tar_rule1.png
@@ -52,7 +50,7 @@ The appropriate structure in Excel is as follows:
          :width: 50%
 
 
-The field "Question1" then influences the selection of the field "Question2".
+In our second example, the dynamic field "Question1" influences the selection of the dynamic field "Question2".
 
 The appropriate structure in Excel is as follows:
 
@@ -72,7 +70,7 @@ Missing entries can created automatically from the Excel sheet.
 
 .. note:: You need to create a document for each relation. Our example needs two Excel sheets.
 
-Upload the Excel/CSV relations files and set the checkmark for "add missing possible dynamic field values".
+Upload the Excel/CSV relations files and scheck for "Add missing possible dynamic field values".
 
 .. note:: The priority sets the execution order for your rules. You can change it later, if needed.
 
