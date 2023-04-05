@@ -18,16 +18,54 @@ To install Znuny or Znuny LTS you need:
 Basics
 ******
 
-Some basic packages are needed to get going. 
-This includes the web server, database (MariaDB in this case), cpanminus to install additional
-Perl modules and TAR to extract the source.
+Some basic packages are needed to get going.
+This includes the web server, database (MariaDB in this case), cpanminus to install additional.
+Perl modules and tar to extract the source.
 
-**CentOS / Red Hat**
+**CentOS / Red Hat / Rocky Linux**
 
 .. code-block::
 
-  dnf install -y epel-release httpd mariadb mariadb-server cpanminus gcc dnf-plugins-core
-  yum config-manager --set-enabled powertools
+  dnf update -y
+  # Enable Powertools
+  dnf config-manager --set-enabled powertools
+  ## CentOS / RHEL / Rocky Linux 9
+  dnf config-manager --enable crb
+  dnf install -y epel-release httpd cpanminus gcc dnf-plugins-core
+  # If you will use mariadb
+  dnf install -y mariadb mariadb-server
+  
+  ## Set selinux to Permissive
+  vi /etc/selinux/config
+
+  # This file controls the state of SELinux on the system.
+  # SELINUX= can take one of these three values:
+  #     enforcing - SELinux security policy is enforced.
+  #     permissive - SELinux prints warnings instead of enforcing.
+  #     disabled - No SELinux policy is loaded.
+  # See also:
+  # https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-selinux/#getting-started-with-selinux-selinux-states-and-modes
+  #
+  # NOTE: In earlier Fedora kernel builds, SELINUX=disabled would also
+  # fully disable SELinux during boot. If you need a system with SELinux
+  # fully disabled instead of SELinux running with no policy loaded, you
+  # need to pass selinux=0 to the kernel command line. You can use grubby
+  # to persistently set the bootloader to boot with selinux=0:
+  #
+  #    grubby --update-kernel ALL --args selinux=0
+  #
+  # To revert back to SELinux enabled:
+  #
+  #    grubby --update-kernel ALL --remove-args selinux
+  #
+  SELINUX=permissive
+  # SELINUXTYPE= can take one of these three values:
+  #     targeted - Targeted processes are protected,
+  #     minimum - Modification of targeted policy. Only selected processes are protected.
+  #     mls - Multi Level Security protection.
+  SELINUXTYPE=targeted
+
+  reboot
 
 **Ubuntu / Debian**
 
@@ -36,10 +74,10 @@ Perl modules and TAR to extract the source.
   apt update
   apt install -y apache2 mariadb-client mariadb-server cpanminus
 
-Install an RPM
-**************
+RPM Install
+***********
 
-The installation via RPM
+Install the RPM via `YUM <https://en.wikipedia.org/wiki/Yum_(software)>`_
 
 .. code-block::
 
@@ -87,25 +125,39 @@ The installation from the source takes some more steps:
 Install Required Perl Modules
 *****************************
 
-Based on your distribution there are several different was to install the needed modules. 
+Based on your distribution, there are several different was to install the needed modules.
 
-**CentOS / Red Hat**
+To see which modules are missing but required, verify these with the following command.
+
+.. code-block::
+
+  ~otrs/bin/otrs.CheckModules.pl --all
+
+**CentOS / Red Hat / Rocky Linux**
 
 Some of the needed Perl Modules are installed, when installing the RPM. You just need
 to complete the missing ones.
 
 .. code-block::
 
-  yum install -y "perl(Moo)"  "perl(Text::CSV_XS)" "perl(YAML::XS)" "perl(ModPerl::Util)" "perl(Mail::IMAPClient)" "perl(JSON::XS)" "perl(Encode::HanExtra)" "perl(Crypt::Eksblowfish::Bcrypt)"
+  yum install -y jq
 
-  cpanm JavaScript::Minifier::XS CSS::Minifier::XS
+  yum install -y "perl(Moo)"  "perl(Text::CSV_XS)" "perl(YAML::XS)" "perl(ModPerl::Util)" "perl(Mail::IMAPClient)" "perl(JSON::XS)" "perl(Encode::HanExtra)" "perl(Crypt::Eksblowfish::Bcrypt)" "perl(Data::UUID)"
+
+  cpanm Jq JavaScript::Minifier::XS iCal::Parser Hash::Merge Crypt::JWT CSS::Minifier::XS Data::UUID Spreadsheet::XLSX Crypt::OpenSSL::X509
+
+  # Note to install the Crypt::OpenSSL::X509, you will need to install openssl-devel
+
+  # If you will use MySQL or MariaDB
 
 
 **Ubuntu / Debian**
 
 .. code-block::
 
-  apt -y install libapache2-mod-perl2 libdbd-mysql-perl libtimedate-perl libnet-dns-perl libnet-ldap-perl libio-socket-ssl-perl libpdf-api2-perl libsoap-lite-perl libtext-csv-xs-perl libjson-xs-perl libapache-dbi-perl libxml-libxml-perl libxml-libxslt-perl libyaml-perl libarchive-zip-perl libcrypt-eksblowfish-perl libencode-hanextra-perl libmail-imapclient-perl libtemplate-perl libdatetime-perl libmoo-perl bash-completion libyaml-libyaml-perl libjavascript-minifier-xs-perl libcss-minifier-xs-perl libauthen-sasl-perl libauthen-ntlm-perl
+  apt -y install apache2 mariadb-client mariadb-server cpanminus libapache2-mod-perl2 libdbd-mysql-perl libtimedate-perl libnet-dns-perl libnet-ldap-perl libio-socket-ssl-perl libpdf-api2-perl libsoap-lite-perl libtext-csv-xs-perl libjson-xs-perl libapache-dbi-perl libxml-libxml-perl libxml-libxslt-perl libyaml-perl libarchive-zip-perl libcrypt-eksblowfish-perl libencode-hanextra-perl libmail-imapclient-perl libtemplate-perl libdatetime-perl libmoo-perl bash-completion libyaml-libyaml-perl libjavascript-minifier-xs-perl libcss-minifier-xs-perl libauthen-sasl-perl libauthen-ntlm-perl libhash-merge-perl libical-parser-perl libspreadsheet-xlsx-perl libcrypt-jwt-perl libcrypt-openssl-x509-perl jq
+
+  cpanm install Jq
 
 Database Configuration
 **********************
@@ -137,19 +189,22 @@ Create a new file for the mysql config:
 	innodb_file_per_table
 	innodb_log_file_size = 256M
 	max_allowed_packet=256M
+  character-set-server  = utf8
+  collation-server      = utf8_general_ci
 
 .. important::
 
   The web installer requires a password. The networking "bind-address" should be localhost. By default, 127.0.0.1, a synonym for skip-networking, is set. Additionally, there is no information about the requirement for utf8 whereas the default is utf8mb4
 
-  character-set-server  = utf8
-  collation-server      = utf8_general_ci
-
-Restart the MariaDB database to apply the changes
+If started, restart the MariaDB database to apply the changes otherwise enable and start the mariadb.
 
 .. code-block::
 
-  systemctl start mariadb
+  systemctl restart mariadb
+  # or
+  systemctl enable --now mariadb 
+
+Run mysql_secure_installation
 
 Webserver Configuration
 ***********************
@@ -165,10 +220,18 @@ Enable MPM prefork module:
   sed -i '/^LoadModule mpm_event_module modules\/mod_mpm_event.so/s/^/#/' /etc/httpd/conf.modules.d/00-mpm.conf
   sed -i '/^#LoadModule mpm_prefork_module modules\/mod_mpm_prefork.so/s/^#//' /etc/httpd/conf.modules.d/00-mpm.conf
 
+.. note:: In case you did a source install on an RPM based system
+
+  To enable the Znuny Apache config you need to create a symlink to our sample config.
+
+  .. code-block::
+
+    ln -s /opt/otrs/scripts/apache2-httpd.include.conf /etc/httpd/conf.d/zzz_znuny.conf
+
 
 **Ubuntu / Debian**
 
-To enable the Znuny Apache config you need to create a symlink to our sample config. 
+To enable the Znuny Apache config you need to create a symlink to our sample config.
 
 .. code-block:: bash
 
@@ -184,8 +247,16 @@ Enable the needed Apache modules:
   a2enmod mpm_prefork
   a2enconf zzz_znuny
 
+.. code-block::
 
-Start / Restart the web server to apply the changes.
+  ## RHEL / CentOS / Rocky Linux
+  systemctl restart httpd
+  # or
+  systemctl enable --now httpd
+  ## Ubuntu / Debian
+  systemctl restart apache2
+  # or
+  systemctl enable --now apache2
 
 **CentOS / Red Hat**
 
