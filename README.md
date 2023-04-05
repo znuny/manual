@@ -1,9 +1,8 @@
 # Znuny Documentation README
 
-The branches `main` and `staging` are deployed on with every push.
+The branches `znuny` and `znuny_lts` are deployed on with every push.
 
-- Branch `main` is available at https://doc.znuny.org/manual/ after the deployment
-- Branch `staging` is only internal available
+- The content created out of both branches is available at https://doc.znuny.org/
 
 ## Requirements
 
