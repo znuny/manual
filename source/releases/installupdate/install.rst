@@ -70,13 +70,13 @@ The installation from the source takes some more steps:
   # Add user for Debian/Ubuntu
   useradd -d /opt/znuny -c 'Znuny user' -g www-data -s /bin/bash -M -N znuny
 
-  # Copy Default Config
+  # Copy default Config.pm
   cp /opt/znuny/Kernel/Config.pm.dist /opt/znuny/Kernel/Config.pm
 
   # Set permissions
   /opt/znuny/bin/znuny.SetPermissions.pl
 
-  # As otrs User - Rename default cronjobs
+  # As znuny user - Rename default cronjobs
   su - znuny
   cd /opt/znuny/var/cron
   for foo in *.dist; do cp $foo `basename $foo .dist`; done
@@ -88,7 +88,7 @@ Based on your distribution there are several different was to install the needed
 
 **CentOS / Red Hat**
 
-Some of the needed Perl Modules are installed, when installing the RPM. You just need
+Some of the needed Perl modules are installed, when installing the RPM. You just need
 to complete the missing ones.
 
 .. code-block::
@@ -96,8 +96,6 @@ to complete the missing ones.
   yum install -y "perl(Moo)"  "perl(Text::CSV_XS)" "perl(YAML::XS)" "perl(ModPerl::Util)" "perl(Mail::IMAPClient)" "perl(JSON::XS)" "perl(Encode::HanExtra)" "perl(Crypt::Eksblowfish::Bcrypt)"
 
   cpanm JavaScript::Minifier::XS CSS::Minifier::XS
-
-  yum remove -y gcc
 
 **Ubuntu / Debian**
 
@@ -199,7 +197,7 @@ Start / Restart the web server to apply the changes.
 
 You should be able to access the installer script using:
 
-http://HOSTNAME/otrs/installer.pl
+http://HOSTNAME/znuny/installer.pl
 
 Start-up Configuration
 ***********************
@@ -221,7 +219,7 @@ You should enable the web server and the database to get started on boot.
 Enable Znuny Cron
 *****************
 
-Switch to the otrs user:
+Switch to the znuny user:
 
 .. code-block:: bash
 
