@@ -182,13 +182,15 @@ Create a new file for the mysql config:
 
 .. code-block::
 
-	[client]
-	max_allowed_packet=256M
+  [mysql]
+  max_allowed_packet=256M
+  [mysqldump]
+  max_allowed_packet=256M
 
-	[mysqld]
-	innodb_file_per_table
-	innodb_log_file_size = 256M
-	max_allowed_packet=256M
+  [mysqld]
+  innodb_file_per_table
+  innodb_log_file_size = 256M
+  max_allowed_packet=256M
   character-set-server  = utf8
   collation-server      = utf8_general_ci
 
