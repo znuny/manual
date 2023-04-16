@@ -126,8 +126,11 @@ Create a new file for the mysql config:
 
 .. code-block::
 
-  [client]
+  [mysql]
   max_allowed_packet=256M
+  [mysqldump]
+  max_allowed_packet=256M
+
 
   [mysqld]
   innodb_file_per_table
