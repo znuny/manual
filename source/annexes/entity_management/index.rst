@@ -24,4 +24,8 @@ The second screen is an entity relationship management screen allowing you to ma
 
 For example, if you create a user group and a user role then you can use the groups roles management screen to set the relationship from groups to roles or roles to groups.
 
-Since this concept is standard throughout the system we will not create screenshots for each entity and their management, unless necessary, in each administrator section. We will assume that this concept is basic enough to understand when using the software. 
+We will not create screenshots for each entity and their management, unless necessary, in each administrator section. Therefore, we will assume that this concept is sufficiently basic to understand when using the software.
+
+Wherever entities can only be invalidated, you have the option to show valid on show all.
+
+.. image:: ../../releases/7_0_1/images/show_valid.png
