@@ -21,6 +21,7 @@ build:
   except:
     - merge_requests
   script:
+    - make linkcheck SPHINXBUILD=sphinx-build
     - make html SPHINXBUILD=sphinx-build
 
 deploy-znuny_lts:
