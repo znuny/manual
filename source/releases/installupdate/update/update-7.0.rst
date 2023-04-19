@@ -52,7 +52,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block:: 
 
 	# Update to Znuny 7.0 (RHEL 7 / CentOS 7)
-	yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.1-01.noarch.rpm
+	yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.3-01.noarch.rpm
 
 	# Check for missing modules and add required modules
 	<HOME_DIR>/bin/znuny.CheckModules.pl --all
@@ -76,23 +76,23 @@ The installation from source takes some more steps. If there are more file to re
 	# Set permissions
 	# If you intend on keeping the previous user, then run this command.
 	# The new default user is znuny
-	/opt/znuny-7.0.1/bin/znuny.SetPermissions.pl --znuny-user <APP_USER>
+	/opt/znuny-7.0.3/bin/znuny.SetPermissions.pl --znuny-user <APP_USER>
 
 	# Restore Kernel/Config.pm, articles, etc.
-	cp -av <HOME_DIR>/Kernel/Config.pm /opt/znuny-7.0.1/Kernel/
-	mv <HOME_DIR>/var/article/* /opt/znuny-7.0.1/var/article/
+	cp -av <HOME_DIR>/Kernel/Config.pm /opt/znuny-7.0.3/Kernel/
+	mv <HOME_DIR>/var/article/* /opt/znuny-7.0.3/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
-	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.1/; done
+	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.3/; done
 
 	# Restore modified and custom cron job
-	for f in $(find -L <HOME_DIR>/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.1/var/cron/; done
+	for f in $(find -L <HOME_DIR>/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.3/var/cron/; done
 
 	# Delete the old symlink
 	rm /opt/<HOME_DIR>
 	
 	# Create a symlink 
-	ln -s /opt/znuny-7.0.1 /opt/<HOME_DIR>
+	ln -s /opt/znuny-7.0.3 /opt/<HOME_DIR>
 
 	# Check for missing modules and add required modules
 	<HOME_DIR>/bin/znuny.CheckModules.pl --all

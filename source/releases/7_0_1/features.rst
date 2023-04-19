@@ -8,7 +8,7 @@ Integrated Features
 Znuny-AdminValidFilter
 ======================
 
-It's not possbile to remove certian records for reasons of consistency. These item lists, such as agents, customers, queues (for eample) grow over time. the new fetaure allows you to filter invalid entries in the administartion area.
+It's not possbile to remove certain records for reasons of consistency. These item lists, such as agents, customers, queues (for example) grow over time. the new feature allows you to filter invalid entries in the administration area.
 
 .. image:: images/show_valid.png
     :alt: Show vaild filter image
