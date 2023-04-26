@@ -6,11 +6,7 @@ stages:
 
 default:
   before_script:
-    - pip3 install sphinx-book-theme
-    - pip3 install sphinx-copybutton
-    - pip3 install sphinxcontrib-mermaid
-    - pip3 install sphinx-code-tabs
-    - pip3 install sphinx-fontawesome
+    - pip3 install -r requirements.txt
 
 build:
   stage: build
