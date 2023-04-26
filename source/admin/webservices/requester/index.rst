@@ -1,10 +1,10 @@
 Requester
 #########
 
-HTTP::REST options
-******************
+``HTTP::REST`` options
+***********************
 
-There are some features added to the HTTP::REST transport:
+There are some features added to the ``HTTP::REST`` transport:
 
 SSL hostname verification
 =========================

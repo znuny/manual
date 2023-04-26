@@ -130,11 +130,12 @@ Attributes of the ``Setting`` element
 ``ValueType``
     An optional attribute dictating which kind of data the ``Item`` holds. Also, how to present the setting to the user in the GUI. If no ``ValueType`` is specified, it defaults to ``String``.
 
-.. note:: 
-    Please `see below <HowItWorks value-types>`_ for a definition of the different value types.
+.. note::
 
-.. code-block:: xml
-    
+    Please see below for a definition of the different value types.
+
+.. code-block::
+
     <Setting Name="Ticket::Hook" Required="1" Valid="1">
         <Description Translatable="1">The identifier for a ticket, e.g. Ticket#, Call#, MyTicket#. The default is Ticket#.</Description>
         <Navigation>Core::Ticket</Navigation>
@@ -1807,13 +1808,13 @@ Lines starting with a # at the beginning of will not be shown in the html output
    # <div class="AsBlock">
    #     <a href="...">link</a>
    # </div>
-                        
+
 [% InsertTemplate("Copyright.tt") %]
    Includes another template file into the current one. The included file may also contain template commands.
 
 .. warning::
 
-   Please note that the ``InsertTemplate`` command was added to provide better backwards compatibility to the old DTL system. It might be deprecated in a future version of the framework and removed later. If you don't use `block commands <TemplatingMechanism.html#block>`__ in your included template, you don't need ``InsertTemplate`` and can use standard Template::Toolkit syntax like
+   Please note that the ``InsertTemplate`` command was added to provide better backwards compatibility to the old DTL system. It might be deprecated in a future version of the framework and removed later. If you don't use block commands in your included template, you don't need ``InsertTemplate`` and can use standard Template::Toolkit syntax like
    ``INCLUDE/PROCESS`` instead.
 
 .. code-block:: html

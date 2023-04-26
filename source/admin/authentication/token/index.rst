@@ -154,11 +154,11 @@ Vendor-Specific Documentation
 
     Redirect URI: The redirect_uri for Znuny is built from the system variables in the following manner:
 
-    ${HttpType}://${FQDN}/${ScriptAlias}/get-oauth2-token-by-authorization-code.pl 
+    ``${HttpType}://${FQDN}/${ScriptAlias}/get-oauth2-token-by-authorization-code.pl``
 
     i.e.
 
-    https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl 
+    ``https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl``
 
 .. versionadded:: 6.4
 

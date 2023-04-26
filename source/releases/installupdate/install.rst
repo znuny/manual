@@ -200,7 +200,7 @@ Start / Restart the web server to apply the changes.
 
 You should be able to access the installer script using:
 
-http://HOSTNAME/znuny/installer.pl
+``http://HOSTNAME/znuny/installer.pl``
 
 Start-up Configuration
 ***********************

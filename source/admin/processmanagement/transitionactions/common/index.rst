@@ -14,7 +14,7 @@ This tool shows the required and optional parameters for every transition action
          :width: 100%
          :alt: Parameter helper for transition actions
 
-Mandatory keys have an *asterisk "\*"* in the example field and require a value. For a detailed description of the modules read the `perl API documentation <https://doc.znuny.org/doc/api/otrs/6.0/Perl/>`_ for each transition action.
+Mandatory keys have an *asterisk "\*"* in the example field and require a value. For a detailed description of the modules read the perl API documentation for each transition action.
 
 .. tip:: 
 

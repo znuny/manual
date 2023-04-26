@@ -45,7 +45,7 @@ The software can act as a consumer (:ref:`Invoker <PageNavigation admin_webservi
 You must choose:
 
 Network Transport
-	Choose HTTP::REST or HTTP::SOAP.
+	Choose ``HTTP::REST`` or ``HTTP::SOAP``.
 Error Handling Module
 	Choose an error handling module.
 Operation

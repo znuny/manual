@@ -48,7 +48,7 @@ These element are available, if not mentioned value is the new value:
 - OTRS_TicketResponsibleSet
 - OTRS_TicketPrioritySet
 - OTRS_TicketHistoryAdd - Requires subelements HistoryType and HistoryComment
-- OTRS_TicketArticleAdd - Supports subelements IsVisibleForCustomer, Body, Subject, MimeType, From, SenderType, Charset, HistoryType, HistoryComment and many more. Check the `API <https://doc.znuny.org/doc/api/otrs/6.0/Perl/Kernel/System/Ticket/Article/Backend/MIMEBase.pm.html>`_ for mode details.
+- OTRS_TicketArticleAdd - Supports subelements IsVisibleForCustomer, Body, Subject, MimeType, From, SenderType, Charset, HistoryType, HistoryComment and many more. Check the API for mode details.
 
 
 .. code-block:: XML

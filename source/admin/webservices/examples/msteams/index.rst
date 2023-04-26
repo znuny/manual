@@ -108,6 +108,5 @@ The used XSLT for the outbound mapping contains some interesting parts:
 .. rubric:: Links to external documentation
 
 .. [#f1] https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook
-.. [#f2] https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-reference#example-of-an-office-365-connector-card
+.. [#f2] https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-reference
 .. [#f3] https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/connectors-using?tabs=cURL
-
