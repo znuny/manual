@@ -19,7 +19,7 @@ Overviews
 *********
 
 .. table::
-  :widths: 6
+  :widths: 6 30
 
   +-------------------+-----------------+
   | :fa:`exclamation` | Escalation View |
@@ -39,7 +39,7 @@ Personal Views
 The user toolbars include:
 
 .. table::
-  :widths: 6
+  :widths: 6 30
 
   +-----------------+---------------------+
   | :fa:`user`      | Owned Tickets       |
@@ -59,7 +59,7 @@ Actions
 The quick access icons include
 
 .. table::
-  :widths: 6
+  :widths: 6 30
 
   +----------------+--------------------+
   | :fa:`phone`    | New Phone Ticket   |
