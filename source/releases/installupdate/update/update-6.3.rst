@@ -140,7 +140,13 @@ The error looks similar to this:
   Step 42 of 48: Remove Generic Agent system commands ...
   ERROR: OTRS-otrs.Console.pl-Dev::Code::CPANAudit-17 Perl: 5.30.0 OS:
 
-  Message: Can't locate Kernel/System/DynamicField/ObjectType/XXX.pm in @INC (you may need to install the Kernel::System::DynamicField::ObjectType::XXX module) (@INC contains: /opt/otrs/Custom /opt/otrs/Kernel/cpan-lib /opt/otrs /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /opt/otrs/Kernel/System/Main.pm line 86.
+  Message: Can't locate Kernel/System/DynamicField/ObjectType/XXX.pm in
+  @INC (you may need to install the Kernel::System::DynamicField::ObjectType::XXX module)
+  (@INC contains: /opt/otrs/Custom /opt/otrs/Kernel/cpan-lib /opt/otrs /etc/perl
+  /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0
+  /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30
+  /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base)
+  at /opt/otrs/Kernel/System/Main.pm line 86.
 
 
 Patch Level Update
