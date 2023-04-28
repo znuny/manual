@@ -2,7 +2,7 @@ ITSM Features
 #############
 .. _PageNavigation itsmfeatures_index:
 
-ITSM Features are provided by way of package installation. The following feature set is available as a bundle or individual package and can be installed after installing the Prerequisite modules.
+ITSM Features are provided by way of package installation. The following feature set is available as a bundle or individual packages and can be installed after installing the prerequisite modules.
 
 Pre-requisite features are
 
@@ -31,12 +31,12 @@ Import Export
     Import, Export, and Update configuration items from a CSV file.
 
 Online Repository Installation
-*******************************
+******************************
 
-Depending on if you want the individual feature set or the bundle, your Settings will vary.
+Depending on if you want the individual feature set or the bundle, your settings will vary.
 
-Bundle URL: ``https://download.znuny.org/releases/itsm/latest/``
-Individual Packages URL: ``https://download.znuny.org/releases/itsm/bundle6x/``
+| Bundle URL: ``https://download.znuny.org/releases/itsm/bundle7/``
+| Individual Packages URL: ``https://download.znuny.org/releases/itsm/packages7/``
 
 Search for and configure the setting ``Package:RepositoryList`` as seen below and deploy the setting. 
 
@@ -50,7 +50,7 @@ Then navigate to the package manager and update the online repository to install
 
 .. note::
     
-    Installing from the Bundle resolves dependencies themselves.
+    Installing from the bundle resolves dependencies themselves.
 
 Manual Installation
 *******************
@@ -70,7 +70,7 @@ After completing this you can then install the other downloaded packages.
 Bundle
 ======
 
-If you want to include all of the packages at one time you can use the bundle package ship also provided by our `bundle download page <https://download.znuny.org/releases/itsm/bundle6x/>`_. We highly recommend installing the package individually. Removing individual packages after installing the bundle is not easily done.
+If you want to include all of the packages at one time you can use the bundle package ship also provided by our `bundle download page <https://download.znuny.org/releases/itsm/bundle7/>`_. We highly recommend installing the package individually. Removing individual packages after installing the bundle is not easily done.
 
 .. note::
 
