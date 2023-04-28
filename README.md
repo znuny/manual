@@ -1,15 +1,15 @@
 # Znuny Documentation README
 
-The branches `znuny` and `znuny_lts` are deployed on with every push.
+The branches `znuny` and `znuny_lts` are deployed with every push.
 
 - The content created out of both branches is available at https://doc.znuny.org/
 
 ## Requirements
 
-- sphinx-book-theme
-- [sphinx-copybutton](https://sphinx-copybutton.readthedocs.io/en/latest/)
+- [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme)
+- [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton)
 - [sphinxcontrib.mermaid](https://github.com/mgaitan/sphinxcontrib-mermaid)
-- [sphinx_code_tabs](https://github.com/coldfix/sphinx-code-tabs)
+- [sphinx-tabs](https://github.com/executablebooks/sphinx-tabs)
 - [sphinx_fontawesome](https://github.com/fraoustin/sphinx_fontawesome)
 
 ## Style Guide

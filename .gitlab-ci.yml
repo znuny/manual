@@ -6,11 +6,7 @@ stages:
 
 default:
   before_script:
-    - pip3 install sphinx-book-theme
-    - pip3 install sphinx-copybutton
-    - pip3 install sphinxcontrib-mermaid
-    - pip3 install sphinx-code-tabs
-    - pip3 install sphinx-fontawesome
+    - pip3 install -r requirements.txt
 
 build:
   stage: build
@@ -24,10 +20,10 @@ build:
     - make linkcheck SPHINXBUILD=sphinx-build
     - make html SPHINXBUILD=sphinx-build
 
-deploy-znuny_lts:
+deploy-znuny:
   stage: deploy
   only: 
-    - znuny_lts
+    - znuny
   except:
     - merge_requests
   script:
@@ -35,12 +31,12 @@ deploy-znuny_lts:
     - eval $(ssh-agent -s)
     - echo "$DEPLOY_PRIVATE_KEY" | ssh-add -
     - ssh-keyscan $DEPLOY_HOST  >> $HOME/.ssh/known_hosts
-    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc/znuny_lts/
+    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc/znuny
 
 github-sync:
   stage: deploy
   only: 
-    - znuny_lts
+    - znuny
   except:
     - merge_requests
   script:
