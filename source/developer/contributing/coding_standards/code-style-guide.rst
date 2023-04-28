@@ -868,7 +868,7 @@ CSS Writing Rules
 
 .. important:: **Frontend Architecture**
 
-   We follow the `Object Oriented CSS <http://wiki.github.com/stubbornella/oocss/>`__ approach. In essence, this means that the layout is achieved by combining different generic building blocks to realize a particular design.
+   We follow the Object Oriented CSS approach. In essence, this means that the layout is achieved by combining different generic building blocks to realize a particular design.
 
    Wherever possible, module specific design should not be used. Therefore we also do not work with IDs on the ``body`` element, for example, if it can be avoided.
 
@@ -933,7 +933,7 @@ JavaScript
 ==========
 :ref:`- jump top - <PageNavigation code-style-guide>`
 
-The `commenting guidelines for Perl <code-style-guide.html#code-style-guide-perl-code-comments>`_ also apply to JavaScript.
+The commenting guidelines for Perl also apply to JavaScript.
 
 * Single line comments are done with ``//``.
 * Longer comments are done with ``/* ... */``.

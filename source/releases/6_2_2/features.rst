@@ -32,4 +32,4 @@ To update your system, follow the :ref:`Updating Instructions <UpdatingInstructi
 
 See the detailed changelog here:  
 
-`Changelog <https://github.com/znuny/Znuny/blob/rel-6_1/CHANGES.md#622-2021-12-15>`_
+`Changelog <https://github.com/znuny/Znuny/blob/rel-6_2/CHANGES.md>`_

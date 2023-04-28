@@ -51,6 +51,6 @@ Additional Resources
 
 * `Commercial Services <https://znuny.com>`_
    Here you can also find information about professional services and training seminars from the project maintainers.
-* `Online API Library <https://doc.znuny.org/doc/api/otrs/6.0/Perl/>`_
-* `Online JavaScript API <https://doc.otrs.com/doc/api/otrs/6.0/JavaScript/index.html>`_
+* `Online API Library <https://doc.znuny.org/legacy/api/otrs/6.0/Perl/>`_
+* `Online JavaScript API <https://doc.znuny.org/legacy/api/otrs/6.0/JavaScript/index.html>`_
 * `Discord Developer Discussion <https://discord.gg/ajaFnUqP>`_

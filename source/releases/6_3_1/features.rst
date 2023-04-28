@@ -45,7 +45,7 @@ Use recurring tasks to:
 
 Whatever you need to schedule, create an appointment to keep you on task.
 
-More details can be found in :doc:`../../agentinterface/appointments/index`.
+More details can be found in :doc:`../../agentinterface/calendarscreens/appointments/index`.
 
 Bulk Service and Dynamic Field Changes
 =======================================

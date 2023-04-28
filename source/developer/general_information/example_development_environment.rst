@@ -19,7 +19,7 @@ Pre-requisites
 * A Git client
 * A Git repository
 
-If you haven't yet, you should first `set up Git <https://docs.github.com/en/articles/set-up-git>`_. Don't forget to set up `authentication to GitHub.com from Git <https://docs.github.com/en/articles/set-up-git#next-steps-authenticating-with-github-from-git>`_ as well.
+If you haven't yet, you should first `set up Git <https://docs.github.com/en/articles/set-up-git>`_. Don't forget to set up authentication to GitHub.com from Git as well.
 
 Znuny `is available on GitHub <https://github.com/Znuny/>`_ along with all additional public modules. Currently we recommend Sublime for your IDE, as we use this internally and offer a package with an array of tools to make your coding experience faster and more convenient. `Znuny4OTRS-Sublime <https://github.com/znuny/Znuny4OTRS-Sublime>`_
 
@@ -46,7 +46,7 @@ Configure Znuny
 ***************
 :ref:`- jump top - <PageNavigation example_development_environment>`
 
-Please configure the Znuny system according to the chapter: `Installation From Source (Linux, Unix) <https://doc.znuny.org/doc/manual/admin/6.0/en/html/manual-installation-of-otrs.html>`_ of the administrator handbook, skipping **Step 1: Install .tar.gz**
+Please configure the Znuny system according to the chapter: `Installation From Source (Linux, Unix) <https://doc.znuny.org/legacy/manual/admin/6.0/en/html/manual-installation-of-otrs.html>`_ of the administrator handbook, skipping **Step 1: Install .tar.gz**
 
 Module Tools Checkout
 =====================

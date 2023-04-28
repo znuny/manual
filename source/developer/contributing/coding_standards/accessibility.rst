@@ -82,7 +82,7 @@ Accessible Rich Internet Application (WAI-ARIA) 1.0
 
 This standard deals with the special issues arising from the shift away from static content to dynamic web applications. It deals with questions like how a user can be notified of changes in the user interface resulting from AJAX requests, for example.
 
-* `WAI-ARIA 1.0 <http://www.w3.org/TR/wai-aria/>`_
+* `WAI-ARIA 1.0 <https://www.w3.org/TR/wai-aria/>`_
 
 Implementation Guidelines
 *************************

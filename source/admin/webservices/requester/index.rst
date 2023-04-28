@@ -1,10 +1,10 @@
 Requester
 #########
 
-HTTP::REST options
-******************
+``HTTP::REST`` options
+**********************
 
-There are some features added to the HTTP::REST transport:
+There are some features added to the ``HTTP::REST`` transport:
 
 SSL hostname verification
 =========================
@@ -26,7 +26,7 @@ If needed, custom HTTP headers can be added to the request. They can also overwr
 .. image:: images/webservice_Requester-Transport.png
          :name: Requester Transport
          :width: 100%
-         :alt: HTTP::REST Transport Settings
+         :alt: ``HTTP::REST`` Transport Settings
 
 Authentication Methods
 **********************

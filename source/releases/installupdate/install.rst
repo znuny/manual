@@ -274,7 +274,7 @@ Enable the needed Apache modules:
 
 You should be able to access the installer script using:
 
-http://HOSTNAME/otrs/installer.pl
+``http://HOSTNAME/otrs/installer.pl``
 
 Start-up Configuration
 ***********************

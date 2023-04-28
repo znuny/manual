@@ -158,17 +158,15 @@ Vendor-Specific Documentation
 *****************************
 
 .. important::
-    
-    Redirect URI: The redirect_uri for Znuny is built from the system variables in the following manner:
-    
-    ${HttpType}://${FQDN}/${ScriptAlias}/get-oauth2-token-by-authorization-code.pl 
-    
-    i.e.
-    
-    https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl 
+
+  Redirect URI: The redirect_uri for Znuny is built from the system variables in the following manner
+
+  i.e.
+
+  ``https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl``
 
 .. versionadded:: 6.4
 
     Starting in this release, we've added a special switch to conform to Microsoft's requirement for POP3 and OAuth2. This is pre-configured for the hosts listed in the `Microsoft KBA <https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353>`_. Hosts that need a separate info about authentication method and token (instead of both in one line) can be added to the system configuration option. ``MailAccount::POP3::Auth::SplitOAuth2MethodAndToken::Hosts``
-    
+
     Most commonly needed for Office365.
