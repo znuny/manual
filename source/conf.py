@@ -24,7 +24,7 @@ language = 'en'
 extensions = [
     'sphinx_copybutton',
     'sphinxcontrib.mermaid',
-    'sphinx_tabs',
+    'sphinx_tabs.tabs',
     'sphinx_fontawesome'
 ]
 
