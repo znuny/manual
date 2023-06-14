@@ -82,10 +82,10 @@ Install the RPM via `YUM <https://en.wikipedia.org/wiki/Yum_(software)>`_
 .. code-block::
 
   # Znuny LTS (modify version to latest see: https://download.znuny.org/releases/RPMS/rhel/7/)
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.2-01.noarch.rpm
+  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.3-01.noarch.rpm
 
   # Znuny 6.5
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.2-01.noarch.rpm
+  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.3-01.noarch.rpm
 
 
 Install From Source
@@ -103,7 +103,7 @@ The installation from the source takes some more steps:
   tar xfz znuny-latest-6.5.tar.gz
 
   # Create a symlink 
-  sudo ln -s /opt/znuny-6.5.2 /opt/otrs
+  sudo ln -s /opt/znuny-6.5.3 /opt/otrs
 
   # Add user for RHEL/CentOS
   useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs
@@ -198,7 +198,7 @@ Create a new file for the mysql config:
 
   The web installer requires a password. The networking "bind-address" should be localhost. By default, 127.0.0.1, a synonym for skip-networking, is set. Additionally, there is no information about the requirement for utf8 whereas the default is utf8mb4
 
-If started, restart the MariaDB database to apply the changes otherwise enable and start the mariadb.
+If started, restart the MariaDB database to apply the changes otherwise enable and start the MariaDB.
 
 .. code-block::
 
