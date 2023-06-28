@@ -7,3 +7,4 @@ Here we discuss the different types of authentication management modules availab
    :maxdepth: 2
 
    token/index
+   two_factor/index
