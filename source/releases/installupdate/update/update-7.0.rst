@@ -37,8 +37,8 @@ Create a backup of the database, the application and all data, especially the at
 
 
 	# Remove crontab, stop daemon
-	su -c 'bin/Cron.sh stop' - otrs
-	su -c 'bin/znuny.Daemon.pl stop' - otrs
+	su -c 'bin/Cron.sh stop' - <APP_USER>
+	su -c 'bin/znuny.Daemon.pl stop' - <APP_USER>
 
 ..
 
@@ -52,7 +52,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block:: 
 
 	# Update to Znuny 7.0 (RHEL 7 / CentOS 7)
-	yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.6-01.noarch.rpm
+	yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.7-01.noarch.rpm
 
 	# Check for missing modules and add required modules
 	<HOME_DIR>/bin/znuny.CheckModules.pl --all
@@ -76,23 +76,23 @@ The installation from source takes some more steps. If there are more file to re
 	# Set permissions
 	# If you intend on keeping the previous user, then run this command.
 	# The new default user is znuny
-	/opt/znuny-7.0.6/bin/znuny.SetPermissions.pl --znuny-user <APP_USER>
+	/opt/znuny-7.0.7/bin/znuny.SetPermissions.pl --znuny-user <APP_USER>
 
 	# Restore Kernel/Config.pm, articles, etc.
-	cp -av <HOME_DIR>/Kernel/Config.pm /opt/znuny-7.0.6/Kernel/
-	mv <HOME_DIR>/var/article/* /opt/znuny-7.0.6/var/article/
+	cp -av <HOME_DIR>/Kernel/Config.pm /opt/znuny-7.0.7/Kernel/
+	mv <HOME_DIR>/var/article/* /opt/znuny-7.0.7/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
-	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.6/; done
+	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.7/; done
 
 	# Restore modified and custom cron job
-	for f in $(find -L <HOME_DIR>/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.6/var/cron/; done
+	for f in $(find -L <HOME_DIR>/var/cron -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.7/var/cron/; done
 
 	# Delete the old symlink
 	rm /opt/<HOME_DIR>
 	
 	# Create a symlink 
-	ln -s /opt/znuny-7.0.6 /opt/<HOME_DIR>
+	ln -s /opt/znuny-7.0.7 /opt/<HOME_DIR>
 
 	# Check for missing modules and add required modules
 	<HOME_DIR>/bin/znuny.CheckModules.pl --all
@@ -119,6 +119,8 @@ Update installed packages
 
     su - <APP_USER>
     bin/znuny.Console.pl Admin::Package::UpgradeAll
+    # Make sure all add-ons are correct installed after a patch level update
+    bin/znuny.Console.pl Admin::Package::ReinstallAll
 
 ..
 
