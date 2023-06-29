@@ -7,4 +7,4 @@ Improvements
 Bugs Fixed
 **********
 
-Read about all changes in the `CHANGES.md <https://github.com/znuny/Znuny/blob/rel-7_0_3/CHANGES.md>`_
+Read about all changes in the `CHANGES.md <https://raw.githubusercontent.com/znuny/Znuny/rel-7_0_3/CHANGES.md>`_
