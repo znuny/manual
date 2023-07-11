@@ -23,6 +23,13 @@ User Profile :fa:`user`
 
 .. image:: images/personal_menu_profile.png
     :alt: Personal Menu Image
+    
+Google Authenticator
+    Enter your shared secret to enable two factor authentication. There is a generate function, to ensure a proper code is generated. 
+
+.. note::
+
+   An administrator must :ref:`enable this <PageNavigation admin_authentication_two_factor_index>` setting.
 
 Change Avatar
     Here you see your Gravatar image and instructions on how to change it.
