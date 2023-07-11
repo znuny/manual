@@ -24,7 +24,7 @@ language = 'en'
 extensions = [
     'sphinx_copybutton',
     'sphinxcontrib.mermaid',
-    'sphinx_tabs',
+    'sphinx_tabs.tabs',
     'sphinx_fontawesome'
 ]
 
@@ -36,4 +36,20 @@ html_static_path = ['_static']
 html_css_files = [
     'css/custom.css',
     'css/code-tabs.css'
+]
+
+linkcheck_allowed_redirects = {
+    # All HTTP redirections from the source URI to the canonical URI will be treated as "working".
+    #r'https?://.*': r'https?://.*',
+    r'https://(www\.)?znuny\.(com|org).*': r'https://www\.znuny\.(com|org).*',
+    r'https://github\.com.*': r'https://github\.com.*',
+    r'https://.+.microsoft.com/.*': r'https://.+.microsoft.com/.*',
+    r'http://.+': r'https://.+',
+    r'https://discord.gg/.+': r'https://discord.com/.+'
+}
+
+linkcheck_ignore = [
+    r'https://download.znuny.org/releases/znuny-\d.\d.\d+.tar.gz',
+    r'https://github.com/znuny/Znuny/commits/rel-.+',
+    r'https://github.com/znuny/Znuny/blob/.+#L\d+'
 ]

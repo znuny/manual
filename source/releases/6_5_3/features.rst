@@ -19,4 +19,4 @@ Issues Fixed
 - Fixed event handling for DBCRUD history entries.
 - Updated article action "Note to linked ticket" to be only available in the agent ticket detail view (AgentTicketZoom).
 
-Read about all changes in the `CHANGES.md <https://github.com/znuny/Znuny/blob/rel-6_5_3/CHANGES.md>`_. For the complete list of all changes, see the commits on `GitHub <https://github.com/znuny/Znuny/commits/rel-6_5_3>`_.
+Read about all changes in the `CHANGES.md <https://raw.githubusercontent.com/znuny/Znuny/rel-6_5_3/CHANGES.md>`_. For the complete list of all changes, see the commits on `GitHub <https://github.com/znuny/Znuny/commits/rel-6_5_3>`_.

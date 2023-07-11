@@ -98,7 +98,7 @@ Fixed broken file permissions.
 Fixed issue with high CPU load on parsing e-mails in PostMaster filter DetectAttachment.
 Fixed SMIME verification does not consider SENDER.
 
-Read about all changes in teh `CHANGES.md <https://github.com/znuny/Znuny/blob/rel-6_4_1/CHANGES.md>`_
+Read about all changes in teh `CHANGES.md <https://github.com/znuny/Znuny/raw/rel-6_4_1/CHANGES.md>`_
 
 Visual Changes
 **************
