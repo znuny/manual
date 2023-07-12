@@ -47,3 +47,9 @@ linkcheck_allowed_redirects = {
     r'http://.+': r'https://.+',
     r'https://discord.gg/.+': r'https://discord.com/.+'
 }
+
+linkcheck_ignore = [
+    r'https://download.znuny.org/releases/znuny-\d.\d.\d+.tar.gz',
+    r'https://github.com/znuny/Znuny/commits/rel-.+',
+    r'https://github.com/znuny/Znuny/blob/.+#L\d+'
+]
