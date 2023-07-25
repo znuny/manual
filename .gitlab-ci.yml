@@ -24,6 +24,7 @@ deploy-znuny:
   stage: deploy
   only: 
     - znuny
+    - znuny_lts
   except:
     - merge_requests
   script:
@@ -31,12 +32,13 @@ deploy-znuny:
     - eval $(ssh-agent -s)
     - echo "$DEPLOY_PRIVATE_KEY" | ssh-add -
     - ssh-keyscan $DEPLOY_HOST  >> $HOME/.ssh/known_hosts
-    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc/znuny
+    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc/$CI_COMMIT_REF_NAME
 
 github-sync:
   stage: deploy
   only: 
     - znuny
+    - znuny_lts
   except:
     - merge_requests
   script:
