@@ -14,6 +14,8 @@ of Znuny. It will be extended with every release.
 
 If you are looking for a basic documentation, have a look at https://doc.znuny.org/ 
 
+To see the newest features, go to our :ref:`pagenavigation release_overview` 
+
 Feel free to improve it or add examples using the GitHub Repository **here**.
 
 If you want to help translate it, check out our weblate **here**...
