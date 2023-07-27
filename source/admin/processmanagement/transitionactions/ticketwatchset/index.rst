@@ -20,7 +20,7 @@ Transition Action Module Configuration
 +------------------+----------------+-----------------------------------------------+------------------------+
 | Key              | Example value  | Description                                   | Mandatory              |
 +==================+================+===============================================+========================+
-| Action           | Subscribe      | 'Subscribe', 'Unsubscribe' and UnsubcribeAll' | yes                    |
+| Action           | Subscribe      | 'Subscribe', 'Unsubscribe' and UnsubscribeAll' | yes                    |
 +------------------+----------------+-----------------------------------------------+------------------------+
 | PostMasterSearch | info@znuny.com | One or more valid user                        | yes, for (Un)Subscribe |
 +------------------+----------------+-----------------------------------------------+------------------------+
