@@ -12,8 +12,19 @@ Please note that your current system needs to be a
 
 to perform the update. We do not support direct updates from any version before Znuny LTS 6.5.
 
-IMPORTANT: The base settings have been changed to reflect the new product name. This means, that you may either switch to the new user znuny and new base dir /opt/znuny, or keep your old settings.
-If you decide to change, you'll need to create the new user, and modify your Config.pm settings before continuing. This upgrading instruction now uses <HOME_DIR> and <APP_USER>.
+.. important::
+
+    The base settings have been changed to reflect the new product name. During an update,  you should verify the following settings to use the new user and path during an update. We recommend creating a new ``znuny `` user to /opt/znuny for the best compatibility and changing the following variables.
+
+    - ``$Self->{Home}``
+    - ``$Self->{'Frontend::WebPath'}``
+    - ``$Self->{'ScriptAlias'}``
+    - ``$Self->- {'Ticket::Article::Backend::MIMEBase::ArticleDataDir`}``
+
+    Also, any scripts like backup.pl or apache configurations like ``DocumentRoot`` or directives like ``<Directory>`` should be verified and changed if you are moving to /opt/znuny.
+	
+    Should you stay with /opt/otrs, you must ensure that the paths in ``scripts/apache2-perl-startup.pl`` and ``apache2-httpd.include.conf``, are verified and changed. Ensure you use the correct user when running ``bin/znuny.SetPermissions.pl --znuny-user otrs`` If you use the backup.pl and stay with otrs, also check the ``backup.pl`` if you use this.
+
 
 Preparations
 ~~~~~~~~~~~~
