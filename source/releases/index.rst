@@ -1,4 +1,5 @@
 .. _PageNavigation release_overview:
+
 Release overview
 ################
 
@@ -19,6 +20,7 @@ Overview
 .. toctree::
    :maxdepth: 2
 
+   7_0_10/index
    7_0_9/index
    7_0_8/index
    7_0_7/index
