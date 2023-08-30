@@ -1,6 +1,5 @@
-=============
 Update to 7.0
-=============
+##############
 
 .. note::	We highly recommend to update on a test instance first.
 
@@ -14,7 +13,7 @@ to perform the update. We do not support direct updates from any version before 
 
 .. important::
 
-    The base settings have been changed to reflect the new product name. During an update,  you should verify the following settings to use the new user and path during an update. We recommend creating a new ``znuny `` user to /opt/znuny for the best compatibility and changing the following variables.
+	The base settings have been changed to reflect the new product name. During an update, you should verify the following settings to use the new user and path during an update. We recommend creating a new ``znuny`` user to /opt/znuny for the best compatibility and changing the following variables.
 
     - ``$Self->{Home}``
     - ``$Self->{'Frontend::WebPath'}``
@@ -27,9 +26,16 @@ to perform the update. We do not support direct updates from any version before 
 
 
 Preparations
-~~~~~~~~~~~~
+************
 
 Before the update can started we need to perform some tasks to prepare the update.
+
+You should or should have entered a scheduled maintenance time period in the admin area. Login as your admin user, select the active maintenance window and kill all sessions but your own. Now only administrators can login.
+
+.. figure:: images/kill_sessions.png
+	:alt: Maintenance Session Managment
+
+	Maintenance Session Managment
 
 Check if every add-on your are using is available for version 7.0. You don't have to care on packages which are already integrated, see the list of them in the :ref:`release notes <Integrated features 7.0>`.
 
@@ -54,7 +60,7 @@ Create a backup of the database, the application and all data, especially the at
 ..
 
 Update via RPM
-~~~~~~~~~~~~~~
+**************
 
 The update via RPM.
 
@@ -71,7 +77,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. 
 
 Update via source
-~~~~~~~~~~~~~~~~~~
+*****************
 
 The installation from source takes some more steps. If there are more file to restore than mentioned in the restore block, add them by yourself.
 
@@ -91,7 +97,7 @@ The installation from source takes some more steps. If there are more file to re
 
 	# Restore Kernel/Config.pm, articles, etc.
 	cp -av <HOME_DIR>/Kernel/Config.pm /opt/znuny-7.0.10/Kernel/
-	mv <HOME_DIR>/var/article/* /opt/znuny-7.0.01/var/article/
+	mv <HOME_DIR>/var/article/* /opt/znuny-7.0.10/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
 	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.0.10/; done
@@ -111,7 +117,7 @@ The installation from source takes some more steps. If there are more file to re
 ..
 
 Execute the migration script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+****************************
 
 .. code-block::
 
@@ -121,10 +127,13 @@ Execute the migration script
 ..
 
 Update installed packages
-~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************
 
 .. note:: Packages for Znuny LTS (6.5.x) are not compatible with Znuny 7.0 and have to be updated.
 
+.. note:: UpgradeAll should only be performed, after your target version has been reached. 
+	
+.. note:: UpgradeAll can fail, if repositories are not reachable or configured, versions for your framework are not available, or packages have been renamed. In this case, you should upgarde your packages manually via the commandline or by installing/updating them via the package manager.
 
 .. code-block::
 
@@ -135,9 +144,11 @@ Update installed packages
 
 ..
 
-
 Restart everything
-~~~~~~~~~~~~~~~~~~
+******************
+
+.. important:: Before starting the cron or mail service and daemon, you should ensure the frontend is working properly. Once new mails are received, or articles are created, a roll back is much more difficutlt, and mails may get lost.
+
 
 .. code-block::
 
@@ -152,3 +163,8 @@ Restart everything
 	systemctl start postfix
 
 ..
+
+Deactivate maintenance 
+**********************
+
+Don't forget to deactivate the scheduled maintenance, so that your users and customers can login again.
