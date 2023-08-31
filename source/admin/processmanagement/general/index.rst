@@ -154,7 +154,7 @@ A process can be Active, Inactive, or set to "FadeAway".
 
 Click *Save*. Then you can then start adding process elements and organizing them on the canvas using the modeler.
 
-You may also use the import function to import your process or use the Ready2Adopt processes available to you in the system. Pay special attention when importing.
+You may also use the import function to import your process or use the :ref:`Ready2Adopt <PageNavigation processmanagement_readytoadopt_index>` processes available to you in the system. Pay special attention when importing them, the parts must be manually removed if the process is deleted later. Additionally, dynamic fields and other settings may be imported when using them.
 
 Editing a Process
 *****************

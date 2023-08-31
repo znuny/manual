@@ -14,5 +14,6 @@ Overview
    activitydialogs/index
    transitions/index
    transitionactions/index
+   readytoadopt/index
 
 .. add new files to list above to include them in toc
