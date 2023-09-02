@@ -20,6 +20,15 @@ Preparations
 
 Before the update can started we need to perform some tasks to prepare the update.
 
+You should or should have entered a scheduled maintenance time period in the admin area. Login as your admin user, select the active maintenance window and kill all sessions but your own. Now only administrators can login.
+
+.. figure:: images/kill_sessions.png
+	:alt: Maintenance Session Managment
+
+	Maintenance Session Managment
+
+Create a backup of the database, the application and all data, especially the attachments.
+
 Check if every add-on your are using is available for version 6.1. You don't have to care on packages which are already integrated, see the list of them in the :ref:`release notes<Integrated features 6.1>`.
 
 Create a backup of the database, the application and all data, especially the attachments.
@@ -113,6 +122,10 @@ Update installed packages
 
 .. note:: Packages for Znuny LTS (6.0.x) are not compatible with Znuny 6.1 and have to be updated.
 
+.. note:: UpgradeAll should only be performed, after your target version has been reached. 
+	
+.. note:: UpgradeAll can fail, if repositories are not reachable or configured, versions for your framework are not available, or packages have been renamed. In this case, you should upgarde your packages manually via the commandline or by installing/updating them via the package manager.
+
 
 .. code-block::
 
@@ -139,3 +152,7 @@ Restart everything
 
 ..
 
+Deactivate maintenance 
+**********************
+
+Don't forget to deactivate the scheduled maintenance, so that your users and customers can login again.

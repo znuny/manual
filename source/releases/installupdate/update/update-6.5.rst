@@ -22,6 +22,15 @@ Preparations
 
 Before the update can started we need to perform some tasks to prepare the update.
 
+You should or should have entered a scheduled maintenance time period in the admin area. Login as your admin user, select the active maintenance window and kill all sessions but your own. Now only administrators can login.
+
+.. figure:: images/kill_sessions.png
+	:alt: Maintenance Session Managment
+
+	Maintenance Session Managment
+
+Create a backup of the database, the application and all data, especially the attachments.
+
 Check if every add-on you are using is available for version 6.5.
 
 Create a backup of the database, the application and all data, especially the attachments.
@@ -113,6 +122,10 @@ Update All Packages
 
 If all packages are available online, you can use the console command for updating.
 
+.. note:: UpgradeAll should only be performed, after your target version has been reached. 
+	
+.. note:: UpgradeAll can fail, if repositories are not reachable or configured, versions for your framework are not available, or packages have been renamed. In this case, you should upgarde your packages manually via the commandline or by installing/updating them via the package manager.
+
 .. code-block::
 
   su - otrs
@@ -145,6 +158,12 @@ Restart everything
 
   # Start your local MTA, mostly Postfix, sometimes Exim or Sendmail
   systemctl start postfix
+
+Deactivate maintenance 
+**********************
+
+Don't forget to deactivate the scheduled maintenance, so that your users and customers can login again.
+
 
 Post Update Changes
 ********************
