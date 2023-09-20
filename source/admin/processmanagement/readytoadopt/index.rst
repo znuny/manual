@@ -94,7 +94,7 @@ We recommend the following adaptations.
 The application goes through some different states which can be used to configure notifications. Set up a ticket notification based on the event ``TicketDynamicFieldUpdate_<FIELDNAME>``.
 
 +-----------------------------------------+-----------------------------------------------+-----------------------------------------+
-| Value                                   | Recommended Recipient                        |                                         |
+| Value                                   | Recommended Recipient                         |                                         |
 +=========================================+===============================================+=========================================+
 | Values filled                           | Application is recorded and awaiting approval | Agent who is responsible for the ticket |
 +-----------------------------------------+-----------------------------------------------+-----------------------------------------+
