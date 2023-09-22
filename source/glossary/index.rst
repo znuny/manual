@@ -19,6 +19,9 @@ Customer interface
 Customer User
     Requester assigned to a ticket. The person receiving support. The owner of an asset. A member of a customer entity.
 
+External Ticket Number
+    A number used to reference an external ticket allowing both the systems own ticket number, as well as one or more additional numbers to be used for communications.
+
 Service
     An object used to represent the service applied to a ticket, in the ITIL sense.
 

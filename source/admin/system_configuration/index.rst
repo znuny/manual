@@ -1,6 +1,7 @@
+.. _PageNavigation admin_system_configuration_index:
+
 Configure Your System
 #####################
-.. _PageNavigation admin_system_configuration_index:
 
 The software configuration is mostly done using entity relationship, ACLs, processes and web services. More comlex configuration is done using the system configuration module. Here a system administrator can make system wide changes like mail sending, logging, module level permissions, menu structure, automated processing, etc.
 

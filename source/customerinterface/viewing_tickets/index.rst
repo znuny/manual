@@ -1,6 +1,7 @@
+.. _PageNavigation customerinterface_viewing_tickets_index:
+
 Viewing Tickets
 ###############
-.. _PageNavigation customerinterface_viewing_tickets_index:
 
 When viewing a ticket, the customer user has access to the basic ticket data and dynamic fields, based on the configuration.
 
