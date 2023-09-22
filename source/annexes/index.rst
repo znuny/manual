@@ -12,6 +12,7 @@ List of annexes.
    permissions/index
    event_reference/index
    entity_management/index
+   external_ticket_numbers/index
    navigation/index
    placeholders/index
    x_headers/index
