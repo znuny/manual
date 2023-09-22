@@ -70,4 +70,5 @@ How it works
 There are two basic options that you can now use to work with external ticket numbers:
 
 1. You can manually add an external ticket number to the dynamic field. Dynamic fields can be made available in any mask within the system. When an email is received, the system looks first to find a matching internal number and then for an external ticket number. This will then match the ticket with the external ticket number, regardless of whether the communication has no internal ticket number.
+
 2. The second way is automatic. When a new ticket is created, and no internal or external number is found, the application generates an internal ticket number. It automatically fills the dynamic field with the external ticket number found in the new communication.

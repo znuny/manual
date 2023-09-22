@@ -5,4 +5,5 @@ Configuring a type of text will allow the user to add a line of text to the tick
 
 .. figure:: images/dynamicfield_text.png
 
-    Add a text filed.
+    Add a text field.
+

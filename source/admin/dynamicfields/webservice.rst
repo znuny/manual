@@ -1,7 +1,7 @@
 Web Service
 ###########
 
-This dynamic field allows to retrieve information from web services. **Webservice (Text)** is used to store a single value, **Webservice (Multiselect)**  allows to select and save multiple values from the result of the web service.
+This dynamic field allows to retrieve information from web services. **Web service (Text)** is used to store a single value, **Web service (Multiselect)**  allows to select and save multiple values from the result of the web service.
 
 Requirements
 ************

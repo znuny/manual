@@ -1,10 +1,8 @@
 Multiselect
 ###########
 
-Configuring a type of miltiselect, similar to the dropdown, will allow the user to select multiple options from preconfigured set options.
+Configuring a type of multiselect, similar to the dropdown, will allow the user to select multiple options from preconfigured set of options.
 
 .. figure:: images/dynamicfield_multiselect.png
 
-    Add a multi select field
-
-   
+    Add a multiselect field

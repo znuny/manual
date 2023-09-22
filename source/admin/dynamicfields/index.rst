@@ -3,24 +3,23 @@
 Extend Ticket Data (Dynamic Fields)
 ###################################
 
-Dynamic fields extend the capability to collect data within your tickets. Dynamic fields can be connected to not just tickets, but any objects within the system. Each dynamic field has, in addtion to it's object, a specific type and a specific configuration.
+Dynamic fields extend the capability to collect additional data within your tickets. Dynamic fields can be connected to not just tickets, but any objects within the system. Each dynamic field has, in addtion to it's object, a specific type and a specific configuration.
 
 .. note::
 
-   Installing add Ons may also intorduce additional types or objects with them. 
+   Installing add-ons may also introduce additional types or objects with them. 
 
-Dynamic Field Obects
-********************
+Dynamic Field Objects
+*********************
 
 Ticket
-   These can be used with ticket objcets and is the default choice for most cases.
+   These can be used with ticket objects and is the default choice for most cases.
 Article
    These are attached to individual articles. Currently, they cannot be used for searching or statistics.
 Customer
-   These can be attached to customer objects. it requires a mapping within ``Kernel/Config.pm``
+   These can be attached to customer objects. It requires a mapping within ``Kernel/Config.pm``
 Customer User
-   These can be attached to customer user objects. it requires a mapping within ``Kernel/Config.pm``
-
+   These can be attached to customer user objects. It requires a mapping within ``Kernel/Config.pm``
 
 Dynamic Field Types
 *******************
@@ -49,7 +48,7 @@ Web service (Multisselect)
 Configuring Screens
 *******************
 
-We've taken the guesswork out of finding the correct system configuration in order to configure the dynamic fields to be used within screens. Using the following module, you will be able toconfigure the viewable fields for overviews and screens per drag and drop.
+We've taken the guesswork out of finding the correct system configuration in order to configure the dynamic fields to be used within screens. Using the following module, you will be able to configure the viewable fields for overviews and screens per drag and drop.
 
 .. note::
 

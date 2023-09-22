@@ -3,7 +3,7 @@
 Configure Your System
 #####################
 
-The software configuration is mostly done using entity relationship, ACLs, processes and web services. More comlex configuration is done using the system configuration module. Here a system administrator can make system wide changes like mail sending, logging, module level permissions, menu structure, automated processing, etc.
+The software configuration is mostly done using entity relationship, ACLs, processes and web services. More complex configuration is done using the system configuration module. Here a system administrator can make system wide changes like mail sending, logging, module level permissions, menu structure, automated processing, etc.
 
 It's best if you learn the concept of URL hacking, and use the front-end action of the URL, to find settings affecting the frontend. As you grow, you will learn to navigate using the navigation tree, and later search more complex using search terms and filters.
 
