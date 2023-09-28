@@ -1,5 +1,7 @@
+.. _PageNavigation console_index:
+
 Command Line Interface
-#######################
+######################
 
 There are many things solely configurable via the command line. Most tasks require understanding how to remotely log on to the server and move about on the console.
 

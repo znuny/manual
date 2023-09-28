@@ -1,6 +1,7 @@
-Console Commands - Admin
-###############################
 .. _PageNavigation console_admin:
+
+Console Commands - Admin
+########################
 
 .. list-table:: Admin Command
    :widths: 35 5 65

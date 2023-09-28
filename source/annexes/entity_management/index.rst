@@ -1,6 +1,7 @@
+.. _PageNavigation annexes_entity_management_index:
+
 Managing Entities
 #################
-.. _PageNavigation annexes_entity_management_index:
 
 An entity is any reusable item within the system. It has, in most cases, a canonical name, a valid setting, and a comment. Typical entities are (but not limited to):
 
@@ -29,3 +30,5 @@ We will not create screenshots for each entity and their management, unless nece
 Wherever entities can only be invalidated, you have the option to show valid on show all.
 
 .. image:: ../../releases/7_0_1/images/show_valid.png
+
+.. note:: All non entity system settings and configurations are found in the :ref:`pagenavigation admin_index_systemconfiguration` tool.
