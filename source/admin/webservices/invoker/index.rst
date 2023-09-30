@@ -87,33 +87,6 @@ These element are available, if not mentioned value is the new value:
 
 ..
 
-Jq in event conditions
-======================
-
-.. note:: To use this feature Jq and the CPAN Module Jq must be installed.
-
-.. code-block:: shell
-	:caption: Example installation for Debian
-
-	sudo apt-get install jq
-	sudo cpan Jq
-..
-
-This optional feature is usefull to check substructures and also arrays in ticket event conditions. For more detail on valid Jq expressions check the `documentation <https://stedolan.github.io/jq/>`_.
-
-In the conditions, all values can then be accessed which are also sent via the Generic Invoker.
-
-.. code-block:: none
-
-	# Retrieve the SenderType of the first element of the Articles array
-	Jq#.Articles[0].SenderType
-	jq#.Article.Subject
-	jq#.OwnerData.Fullname
-
-.. image:: images/webservice_Jq-Condition.png
-         :width: 100%
-         :alt: Example Jq condition
-
 Encode binary fields
 ====================
 
@@ -871,3 +844,82 @@ Example data invoker Ticket::Generic
 	}
 
 ..
+
+Evaluate Event Conditions
+*************************
+
+When invokers are triggered, they have a payload. This payload can evaluated, to ensure the specifcs of an event are also considered, and not just the event. There are two types of evaluation. In both cases
+
+Simple Evaluation
+=================
+
+Check ticket data against a string or regular expression. This is done by entering the key selecting the type of comparison and then entering the value for comparison.
+
+Complex Evaluation
+==================
+
+
+To evaluate event condtions, we implement jq and the Jq perl Module.
+
+jq is a lightweight, command-line JSON processor. To use it, you construct one or more filters, and it applies those filters to the event payload.
+
+.. note:: To use this feature Jq and the CPAN Module Jq must be installed.
+
+.. code-block:: shell
+	:caption: Example installation for Debian
+
+	sudo apt-get install jq
+	sudo cpan Jq
+..
+
+This optional feature is usefull to check substructures and also arrays in ticket event conditions. For more detail on valid Jq expressions check the `documentation <https://stedolan.github.io/jq/>`_.
+
+In the conditions, all values can then be accessed which are also sent via the ``Ticket::Generic`` Invoker. jq lets you select elements in a JSON document like it’s a JavaScript object. 
+
+.. important:: 
+	
+	jq is only applicable to ``Ticket::Generic``.
+
+
+Just start with . (for the whole payload) and drill down to the value you want. It ends up looking something like this:
+
+.. code-block:: none
+
+	# Retrieve the SenderType of the first element of the Articles array
+	jq#.Articles[0].SenderType
+	jq#.Article.Subject
+	jq#.OwnerData.Fullname
+
+.. image:: images/webservice_Jq-Condition.png
+         :width: 100%
+         :alt: Example Jq condition
+
+.. important:: 
+	
+	Parsing begins with the ticket element. This means, that the ticket data is in the ``.`` element, and the event data is not accessible.
+
+**Avaliable Elements:**
+
++------------------+----------------------+----------------------------+
+| Element          | Description          | Example                    |
++==================+======================+============================+
+| .                | Ticket Data          | jq#.TicketID               |
++------------------+----------------------+----------------------------+
+| .Artilces        | An array of articles | jq#.Articles[0].SenderType |
++------------------+----------------------+----------------------------+
+| .CustomerUser    | Customer user data   | jq#.CustomerUser.UserEmail |
++------------------+----------------------+----------------------------+
+| .OwnerData       | Owner data           | jq#.OwnerData.Fullname     |
++------------------+----------------------+----------------------------+
+| .PriorityData    | Priority data        | jq#.PriorityData.Name      |
++------------------+----------------------+----------------------------+
+| .QueueData       | Queue data           | jq#.QueueData.Name         |
++------------------+----------------------+----------------------------+
+| .ResponsibleData | Reponsible data      | jq#.ResponsibleData.Name   |
++------------------+----------------------+----------------------------+
+| .TypeData        | Type data            | jq#.TypeData.Name          |
++------------------+----------------------+----------------------------+
+| .ServiceData     | Service data         | jq#.ServiceData.Name       |
++------------------+----------------------+----------------------------+
+| .SLAData         | SLA data             | jq#.SLAData.Name           |
++------------------+----------------------+----------------------------+
