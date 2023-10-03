@@ -23,5 +23,5 @@ By default, all tickets in open states are shown. The customer user can choose b
 - Open
 - Closed
 
-Clicking on a ticket will lead the to :ref:`viewing the ticket <PageNavigation customerinderface_viewing_tickets_index>`.
+Clicking on a ticket will lead the to :ref:`viewing the ticket <PageNavigation customerinterface_viewing_tickets_index>`.
  

@@ -13,4 +13,4 @@ Customers may use the search to:
 - Save save search templates
 - Access historical tickets
 
-Once a ticket is viewed, (see :ref:`Viewing Tickets <PageNavigation customerinderface_viewing_tickets_index>` ), ticket can also be reopened.
+Once a ticket is viewed, (see :ref:`Viewing Tickets <PageNavigation customerinterface_viewing_tickets_index>` ), ticket can also be reopened.

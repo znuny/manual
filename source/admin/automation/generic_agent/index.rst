@@ -96,7 +96,7 @@ The possibility to execute system command (CMD) was removed for security reasons
 
 **Example Module**
 
-.. code:: perl
+.. code:: 
 
   # --
   # Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/

@@ -158,7 +158,7 @@ To make this configuration active, we need to navigate to the SysConfig module i
 
 In conclusion: to create a new skin in OTRS, we had to place the new logo file, and create one CSS and one XML file, resulting in three new files:
 
-.. code:: screen
+.. code:: 
 
    Kernel/Config/Files/CustomSkin.xml
    var/httpd/htdocs/skins/Agent/custom/img/custom-logo.png
