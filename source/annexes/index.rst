@@ -16,3 +16,4 @@ List of annexes.
    navigation/index
    placeholders/index
    x_headers/index
+   stat_values/index

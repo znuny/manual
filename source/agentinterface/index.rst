@@ -69,3 +69,10 @@ Dashboards:
    :maxdepth: 3
 
    dashboards/index
+
+Statistics:
+
+.. toctree::
+   :maxdepth: 3
+
+   statistics/index
