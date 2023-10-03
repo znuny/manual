@@ -86,3 +86,4 @@ In the rest of this chapter we will discuss how to use groups and rolls to manag
    users/index
    customer_users/index
    user_backends/index
+   user_synchronization/index
