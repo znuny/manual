@@ -1,5 +1,5 @@
-Working with Stats
-##################
+Working with Statistics
+#######################
 
 Using the statistics module, it is possible to get reports about different metrics within the system. These reports could be a dynamic matrix, resembling a pivot chart or table, or they can be a list of objects. Additionally, statistics can have designed and implemented, one such is included with the FAQ add-on. These are Perl modules that have a specific use and are not configurable. Depending on which modules or add-ons you have within your system, additional statistics may be available for selection when creating a new statistic.
 
@@ -23,7 +23,7 @@ There are many statistics which are preloaded within your system. By navigating 
 
 .. important:: 
   
-  When importing and exporting statistics, ID's are used for entities. Make sure, that you change these in the YAML file, when importing into another sysetm.
+  When importing and exporting statistics, IDs are used for entities. Make sure, that you change these in the YAML file, when importing into another system.
 
 
 Statistic Type
@@ -34,7 +34,7 @@ Statistic Type
    Type Chooser
 
 Dynamic matrix
-  This report returns a Bar, line, or pie chart. Also, you can get a CSV, or Excel format. It is possible to configure X and the Y axis, and filters, based on ticket data. These can also be selected for use as dashboard elements.
+  This report returns a bar, line, or pie chart. Also, you can get a CSV, or Excel file. It is possible to configure X and the Y axis, and filters, based on ticket data. These can also be selected for use as dashboard elements.
 Dynamic list
   The list returns tickets which meet, filter requirements. On the Y axis, you can set order and sort options. On the X axis, you can choose which attributes are returned.
 Static
@@ -48,11 +48,11 @@ For each specific statistic type, you may select from one or more modules. Each 
 +----------------+-------------------------------+----------------------------------------------------------------+
 | Statistic Type | Module Name                   | Description                                                    |
 +================+===============================+================================================================+
-| Matirx         | Ticket Accounted Time         | The values show the total accounted time for matching tickets. |
+| Matrix         | Ticket Accounted Time         | The values show the total accounted time for matching tickets. |
 +----------------+-------------------------------+----------------------------------------------------------------+
-| Matirx         | Ticket Accumulation           | The values show the total count of tiets matching tickets.     |
+| Matrix         | Ticket Accumulation           | The values show the total count of tiets matching tickets.     |
 +----------------+-------------------------------+----------------------------------------------------------------+
-| Matirx         | Ticket Solution Response Time | The values show the average response time of matching tickets. |
+| Matrix         | Ticket Solution Response Time | The values show the average response time of matching tickets. |
 +----------------+-------------------------------+----------------------------------------------------------------+
 | List           | Ticket List                   | The list returns tickets and thier data.                       |
 +----------------+-------------------------------+----------------------------------------------------------------+
@@ -78,9 +78,9 @@ Title
 Description 
   Give more details about the report for an explanation about what the report should return.
 Object type:
-  The object type allows you to choose which module should be used by the statistics to do the calculation and return the values. This can only be modified duringstatistic creation and cannot be edited.
+  The object type allows you to choose which module should be used by the statistics to do the calculation and return the values. This can only be modified during statistic creation and cannot be edited.
 Permissions 
-  Set the groups who will be able to view and or edit this report.
+  Set the groups who will be able to view and/or edit this report.
 Results format 
   Choose the available result formats for the statistic module.
 Time zone
@@ -94,7 +94,7 @@ Cache results
 Show as dashboard widget 
   Should the report be available as a dashboard widget? (only charts can be  used)
 Validity
-  Is the stat valid for use?
+  Is the report valid for use?
 
 Configure Axis and Filters
 ==========================
@@ -110,7 +110,11 @@ Configuration is first available after saving the general information. After thi
      Sorting for Lists
 
 
+<<<<<<< HEAD
+When you configure your X and Y axis or filters, you can choose to allow for changes at runtime, or not. If you do allow changes, only the values selected during stat creation will be available. To make all values available, leave the attribute list empty.
+=======
 When you configure your X and Y axis or fiters, you can choose to allow for changes at runtime, or not. If you do allow changes, only the values selected during stat creation will be available. To make all values available, leave the attribute list empty.
+>>>>>>> znuny
 
 .. figure:: images/stats_agent_configure_axis.png
 
@@ -127,7 +131,7 @@ When you configure your X and Y axis or fiters, you can choose to allow for chan
 Running a Statistic
 *******************
 
-Choose the statistic by selecting the statistic number or run in the :ref:`pagenavigaton agentinterface_statistics_overview`.  You'll then be offered the chance to change any settings the designer choose for you, or if you have write permissions you'll be able to do a full edit on the statistic.
+Choose the statistic by selecting the statistic number or run in the :ref:`pagenavigaton agentinterface_statistics_overview`. You'll then be offered the chance to change any settings the designer choose for you, or if you have write permissions you'll be able to do a full edit on the statistic.
 
 .. figure:: images/stats_agent_run.png
 

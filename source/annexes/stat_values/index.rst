@@ -3,135 +3,171 @@
 Statistics Attributes
 #####################
 
-Here's a translation table to show you different types of values returned by the Ticket Dynamic List, and what they mean within the system.
+Here's a table to show you different types of values returned by the Ticket Dynamic List, and what they mean within the system.
 
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Attribute                         | Descritpion                                                                                                             | Example                                                 |
-+===================================+=========================================================================================================================+=========================================================+
-| Age                               | Age of the ticket in days                                                                                               | 42                                                      |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Created                           | Creation date                                                                                                           | 2023-01-01 08:08:00                                     |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Closed                            | Closing time (in standard last closing time)                                                                            | 2023-01-01 08:08:00                                     |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| CustomerUserID                    | current customer user                                                                                                   | test                                                    |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| CustomerID                        | current customer number of the selected customer user                                                                   | acme                                                    |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| EscalationDestinationIn          || next escalation in (minutes)(only available if escalation still expected if                                            || 12                                                     |
-||                                  || ticket already closed or escalation expired this value is empty)                                                       ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| EscalationDestinationDate        || next escalation (date) (only available if escalation is still expected when                                            || 2023-01-01                                             |
-||                                  || ticket is already closed or escalation expires this value is empty)                                                    ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| EscalationTimeWorkingTime        || next escalation in sec. calculated in working time (based on calendar)                                                 || 1235467                                                |
-||                                  || (only available if escalation still expected if ticket already closed or escalation expire this value is empty)        ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| EscalationResponseTime           || unix time stamp of response time escalation (only present if escalation still                                          || 32465                                                  |
-||                                  || expected if ticket already closed or escalation expired this value is empty)                                           ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| EscalationSolutionTime           || unix time stamp of update time escalation (only available if escalation still                                          || 216549                                                 |
-||                                  || expected if ticket already closed or escalation expired this value is empty)                                           ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| EscalationUpdateTime             || unix time stamp of solution time escalation (only present if escalation still                                          || 16549                                                  |
-||                                  || expected if ticket already closed or escalation expire this value is empty)                                            ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| EscalationTime                   || next escalation in sec. (without calendar) (only available if escalation                                               || 2023-01-01 08:00:30                                    |
-||                                  || is still expected if ticket is already closed or escalation expires this value is empty)                               ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| FirstLock                         | Time of first lock                                                                                                      | 2023-01-01                                              |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| FirstResponse                     | timestamp of the first answer (if done)                                                                                 | 2023-01-01                                              |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| FirstResponseInMin               || Minutes of the first response (if done / if escalation parameters are still                                            || 12459 or -12459                                        |
-||                                  || present at the queue or SLA of the ticket - even if ticket is closed)                                                  ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| FirstResponseDiffInMin           || Remaining time until escalation of first response (if escalation parameters are                                        || 1246 or -1246                                          |
-||                                  || still contained in the queue or SLA of the ticket - also for closed tickets)                                           ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| FirstResponseTimeWorkingTime     || First response escalation in sec. calculated in working time (based on calendar)                                       || 123456                                                 |
-||                                  || (only available if escalation still expected if ticket already closed or escalation expired this value is empty)       ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| FirstResponseTimeEscalation      || Escalation first response (only available if escalation still expected if ticket already                               || 324657987                                              |
-||                                  || closed or escalation expire this value is false)                                                                       ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| FirstResponseTimeNotification     | Time of escalation notification in UnixTime                                                                             | 230216541                                               |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| FirstResponseTimeDestinationTime || Time for first response escalation in UnixTime                                                                         || 2193292                                                |
-||                                  ||                                                                                                                        || (only present if set and ticket not previously closed) |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| FirstResponseTimeDestinationDate || Time for escalation of first response as UnixTimestapm (only available if escalation is still                          || 2456246                                                |
-||                                  || expected when ticket is already closed or escalation expires this value is empty)                                      ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| FirstResponseTime                || First response escalation in seconds (without calendar) (only available if escalation is still                         || 1440                                                   |
-||                                  || expected when ticket is already closed or escalation expires this value is empty)                                      ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Lock                              | State of the ticket lock                                                                                                | sock                                                    |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Modified                          | Date of last modification                                                                                               | 2023-01-01 08:08:00                                     |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Number                            | Result number                                                                                                           | 15                                                      |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Priority                          | current priority                                                                                                        | 3 normal                                                |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Queue                             | current queue                                                                                                           | Junk                                                    |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| RealTillTimeNotUsed               | Unix time when the ticket will reach the wait time.                                                                     | 1657498                                                 |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| ResponseWorkingTime               | time recorded as "working time" on ticket items                                                                         | 45                                                      |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| SolutionTime                     || Solution time escalation in sec. (without calendar) (only available if escalation still                                || 31868849                                               |
-||                                  || expected if ticket already closed or escalation expire this value is empty)                                            ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| SolutionTimeDestinationTime      || Time to resolution in minutes (if escalation parameters are                                                            || 12324                                                  |
-||                                  || still present at the queue or SLA of the ticket - even if ticket is closed)                                            ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| SolutionDiffInMin                || Remaining time until escalation Solution time in minutes (if escalation parameters are still included in the queue or  || 32126 or -32126                                        |
-||                                  || SLA of the ticket - also for closed tickets)                                                                           ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| SolutionTimeWorkingTime          || SolutionTime Escalation in sec. calculated in working time (based on calendar)                                         || 3213246                                                |
-||                                  || (only available if escalation still expected if ticket already closed or escalation expired this value is empty)       ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| SolutionTimeEscalation           || Time if ticket SolutionTime is currently active (only available if escalation is still expected if ticket              || 3216564                                                |
-||                                  || is already closed or escalation expires this value is false)                                                           ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| SolutionTimeNotification          | Solution time notification                                                                                              | 321654                                                  |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| SolutionTimeDestinationTime      || Time for escalation Solution Time Escalation in UnixTime                                                               || 72193292                                               |
-||                                  ||                                                                                                                        || (only present if set and ticket not previously closed) |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| SolutionTimeDestinationDate      || Time for escalation Update Time Escalation as timestamp                                                                || 32165                                                  |
-||                                  || (only available if escalation still expected if ticket already closed or escalation expire this value is empty)        ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Status                            | current status                                                                                                          | open                                                    |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| TicketID                          | Ticket ID                                                                                                               | 202301124845000052                                      |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| TicketNumber                      | Ticket number                                                                                                           | 202301124845000052                                      |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| Title                             | Ticket title                                                                                                            | Some Title                                              |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| UpdateTime                       || next Update Time escalation in sec. (without calendar) (only available if escalation still                             || 16549                                                  |
-||                                  || expected if ticket already closed or escalation expire this value is empty)                                            ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| UpdateTimeEscalation             || Time if ticket UpdateTime current is active (only available if escalation still expected if                            || 213468498                                              |
-||                                  || ticket already closed or escalation expire this value is false)                                                        ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| UpdateTimeNotification           || Shows to what percentage Update Time escalation is escalated (only available if escalation is                          || 6549819877                                             |
-||                                  || still expected if ticket is already closed or escalation expires this value is empty)                                  ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| UpdateTimeDestinationTime        || Time for escalation Update Time Escalation in UnixTime                                                                 || 72193292                                               |
-||                                  ||                                                                                                                        ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| UpdateTimeDestinationDate        || Time for escalation Update Time Escalation as timestamp (only available if escalation still                            || 5498198687                                             |
-||                                  || expected if ticket already closed or escalation expire this value is empty)                                            ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-|| UpdateTimeWorkingTime            || next escalation of UpdateTime in sec. calculated in working time (based on calendar)                                   || 651987                                                 |
-||                                  || (only available if escalation is still expected if ticket is already closed or escalation expires this value is empty) ||                                                        |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| StateType                         | To which type does the current state belong                                                                             | open                                                    |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| UntilTime                         | Time in seconds until the wait time (e.g. wait for resubmission) is reached                                             | 1234                                                    |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
-| UnlockTimeout                     | Unix time when the ticket was locked                                                                                    | 1324654665                                              |
-+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
+.. list-table:: Attributes of the ticket list object
+   :widths: 20 65 15
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+     - Example value
+   * - Accounted time
+     - Sum of the accounted time of the ticket's article.
+     - 263
+   * - Age
+     - Age of the ticket in human readable format.
+     - 10 d 5 h
+   * - Created
+     - Create time of the ticket.
+     - 2023-02-12 09:12:82
+   * - Close Time
+     - Time when the ticket was **last** closed.
+     -
+   * - Customer ID
+     - The customer id of the ticket.
+     - Example, Inc.
+   * - Customer User
+     - The id of the ticket's customer user.
+     - john.doe@example.com
+   * - EscalationDestinationDate
+     - The date and time when the ticket is escalated.
+     - 2023-10-12 12:45:00
+   * - EscalationDestinationIn
+     - The relative time from the now to the time of escalation.
+     - 4h 30m
+   * - EscalationResponseTime
+     - Unix timestamp of the response time escalation.
+     -
+   * - EscalationSolutionTime
+     - Unix timestamp of the solution time escalation.
+     -
+   * - EscalationTime
+     - Seconds until the nearest escalation time. Independet from the ecalation type response,update or solution.
+     -
+   * - EscalationTimeWorkingTime
+     - Time in seconds within the defined working time until an escalation.
+     -
+   * - EscalationUpdateTime
+     - Unix timestamp of the update time escalation.
+     -
+   * - FirstLock
+     - Date and time of the first lock and only set when the ticket was locked at least once.
+     -
+   * - FirstResponse
+     - Date and time of the first response.
+     -
+   * - FirstResponseDiffInMin
+     - The difference in minutes between the specified and real first response time.
+     -
+   * - FirstResponseInMin
+     - Time in minutes from the ticket creation until the first response.
+     -
+   * - FirstResponseTime
+     - The timestamp of first response.
+     - 
+   * - FirstResponseTimeDestinationDate
+     - Date and time of the first response escalation.
+     -
+   * - FirstResponseTimeDestinationTime
+     - Unix timestamp of the first response escalation.
+     -
+   * - FirstResponseTimeEscalation
+     - Indicates if there was a first response time escalation with the value 1.
+     -
+   * - FirstResponseTimeNotification
+     - Shows if the defined escalation notification time is activated or not.
+     -
+   * - FirstResponseTimeWorkingTime
+     - Time in seconds within the defined working time until an first response escalation.
+     -
+   * - Last Changed
+     - Last time the ticket has changed.
+     - 2022-07-12 21:23:00
+   * - Lock
+     - Value of the ticket's lock.
+     - unlock
+   * - Number
+     - Current number of this entry in a report.
+     - 42
+   * - Priority
+     - Name of the ticket's priority.
+     - 4 high
+   * - Queue
+     - Name of the queue where the ticket belongs to.
+     - Postmaster
+   * - RealTillTimeNotUsed
+     - Unix timestamp of the pending time.
+     - 1696343400
+   * - SolutionInMin
+     - Time in minutes until the solution escalation.
+     -
+   * - SolutionTime
+     - The time in seconds until a solution time escalation.
+     -
+   * - SolutionTimeDestinationTime
+     - Unix timestamp of SolutionTime.
+     -
+   * - SolutionDiffInMin
+     - The difference in minutes between the specified and real solution time.
+     -
+   * - SolutionTimeEscalation
+     - Shows if the solution time escalation happened with the value 1, and 0 for no esclation.
+     -
+   * - SolutionTimeNotification
+     - Shows if the defined escalation notification time is activated or not.
+     -
+   * - SolutionTimeDestinationDate
+     - Date of the solution time escalation.
+     -
+   * - SolutionTimeDestinationTime
+     - Unix timestamp of the solution time escalation.
+     -
+   * - SolutionTimeWorkingTime
+     - Time in seconds within the defined working time until an solution time escalation.
+     -
+   * - State
+     - The state of the ticket.
+     - pending reminder
+   * - StateType
+     - State type of the ticket.
+     - pending auto
+   * - TicketID
+     - The id of the ticket.
+     - 115561
+   * - Ticket#
+     - The ticket number.
+     - 421305912
+   * - Title
+     - Ticket title.
+     -
+   * - Type
+     - The type of the ticket.
+     - Unclassified
+   * - UnlockTimeout
+     - Time in seconds until the ticket will be unlocked.
+     - 872
+   * - UntilTime
+     - Time in secondes until the pending time of a pending state is reached.
+     - 120
+   * - UpdateTime
+     - Seconds until the update escalation.
+     - 
+   * - UpdateTimeDestinationDate
+     - Date of the update time escalation.
+     -
+   * - UpdateTimeDestinationTime
+     - Unix timestamp of the update time escalation.
+     -
+   * - UpdateTimeEscalation
+     - Indicates with a value of 1 the update time escalated or not (value 0).
+     -
+   * - UpdateTimeNotification
+     - Shows if the defined escalation notification time is activated or not.
+     -
+   * - UpdateTimeWorkingTime
+     - Time in seconds within the defined working time until an update escalation.
+     -
+
+..
+
