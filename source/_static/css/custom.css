@@ -14,3 +14,8 @@ div.versionadded, div.versionchanged {
 div.versionadded p, div.versionchanged p {
   display: inline;
 }
+
+tr.row-even {
+  background-color: #efefef;
+}
+
