@@ -39,6 +39,8 @@ Agent Authentication LDAP Example
 
     `AuthBackend in Defaults.pm <https://github.com/znuny/Znuny/blob/dev/Kernel/Config/Defaults.pm#L406>`_
 
+.. _PageNavigation admin_usermangement_user_backends_usersyncbackend_config:
+
 User Synchronization Backend
 *****************************
 
