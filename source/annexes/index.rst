@@ -10,10 +10,10 @@ List of annexes.
 
    acl_reference/index
    permissions/index
-   event_modules/index
    event_reference/index
-   external_ticket_numbers/index
    entity_management/index
-   placeholders/index
+   external_ticket_numbers/index
    navigation/index
+   placeholders/index
    x_headers/index
+   stat_values/index
