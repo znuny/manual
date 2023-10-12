@@ -30,6 +30,18 @@ Console Commands - Admin
    * - Admin::TicketAttributeRelations::Import
      - 6.2
      - Imports ticket attribute relations from a CSV/Excel file.
+   * - Admin::DynamicField::Import
+     - 6.5.5
+     - Imports configuration of dynamic fields and dynamic field screens from a file in YAML format.
+   * - Admin::DynamicField::Export
+     - 6.5.5
+     - Exports configuration of all dynamic fields. Output can be formatted as YAML or Perl structure.
+   * - Admin::DynamicField::ScreenConfig
+     - 6.5.5
+     - Adds and removes dynamic fields to/from screen configurations.
+   * - Admin::DynamicField::DefaultColumnsScreenConfig
+     - 6.5.5
+     - Adds and removes dynamic fields to/from default column screen configurations.
 
 
 ..
