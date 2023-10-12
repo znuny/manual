@@ -1,6 +1,7 @@
+.. _PageNavigation annexes_entity_management_index:
+
 Managing Entities
 #################
-.. _PageNavigation annexes_entity_management_index:
 
 An entity is any reusable item within the system. It has, in most cases, a canonical name, a valid setting, and a comment. Typical entities are (but not limited to):
 

@@ -11,6 +11,7 @@ List of annexes.
    acl_reference/index
    permissions/index
    event_reference/index
+   event_modules/index
    entity_management/index
    external_ticket_numbers/index
    navigation/index

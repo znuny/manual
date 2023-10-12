@@ -47,7 +47,7 @@ See more :ref:`here <PageNavigation admin_processmanagement_activitydialogs_arti
 * Sort screens in AdminDynamicFieldScreenConfiguration by values (#327). Thanks to Emin Yazi (@eyazi), Efflux. [PR#327](https://github.com/znuny/Znuny/pull/327)
 * Added SysConfig setting to configure format tags in rich text editor. Thanks to Daniel Sprenger (@sprengerdaniel). [PR#334](https://github.com/znuny/Znuny/pull/334)
 
-Read more about :ref:`configuring your system <PageNavigation admin_system_configuration_index>` 
+Read more about :ref:`pagenavigation admin_index_systemconfiguration` 
 
 * Sector Nord AG: Fixed popup description long were cut off in Customer Interface. Thanks to Sector Nord AG (@jsinagowitz). [PR#331](https://github.com/znuny/Znuny/pull/331)
 * Reworked information of LastViews.

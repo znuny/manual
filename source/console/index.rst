@@ -1,3 +1,5 @@
+.. _PageNavigation console_index:
+
 Command Line Interface
 #######################
 
