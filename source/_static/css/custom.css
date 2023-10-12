@@ -15,7 +15,19 @@ div.versionadded p, div.versionchanged p {
   display: inline;
 }
 
-tr.row-even {
+html[data-theme="light"] tr.row-even {
   background-color: #efefef;
 }
+
+html[data-theme="dark"] tr.row-even {
+  background-color: #2c3529;
+  border: none;
+  border-color: none;
+}
+
+html[data-theme="dark"] tr.row-odd {
+  border-color: none;
+  border: none;
+}
+
 
