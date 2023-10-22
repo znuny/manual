@@ -1,6 +1,7 @@
+.. _PageNavigation admin_webservices_invoker_index:
+
 Invokers
 ########
-.. _PageNavigation admin_webservices_invoker_index:
 
 Ticket::Generic
 ****************

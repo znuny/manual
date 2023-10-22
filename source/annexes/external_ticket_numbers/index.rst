@@ -5,7 +5,7 @@ By default, it's only possible to parse the ticket number in the format provided
 
 You'll first have to identify where the emails are coming from. That helps in the case of obtaining external ticket numbers from a service desk or any other known email address. It is also possible to form a regular expression to parse all incoming emails as well. Once you've identified this, you'll have to determine the ticket number because you'll need a regular expression to parse the number. Once you have both items, we can continue with the system configuration and configure the system to parse the emails for this ticket number.
 
-See :ref:`pagenavigation admin_system_configuration_index` .
+See :ref:`pagenavigation admin_system_configuration_index`.
 
 Configure Your System
 *********************
