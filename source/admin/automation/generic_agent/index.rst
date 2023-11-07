@@ -210,3 +210,7 @@ The possibility to execute system command (CMD) was removed for security reasons
            'Title' => '',
            'TicketID' => '1'
          };
+
+.. important:: 
+  
+  A generic agent only processes 4000 tickets per run! This can be modified in ``Daemon::SchedulerGenericAgentTaskManager::TicketLimit``.
