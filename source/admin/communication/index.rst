@@ -13,3 +13,13 @@ Having a standard and common language three and essential for creating a feeling
    :maxdepth: 2
    
    templates/index
+
+Automated Responses
+*******************
+
+One of the communication features is the ability to send automatic responses to requesters.
+
+.. toctree::
+   :maxdepth: 2
+   
+   autoresponses/index
