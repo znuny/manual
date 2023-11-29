@@ -31,6 +31,7 @@ Table of Contents
    releases/installupdate/install
    releases/installupdate/update
    releases/index
+   concepts/index
    admin/index
    agentinterface/index
    customerinterface/index
