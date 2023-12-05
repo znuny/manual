@@ -7,4 +7,5 @@ There are many basic concepts that you need to understand in order to work with 
 .. toctree::
     :maxdepth: 2
     
+    states/index
     queues/index
