@@ -5,10 +5,6 @@ Statistics Attributes
 
 Here's a table to show you different types of values returned by the Ticket Dynamic List, and what they mean within the system.
 
-.. list-table:: Attributes of the ticket list object
-   :widths: 20 65 15
-   :header-rows: 1
-
 +----------------------------------+-------------------------------------------------------------------------------------------------------------+----------------------+
 | Attribute                        | Description                                                                                                 | Example value        |
 +==================================+=============================================================================================================+======================+
