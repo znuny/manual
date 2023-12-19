@@ -5,7 +5,7 @@ By default, it's only possible to parse the ticket number in the format provided
 
 You'll first have to identify where the emails are coming from. That helps in the case of obtaining external ticket numbers from a service desk or any other known email address. It is also possible to form a regular expression to parse all incoming emails as well. Once you've identified this, you'll have to determine the ticket number because you'll need a regular expression to parse the number. Once you have both items, we can continue with the system configuration and configure the system to parse the emails for this ticket number.
 
-See :ref:`pagenavigation admin_system_configuration_index`.
+See :ref:`pagenavigation admin_index_systemconfiguration`.
 
 Configure Your System
 *********************
@@ -21,10 +21,12 @@ See :ref:`pagenavigation admin_dynamicfields_index`
    If the external system has a web interface you can create a link in the dynamic field configuration. 
 
 - Search for the following setting and activate it: **PostMaster::CheckFollowUpModule###0600-ExternalTicketNumberRecognition**
-This filter will check for the external ticket number and add the email to an existing ticket if there is a match.
+
+  This filter will check for the external ticket number and add the email to an existing ticket if there is a match.
 
 - Search for the following setting and configure it appropriately. Here is an example: **PostMaster::PreFilterModule###000-ExternalTicketNumberRecognition1**
-The settings define which email should be processed and where to look for the external ticket number.
+
+  The settings define which email should be processed and where to look for the external ticket number.
 
 .. code-block:: 
 
