@@ -19,16 +19,31 @@ Transition Action Module Configuration
 
 The following list shows the mandatory items.
 
-+-----------------+---------------------+-----------------------------+---------------------------------------------------------------+
-| Key             | Example Value       | Description                 | Mandatory                                                     |
-+=================+=====================+=============================+===============================================================+
-| State           | open                | A valid ticket state        | yes, or StateID                                               |
-+-----------------+---------------------+-----------------------------+---------------------------------------------------------------+
-| StateID         | 1                   | A valid ticket state ID     | no. if State is used                                          |
-+-----------------+---------------------+-----------------------------+---------------------------------------------------------------+
-| PendingTime     | 2022-11-01 00:00:00 | A valid ISO date time stamp | yes, if pending auto or pending reminder state type is chosen |
-+-----------------+---------------------+-----------------------------+---------------------------------------------------------------+
-| PendingTimeDiff | 1400                | A unit in minutes from now  | no, if PendingTime is used                                    |
-+-----------------+---------------------+-----------------------------+---------------------------------------------------------------+
-| UserID          | 123                 | A valid user ID             | no, will override the logged in user id                       |
-+-----------------+---------------------+-----------------------------+---------------------------------------------------------------+
+.. list-table::
+   :widths: 10 20 35 35
+   :header-rows: 1
+
+   * - Key
+     - Example value
+     - Description
+     - Mandatory
+   * - State
+     - open
+     - A valid ticket state.
+     - Yes, or use StateID.
+   * - StateID
+     - 2
+     - A valid state id.
+     - Not if State is used.
+   * - PendingTime
+     - 2022-11-01 00:00:00
+     - A valid ISO date time stamp.
+     - Yes, if the state is of the state type pending auto or pending reminder.
+   * - PendingTimeDiff
+     - 3600
+     - Seconds added to the time of the transition action's exectution.
+     - No, only if PendingTime is not used.
+   * - UserID
+     - 123
+     - Can be used to override the current user id.
+     - Optional
