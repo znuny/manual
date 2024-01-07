@@ -33,6 +33,7 @@ Table of Contents
    admin/index
    agentinterface/index
    customerinterface/index
+   standardoperations/index
    console/index
    itsmfeatures/index
    generalinformation/index
