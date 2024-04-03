@@ -1582,7 +1582,7 @@ Internally, the framework uses a templating mechanism to dynamically generate it
 
 The template files are under ``Kernel/Output/HTML/Standard/*.tt``
 
-The framework relies on `the Template::Toolkit renderin engine <http://www.template-toolkit.org/>`__. The ful Template::Toolkit syntax can be used in templates. This sectio describes some example use cases and framework extensions to the
+The framework relies on `the Template::Toolkit renderin engine <https://template-toolkit.org/>`__. The ful Template::Toolkit syntax can be used in templates. This sectio describes some example use cases and framework extensions to the
 Template::Toolkit syntax.
 
 Template Commands
