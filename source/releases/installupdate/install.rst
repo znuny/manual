@@ -1,6 +1,7 @@
-Installation
-############
-.. PageNavigation installupdate_install:
+.. _PageNavigation installupdate_install:
+
+Installation Instructions
+#########################
 
 To install Znuny you need:
 

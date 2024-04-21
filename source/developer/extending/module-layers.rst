@@ -1182,7 +1182,7 @@ This can be achieved with a ``FilterElementPost`` output filter.
 Create links within plain text article bodies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A biotech company uses gene names like IPI00217472 in plain text articles. A ``FilterText`` output filter can be used to create links to a sequence database, e.g. http://srs.ebi.ac.uk/srsbin/cgi-bin/wgetz?-e+[IPI-acc:IPI00217472]+-vn+2, for the gene names.
+A biotech company uses gene names like IPI00217472 in plain text articles. A ``FilterText`` output filter can be used to create links to a sequence database, for the gene names.
 
 Prohibit Active Content
 ~~~~~~~~~~~~~~~~~~~~~~~~

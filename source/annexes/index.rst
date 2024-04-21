@@ -17,3 +17,4 @@ List of annexes.
    placeholders/index
    x_headers/index
    stat_values/index
+   backup/index
