@@ -11,23 +11,22 @@ Configure Archiving
 In the system configuration, you will find the following settings:
 
 Ticket::ArchiveSystem
-    Enable or disable archiving
+  Enable or disable archiving.
 Ticket::ArchiveSystem::RemoveSeenFlags
-    Remove flags from archived tickets
+  Remove flags from archived tickets.
 Ticket::ArchiveSystem::RemoveTicketWatchers
-    Remove any watchers from archived tickets
+  Remove any watchers from archived tickets.
 Ticket::CustomerArchiveSystem
-    Enable customer search in archive
+  Enable customer search in archive.
 Ticket::EventModulePost###2300-ArchiveRestore
-    Un-archive tickets when the state changes to a non-closed state type
+  Un-archive tickets when the state changes to a non-closed state type.
 Ticket::SearchIndex::IndexArchivedTickets
-    Indexing for archived tickets. (Increases StaticDB Index Size and decreases RuntimeDB performance)
+  Indexing for archived tickets. (Increases StaticDB Index Size and decreases RuntimeDB performance)
 
 Once active, the agent search, statistic edit and generic agent masks include an archive search filter. If so enabled, the customer search mask also includes this option as well.
 
 .. important:: 
-    
-    You will have to accommodate for this when activating this option.
+  You will have to accommodate for this when activating this option.
 
 Archiving Tickets
 *****************
