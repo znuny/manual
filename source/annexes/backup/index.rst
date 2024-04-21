@@ -22,9 +22,9 @@ Backup Checklist
   - Cron
 - Backup the database
 - Backup Kernel/Config.pm
-- Backup do files and dot folder in the application home like .procmailrc
+- Backup dot files and dot folder in the application home like .procmailrc
 - Backup custom cron tasks from var/cron (if added or modified)
-- Backup own XML configuration Files
+- Backup own XML configuration files
 - Backup own modules or scripts
 - Backup PGP/SMIME certs (if used)
 - Backup attachment directory (when ArticleStorageDB)
