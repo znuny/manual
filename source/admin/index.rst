@@ -48,3 +48,12 @@ The general rules are:
    packagemanagement/index
    systemconfiguration/index
 
+Additional Resouces
+*******************
+
+Here's additional information and chapters regarding administering your system, including some small use cases.
+
+.. toctree:: 
+   :maxdepth: 2
+
+   miniadmin/index
