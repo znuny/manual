@@ -321,3 +321,16 @@ In :ref:`pagenavigation admin_systemconfiguration_group_settings_mode` and :ref:
 - Enable all settings for editing
 - Save all open settings
 - Cancel all open settings
+
+Additional Configuration
+************************
+
+The following topics will help you to further understand some essential configurations you must know.
+
+Managing Time Zones
+===================
+
+.. toctree:: 
+   :maxdepth: 2
+
+   timezones/index
