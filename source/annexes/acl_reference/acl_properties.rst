@@ -11,7 +11,7 @@ A list of all possible match and set criteria:
 Match Properties
 *****************
 
-You may match Key/Values using ``Properties Database`` (Back-end) or ``Properties`` (Font-end) matching.
+You may match Key/Values using ``Properties Database`` (Backend) or ``Properties`` (Frontend) matching.
 
 
 +---------------+-------------------------------+-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
