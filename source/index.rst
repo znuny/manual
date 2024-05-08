@@ -1,31 +1,28 @@
 
 
 .. image:: images/logo_header_documentation.png
-         :alt: my picture
+         :alt: Znuny documantation logo
          :width: 100%
 
 
 Welcome
-###############################
+#######
 
-This is our documentation for the regular Znuny branch. 
-We document new features added in the **Feature** Versions
-of Znuny. It will be extended with every release.
+This is the documentation for the latest Znuny (non LTS) version. 
 
-If you are looking for a basic documentation, have a look at https://doc.znuny.org/ 
+If you are looking for more documentation, have a look at the `documentation overview <https://doc.znuny.org/>`_.
 
 To see the newest features, go to our :ref:`pagenavigation release_overview` 
 
-Feel free to improve it or add examples using the GitHub Repository **here**.
+Feel free to improve it, add examples or just report what's missing or wrong using the `GitHub repository <https://github.com/znuny/manual/>`_.
 
-If you want to help translate it, check out our weblate **here**...
-
-
+If you want to help translate it, check out our `Weblate <https://translations.znuny.org/>`_ translation service.
 
 Table of Contents
+~~~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    about/index
    releases/installupdate/install
