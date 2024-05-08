@@ -1,7 +1,7 @@
 
 
 .. image:: images/logo_header_documentation.png
-         :alt: Znuny documantation logo
+         :alt: Znuny documentation logo
          :width: 100%
 
 
