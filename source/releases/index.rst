@@ -1,3 +1,5 @@
+.. _PageNavigation release_overview:
+
 Release overview
 ################
 
