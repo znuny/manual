@@ -5,11 +5,16 @@ Installation Instructions
 
 To install Znuny you need:
 
-- A database of your choice (MySQL, MariaDB, Postgresql)
-- MySQL 8 or newer requires Znuny 6.1 or newer
-- A webserver (Apache)
-- Some additional perl modules, depending on the distribution you are using
-- Disabled SELinux when using Red Hat Linux, CentOS, Rocky Linux, etc.
+* A database of your choice:
+
+  * MySQL 8.0
+  * MariaDB
+  * Postgresql
+  * Oracle
+
+* A webserver (Apache)
+* Some additional Perl modules, depending on the distribution you are using
+* Disabled SELinux when using Red Hat Linux, Rocky Linux, etc.
 
 .. note::
 
@@ -21,7 +26,7 @@ Basics
 
 Some basic packages are needed to get going.
 This includes the web server, database (MariaDB in this case), cpanminus to install additional
-Perl modules and TAR to extract the source.
+Perl modules and Tar to extract the source.
 
 **CentOS / Red Hat**
 
@@ -44,8 +49,8 @@ The installation via RPM
 
 .. code-block::
 
-  # Znuny 7.0.17
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.17-01.noarch.rpm
+  # Znuny 7.0.18
+  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.18-01.noarch.rpm
 
 
 Install From Source
@@ -63,7 +68,7 @@ The installation from the source takes some more steps:
   tar xfz znuny-latest-7.0.tar.gz
 
   # Create a symlink
-  sudo ln -s /opt/znuny-7.0.17 /opt/znuny
+  sudo ln -s /opt/znuny-7.0.18 /opt/znuny
 
   # Add user for RHEL/CentOS
   useradd -d /opt/znuny -c 'Znuny user' -g apache -s /bin/bash -M -N znuny
@@ -107,11 +112,11 @@ to complete the missing ones.
 Database Configuration
 **********************
 
-MySQL / Maria DB needs some config modifications. If you are using
-postgresql you can skip this step:
+MySQL and Maria DB needs some configuation modifications. If you are using
+PostgreSQL you can skip this step:
 
 
-Create a new file for the mysql config:
+Create a new configuration file for MySQL/MariaDB:
 
 **CentOS / Red Hat**
 
@@ -142,8 +147,8 @@ Create a new file for the mysql config:
 
   The web installer requires a password. The networking "bind-address" should be localhost. By default, 127.0.0.1, a synonym for skip-networking, is set. Additionally, there is no information about the requirement for utf8 whereas the default is utf8mb4
 
-  character-set-server  = utf8
-  collation-server      = utf8_general_ci
+  character-set-server  = utf8mb3
+  collation-server      = utf8mb3_general_ci
 
 Restart the MariaDB database to apply the changes
 
@@ -181,7 +186,7 @@ Enable the needed Apache modules:
 
   a2enmod perl headers deflate filter cgi
   a2dismod mpm_event
-  a2enmod mpm_prefork
+  a2enmod mpm_prefork headers filter
   a2enconf zzz_znuny
 
 
@@ -199,7 +204,7 @@ Start / Restart the web server to apply the changes.
 
   systemctl restart apache2
 
-You should be able to access the installer script using:
+You should be able to access the installation script using:
 
 ``http://HOSTNAME/znuny/installer.pl``
 
@@ -227,5 +232,5 @@ Switch to the znuny user:
 
 .. code-block:: bash
 
-  su - <APP_USER>
+  su - znuny
   bin/Cron.sh start

@@ -5,21 +5,21 @@ Release overview
 
 Here is a release overview to give you some insights what has changed.
 
-We create a section for every release which contains of:
-- New features
-- Developer overview (breaking changes, new APIs, renamed functions)
+We create a section for every release that contains
+- Changes,
+- Fixed issues, and 
+- Developer information (breaking changes, new APIs, renamed functions).
 
-The "New features" section gives insights to what's new.
-
-The "developer overview" is mainly for developers or 3rd parties who develop for Znuny. Here will you find (hopefully all the notable changes.
+The "Developer overview" is mainly for developers or 3rd parties who develop for Znuny. Here will you find (hopefully all the notable changes).
 
 For any missing information, please create an issue via GitHub.
 
 Overview
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
+   7_0_18/index
    7_0_17/index
    7_0_16/index
    7_0_15/index
