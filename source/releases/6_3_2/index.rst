@@ -1,5 +1,5 @@
-6.3.2
-#####
+Znuny 6.3.2
+###########
 
 **Release Information:**
 

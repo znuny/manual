@@ -1,5 +1,5 @@
-6.5.5
-#####
+Znuny LTS 6.5.5
+###############
 
 **Release Information:**
 

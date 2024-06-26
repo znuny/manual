@@ -1,5 +1,5 @@
-6.4.4
-#####
+Znuny 6.4.4
+###########
 
 **Release Information:**
 

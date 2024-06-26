@@ -18,8 +18,9 @@ For any missing information, please create an issue via GitHub.
 Overview
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
+   6_5_9/index
    6_5_8/index
    6_5_7/index
    6_5_6/index
