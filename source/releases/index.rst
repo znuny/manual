@@ -12,13 +12,14 @@ We create a section for every release that contains
 
 The "Developer overview" is mainly for developers or 3rd parties who develop for Znuny. Here will you find (hopefully all the notable changes).
 
-For any missing information, please create an issue via GitHub.
+For any missing information, please create an issue at GitHub. `GitHub <https://github.com/znuny/manual/issues>`_
 
 Overview
 
 .. toctree::
    :maxdepth: 1
 
+   7_0_19/index
    7_0_18/index
    7_0_17/index
    7_0_16/index

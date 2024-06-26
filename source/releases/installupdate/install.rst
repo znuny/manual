@@ -49,8 +49,8 @@ The installation via RPM
 
 .. code-block::
 
-  # Znuny 7.0.18
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.18-01.noarch.rpm
+  # Znuny 7.0.19
+  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.0.19-01.noarch.rpm
 
 
 Install From Source
@@ -68,7 +68,7 @@ The installation from the source takes some more steps:
   tar xfz znuny-latest-7.0.tar.gz
 
   # Create a symlink
-  sudo ln -s /opt/znuny-7.0.18 /opt/znuny
+  sudo ln -s /opt/znuny-7.0.19 /opt/znuny
 
   # Add user for RHEL/CentOS
   useradd -d /opt/znuny -c 'Znuny user' -g apache -s /bin/bash -M -N znuny
