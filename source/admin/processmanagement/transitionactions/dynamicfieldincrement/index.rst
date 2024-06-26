@@ -1,7 +1,7 @@
 .. _TransitionAction DynamicFieldIncrement:
 
 Incrementing a Dynamic Field Value
-############################################################
+##################################
 
 Summary
 ********
@@ -19,12 +19,24 @@ Transition Action Module Configuration
 
 The following list shows the mandatory items.
 
-+-------------------+---------------+-----------------------------------------+-----------+
-| Key               | Example value | Description                             | Mandatory |
-+===================+===============+=========================================+===========+
-| DynamicFieldNameX | 1             | Marks the field for change              | yes       |
-+-------------------+---------------+-----------------------------------------+-----------+
-| Value             | 5             | Amount to change (can be negative)      | yes       |
-+-------------------+---------------+-----------------------------------------+-----------+
-| UserID            | 123           | no, will override the logged in user id | no        |
-+-------------------+---------------+-----------------------------------------+-----------+
+.. note:: 
+
+   The key is the name of the field. The `DynamicField_` prefix is not required.
+
++--------------+---------------+-----------------------------------------+-----------+
+| Key          | Example value | Description                             | Mandatory |
++==============+===============+=========================================+===========+
+|| FieldName   || 1            || Identinfies field for change           || yes      |
+||             ||              || One field is mandatory.                ||          |
++--------------+---------------+-----------------------------------------+-----------+
+|| SecondField || 1            || Identinfies field for change           || no       |
+||             ||              || Additional fields are optional         ||          |
++--------------+---------------+-----------------------------------------+-----------+
+|| ThirdField  || 1            || Identinfies field for change           || no       |
+||             ||              || Additional fields are optional         ||          |
++--------------+---------------+-----------------------------------------+-----------+
+|| Value       || 5            || Amount to change. ex 5 or -5           || no       |
+||             ||              || Default value 1 if not set.            ||          |
++--------------+---------------+-----------------------------------------+-----------+
+| UserID       | 123           | no, will override the logged in user id | no        |
++--------------+---------------+-----------------------------------------+-----------+
