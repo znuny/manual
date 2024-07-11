@@ -12,6 +12,7 @@ Available Screens
    :maxdepth: 2
 
    agentticketactioncommon/index
+   agentticketdraft/index
    agentticketbounce/index
    agentticketclose/index
    agentticketcompose/index
