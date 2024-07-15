@@ -1,16 +1,16 @@
 # Znuny Documentation README
 
-The branches `znuny` and `znuny_lts` are deployed with every push.
+For each version of Znuny there is a one branch for the documentation. The branches are named like `znuny-MAJOR_MINOR` and `znuny-lts_MAJOR_MINOR`.
 
-- The content created out of both branches is available at https://doc.znuny.org/
+The documentation is available at https://doc.znuny.org/ with a link to the most current version of Znuny LTS and Znuny. Older documentations are available via a version switch.
 
 ## Requirements
 
 - [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme)
 - [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton)
 - [sphinxcontrib.mermaid](https://github.com/mgaitan/sphinxcontrib-mermaid)
-- [sphinx-tabs](https://github.com/executablebooks/sphinx-tabs)
-- [sphinx_fontawesome](https://github.com/fraoustin/sphinx_fontawesome)
+- [sphinx-design](https://sphinx-design.readthedocs.io/en/latest/)
+
 
 ## Style Guide
 
@@ -167,15 +167,6 @@ graph TD
 
 Check the documentaion of [sphinxcontrib.mermaid](https://github.com/mgaitan/sphinxcontrib-mermaid) for details.
 
-
-#### Font Awesome
-
-To use icons in the documentation, just add a role
-
-```md
-:fa:`icon`
-```
-Read more at [sphinx_fontawesome](https://github.com/fraoustin/sphinx_fontawesome)
 
 ### DRY
 

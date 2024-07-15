@@ -24,18 +24,25 @@ language = 'en'
 extensions = [
     'sphinx_copybutton',
     'sphinxcontrib.mermaid',
-    'sphinx_tabs.tabs',
-    'sphinx_fontawesome'
+    'sphinx_design'
 ]
 
 pygments_style = 'sphinx'
 html_theme = 'sphinx_book_theme'
 html_favicon = 'images/favicon.ico'
 
+html_theme_options = {
+    "switcher": {
+        "json_url": "https://doc.znuny.org/version.json",
+        "version_match": "znuny-7_0"
+   },
+   "primary_sidebar_top": ["version-switcher"]
+}
+
+
 html_static_path = ['_static']
 html_css_files = [
-    'css/custom.css',
-    'css/code-tabs.css'
+    'css/custom.css'
 ]
 
 linkcheck_allowed_redirects = {
