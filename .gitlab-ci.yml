@@ -22,25 +22,18 @@ build:
 
 deploy-znuny:
   stage: deploy
-  only: 
-    - znuny
-    - znuny_lts
-  except:
-    - merge_requests
+  rules:
+    - if: $CI_COMMIT_BRANCH =~ /^znuny-(lts_)?\d_\d/ && $CI_PIPELINE_SOURCE != "merge_request_event"
   script:
     - test -d $HOME/.ssh || mkdir $HOME/.ssh
     - eval $(ssh-agent -s)
     - echo "$DEPLOY_PRIVATE_KEY" | ssh-add -
     - ssh-keyscan $DEPLOY_HOST  >> $HOME/.ssh/known_hosts
-    - rsync -avz --delete ./build/html/* $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc/$CI_COMMIT_REF_NAME
+    - rsync -avz --delete ./build/html/ $DEPLOY_USER@$DEPLOY_HOST:/var/www/html/doc/$CI_COMMIT_BRANCH
 
 github-sync:
   stage: deploy
-  only: 
-    - znuny
-    - znuny_lts
-  except:
-    - merge_requests
+  rules:
+    - if: $CI_COMMIT_BRANCH =~ /^znuny-(lts_)?\d_\d/ && $CI_PIPELINE_SOURCE != "merge_request_event"
   script:
     - /usr/bin/sync_repo.sh git@github.com:znuny/manual.git
-

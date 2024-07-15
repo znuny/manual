@@ -24,18 +24,25 @@ language = 'en'
 extensions = [
     'sphinx_copybutton',
     'sphinxcontrib.mermaid',
-    'sphinx_tabs.tabs',
-    'sphinx_fontawesome'
+    'sphinx_design'
 ]
 
 pygments_style = 'sphinx'
 html_theme = 'sphinx_book_theme'
 html_favicon = 'images/favicon.ico'
 
+html_theme_options = {
+    "switcher": {
+        "json_url": "https://doc.znuny.org/version.json",
+        "version_match": "znuny-lts_6_5"
+   },
+   "primary_sidebar_end": ["version-switcher"]
+}
+
+
 html_static_path = ['_static']
 html_css_files = [
-    'css/custom.css',
-    'css/code-tabs.css'
+    'css/custom.css'
 ]
 
 linkcheck_allowed_redirects = {
@@ -51,5 +58,6 @@ linkcheck_allowed_redirects = {
 linkcheck_ignore = [
     r'https://download.znuny.org/releases/znuny-\d.\d.\d+.tar.gz',
     r'https://github.com/znuny/Znuny/commits/rel-.+',
-    r'https://github.com/znuny/Znuny/blob/.+#L\d+'
+    r'https://github.com/znuny/Znuny/blob/.+#L\d+',
+    r'.+/cgi-bin/.+'
 ]
