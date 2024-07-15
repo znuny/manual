@@ -10,6 +10,7 @@ default:
 
 build:
   stage: build
+  image: python:bookworm
   artifacts:
     paths:
       - build/
