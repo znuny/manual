@@ -1,6 +1,7 @@
+.. _PageNavigation annexes_event_reference_index_event_reference:
+
 Event Reference
 ################
-.. _PageNavigation annexes_event_reference_index_event_reference:
 
 In this annex, you find a list of all events recorded by the system. These events appear in multiple areas of the software as a dropdown selection field, including but not limited to generic agents and a . As these.Events are not usable in all areas of the software, they are listed according to their functionality.
 
@@ -211,6 +212,6 @@ Graphical User interface Reference
 
 List of where the event is an available trigger:
 
-a. Ticket Notifications
+a. :ref:`pagenavigation admin_automation_ticket-notification_index` 
 b. Generic agents
 c. Appointment Notifications

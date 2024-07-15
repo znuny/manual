@@ -1,3 +1,5 @@
+.. _PageNavigation admin_queues_index:
+
 Adding a Team (Queue)
 #####################
 
