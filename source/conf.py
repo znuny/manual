@@ -36,7 +36,7 @@ html_theme_options = {
         "json_url": "https://doc.znuny.org/version.json",
         "version_match": "znuny-7_0"
    },
-   "primary_sidebar_top": ["version-switcher"]
+   "primary_sidebar_end": ["version-switcher"]
 }
 
 
