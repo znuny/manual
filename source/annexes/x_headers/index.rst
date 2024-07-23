@@ -56,7 +56,7 @@ Default Header Table:
 +-----------------------------+---------------+------------------------------------------------------------------------+
 | X-OTRS-IsVisibleForCustomer | 1             | Visible (Default: 1) or not visible (0)                                |
 +-----------------------------+---------------+------------------------------------------------------------------------+
-| X-OTRS-DynamicField_Field   | Value         | Value depends on dynamic field type. Must be a field of object Ticket. |
+| X-OTRS-DynamicField-Field   | Value         | Value depends on dynamic field type. Must be a field of object Ticket. |
 +-----------------------------+---------------+------------------------------------------------------------------------+
 | X-OTRS-Loop                 | 1             | Suppress auto-replies if set to 1/true                                 |
 +-----------------------------+---------------+------------------------------------------------------------------------+
