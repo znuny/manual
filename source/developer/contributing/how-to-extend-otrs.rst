@@ -259,10 +259,9 @@ Next, we create the file for the core module ``/HelloWorld/Kernel/System/HelloWo
         return $HelloWorld;
 
     }
-
+    1;
     =end Internal:
 
-    1;
                         
 
 Template File
