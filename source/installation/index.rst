@@ -61,7 +61,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
     .. code-block::
 
-      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.1.1-01.noarch.rpm
+      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.1.3-01.noarch.rpm
 
 
   .. tab-item:: Installation from source archive
@@ -72,13 +72,13 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
       # Download Znuny
       cd /opt
-      wget https://download.znuny.org/releases/znuny-latest-7.1.tar.gz
+      wget https://download.znuny.org/releases/znuny-latest-7.3.tar.gz
 
       # Extract
-      tar xfz znuny-latest-7.1.tar.gz
+      tar xfz znuny-latest-7.3.tar.gz
 
       # Create a symlink
-      ln -s /opt/znuny-7.1.1 /opt/znuny
+      ln -s /opt/znuny-7.1.3 /opt/znuny
 
       # Add user for RHEL
       useradd -d /opt/znuny -c 'Znuny user' -g apache -s /bin/bash -M -N znuny
