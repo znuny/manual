@@ -13,11 +13,11 @@ The group is assigned using the module labeled "Agents ↔ Groups" by giving bas
 
 All other modules, you'd like to provide access to, should be done in the same fashion. Let's say a mini-administrator should be able to edit templates. Then you would additionally need to provide access by editing
 
-``Frontend::Module###AdminTemplates``
+``Frontend::Module###AdminTemplate``
 
-``Frontend::NavigationModule###AdminTemplates``
+``Frontend::NavigationModule###AdminTemplate``
 
-Add the group permission by 
+Add the group permission by
 
 1. Search for the module configuration, in the system configuration
 2. Select the setting
