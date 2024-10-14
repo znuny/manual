@@ -18,9 +18,9 @@ The following list shows the mandatory items.
 +---------------+---------------+-----------------+-----------------------------------------+
 | Key           | Example Value | Description     | Mandatory                               |
 +===============+===============+=================+=========================================+
-| Owner   | agent         | A valid user    | yes, or OwnerID                   |
+| Owner         | agent         | A valid user    | yes, or OwnerID                         |
 +---------------+---------------+-----------------+-----------------------------------------+
-| OwnerID | 1             | A valid user id | no. if Owner is used              |
+| OwnerID       | 1             | A valid user id | no. if Owner is used                    |
 +---------------+---------------+-----------------+-----------------------------------------+
 | UserID        | 123           | A valid user id | no, will override the logged in user id |
 +---------------+---------------+-----------------+-----------------------------------------+
