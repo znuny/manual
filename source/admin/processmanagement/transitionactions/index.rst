@@ -28,6 +28,7 @@ Overview
    ticketcustomerset/index
    ticketdynamicfieldset/index
    ticketlockset/index
+   ticketownerset/index
    ticketpriorityset/index
    ticketqueueset/index
    ticketresponsibleset/index
