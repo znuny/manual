@@ -29,6 +29,6 @@ We will not create screenshots for each entity and their management, unless nece
 
 Wherever entities can only be invalidated, you have the option to show valid on show all.
 
-.. image:: ../../releases/7_0_1/images/show_valid.png
+.. image:: images/show_valid.png
 
 .. note:: All non entity system settings and configurations are found in the :ref:`pagenavigation admin_index_systemconfiguration` tool.

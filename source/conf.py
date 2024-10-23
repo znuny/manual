@@ -34,7 +34,7 @@ html_favicon = 'images/favicon.ico'
 html_theme_options = {
     "switcher": {
         "json_url": "https://doc.znuny.org/version.json",
-        "version_match": "znuny-7_0"
+        "version_match": "znuny-7_1"
     },
     "primary_sidebar_end": ["version-switcher"],
     "repository_url": "https://github.com/znuny/manual",
