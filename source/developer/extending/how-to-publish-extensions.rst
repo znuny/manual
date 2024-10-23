@@ -53,25 +53,25 @@ Important Commands
 
 .. code::
 
-   shell> bin/otrsConsole.pl Admin::Package::Install /path/to/package.opm
+   shell> bin/otrs.Console.pl Admin::Package::Install /path/to/package.opm
 
 **Uninstall packages**
 
 .. code::
 
-   shell> bin/otrsConsole.pl Admin::Package::Uninstall /path/to/package.opm
+   shell> bin/otrs.Console.pl Admin::Package::Uninstall /path/to/package.opm
 
 **Upgrade packages**
 
 .. code::
 
-   shell> bin/otrsConsole.pl Admin::Package::Upgrade /path/to/package.opm
+   shell> bin/otrs.Console.pl Admin::Package::Upgrade /path/to/package.opm
 
 **List packages**
 
 .. code::
    
-   shell> bin/otrsConsole.pl Admin::Package::List
+   shell> bin/otrs.Console.pl Admin::Package::List
 
 
 Full Command Listing
