@@ -35,10 +35,14 @@ html_theme_options = {
     "switcher": {
         "json_url": "https://doc.znuny.org/version.json",
         "version_match": "znuny-7_1"
-   },
-   "primary_sidebar_end": ["version-switcher"]
+    },
+    "primary_sidebar_end": ["version-switcher"],
+    "repository_url": "https://github.com/znuny/manual",
+    "repository_branch": "znuny-7_0",
+    "use_repository_button": True,
+    "use_issues_button": False,
+    "use_edit_page_button": False,
 }
-
 
 html_static_path = ['_static']
 html_css_files = [
