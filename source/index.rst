@@ -25,9 +25,9 @@ Table of Contents
    :maxdepth: 1
    
    about/index
-   releases/installupdate/install
-   releases/installupdate/update
    releases/index
+   installation/index
+   updating/index
    concepts/index
    admin/index
    agentinterface/index
