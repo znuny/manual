@@ -72,10 +72,10 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
       # Download Znuny
       cd /opt
-      wget https://download.znuny.org/releases/znuny-latest-7.3.tar.gz
+      wget https://download.znuny.org/releases/znuny-latest-7.1.tar.gz
 
       # Extract
-      tar xfz znuny-latest-7.3.tar.gz
+      tar xfz znuny-latest-7.1.tar.gz
 
       # Create a symlink
       ln -s /opt/znuny-7.1.3 /opt/znuny
