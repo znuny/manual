@@ -158,12 +158,12 @@ To run your tests, just use
 .. code-block::
 
    # Run Calendar Test
-   bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar
+   bin/znuny.Console.pl Dev::UnitTest::Run --test Calendar
 
 
 .. code-block::
 
-   shell:/opt/znuny> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar
+   shell:/opt/znuny> bin/znuny.Console.pl Dev::UnitTest::Run --test Calendar
    +-------------------------------------------------------------------+
    /opt/znuny/scripts/test/Calendar.t:
    +-------------------------------------------------------------------+
@@ -178,7 +178,7 @@ You can even run several tests at once, just supply additional test arguments to
 
 .. code-block::
 
-   shell:/opt/znuny> bin/otrs.Console.pl Dev::UnitTest::Run --test Calendar --test Appointment
+   shell:/opt/znuny> bin/znuny.Console.pl Dev::UnitTest::Run --test Calendar --test Appointment
    +-------------------------------------------------------------------+
    /opt/znuny/scripts/test/Calendar.t:
    +-------------------------------------------------------------------+
@@ -193,7 +193,7 @@ You can even run several tests at once, just supply additional test arguments to
    shell:/opt/znuny>
    
 
-If you execute ``bin/otrs.Console.pl Dev::UnitTest::Run`` without any argument, it will run all tests found in the system. Please note that this can take some time to finish.
+If you execute ``bin/znuny.Console.pl Dev::UnitTest::Run`` without any argument, it will run all tests found in the system. Please note that this can take some time to finish.
 
 Provide ``--verbose`` argument in order to see messages about successful tests too. Any errors encountered during testing will be displayed regardless of this switch, provided they are actually raised in the test.
 

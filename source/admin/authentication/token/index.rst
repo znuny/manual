@@ -65,7 +65,7 @@ Adding a token will generates a YAML configuration in the database. This file ha
 
     .. code-block::
 
-        [otrs@host ~]$ bin/otrs.Console.pl Admin::Config::Update --setting-name HttpType --value https
+        [otrs@host ~]$ bin/znuny.Console.pl Admin::Config::Update --setting-name HttpType --value https
 
     Alternatively, you can search for *HttpType* in the system configuration and set it there.
 

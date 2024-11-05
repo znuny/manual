@@ -161,7 +161,7 @@ Framework 6 uses a new `XML configuration file format :ref:<HowItWorks ConfigMec
 
 .. code-block::
 
-   bin/otrs.Console.pl Dev::Tools::Migrate::ConfigXMLStructure --source-directory Kernel/Config/Files
+   bin/znuny.Console.pl Dev::Tools::Migrate::ConfigXMLStructure --source-directory Kernel/Config/Files
    Migrating configuration XML files...
    Kernel/Config/Files/Calendar.xml -> Kernel/Config/Files/XML/Calendar.xml... Done.
    Kernel/Config/Files/CloudServices.xml -> Kernel/Config/Files/XML/CloudServices.xml... Done.

@@ -44,11 +44,11 @@ XML files define user configurable options for use in the GUI. These are special
 
 .. note:: 
    
-   To convert an older XML format, you can use 'otrs.Console.pl Dev::Tools::Migrate::ConfigXMLStructure' command. 
+   To convert an older XML format, you can use 'bin/znuny.Console.pl Dev::Tools::Migrate::ConfigXMLStructure' command. 
 
    This console command is only available in Znuny LTS 6.0.
 
-The file ``Kernel/Config/Files/ZZZAAuto.pm`` is a cached Perl version of the XML that contains all settings with their current values. Generation happens during a system deployment. Manual redeployment is performed with ``bin/otrs.Console.pl Maint::Config::Rebuild``.
+The file ``Kernel/Config/Files/ZZZAAuto.pm`` is a cached Perl version of the XML that contains all settings with their current values. Generation happens during a system deployment. Manual redeployment is performed with ``bin/znuny.Console.pl Maint::Config::Rebuild``.
 
 .. note::
     ``Kernel/Config/Files/ZZZAuto.pm`` does not exist anymore. It's now merged with ``Kernel/Config/Files/ZZZAAuto.pm``. Remove ``Kernel/Config/Files/Backups/ZZZAutoOTRS5.pm`` after a successful update.
@@ -1455,13 +1455,13 @@ In SysConfig and Database XML files you can mark strings for extraction with the
 Generate Translations
 ======================
 
-To collect translatable strings into the translation files, use the console command ``otrs.Console.pl Dev::Tools::TranslationsUpdate``. This command parses source files for all translatable strings. The script then places the strings into the translation file.
+To collect translatable strings into the translation files, use the console command ``bin/znuny.Console.pl Dev::Tools::TranslationsUpdate``. This command parses source files for all translatable strings. The script then places the strings into the translation file.
 
 For the framework and other modules listed in our Weblate, the script creates .pot and .po files. These files are used to push the translatable strings to `Weblate <https://weblate.org/en/>`_ and pull the translations from there.
 
 For performance, the framework uses Perl files for translations. 
 
-``otrs.Console.pl Dev::Tools::TranslationsUpdate`` generates these files as well. 
+``bin/znuny.Console.pl Dev::Tools::TranslationsUpdate`` generates these files as well. 
 
 There are two different translation cache file types. These are used in the following order. 
 

@@ -1,7 +1,7 @@
 Granting Limited Admin Privileges
 #################################
 
-In some cases, it is used to manage teams' configurations, such as templates, attachments, signatures, and other things like email addresses. You may be required to create a mini admin role. It is necessary to grant a specific group the rights to access the modules and menus within the administration area via the system configuration. To achieve this, add a group (:ref:`pagenavigation admin_groups_index`) and a role. Assign the group to the role, and the role to the user. The roles should have RW permission, and the group should be used for nothing else.
+In some cases, it is used to manage teams' configurations, such as templates, attachments, signatures, and other things like email addresses. You may be required to create a mini admin role. It is necessary to grant a specific group the rights to access the modules and menus within the administration area via the system configuration. To achieve this, add a group (:ref:`Pagenavigation admin_groups_index`) and a role. Assign the group to the role, and the role to the user. The roles should have RW permission, and the group should be used for nothing else.
 
 The group is assigned using the module labeled "Agents ↔ Groups" by giving basic permissions to the mini-administrator in these two settings.
 

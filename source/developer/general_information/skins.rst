@@ -154,7 +154,7 @@ Now follows the second step, adding a new logo and making the new skin known to 
    </otrs_config>
                
 
-To make this configuration active, we need to navigate to the SysConfig module in the admin area of OTRS (alternatively, you can run the script ``bin/otrs.Console.pl Maint::Config::Rebuild``). This will regenerate the Perl cache of the XML configuration files, so that our new skin is now known and can be selected in the system. To make it the default skin that new agents see before they made their own skin selection, edit the SysConfig setting ``Loader::Agent::DefaultSelectedSkin`` and set it to "custom".
+To make this configuration active, we need to navigate to the SysConfig module in the admin area of OTRS (alternatively, you can run the script ``bin/znuny.Console.pl Maint::Config::Rebuild``). This will regenerate the Perl cache of the XML configuration files, so that our new skin is now known and can be selected in the system. To make it the default skin that new agents see before they made their own skin selection, edit the SysConfig setting ``Loader::Agent::DefaultSelectedSkin`` and set it to "custom".
 
 In conclusion: to create a new skin in OTRS, we had to place the new logo file, and create one CSS and one XML file, resulting in three new files:
 

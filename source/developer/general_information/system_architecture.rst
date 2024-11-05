@@ -224,7 +224,7 @@ The CMD front-end are used by non-humans and have access to all framework object
 
 The CMD modules used by core modules for various actions in the system like providing a RPC (SOAP) front-end via the ``bin/cgi-bin/rpc.pl``.
 
-Additional CMD modules are all those contained under the ``bin``` directory. Most notably ``bin/otrs.Console.pl``
+Additional CMD modules are all those contained under the ``bin``` directory. Most notably ``bin/znuny.Console.pl``
 
 Generic Interface Modules
 *************************

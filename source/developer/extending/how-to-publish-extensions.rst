@@ -28,7 +28,7 @@ Generate a package index using the ``Dev::Package::RepositoryIndex`` console com
 
 .. code-block::
 
-   shell> bin/otrs.Console.pl Dev::Package::RepositoryIndex /path/to/repository/ > /path/to/repository/repo_name.xml
+   shell> bin/znuny.Console.pl Dev::Package::RepositoryIndex /path/to/repository/ > /path/to/repository/repo_name.xml
                         
 .. note:: 
    
@@ -38,7 +38,7 @@ Generate a package index using the ``Dev::Package::RepositoryIndex`` console com
 Package Commands
 ****************
       
-Commands for maintaining packages are available as modules of ``bin/otrs.Console.pl``.
+Commands for maintaining packages are available as modules of ``bin/znuny.Console.pl``.
 
 Using the command line, you can install or upgrade a package locally or from a remote resource.
 
@@ -53,25 +53,25 @@ Important Commands
 
 .. code::
 
-   shell> bin/otrs.Console.pl Admin::Package::Install /path/to/package.opm
+   shell> bin/znuny.Console.pl Admin::Package::Install /path/to/package.opm
 
 **Uninstall packages**
 
 .. code::
 
-   shell> bin/otrs.Console.pl Admin::Package::Uninstall /path/to/package.opm
+   shell> bin/znuny.Console.pl Admin::Package::Uninstall /path/to/package.opm
 
 **Upgrade packages**
 
 .. code::
 
-   shell> bin/otrs.Console.pl Admin::Package::Upgrade /path/to/package.opm
+   shell> bin/znuny.Console.pl Admin::Package::Upgrade /path/to/package.opm
 
 **List packages**
 
 .. code::
    
-   shell> bin/otrs.Console.pl Admin::Package::List
+   shell> bin/znuny.Console.pl Admin::Package::List
 
 
 Full Command Listing
@@ -79,7 +79,7 @@ Full Command Listing
 
 .. note:: 
    
-   Use ``bun/otrs.Console.pl <COMMAND> --help`` for all usage options.
+   Use ``bun/znuny.Console.pl <COMMAND> --help`` for all usage options.
 
 
 +------------------------------------+--------------------------------------------------------------+

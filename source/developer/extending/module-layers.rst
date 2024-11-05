@@ -5915,7 +5915,7 @@ The ``TemplateValueTypeGet()`` function is used to know how the Dynamic Field va
     sub RandomValueSet { ... }
                 
 
-This function is used by ``otrs.Console.pl Dev::Tools::Database::RandomDataInsert`` console to populate the database with some test and random data. The value inserted by this function is not really relevant. The only restriction is that the value must be compatible with the field value type.
+This function is used by ``znuny.Console.pl Dev::Tools::Database::RandomDataInsert`` console to populate the database with some test and random data. The value inserted by this function is not really relevant. The only restriction is that the value must be compatible with the field value type.
 
 .. code-block:: perl
 

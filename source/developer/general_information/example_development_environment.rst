@@ -90,7 +90,7 @@ Rebuild the configuration files to complete integration in Znuny.
 
 .. code-block:
 
-   shell> ~/src/otrs/bin/otrs.Console.pl Maint::Config::Rebuild
+   shell> ~/src/otrs/bin/znuny.Console.pl Maint::Config::Rebuild
 
 .. note:: Database or Migration Tasks
 

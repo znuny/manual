@@ -344,7 +344,7 @@ To build a package from the specification file, do the following.
 
 .. code-block::
 
-   shell> bin/otrs.Console.pl Dev::Package::Build /path/to/example.sopm /tmp
+   shell> bin/znuny.Console.pl Dev::Package::Build /path/to/example.sopm /tmp
    Building package...
    Done.
                
