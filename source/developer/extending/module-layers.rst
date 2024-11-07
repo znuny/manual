@@ -166,9 +166,9 @@ The interface class is called ``Kernel::System::Auth``. The example agent authen
 There is the need to activate your custom agent authenticate module. This can be done using the Perl configuration below. It is not recommended to use the XML configuration because you can lock you out via the sysconfig.
 
 .. code-block:: perl
-    
+
     $Self->{'AuthModule'} = 'Kernel::System::Auth::CustomAuth';
-                       
+
 **Use Case Example**
 
 
@@ -239,9 +239,9 @@ The interface class is called ``Kernel::System::Auth``. The example agent authen
 You should activate your custom synchronization module. This can be done using the Perl configuration below. It is not recommended to use the XML configuration because this would allow you to lock yourself out via SysConfig.
 
 .. code-block:: perl
-    
+
     $Self->{'AuthSyncModule'} = 'Kernel::System::Auth::Sync::LDAP';
-                       
+
 
 **Use Case Example**
 
@@ -421,7 +421,7 @@ There is the need to activate your custom customer authenticate module. This can
             <Option Location="Kernel/System/CustomerAuth/*.pm" SelectedID="Kernel::System::CustomerAuth::CustomAuth"></Option>
         </Setting>
     </ConfigItem>
-            
+
 
 **Use Case Example**
 
@@ -432,8 +432,8 @@ There is a DB customer-user preferences module which come with the framework. It
 
 **Code Example**
 
-The interface class is called ``Kernel::System::CustomerUser``. The example customer-user preferences may be called ``Kernel::System::CustomerUser::Preferences::Custom``. You can find an example below 
-            
+The interface class is called ``Kernel::System::CustomerUser``. The example customer-user preferences may be called ``Kernel::System::CustomerUser::Preferences::Custom``. You can find an example below
+
 .. code-block:: perl
 
     # --
@@ -558,7 +558,7 @@ The interface class is called ``Kernel::System::CustomerUser``. The example cust
 
     1;
 
-                       
+
 
 **Configuration Example**
 
@@ -585,7 +585,7 @@ There is the need to activate your custom customer-user preferences module. This
             </Hash>
         </Setting>
     </ConfigItem>
-                       
+
 **Use Case Example**
 
 Useful preferences implementation could be a SOAP or LDAP backend.
@@ -717,7 +717,7 @@ There is the need to activate your custom queue preferences module. This can be 
             <String Regex="">Kernel::System::Queue::PreferencesCustom</String>
         </Setting>
     </ConfigItem>
-            
+
 **Use Case Example**
 
 Useful preferences implementation could be a SOAP or RADIUS backend.
@@ -849,7 +849,7 @@ There is the need to activate your custom service preferences module. This can b
             <String Regex="">Kernel::System::Service::PreferencesCustom</String>
         </Setting>
     </ConfigItem>
-                       
+
 SLA Preferences Module
 **********************
 
@@ -974,7 +974,7 @@ There is the need to activate your custom SLA preferences module. This can be do
             <String Regex="">Kernel::System::SLA::PreferencesCustom</String>
         </Setting>
     </ConfigItem>
-                       
+
 **Use Case Example**
 
 Useful preferences implementation could be to store additional values on SLAs.
@@ -1092,7 +1092,7 @@ In this small example, we'll write a little file logging backend which works sim
     }
 
     1;
-                       
+
 **Configuration Example**
 
 To activate our custom logging module, the administrator can either set the existing configuration item ``LogModule`` manually to ``Kernel::System::Log::CustomFile``. To realize this automatically, you can provide an XML configuration file which overrides the default setting.
@@ -1107,18 +1107,18 @@ To activate our custom logging module, the administrator can either set the exis
             <Option Location="Kernel/System/Log/*.pm" SelectedID="Kernel::System::Log::CustomFile"></Option>
         </Setting>
     </ConfigItem>
-                       
+
 **Use Case Example**
 
 Useful logging backends could be logging to a web service or to encrypted files.
 
-.. important:: 
+.. important::
 
     Please note that ``Kernel::System::Log`` has other methods than ``Log()`` which cannot be reimplemented, for example code for working with shared memory segments and log data caching.
 
 Output Filter Module
 ********************
- 
+
 Output filters allow to modify HTML on the fly. It is best practice to use output filters instead of modifying ``.tt`` files directly. There are three good reasons for that. When the same adaptation has to be applied to several frontend modules then the adaption only has to be implemented once. The second advantage is that when  is upgraded there is a chance that the filter doesn't have to be updated, when the relevant pattern has not changed. When two extensions modify the same file there is a conflict during the installation of the second package. This conflict can be resolved by using two output filters that modify the same frontend module. There are three different kinds of output filters. They are active at different stages of the generation of HTML content.
 
 ``FilterElementPost``
@@ -1144,7 +1144,7 @@ To make using post output filters easier, there is also a mechanism to request H
             </Hash>
         </Setting>
     </ConfigItem>
-                           
+
 
 This will cause the block ``CustomerTable`` in ``AgentTicketZoom.tt`` to be wrapped in HTML comments each time it is rendered:
 
@@ -1153,7 +1153,7 @@ This will cause the block ``CustomerTable`` in ``AgentTicketZoom.tt`` to be wrap
     <!--HookStartCustomerTable-->
     ... block output ...
     <!--HookEndCustomerTable-->
-                           
+
 
 With this mechanism every package can request just the block hooks it needs, and they are consistently rendered. These HTML comments can then be used in your output filter for easy regular expression matching.
 
@@ -1193,14 +1193,14 @@ Caveats and Warnings
 =====================
 Every ``FilterElementPost`` output filter is constructed and run for every configured Template that is needed for the current request. Thus low performance of the output filter or a large number of filters can severely degrade performance.
 
-.. important:: 
-    
+.. important::
+
     ``FilterElementPre`` was dropped with framework version 5.
 
 
 Good Practice
 ==============
- 
+
  In order to increase flexibility the list of affected templates should be configured in SysConfig.
 
 Stats Module
@@ -1244,7 +1244,7 @@ In this section a sample stats module is shown and each subroutine is explained.
     use Kernel::System::Queue;
     use Kernel::System::State;
     use Kernel::System::Ticket;
-                    
+
 
 This is a common boilerplate that can be found in common framework modules. The class/package name is declared via the frameworkpackage`` keyword. Then the needed modules are used via framework ``use`` keyword.
 
@@ -1272,7 +1272,7 @@ This is a common boilerplate that can be found in common framework modules. The 
 
         return $Self;
     }
-                    
+
 
 ``new``
     The constructor for this statistic module. It creates a new instance of the class. According to the coding guidelines objects of other classes that are needed in this module have to be created in ``new``. In lines 27 to 29 the object of the stats module is created. Lines 31 to 37 check if objects that are needed in this code - either for creating other objects or in this module - are passed. After that the other objects are created.
@@ -1284,7 +1284,7 @@ This is a common boilerplate that can be found in common framework modules. The 
 
         return 'Sample Statistics';
     }
-                    
+
 
 ``GetObjectName``
     Returns a name for the statistic module. This is the label that is shown in the drop dow in the configuration as well as in the list of existin statistics (column "object").
@@ -1345,7 +1345,7 @@ This is a common boilerplate that can be found in common framework modules. The 
 
         return @ObjectAttributes;
      }
-                                  
+
 
 In this sample stats module, we want to provide three attributes the user can chose from: a list of queues, a list of states and a time drop down. To get the values shown in the drop down, some operations are needed. In this case ``StateList`` and ``GetAllQueues`` are called.
 
@@ -1366,7 +1366,7 @@ Then the list of attributes is created. Each attribute is defined via a hash ref
 ``Values``
     The values shown in the attribute.
 
-.. note:: 
+.. note::
     Hint: If you install this sample and you configure a statistic with some queues - lets say 'queue A' and 'queue B' - then these queues are the only ones that are shown to the user when he starts the statistic. Sometimes a dynamic drop down or multiselect field is needed. In this case, you can set ``SelectedValues`` in the definition of the attribute:
 
 .. code-block:: perl
@@ -1382,7 +1382,7 @@ Then the list of attributes is created. Each attribute is defined via a hash ref
         Values           => \%QueueList,
         SelectedValues   => [ @SelectedQueues ],
     },
-                    
+
 
 .. code-block:: perl
 
@@ -1398,7 +1398,7 @@ Then the list of attributes is created. Each attribute is defined via a hash ref
             %Param,
         );
     }
-                                  
+
 
 ``GetStatElement`` Ialled for each cell in the result table. So it should be a numeric value. In this sample it does a simple ticket search. The hash ``%Param`` contains information about the "current" x-value and the y-value as well as any restrictions. So, for a cell that should count the created tickets for queue 'Misc' with state 'open' the passed parameter hash looks something like this:
 
@@ -1410,9 +1410,9 @@ Then the list of attributes is created. Each attribute is defined via a hash ref
         'StateIDs' => [
             '2'
         ]
-                    
 
-If the "per cell" calculation should be avoided, ``GetStatTable`` is an alternative. 
+
+If the "per cell" calculation should be avoided, ``GetStatTable`` is an alternative.
 
 ``GetStatTable``
     Returns a list of rows, hence an array of array references. This leads to the same result as using ``GetStatElement``.
@@ -1443,9 +1443,9 @@ If the "per cell" calculation should be avoided, ``GetStatTable`` is an alternat
 
         return @StatData;
     }
-                                  
 
-.. note:: 
+
+.. note::
 
     ``GetStatTable`` gets all information about the stats query that is needed. The passed parameters contain information about the attributes (``Restrictions``, attributes that are used for x/y-axis) and the table structure. The table structure is a hash reference where the keys are the values of the y-axis and their values are hash references with the parameters used for ``GetStatElement`` subroutines.
 
@@ -1519,10 +1519,10 @@ If the "per cell" calculation should be avoided, ``GetStatTable`` is an alternat
             '4' => 'Misc'
         }
     }
-                                  
 
-Sometimes the headers of the table have to be changed. In that case, a subroutine called ``GetHeaderLine`` has to be implemented. That subroutine has to return an array reference with the column headers as elements. It gets information about the x-values passed 
-               
+
+Sometimes the headers of the table have to be changed. In that case, a subroutine called ``GetHeaderLine`` has to be implemented. That subroutine has to return an array reference with the column headers as elements. It gets information about the x-values passed
+
 .. code-block:: perl
 
     sub GetHeaderLine {
@@ -1535,7 +1535,7 @@ Sometimes the headers of the table have to be changed. In that case, a subroutin
 
         return \@HeaderLine;
     }
-                    
+
 
 .. code-block:: perl
 
@@ -1569,7 +1569,7 @@ Sometimes the headers of the table have to be changed. In that case, a subroutin
         }
         return \%Param;
     }
-                                  
+
 
 Configured statistics can be exported into XML format. But as queues with the same queue names can have different IDs on different instances it would be quite painful to export the IDs (the statistics would calculate the wrong numbers then). So an export wrapper should be written to use the names instead of ids. This should be done for each "dimension" of the stats module (x-axis, y-axis and restrictions).
 
@@ -1608,7 +1608,7 @@ Configured statistics can be exported into XML format. But as queues with the sa
         </UseAsXvalue>
         <Valid>1</Valid>
     </otrs_stats>
-                    
+
 
 Now, that all subroutines are explained, this is the complete sample stats module.
 
@@ -1815,7 +1815,7 @@ Now, that all subroutines are explained, this is the complete sample stats modul
     }
 
     1;
-                                  
+
 **Configuration Example**
 
 .. code-block:: xml
@@ -1873,7 +1873,7 @@ The following paragraphs describe the subroutines needed in a static stats.
 
         return $Self;
     }
-                                  
+
 
 The ``new`` creates a new instance of the static stats class. First it creates a new object and then it checks for the needed objects.
 
@@ -1906,7 +1906,7 @@ The ``new`` creates a new instance of the static stats class. First it creates a
 
         return @Params;
     }
-                                  
+
 
 The ``Param`` method provides the list of all parameters/attributes that can be selected to create a static stat. It gets some parameters passed: The values for the stats attributes provided in a request, the format of the stats and the name of the object (name of the module).
 
@@ -1965,7 +1965,7 @@ Other parameter for the ``BuildSelection`` method of the ``LayoutObject`` can be
 
         return ( [$Title], [@HeadData], @Data );
     }
-                                  
+
 
 The ``Run`` method actually generates the table data for the stats. It gets the attributes for this stats passed. In this sample in ``%Param`` a key ``TypeIDs`` and a key ``QueueIDs`` exist (see attributes in ``Param`` method) and their values are array references. The returned data consists of three parts: Two array references and an array. In the first array reference the title for the statistic is stored, the second array reference contains the headlines for the columns in the table. And then the data for the table body follow.
 
@@ -2170,7 +2170,7 @@ The ``Run`` method actually generates the table data for the stats. It gets the 
 
 There is no configuration needed. Right after installation, the module is available to create a statistic for this module.
 
-                                  
+
 Ticket Number Generator Modules
 *******************************
 
@@ -2198,19 +2198,19 @@ You will need to create a new ticket number generator if the default modules don
 
 Caveats and Warnings
 =====================
-You should stick to the code of ``GetTNByString()`` as used in existing ticket number generators to prevent problems with ticket number parsing. Also the routine to detect a loop in ``TicketCreateNumber()`` should be kept intact to prevent duplicate ticket numbers 
+You should stick to the code of ``GetTNByString()`` as used in existing ticket number generators to prevent problems with ticket number parsing. Also the routine to detect a loop in ``TicketCreateNumber()`` should be kept intact to prevent duplicate ticket numbers
 
 Ticket Event Module
 ********************
 
-Ticket event modules are running right after a ticket action takes place. Per convention these modules are located in the directory ``Kernel/System/Ticket/Event``. 
+Ticket event modules are running right after a ticket action takes place. Per convention these modules are located in the directory ``Kernel/System/Ticket/Event``.
 
-A ticket event module needs only two functions: 
+A ticket event module needs only two functions:
 
 ``new()``
     Constructor
-``Run()````Run()`` 
-    Receives at least the parameters ``Event``, ``UserID``, and ``Data``. 
+``Run()````Run()``
+    Receives at least the parameters ``Event``, ``UserID``, and ``Data``.
 ``Data``
     is a hash ref containing data of the ticket, and in case of article-related events also containing article data.
 
@@ -2409,7 +2409,7 @@ Dashboard module to display statistics in the form of a line graph.
     }
 
     1;
-                        
+
 
 To use this module add the following to the``Kernel/Config.pm`` and restart your web server (if you use``mod_perl``).
 
@@ -2435,9 +2435,9 @@ To use this module add the following to the``Kernel/Config.pm`` and restart your
         </Setting>
     </ConfigItem>
 
-.. important:: 
-    
-    The above module is already part of the framework and serves the soul purpose of an example. You should also create configurations as separate XML files and register them as described in the section about :ref:`XML Files <HowItWorks XMLFiles>` 
+.. important::
+
+    The above module is already part of the framework and serves the soul purpose of an example. You should also create configurations as separate XML files and register them as described in the section about :ref:`XML Files <HowItWorks XMLFiles>`
 
 Caveats and Warnings
 ====================
@@ -2552,7 +2552,7 @@ There is the need to activate your custom notification module. This can be done 
         </Setting>
     </ConfigItem>
 
-                      
+
 **Use Case Example**
 
 Useful ticket menu implementation could be a link to an external tool if parameters (e.g. ``FreeTextField``) have been set.
@@ -2669,7 +2669,7 @@ The ticket menu modules are located under ``Kernel/Output/HTML/TicketMenu*.pm``.
     }
 
     1;
-                     
+
 **Configuration Example**
 
 There is the need to activate your custom ticket menu module. This can be done using the XML configuration below. There may be additional parameters in the config hash for your ticket menu module.
@@ -2689,7 +2689,7 @@ There is the need to activate your custom ticket menu module. This can be done u
             </Hash>
         </Setting>
     </ConfigItem>
-                       
+
 
          .. container:: section
 
@@ -2709,7 +2709,7 @@ Caveats and Warnings
 
 The ticket menu directs to an URL that can be handled. If you want to handle that request via the framework, you have to write your own frontend module.
 
- 
+
 Network Transport
 ******************
 
@@ -2720,7 +2720,7 @@ The network transport is used as method to send and receive information between 
 
 *Znuny as requester:*
     Znuny uses the network transport modules to send petitions to.the Remote System to perform a remote action along with therequired data. Znuny waits for the Remote System response andsend it back to the Requester module.
-    
+
     In both ways network transport modules deal with the data in the Remote System format. It is not recommended to do any data transformation in this modules, as the Mapping layer is the responsible to perform any data transformation needed during the communication. An exception of this is the data conversion that is required specifically by for the transport e.g. XML or JSON from / to Perl conversions.
 
 Transport Back-end
@@ -2767,7 +2767,7 @@ For this example a custom package is used to return the data without doing a rea
     use Kernel::System::ObjectManager;
 
     our $ObjectManagerDisabled = 1;
-                    
+
 
 This is common header that can be found in common OTRS
 modules. The class/package name is declared via the
@@ -2792,7 +2792,7 @@ by the Object Manager.
         return $Self;
     }
 
-                    
+
 
 The constructor ``new`` creates a new instance of the class. According to the coding guidelines only objects of other classes not handled by the object manager that are needed in this module have to be created in ``new``.
 
@@ -2835,7 +2835,7 @@ The constructor ``new`` creates a new instance of the class. According to the co
             Operation => 'test_operation',
         };
     }
-                                  
+
 
 The ``ProviderProcessRequest`` function gets the reques from the Remote System (in this case the same OTRS) an extracts the data and the operation to perform from th request. For this example the operation is alway ``test_operation``.
 
@@ -2888,7 +2888,7 @@ The way this function parses the request to get the dat and the operation name, 
             Success => 1,
         };
     }
-                    
+
 
 This function sends the response back to the Remote System for the requested operation.
 
@@ -2922,7 +2922,7 @@ For this particular example we return a standard HTTP response success (200) or 
             },
         };
     }
-                    
+
 
 This is the only function that is used by the framework as requester. It sends the request to the Remote System and waits for its response.
 
@@ -2957,7 +2957,7 @@ For this example we use a custom protocol handler to avoid send the request to t
         return $Response;
     }
 
-                    
+
 
 This is the code for the custom protocol that we use. This approach is only useful for training or for testing environments where the Remote Systems are not available.
 
@@ -2982,7 +2982,7 @@ There is the need to register this network transport module to be accessible in 
             </Hash>
         </Setting>
     </ConfigItem>
-                                  
+
 
 Mapping
 ~~~~~~~
@@ -3004,7 +3004,7 @@ Mapping modules can be called more than one time during a normal communication, 
 
 *Znuny as provider example:*
 
-         
+
 #. The remote system sends the request with the data in the remote system format
 #. The data is mapped from the remote system format to the the framework format
 #. the framework performs the operation and return the response in the framework format
@@ -3053,7 +3053,7 @@ In this section a sample mapping module is shown and each subroutine is explaine
     use Kernel::System::VariableCheck qw(IsHashRefWithData IsStringWithData);
 
     our $ObjectManagerDisabled = 1;
-                    
+
 
 This is common header that can be found in common modules. The class/package name is declared via the ``package`` keyword.
 
@@ -3102,7 +3102,7 @@ We also include ``VariableCheck`` module to perform certain validation over some
 
         return $Self;
     }
-                    
+
 
 The constructor ``new`` creates a new instance of the class. According to the coding guidelines only objects of other classes not handled by the object manager that are needed in this module have to be created in ``new``.
 
@@ -3170,7 +3170,7 @@ The constructor ``new`` creates a new instance of the class. According to the co
             Data    => $ReturnData,
         };
     }
-                    
+
 
 The ``Map`` function is the main part of each mapping module. It receives the mapping configuration (rules) and the data in the original format (either the system or remote system format) and converts it to a new format, even if the structure of the data can be changed during the mapping process.
 
@@ -3224,7 +3224,7 @@ In this example no data key transformations were implemented.
         return $ReturnData;
     }
 
-                    
+
 
 This are the helper functions that actually performs the string conversions.
 
@@ -3244,7 +3244,7 @@ There is the need to register this mapping module to be accessible in the GUI. T
             </Hash>
         </Setting>
     </ConfigItem>
-                                  
+
 Invoker
 *******
 
@@ -3285,7 +3285,7 @@ In this section a sample invoker module is shown and each subroutine is explaine
     use Kernel::System::ObjectManager;
 
     our $ObjectManagerDisabled = 1;
-                    
+
 
 This is common header that can be found in common modules. The class/package name is declared via the ``package`` keyword. Invokers can not be instantiated by the Object Manager.
 
@@ -3310,7 +3310,7 @@ This is common header that can be found in common modules. The class/package nam
 
         return $Self;
     }
-                    
+
 
 The constructor ``new`` creates a new instance of the class. According to the coding guidelines only objects of other classes not handled by the object manager that are needed in this module have to be created in ``new``.
 
@@ -3343,7 +3343,7 @@ The constructor ``new`` creates a new instance of the class. According to the co
             Data    => \%ReturnData,
         };
     }
-                    
+
 
 The ``PrepareRequest`` function is used to handle and collect all needed data to be sent into the request. Here we can receive data from the request handler, use it, extend it, generate new data, and after that, we can transfer the results to the mapping layer.
 
@@ -3360,7 +3360,7 @@ If during any part of the ``PrepareRequest`` function the request need to be sto
         Success           => 1,
         StopCommunication => 1,
     };
-                    
+
 
 Using this, the Requester will understand that the request should not continue (it will not be sent to Mapping layer and will also not be sent to the Network Transport). The Requester will not send an error on the debug log, it will only silently stop.
 
@@ -3411,7 +3411,7 @@ Using this, the Requester will understand that the request should not continue (
             Data    => \%ReturnData,
         };
     }
-                    
+
 
 The ``HandleResponse`` function is used to receive and process the data from the previous request, that was made to the Remote System. This data already passed by Mapping layer, to transform it from Remote System format to the framework format (if needed).
 
@@ -3438,7 +3438,7 @@ There is the need to register this invoker module to be accessible in the GUI. T
             </Hash>
         </Setting>
     </ConfigItem>
-                                  
+
  Operation
  *********
 
@@ -3477,7 +3477,7 @@ In this section a sample operation module is shown and each subroutine is explai
     use Kernel::System::VariableCheck qw(IsHashRefWithData);
 
     our $ObjectManagerDisabled = 1;
-                    
+
 
 This is common header that can be found in common modules. The class/package name is declared via the ``package`` keyword.
 
@@ -3505,7 +3505,7 @@ We also include ``VariableCheck`` module to perform certain validation over some
 
         return $Self;
     }
-                    
+
 
 The constructor ``new`` creates a new instance of the class. According to the coding guidelines only objects of other classes not handled by the object manager that are needed in this module have to be created in ``new``.
 
@@ -3549,7 +3549,7 @@ The constructor ``new`` creates a new instance of the class. According to the co
             Data    => $ReturnData,
         };
     }
-                    
+
 
 The ``Run`` function is the main part of each operation. It receives all internal mapped data from remote system needed by the provider to execute the action, it performs the action and returns the result to the provider to be external mapped and deliver back to the remote system.
 
@@ -3573,7 +3573,7 @@ There is the need to register this operation module to be accessible in the GUI.
             </Hash>
         </Setting>
     </ConfigItem>
-                    
+
 Unit Test Example
 *****************
 
@@ -3684,7 +3684,7 @@ The following is just the starting point for a unit test:
                 Type   => 'HTTP::SOAP',
                 Config => {
                     MaxLength => 10000000,
-                    NameSpace => 'http://otrs.org/SoapTestInterface/',
+                    NameSpace => 'http://znuny.org/SoapTestInterface/',
                     Endpoint  => $RemoteSystem,
                 },
             },
@@ -3698,7 +3698,7 @@ The following is just the starting point for a unit test:
             Transport => {
                 Type   => 'HTTP::SOAP',
                 Config => {
-                    NameSpace => 'http://otrs.org/SoapTestInterface/',
+                    NameSpace => 'http://znuny.org/SoapTestInterface/',
                     Encoding  => 'UTF-8',
                     Endpoint  => $RemoteSystem,
                 },
@@ -3858,7 +3858,7 @@ The following is just the starting point for a unit test:
     # also delete any other added data during the this test, since RestoreDatabase must not be used.
 
     1;
-                    
+
 
 WSDL Extension Example
 ***********************
@@ -3876,7 +3876,7 @@ WSDL files contain the definitions of the web services and its operations for SO
                 <wsdl:output message="tns:TestResponse"/>
             </wsdl:operation>
         <!-- ... -->
-                    
+
 
 **Binding:**
 
@@ -3896,7 +3896,7 @@ WSDL files contain the definitions of the web services and its operations for SO
             </wsdl:operation>
             <!-- ... -->
         </wsdl:binding>
-                    
+
 
 **Type:**
 
@@ -3923,7 +3923,7 @@ WSDL files contain the definitions of the web services and its operations for SO
             <!-- ... -->
             </xsd:schema>
         </wsdl:types>
-                    
+
 
 **Message:**
 
@@ -3937,14 +3937,14 @@ WSDL files contain the definitions of the web services and its operations for SO
             <wsdl:part element="tns:TestResponse" name="parameters"/>
         </wsdl:message>
         <!-- ... -->
-                                  
+
 WADL Extension Example
 ***********************
 WADL files contain the definitions of the web services and its operations for REST interface, add a new resource to ``development/webservices/GenericTickeConnectorREST.wadl``.
 
 .. code-block:: xml
 
-    <resources base="http://localhost/otrs/nph-genericinterface.pl/Webservice/GenericTicketConnectorREST">
+    <resources base="http://localhost/znuny/nph-genericinterface.pl/Webservice/GenericTicketConnectorREST">
         <!-- ... -->
         <resource path="Test" id="Test">
         <doc xml:lang="en" title="Test"/>
@@ -3977,7 +3977,7 @@ Web services can be imported by a YAML with a predefined structure in this case 
         MappingInbound: {}
         MappingOutbound: {}
         Type: Test::Test
-                                  
+
 Web Service REST Extension Example
 ***********************************
 
@@ -4003,7 +4003,7 @@ Web services can be imported by a YAML with a predefined structure in this case 
             RequestMethod:
             - GET
             Route: /Test
-                                  
+
 Daemon And Scheduler
 ********************
 
@@ -4015,7 +4015,7 @@ The daemon is a separated process that helps executes certain actions asynchrono
 System Daemon Modules
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The daemon ``bin/otrs.Daemon.pl`` main purpose is to call (Daemonize) all the registered daemon modules in the System Configuration.
+The daemon ``bin/znuny.Daemon.pl`` main purpose is to call (Daemonize) all the registered daemon modules in the System Configuration.
 
 Each daemon module must implement a common API in order to be correctly called by the System Daemon and be a semi persistent process in the system. Persistent process could grow in size and memory usage over the time and normally they do not respond to changes in the configuration. That is why the daemon modules should implement a discard mechanism to be stopped and re-spawned again from time to time, freeing system resources and re-reading the configuration.
 
@@ -4024,7 +4024,7 @@ A daemon module could be an all-in-one solution to perform a certain job, but th
 It is not always necessary to create a new daemon module to perform certain task, usually the System Scheduler Daemon can deal with the majority of them, either if it is an System function that needs to be executed on a regular basis (CRON like) or if it's triggered by an System event, the System Scheduler should be capable to deal with it out of the box or by adding a new scheduler task worker module.
 
 **Creating A New Daemon Module**
-                           
+
 All daemon modules requires to be registered in the System Configuration in order to be called by the main System Daemon.
 
 **Daemon Module Registration ExampleCode**
@@ -4040,10 +4040,10 @@ All daemon modules requires to be registered in the System Configuration in orde
             </Hash>
         </Value>
     </Setting>
-                        
+
 
  **Daemon Module Example Code**
- 
+
  The following code implements a daemon module that displays the system time every 2 seconds.
 
 .. code-block:: perl
@@ -4071,7 +4071,7 @@ All daemon modules requires to be registered in the System Configuration in orde
         'Kernel::System::Cache',
         'Kernel::System::DB',
     );
-                        
+
 
 This is common header that can be found in most modules. The class/package name is declared via the ``package`` keyword.
 
@@ -4107,7 +4107,7 @@ In this case we are inheriting from ``BaseDaemon`` class, and the object manager
 
         return $Self;
     }
-                        
+
 
 The constructor ``new`` creates a new instance of the class. Some used objects are also created here. It is highly recommended to disable in-memory cache in daemon modules especially if the framework runs in a cluster environment.
 
@@ -4129,7 +4129,7 @@ For the following functions (``PreRun``, ``Run`` and ``PostRun``) if they return
 
         return;
     }
-                        
+
 
 The ``PreRun`` method is executed before the main daemon module method, and the its purpose is to perform some test before the real operation. In this case a check to the database is done (always recommended), otherwise it sleeps for 10 seconds. This is needed in order to wait for DB connection to be reestablished.
 
@@ -4142,7 +4142,7 @@ The ``PreRun`` method is executed before the main daemon module method, and the 
 
         return 1;
     }
-                        
+
 
 The ``Run`` method is where the main daemon module code resides, in this case it only prints the current time.
 
@@ -4161,7 +4161,7 @@ The ``Run`` method is where the main daemon module code resides, in this case it
 
         return 1;
     }
-                        
+
 
 The ``PostRun`` method is used to perform the sleeps (preventing the daemon module to be executed too often) and also to manage the safe discarding of the object. Other operations like verification or cleanup can be done here.
 
@@ -4201,14 +4201,14 @@ The ``PostRun`` method is used to perform the sleeps (preventing the daemon modu
 
         return \%Summary;
     }
-                        
+
 
 The ``Summary`` method is called by the console command ``Maint::Daemon::Summary`` and it's required to return ``Header``, ``Column``, ``Data`` and ``NoDataMessages`` keys. ``Column`` and ``Data`` needs to be an array of hashes. It is used to display useful information of what the daemon module is currently doing, or what has been done so far. This method is optional.
 
 .. code-block:: perl
 
     1;
-                        
+
 
     End of file.
 
@@ -4219,7 +4219,7 @@ The system scheduler is a conjunction of daemon modules and task workers that ru
 Scheduler Task Managers
 ========================
 
-``SchedulerCronTaskManager`` 
+``SchedulerCronTaskManager``
     reads registered cron tasks from the SysConfig and determines the correct time to create a task to be executed.
 
 ``SchedulerFutureTaskManager``
@@ -4233,7 +4233,7 @@ Whenever these tasks managers are not enough, a new daemon module can be created
 Scheduler Task Workers
 =======================
 
-``SchedulerTaskWorker`` 
+``SchedulerTaskWorker``
     execute all tasks planned by the previous tasks managers plus the ones that come directly from the code by using the Asynchronous Executor.
 
 In order to execute each task, the ``SchedulerTaskWorker`` calls a backend module (Task Worker) to perform the specific task. The worker module is determined by the task type. If a new task type is added, it will require a new task worker.
@@ -4264,7 +4264,7 @@ All files placed under ``Kernel/System/Daemon/DaemonModules/SchedulerTaskWorker`
     our @ObjectDependencies = (
         'Kernel::System::Log',
     );
-                            
+
 
 This is common header that can be found in most OTR modules. The class/package name is declared via th ``package`` keyword.
 
@@ -4283,7 +4283,7 @@ In this case we are inheriting from ``BaseTaskWorker`` class, and the object man
 
         return $Self;
     }
-                            
+
 
 The constructor ``new`` creates a new instance of the class.
 
@@ -4336,14 +4336,14 @@ The constructor ``new`` creates a new instance of the class.
 
             return $Success;
         }
-                                             
+
 
 The ``Run`` is the main method. A call to ``_CheckTaskParams()`` from the base class will save some lines of code. Executing the task while capturing the STDERR is a very good practice, since the scheduler runs normally unattended, and saving all errors to a variable will make it available for further processing. ``_HandleError()`` provides a common interface to send the error messages as email to the recipient specified in the System Configuration.
 
 .. code-block:: perl
 
     1;
-                            
+
 
     End of file.
 
@@ -4436,7 +4436,7 @@ These modules are located in ``Kernel/System/DynamicField/ObjectType/*.pm``.
 
 Dynamic Fields Admin Modules
 ============================
- 
+
  To manage the Dynamic Fields (Add, Edit and List) a series of modules has been already developed. There is one specific master module (``AdminDynamicField.pm``) that shows the list of defined Dynamic Fields, and from within other modules are called to create new Dynamic Fields or modify an existing ones.
 
 Normally a Dynamic Field Driver needs its own Admin Module (Admin Dialog) to define its properties. This dialog might differ from other Drivers. But this is not mandatory, Drivers can share Admin Dialogs, if they can provide needed information for all the Drivers that are linked to them, no matter if they are from different type. What is mandatory is that each Driver must be linked to an Admin Dialog (e.g. Text and TextArea Drivers share ``AdminDynamicFieldText.pm`` Admin Dialog, and Date and Date/Time Drivers share ``AdminDynamicFieldDateTime.pm`` Admin Dialog).
@@ -4446,7 +4446,7 @@ Admin Dialogs follow the normal  Admin Module rules and architecture. But for st
 These modules are located in ``Kernel/Modules/*.pm``.
 
 .. note::
-    
+
     Each Admin Dialog needs its corresponding HTML template file (``.tt``).
 
 
@@ -4468,7 +4468,7 @@ Dynamic Fields Database Tables
 ===============================
 There are two tables in the database to store the dynamic field information:
 
-dynamic_field 
+dynamic_field
     Used by the Core Module ``DynamicField.pm``, it stores the Dynamic Field definitions.
 
 dynamic_field_value
@@ -4523,15 +4523,15 @@ Ticket or Article
 ^^^^^^^^^^^^^^^^^^
 
 * Create a Dynamic Field Driver
- 
+
 This is the main module of the new field.
- 
+
 * Create or use an existing Admin Dialog
- 
+
 To have a management interface and set its configuration options.
- 
+
 * Create a Configuration File
- 
+
 To register the new field in the Backend (or new Admin Dialogs in the framework if needed) and be able to create instances or it.
 
 Other Objects
@@ -4649,7 +4649,7 @@ To create this new Dynamic Field we will create 4 files: a Configuration File (X
     |   |   |   |--/Driver/
     |   |   |   |   |Password.pm
     ...
-        
+
 Dynamic Field Configuration File
 ================================
 
@@ -4664,7 +4664,7 @@ In this section a configuration file for password Dynamic Field is shown and exp
 
     <?xml version="1.0" encoding="utf-8"?>
     <otrs_config version="1.0" init="Application">
-                
+
 
 This is the normal header for a configuration file.
 
@@ -4682,7 +4682,7 @@ This is the normal header for a configuration file.
                 </Hash>
             </Setting>
         </ConfigItem>
-                
+
 
 This setting registers the Password Dynamic Field Driver for the Backend module so it can be included in the list of available Dynamic Fields Types. It also specify its own Admin Dialog in the key ``ConfigDialog``. This key is used by the Master Dynamic Field Admin Module to manage this new Dynamic Field Type.
 
@@ -4703,14 +4703,14 @@ This setting registers the Password Dynamic Field Driver for the Backend module 
                 </FrontendModuleReg>
             </Setting>
         </ConfigItem>
-                
+
 
 This is a standard module registration for the Password Admin Dialog in the Admin Interface.
 
 .. code-block:: xml
 
     </otrs_config>
-                
+
 
 Standard closure of a configuration file.
 
@@ -4743,7 +4743,7 @@ In this section an Admin Dialog for password dynamic field is shown and explaine
     use Kernel::System::Valid;
     use Kernel::System::CheckItem;
     use Kernel::System::DynamicField;
-                
+
 
 This is common header that can be found in common  modules. The class/package name is declared via the ``package`` keyword.
 
@@ -4775,7 +4775,7 @@ This is common header that can be found in common  modules. The class/package na
         $Self->{DefaultValueMask} = '****';
         return $Self;
     }
-                
+
 
 The constructor ``new`` creates a new instance of the class. According to the coding guidelines objects of other classes that are needed in this module have to be created in ``new``.
 
@@ -4818,7 +4818,7 @@ The constructor ``new`` creates a new instance of the class. According to the co
             Message => "Undefined subaction.",
         );
     }
-                
+
 
 ``Run`` is the default function to be called by the web request. We try to make this function as simple as possible and let the helper functions to do the "hard" work.
 
@@ -4850,11 +4850,11 @@ The constructor ``new`` creates a new instance of the class. According to the co
             FieldTypeName  => $FieldTypeName,
         );
     }
-                
 
-``_Add`` 
+
+``_Add``
     function is also pretty simple, it just get some parameters from the web request and call the
-``_ShowScreen()`` 
+``_ShowScreen()``
     function. Normally this function is not needed to be modified.
 
 .. code-block:: perl
@@ -4972,7 +4972,7 @@ The constructor ``new`` creates a new instance of the class. According to the co
             OP => "Action=AdminDynamicField",
         );
     }
-                
+
 
 The ``_AddAction`` function gets the configuration parameters from a new dynamic field, and it validates that the Dynamic Field name only contains letters and numbers. This function could validate any other parameter.
 
@@ -5044,7 +5044,7 @@ If all the parameters are correct it creates a new Dynamic Field.
             FieldTypeName  => $FieldTypeName,
         );
     }
-                
+
 
 The ``_Change`` function is very similar to the ``_Add`` function but since this function is used to edit an existing field it needs to validated the ``FieldID`` parameter and gather the current Dynamic Field data.
 
@@ -5190,7 +5190,7 @@ The ``_Change`` function is very similar to the ``_Add`` function but since this
             OP => "Action=AdminDynamicField",
         );
     }
-                
+
 
 ``_ChangeAction()`` is very similar to ``_AddAction()``, but adapted for the update of an existing field instead of creating a new one.
 
@@ -5284,7 +5284,7 @@ The ``_Change`` function is very similar to the ``_Add`` function but since this
     }
 
     1;
-                
+
 
 The ``_ShowScreen`` function is used to set and define the HTML elements and blocks from a template to generate the Admin Dialog HTML code.
 
@@ -5307,7 +5307,7 @@ In this section an Admin Dialog template for the password Dynamic Field is shown
     # the enclosed file COPYING for license information (GPL). If you
     # did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
     # --
-                
+
 
 This is common header that can be found in common modules.
 
@@ -5332,7 +5332,7 @@ This is common header that can be found in common modules.
                 </div>
             </div>
         </div>
-                
+
 
 This part of the code has the main box and also the actions side bar. No modifications are needed in this section.
 
@@ -5345,7 +5345,7 @@ This part of the code has the main box and also the actions side bar. No modific
                 <input type="hidden" name="ObjectType" value="[% Data.ObjectType | html %]" />
                 <input type="hidden" name="FieldType" value="[% Data.FieldType | html %]" />
                 <input type="hidden" name="ID" value="[% Data.ID | html %]" />
-                
+
 
 In this section of the code is defined the right part of the dialog. Notice that the value of the ``Action`` hidden input must match with the name of the Admin Dialog.
 
@@ -5414,7 +5414,7 @@ In this section of the code is defined the right part of the dialog. Notice that
             </div>
         </div>
     </div>
-                                 
+
 
 This first widget contains the common form attributes for the Dynamic Fields. For consistency with other Dynamic Fields is recommended to leave this part of the code unchanged.
 
@@ -5455,7 +5455,7 @@ This first widget contains the common form attributes for the Dynamic Fields. Fo
             </fieldset>
         </div>
     </div>
-                                 
+
 
 The second widget has the Dynamic Field specific form attributes. This is the place where new attributes can be set and it could use JavaScript and AJAX technologies to make it more easy or friendly for the end user.
 
@@ -5481,7 +5481,7 @@ The second widget has the Dynamic Field specific form attributes. This is the pl
     Core.Agent.Admin.DynamicField.ValidationInit();
     //]]></script>
     [% END %]
-                                 
+
 
 The final part of the file contains the "Submit" button and the "Cancel" link, as well as other needed JavaScript code.
 
@@ -5523,7 +5523,7 @@ In this section the Password Dynamic Field driver is shown and explained. This d
         'Kernel::System::DynamicFieldValue',
         'Kernel::System::Main',
     );
-                
+
 
 This is the common header that can be found in common  modules. The class/package name is declared via the ``package`` keyword. Notice that ``BaseText`` is used as base class.
 
@@ -5584,14 +5584,14 @@ This is the common header that can be found in common  modules. The class/packag
 
         return $Self;
     }
-                
+
 
 The constructor ``new`` creates a new instance of the class. According to the coding guidelines objects of other classes that are needed in this module have to be created in ``new``.
 
 It is important to define the behaviors correctly as the field might or might not be used in certain screens, functions that depends on behaviors that are not active for this particular field might not be needed to be implemented.
 
 .. note::
-    
+
     Drivers are created only by the ``BackendObject`` and not directly from any other module.
 
 .. code-block:: perl
@@ -5681,7 +5681,7 @@ It is important to define the behaviors correctly as the field might or might no
 
         return $Data;
     }
-                
+
 
 This function is the responsible to create the HTML representation of the field and its label, and is used in the edit screens like ``AgentTicketPhone``, ``AgentTicketNote``, etc.
 
@@ -5745,7 +5745,7 @@ This function is the responsible to create the HTML representation of the field 
 
         return $Data;
     }
-                
+
 
 ``DisplayValueRender()`` function returns the field value as a plain text as well as its title (both can be translated). For this particular example we are checking if the password should be revealed or display a predefined mask by a configuration parameter in the Dynamic Field.
 
@@ -5791,7 +5791,7 @@ This function is the responsible to create the HTML representation of the field 
 
         return $Data;
     }
-                
+
 
 This function is similar to ``DisplayValueRender()``but is used in places where there is no ``LayoutObject``.
 
@@ -5803,56 +5803,56 @@ The following are other functions that are might needed if the new Dynamic Field
 .. code-block:: perl
 
     sub ValueGet { ... }
-                
+
 
 This function retrieves the value from the field on a specified Object. In this case we are returning the first text value, since the field only stores one text value at time.
 
 .. code-block:: perl
 
     sub ValueSet { ... }
-                
+
 
 ``ValueSet()`` is used to store a Dynamic Field value. In this case this field only stores one text type value. Other fields could store more than one value on either ``ValueText``, ``ValueDateTime`` or ``ValueInt`` format.
 
 .. code-block:: perl
 
     sub ValueDelete { ... }
-                
+
 
 This function is used to delete one field value attached to a particular object ID. For example if the instance of an object is to be deleted, then there is no reason to have the field value stored in the database for that particular object instance.
 
 .. code-block:: perl
 
     sub AllValuesDelete { ... }
-                
+
 
 ``AllValuesDelete()`` function is used to delete all values from a certain Dynamic Field. This function is very useful when a Dynamic Field is going to be deleted.
 
 .. code-block:: perl
 
     sub ValueValidate { ... }
-                
+
 
 The ``ValueValidate()`` function is used to check if the value is consistent to its type.
 
 .. code-block:: perl
 
     sub SearchSQLGet { ... }
-                
+
 
 This function is used by ``TicketSearch`` core module to build the internal query to search for a ticket based on this field as a search parameter.
 
 .. code-block:: perl
 
     sub SearchSQLOrderFieldGet { ... }
-                
+
 
 The ``SearchSQLOrderFieldGet`` is also a helper for ``TicketSearch`` module. ``$Param{TableAlias}`` should be kept and ``value_text`` could be replaced with ``value_date`` or ``value_int`` depending on the field.
 
 .. code-block:: perl
 
     sub EditFieldValueGet { ... }
-                
+
 
 ``EditFieldValueGet()`` is a function used in the edit screens of the framework and its purpose is to get the value of the field, either from a template like generic agent profile or from a web request. This function gets the web request in the ``$Param{ParamObject}``, that is a copy of the ``ParamObject`` of the Frontend Module or screen.
 
@@ -5863,41 +5863,41 @@ If the result should be a structure then, normally this is used to store its val
 .. code-block:: perl
 
     sub EditFieldValueValidate { ... }
-                
+
 
 This function should provide at least a method to validate if the field is empty, and return an error if the field is empty and mandatory, but it can also do more validations for other kind of fields, like if the option selected is valid, or if a date should be only in the past etc. It can provide a custom error message also.
 
 .. code-block:: perl
 
     sub SearchFieldRender { ... }
-                
+
 
 This function is used by ticket search dialog and it is similar to ``EditFieldRander()``, but normally on a search screen small changes has to be done for all fields. For this example we use a HTML text input instead of a password input. In other fields like Dropdown field is displayed as a Multiple select in order to let the user search for more than one value at a time.
 
 .. code-block:: perl
 
     sub SearchFieldValueGet { ... }
-                
+
 
 Very similar to ``EditFieldValueGet()``, but uses a different name prefix, adapted for the search dialog screen.
 
 .. code-block:: perl
 
     sub SearchFieldParameterBuild { ... }
-                
+
 ``SearchFieldParameterBuild()`` is used also by the ticket search dialog to set the correct operator and value to do the search on this field. It also returns how the value should be displayed in the used search attributes in the results page.
 
 .. code-block:: perl
 
     sub StatsFieldParameterBuild { ... }
-                
+
 
 This function is used by the stats modules. It includes the field definition in the stats format. For fields with fixed values it also includes all this possible values and if they can be translated, take a look to the ``BaseSelect`` driver code for an example how to implement those.
 
 .. code-block:: perl
 
     sub StatsSearchFieldParameterBuild { ... }
-                
+
 
 ``StatsSearchFieldParameterBuild()`` is very similar to the ``SearchFieldParameterBuild()``. The difference is that the ``SearchFieldParameterBuild()`` gets the value from the search profile and this one gets the value directly from its parameters.
 
@@ -5906,21 +5906,21 @@ This function is used by statistics module.
 .. code-block:: perl
 
     sub TemplateValueTypeGet { ... }
-                
+
 
 The ``TemplateValueTypeGet()`` function is used to know how the Dynamic Field values stored on a profile should be retrieved, as a SCALAR or as an ARRAY, and it also defines the correct name of the field in the profile.
 
 .. code-block:: perl
 
     sub RandomValueSet { ... }
-                
+
 
 This function is used by ``znuny.Console.pl Dev::Tools::Database::RandomDataInsert`` console to populate the database with some test and random data. The value inserted by this function is not really relevant. The only restriction is that the value must be compatible with the field value type.
 
 .. code-block:: perl
 
     sub ObjectMatch { ... }
-                
+
 
 Used by the notification modules. This functio returns 1 if the field is present in th ``$Param{ObjectAttributes}`` parameter and if i matches the given value.
 
@@ -5949,14 +5949,14 @@ To illustrate this process a new Dynamic Field functionality extension for the f
     |   |   |   |--/Driver/
     |   |   |   |   |FooExtensionText.pm
     ...
-                    
+
 Dynamic Field Foo Extension files
 =================================
 
 Dynamic Field Extension
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The configuration files are used to register the extensions for the Backend and Drivers as well as new behaviors for each drivers 
+The configuration files are used to register the extensions for the Backend and Drivers as well as new behaviors for each drivers
 .. note::
 
     If a driver is extended with a new function, the backend will need also an extension for that function.
@@ -5969,7 +5969,7 @@ In this section a configuration file for ``Foo`` extension is shown and explaine
 
     <?xml version="1.0" encoding="utf-8"?>
     <otrs_config version="1.0" init="Application">
-                
+
 
 This is the normal header for a configuration file.
 
@@ -5985,7 +5985,7 @@ This is the normal header for a configuration file.
                 </Hash>
             </Setting>
         </ConfigItem>
-                
+
 
 This setting registers the extension in the ``Backend`` object. The module will be loaded from ``Backend`` as a base class.
 
@@ -6006,14 +6006,14 @@ This setting registers the extension in the ``Backend`` object. The module will 
                 </Hash>
             </Setting>
         </ConfigItem>
-                
+
 
 This is the registration for an extension in the ``Text`` Dynamic Field Driver. The module will be loaded as a base class in the Driver. Notice also that new behaviors can be specified. These extended behaviors will be added to the behaviors that the Driver has out of the box, therefore a call to ``HasBehavior()`` to check for these new behaviors will be totally transparent.
 
 .. code-block:: xml
 
     </otrs_config>
-                
+
 
 Standard closure of a configuration file.
 
@@ -6061,7 +6061,7 @@ In this section the ``Foo`` extension for Backend is shown and explained. The ex
     =over 4
 
     =cut
-                
+
 
 This is common header that can be found in common  modules. The class/package name is declared via the ``package`` keyword.
 
@@ -6135,7 +6135,7 @@ This is common header that can be found in common  modules. The class/package na
         # call HasBehavior on the specific backend
         return $Self->{$DynamicFieldBackend}->Foo(%Param);
     }
-                
+
 
 The function ``Foo()`` is only used for test purposes. First it checks the Dynamic Field configuration, then it checks if the Dynamic Field Driver (type) exists and was already loaded. To prevent the function call on a driver where is not defined it first check if the driver can execute the function, then executes the function in the driver passing all parameters.
 
@@ -6188,7 +6188,7 @@ In this section the ``Foo`` extension for Text field driver is shown and explain
     =over 4
 
     =cut
-                
+
 
 This is common header that can be found in common  modules. The class/package name is declared via the ``package`` keyword.
 
@@ -6198,7 +6198,7 @@ This is common header that can be found in common  modules. The class/package na
         my ( $Self, %Param ) = @_;
         return 1;
     }
-                
+
 
 The function ``Foo()`` has no special logic. It is only for testing and it always returns 1.
 
@@ -6237,7 +6237,7 @@ If you want to create your own postmaster filter, just createyour own module. Th
             </Hash>
         </Setting>
     </ConfigItem>
-            
+
 
     And the actual filter code in
     ``Kernel/System/PostMaster/Filter/Example.pm``:
@@ -6329,7 +6329,7 @@ If you want to create your own postmaster filter, just createyour own module. Th
     }
 
     1;
-            
+
 
 Email Parsing Flow
 

@@ -2,10 +2,10 @@ Provider
 ########
 .. _PageNavigation admin_webservices_provider_index:
 
-HTTP-Header Authentication 
+HTTP-Header Authentication
 **************************
 
-To prevent revealing of information like passwords, usernames, etc, in the URL for HTTPD methods like GET it is possible to transfer the authentication fields in custom HTTP header. 
+To prevent revealing of information like passwords, usernames, etc, in the URL for HTTP methods like GET it is possible to transfer the authentication fields in custom HTTP header.
 
 These headers are:
 
@@ -32,7 +32,7 @@ Request
 .. code-block:: none
 
 	curl -X POST \
-	'https://zunny.exapmle.com/otrs/nph-genericinterface.pl/Webservice/Ticket/search' \
+	'https://zunny.exapmle.com/znuny/nph-genericinterface.pl/Webservice/Ticket/search' \
         --header 'Accept: */*' \
         --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
         --header 'Content-Type: application/json' \
@@ -229,7 +229,7 @@ TicketSearch Operation API
     };
 
 
-Sending e-mails 
+Sending e-mails
 ***************
 
 When an article is created with the operation **TicketCreate** or **TicketUpdate** can now additionally be sent via e-mail.
@@ -237,10 +237,10 @@ When an article is created with the operation **TicketCreate** or **TicketUpdate
 The following parameters are available for this purpose:
 
 .. code-block:: none
-	
+
 	ArticleSend => 1,
 	To          => 'email@example.com',  # E-mail address to which the item should be sent.
-	Cc          => 'email2@example.com', # Optional 
+	Cc          => 'email2@example.com', # Optional
 	Bcc         => 'email3@example.com', # Optional
 
 Signing or encrypting with S/MIME or PGP is also possible:
@@ -335,11 +335,11 @@ And to bring you up to speed, here's a small client in PowerShell:
 
 .. code-block:: powershell
 
-    $uri  = "https://YOURFQDN/otrs/nph-genericinterface.pl/Webservice/TimeAccountingREST"
+    $uri  = "https://YOURFQDN/znuny/nph-genericinterface.pl/Webservice/TimeAccountingREST"
     $headers = @{}
     $headers.Add("Accept", "application/json")
     $headers.Add("Content-Type", "application/json")
-    
+
     $Request = @{
         UserLogin = "yourusername"
         Password  = "AverYSavePassW0rD"
@@ -349,7 +349,7 @@ And to bring you up to speed, here's a small client in PowerShell:
     }
     $json = $Request | ConvertTo-Json
     $Response = Invoke-RestMethod -Method Post -Headers $Headers -Uri "$uri/TimeAccountingGet" -Body $json
-    
+
     $Response | ConvertTo-Json | Write-Host
 
 ..
@@ -367,9 +367,9 @@ The CSV file requires a specific header with the entries:
 - **StartTime** or **EndData**
 - **Enabled** contains a yes or no to enable or disable the out of office state
 
-The entries should be enclosed by **"** and separated with an **,** 
+The entries should be enclosed by **"** and separated with an **,**
 
-.. code-block:: 
+.. code-block::
 	:caption: CSV example 1
 
 	"UserEmail","EndTime","StartTime","Enabled"
@@ -377,7 +377,7 @@ The entries should be enclosed by **"** and separated with an **,**
 
 ..
 
-.. code-block:: 
+.. code-block::
 	:caption: CSV example 2
 
 
@@ -404,7 +404,7 @@ The user in the request requires rw permission to the group admin.
 .. code-block:: Powershell
 	:caption: PowerShell example request for this operation
 
-	$uri  = "https://YOURFQDN/otrs/nph-genericinterface.pl/Webservice/OutOfOffice"
+	$uri  = "https://YOURFQDN/znuny/nph-genericinterface.pl/Webservice/OutOfOffice"
 
 	$headers = @{}
 	$headers.Add("Accept", "application/json")

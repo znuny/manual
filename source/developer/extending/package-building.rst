@@ -6,9 +6,9 @@ Packaging Code
 
 To distribute your modules, the changes must first be packaged in the ``.opm`` format before it can be listed in a repository or installed.
 
-.. note:: 
-   
-   An exception is during development when using the :ref:`module tools <DeveolperEnvironment ModuleTools>`. 
+.. note::
+
+   An exception is during development when using the :ref:`module tools <DeveolperEnvironment ModuleTools>`.
 
 
 A specification file or ``.sopm``  is the basis for compiling a package from your source directory. This includes the properties, restrictions, and files of the module.
@@ -103,7 +103,7 @@ SQL Examples
 .. _PackageBuilding SQLExampleInstall:
 
 .. code-block:: xml
-   
+
    <DatabaseInstall>
       <TableCreate Name="calendar_event">
       <Column Name="id" Required="true" PrimaryKey="true" AutoIncrement="true" Type="BIGINT"/>
@@ -134,9 +134,9 @@ SQL Examples
 .. _PackageBuilding SQLExampleReinstall:
 
 .. code-block:: xml
-   
+
    <DatabaseReinstall></DatabaseReinstall>
-                            
+
 
 **Example SQL Uninstall**
 
@@ -150,8 +150,8 @@ SQL Examples
 
 .. note::
 
-   You also can choose ``<Database* Type="post">`` or ``<Database* Type="pre">`` to define the time of execution separately (``post`` is default). 
-   For more info see package life cycle. Information on which actions have to be performed in case of an upgrade (optional). 
+   You also can choose ``<Database* Type="post">`` or ``<Database* Type="pre">`` to define the time of execution separately (``post`` is default).
+   For more info see package life cycle. Information on which actions have to be performed in case of an upgrade (optional).
    Example if already installed package version is below 1.3.4 (e. g. 1.2.6), the defined action will be performed:
 
 Introduction Texts
@@ -235,11 +235,11 @@ It may be necessary to execute perl code upon installation. Add this tag to your
    # database example
    $Kernel::OM->Get('Kernel::System::DB')->Do(SQL => "SOME SQL");
    ]]></CodeUpgrade>
-                            
 
-.. note:: 
 
-   You also can choose ``<Code* Type="post">`` or ``<Code* Type="pre">`` to define the time of execution separately (``post`` is default). 
+.. note::
+
+   You also can choose ``<Code* Type="post">`` or ``<Code* Type="pre">`` to define the time of execution separately (``post`` is default).
    For more info see Package Life Cycle. Perl code to be executed when the package is upgraded (subject to ``version`` tag), (optional). Example if already installed package version is below 1.3.4 (e. g. 1.2.6), defined action will be performed.
 
 Merging Packages
@@ -261,7 +261,7 @@ Additionally it is possible to add required database and code upgrade tags for `
          </TableCreate>
       </DatabaseUpgrade>
    </PackageMerge>
-                     
+
 
 As you can see the attribute ``Type="merge"`` needs to be set in this case. These sections will only be executed if a package merge is possible.
 
@@ -277,14 +277,14 @@ These attributes can be added to the regular ``Database*`` and ``Code*`` section
    <DatabaseInstall IfPackage="AnyPackage">
          ...
    </DatabaseInstall>
-                     
+
 
 .. code-block:: xml
 
    <CodeUpgrade IfNotPackage="OtherPackage">
          ...
    </CodeUpgrade>
-                     
+
 
    These attributes can be also set in the ``Database*`` and
    ``Code*`` sections inside the ``PackageMerge`` tags.
@@ -336,7 +336,7 @@ This is an example spec file looks with some of the above tags.
             <TableDrop Name="calendar_event"/>
          </DatabaseUninstall>
    </otrs_package>
-               
+
 Build Package
 **************
 
@@ -347,7 +347,7 @@ To build a package from the specification file, do the following.
    shell> bin/znuny.Console.pl Dev::Package::Build /path/to/example.sopm /tmp
    Building package...
    Done.
-               
+
 
 Package Life Cycle
 *******************

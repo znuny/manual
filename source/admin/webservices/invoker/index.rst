@@ -57,7 +57,7 @@ These element are available, if not mentioned value is the new value:
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-					xmlns:date="http://exslt.org/dates-and-times" 
+					xmlns:date="http://exslt.org/dates-and-times"
 					extension-element-prefixes="date">
     	<xsl:output method="xml" encoding="utf-8" indent="yes"/>
     	<xsl:template match="RootElement">
@@ -66,7 +66,7 @@ These element are available, if not mentioned value is the new value:
         	</xsl:copy>
     	</xsl:template>
 	</xsl:transform>
-.. 
+..
 
 .. code-block:: XML
 	:caption: Add an entry to the ticket history:
@@ -221,7 +221,7 @@ Example data invoker Ticket::Generic
 	      "UserCreateNextMask": "",
 	      "UserFirstname": "Admin",
 	      "UserTitle": null,
-	      "UserLastname": "OTRS",
+	      "UserLastname": "Znuny",
 	      "AdminCommunicationLogPageShown": "25",
 	      "ChangeTime": "2021-08-02 14:59:14",
 	      "UserTicketOverviewMediumPageShown": "20",
@@ -229,7 +229,7 @@ Example data invoker Ticket::Generic
 	      "UserTicketOverviewPreviewPageShown": "15",
 	      "UserLastViewsPosition": "Avatar",
 	      "UserLogin": "root@localhost",
-	      "UserFullname": "Admin OTRS",
+	      "UserFullname": "Admin Znuny",
 	      "UserLoginFailed": "0",
 	      "UserLastLoginTimestamp": "2021-08-03 08:35:17",
 	      "UserLastLogin": "1627972517",
@@ -250,7 +250,7 @@ Example data invoker Ticket::Generic
 	      "UserCreateNextMask": "",
 	      "UserFirstname": "Admin",
 	      "UserTitle": null,
-	      "UserLastname": "OTRS",
+	      "UserLastname": "Znuny",
 	      "AdminCommunicationLogPageShown": "25",
 	      "ChangeTime": "2021-08-02 14:59:14",
 	      "UserTicketOverviewMediumPageShown": "20",
@@ -258,7 +258,7 @@ Example data invoker Ticket::Generic
 	      "UserTicketOverviewPreviewPageShown": "15",
 	      "UserLastViewsPosition": "Avatar",
 	      "UserLogin": "root@localhost",
-	      "UserFullname": "Admin OTRS",
+	      "UserFullname": "Admin Znuny",
 	      "UserLoginFailed": "0",
 	      "UserLastLoginTimestamp": "2021-08-03 08:35:17",
 	      "UserLastLogin": "1627972517",
@@ -390,7 +390,7 @@ Example data invoker Ticket::Generic
 	      "UserCreateNextMask": "",
 	      "UserFirstname": "Admin",
 	      "UserTitle": null,
-	      "UserLastname": "OTRS",
+	      "UserLastname": "Znuny",
 	      "AdminCommunicationLogPageShown": "25",
 	      "ChangeTime": "2021-08-02 14:59:14",
 	      "UserTicketOverviewMediumPageShown": "20",
@@ -398,7 +398,7 @@ Example data invoker Ticket::Generic
 	      "UserTicketOverviewPreviewPageShown": "15",
 	      "UserLastViewsPosition": "Avatar",
 	      "UserLogin": "root@localhost",
-	      "UserFullname": "Admin OTRS",
+	      "UserFullname": "Admin Znuny",
 	      "UserLoginFailed": "0",
 	      "UserLastLoginTimestamp": "2021-08-03 08:35:17",
 	      "UserLastLogin": "1627972517",
@@ -457,7 +457,7 @@ Example data invoker Ticket::Generic
 	  }
 	}
 
-.. 
+..
 
 .. code-block::
 	:caption: Data for the event ArticleCreate
@@ -559,7 +559,7 @@ Example data invoker Ticket::Generic
 	      "UserCreateNextMask": "",
 	      "UserFirstname": "Admin",
 	      "UserTitle": null,
-	      "UserLastname": "OTRS",
+	      "UserLastname": "Znuny",
 	      "AdminCommunicationLogPageShown": "25",
 	      "ChangeTime": "2021-08-02 14:59:14",
 	      "UserTicketOverviewMediumPageShown": "20",
@@ -567,7 +567,7 @@ Example data invoker Ticket::Generic
 	      "UserTicketOverviewPreviewPageShown": "15",
 	      "UserLastViewsPosition": "Avatar",
 	      "UserLogin": "root@localhost",
-	      "UserFullname": "Admin OTRS",
+	      "UserFullname": "Admin Znuny",
 	      "UserLoginFailed": "0",
 	      "UserLastLoginTimestamp": "2021-08-03 08:35:17",
 	      "UserLastLogin": "1627972517",
@@ -588,7 +588,7 @@ Example data invoker Ticket::Generic
 	      "UserCreateNextMask": "",
 	      "UserFirstname": "Admin",
 	      "UserTitle": null,
-	      "UserLastname": "OTRS",
+	      "UserLastname": "Znuny",
 	      "AdminCommunicationLogPageShown": "25",
 	      "ChangeTime": "2021-08-02 14:59:14",
 	      "UserTicketOverviewMediumPageShown": "20",
@@ -596,7 +596,7 @@ Example data invoker Ticket::Generic
 	      "UserTicketOverviewPreviewPageShown": "15",
 	      "UserLastViewsPosition": "Avatar",
 	      "UserLogin": "root@localhost",
-	      "UserFullname": "Admin OTRS",
+	      "UserFullname": "Admin Znuny",
 	      "UserLoginFailed": "0",
 	      "UserLastLoginTimestamp": "2021-08-03 08:35:17",
 	      "UserLastLogin": "1627972517",
@@ -801,7 +801,7 @@ Example data invoker Ticket::Generic
 	      "UserCreateNextMask": "",
 	      "UserFirstname": "Admin",
 	      "UserTitle": null,
-	      "UserLastname": "OTRS",
+	      "UserLastname": "Znuny",
 	      "AdminCommunicationLogPageShown": "25",
 	      "ChangeTime": "2021-08-02 14:59:14",
 	      "UserTicketOverviewMediumPageShown": "20",
@@ -809,7 +809,7 @@ Example data invoker Ticket::Generic
 	      "UserTicketOverviewPreviewPageShown": "15",
 	      "UserLastViewsPosition": "Avatar",
 	      "UserLogin": "root@localhost",
-	      "UserFullname": "Admin OTRS",
+	      "UserFullname": "Admin Znuny",
 	      "UserLoginFailed": "0",
 	      "UserLastLoginTimestamp": "2021-08-03 08:35:17",
 	      "UserLastLogin": "1627972517",
@@ -899,10 +899,10 @@ jq is a lightweight, command-line JSON processor. To use it, you construct one o
 
 This optional feature is usefull to check substructures and also arrays in ticket event conditions. For more detail on valid Jq expressions check the `documentation <https://stedolan.github.io/jq/>`_.
 
-In the conditions, all values can then be accessed which are also sent via the ``Ticket::Generic`` Invoker. jq lets you select elements in a JSON document like it’s a JavaScript object. 
+In the conditions, all values can then be accessed which are also sent via the ``Ticket::Generic`` Invoker. jq lets you select elements in a JSON document like it’s a JavaScript object.
 
-.. important:: 
-	
+.. important::
+
 	jq is only applicable to ``Ticket::Generic``.
 
 
@@ -919,8 +919,8 @@ Just start with . (for the whole payload) and drill down to the value you want. 
          :width: 100%
          :alt: Example Jq condition
 
-.. important:: 
-	
+.. important::
+
 	Parsing begins with the ticket element. This means, that the ticket data is in the ``.`` element, and the event data is not accessible.
 
 **Avaliable Elements:**

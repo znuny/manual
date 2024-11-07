@@ -21,7 +21,7 @@ Pre-requisites
 
 If you haven't yet, you should first set up Git. Don't forget to set up authentication to GitHub.com from Git as well.
 
-Znuny `is available on GitHub <https://github.com/Znuny/>`_ along with all additional public modules. Currently we recommend Sublime for your IDE, as we use this internally and offer a package with an array of tools to make your coding experience faster and more convenient. `Znuny4OTRS-Sublime <https://github.com/znuny/Znuny4OTRS-Sublime>`_
+Znuny `is available on GitHub <https://github.com/Znuny/>`_ along with all additional public modules. Currently we recommend Sublime for your IDE, as we use this internally and offer a package with an array of tools to make your coding experience faster and more convenient. `Znuny-Sublime <https://github.com/znuny/Znuny-Sublime>`_
 
 Clone Your Repository
 =====================
@@ -29,8 +29,8 @@ Clone Your Repository
 
 If you are not familiar with GitHub, forking is as easy as a click of your mouse. You can even use the web-based IDE for smaller changes. For larger changes, Add a source directory to your workstation or server to store the source code. Then, switch to the new directory using the command line and check them out by using the following command:
 
-.. important:: 
-   
+.. important::
+
    Please replace ``git@github.com:znuny/Znuny.git`` with your own repository. If you complete the commands as below, you will just have a copy of the source code and will not be able to push branches or make pull requests based upon this clone. For more information about forking and working with GitHub see the section `Quick Start <https://docs.github.com/en/get-started/quickstart>`_ in the GitHub documentation.
 
 
@@ -80,7 +80,7 @@ Link the modules source to the framework.
 
 .. code-block:
 
-   shell> ~/src/module-tools/link.pl ~/src/FAQ/ ~/src/otrs/
+   shell> ~/src/module-tools/link.pl ~/src/FAQ/ ~/src/znuny/
 
 .. important:: Adding New Package Files
 
@@ -90,7 +90,7 @@ Rebuild the configuration files to complete integration in Znuny.
 
 .. code-block:
 
-   shell> ~/src/otrs/bin/znuny.Console.pl Maint::Config::Rebuild
+   shell> ~/src/znuny/bin/znuny.Console.pl Maint::Config::Rebuild
 
 .. note:: Database or Migration Tasks
 
@@ -108,7 +108,7 @@ To remove links from Znuny enter the following command:
 
 .. code-block::
 
-   shell> ~/src/module-tools/remove_links.pl ~/src/otrs/
+   shell> ~/src/module-tools/remove_links.pl ~/src/znuny/
 
 Additional Tools Set
 ********************
@@ -146,4 +146,3 @@ More details are documented in the `module documentation <https://github.com/znu
 .. note:: Call to Action
 
    We make all of our tools open source; feel free to improve, fix, and expand theese tools as well.
-   

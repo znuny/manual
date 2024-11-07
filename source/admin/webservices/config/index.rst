@@ -7,7 +7,7 @@ Some information is specific to all web services, and we will discuss the parts 
 Adding A Webservice
 *******************
 
-Each service requires an endpoint. The endpoint is determined by 
+Each service requires an endpoint. The endpoint is determined by
 
 * Configured ``FQDN``
 * Configured ``ScriptAlias``
@@ -15,7 +15,7 @@ Each service requires an endpoint. The endpoint is determined by
 
 A default endpoint for a webservice named Service would be:
 
-``https://znuny.example.com/otrs/nph-genericinterface.pl/Webservice/Service``
+``https://znuny.example.com/znuny/nph-genericinterface.pl/Webservice/Service``
 
 For REST, we will create a routing later in the transport section.
 

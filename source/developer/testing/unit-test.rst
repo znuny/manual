@@ -33,11 +33,11 @@ Every test file should ideally instantiate unit test helper object at the start,
  },
    );
    my $Helper = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
-   
+
 
 By providing ``RestoreDatabase`` parameter to the helper constructor, any database statement executed during the unit test will b, rolled back at the end, making sure no permanent change has bee, done.
 
-Like any other test suite, OTRS provides assertion methods which can be used to test conditions. For example, this is how we create a test user and test that it has been indeed created:
+Like any other test suite, Znuny provides assertion methods which can be used to test conditions. For example, this is how we create a test user and test that it has been indeed created:
 
 .. code-block:: perl
 
@@ -48,7 +48,7 @@ Like any other test suite, OTRS provides assertion methods which can be used to 
          $UserID,
          "Test user $UserID created"
    );
-   
+
 
 Please consult the API section below for complete list of assertion methods.
 
@@ -70,7 +70,7 @@ It's always good practice to create random data in unit tests, which can help di
          $GroupID,
          "Test group $GroupID created"
    );
-   
+
 
 Good developers make their unit test easy to maintain. Consider putting all test cases in an array and then iterate over them with some code. This will provide an easy way to extend the test later:
 
@@ -141,16 +141,16 @@ Good developers make their unit test easy to maintain. Consider putting all test
           );
       }
    }
-   
+
 Testing
 ********
 
 Testing Prerequisites
 =====================
 
-To be able to run the unit tests, you need to have all optional Perl modules installed, except those for different database backends than what you are using. Run ``bin/otrs.CheckModules.pl`` to verify your module installation.
+To be able to run the unit tests, you need to have all optional Perl modules installed, except those for different database backends than what you are using. Run ``bin/znuny.CheckModules.pl`` to verify your module installation.
 
-You also need to have an instance of the OTRS web frontend running on the FQDN that is configured in your local OTRS's ``Config.pm`` file. This OTRS instance must use the same database that is configured for the unit tests.
+You also need to have an instance of the Znuny web frontend running on the FQDN that is configured in your local Znuny's ``Config.pm`` file. This Znuny instance must use the same database that is configured for the unit tests.
 
 
 To run your tests, just use
@@ -172,7 +172,7 @@ To run your tests, just use
    yourhost ran tests in 2s
    All 97 tests passed.
    shell:/opt/znuny>
-   
+
 
 You can even run several tests at once, just supply additional test arguments to the command:
 
@@ -191,7 +191,7 @@ You can even run several tests at once, just supply additional test arguments to
    yourhost ran tests in 5s
    All 212 tests passed.
    shell:/opt/znuny>
-   
+
 
 If you execute ``bin/znuny.Console.pl Dev::UnitTest::Run`` without any argument, it will run all tests found in the system. Please note that this can take some time to finish.
 
@@ -210,7 +210,7 @@ The framework provides API for unit testing that was used in the previous exampl
    $Self->True(
       1, #'Scalar 1 is always evaluated as true'
    );
-   
+
 
 ``False()``
    This function tests whether given scalar value is a false value in Perl.
@@ -220,7 +220,7 @@ The framework provides API for unit testing that was used in the previous exampl
    $Self->False(
       0, # 'Scalar 0 is always evaluated as false'
    );
-   
+
 
 ``Is()``
    This function tests whether the given scalar variables are equal.
@@ -232,7 +232,7 @@ The framework provides API for unit testing that was used in the previous exampl
       $B,
       'Test Name',
    );
-   
+
 
 ``IsNot()``
    This function tests whether the given scalar variables are unequal.
@@ -244,7 +244,7 @@ The framework provides API for unit testing that was used in the previous exampl
       $B,
       'Test Name'
    );
-   
+
 ``IsDeeply()``
    This function compares complex data structures for equality. ``$A`` and ``$B`` have to be references.
 
@@ -255,7 +255,7 @@ The framework provides API for unit testing that was used in the previous exampl
       $B,
       'Test Name'
    );
-   
+
 
 ``IsNotDeeply()``
    This function compares complex data structures for inequality. ``$A`` and ``$B`` have to be references.
@@ -267,7 +267,7 @@ The framework provides API for unit testing that was used in the previous exampl
       $B,
       'Test Name'
    );
-   
+
 
 Besides this, unit test helper object also provides some helpful methods for common test conditions. For full reference, please see the POD for ``Kernel::System::UnitTest::Helper``.
 .
@@ -283,7 +283,7 @@ Besides this, unit test helper object also provides some helpful methods for com
 
    my $RandomID = $Helper->GetRandomID();
    # $RandomID = 'test6326004144100003';
-   
+
 
 ``TestUserCreate()``
    This function creates a test user that can be used in tests. It will be set to invalid automatically during the destructor. It returns the login name of the new user, the password is the same.
@@ -294,13 +294,13 @@ Besides this, unit test helper object also provides some helpful methods for com
       Groups   => ['admin', 'users'],    # optional, list of groups to add this user to (rw rights)
       Language => 'de',# optional, defaults to 'en' if not set
    );
-   
+
 
 ``FixedTimeSet()``
    This functions makes it possible to override the system time as long as this object lives. You can pass an optional time parameter that should be used, if not, the current system time will be used.
 
 .. note::
-   
+
    All calls to methods of ``Kernel::System::Time`` and ``Kernel::System::DateTime`` will use the given time afterwards.
 
 .. code-block:: perl
@@ -308,7 +308,7 @@ Besides this, unit test helper object also provides some helpful methods for com
    $HelperObject->FixedTimeSet(366475757);   # with Timestamp
    $HelperObject->FixedTimeSet($DateTimeObject);   # with previously created DateTime object
    $HelperObject->FixedTimeSet();# set to current date and time
-   
+
 
 ``FixedTimeUnset()``
    This functions restores the regular system time behavior.
@@ -330,7 +330,7 @@ Besides this, unit test helper object also provides some helpful methods for com
       Key   => 'MySetting',  # setting name
       Value => { ... } ,     # setting value
    );
-   
+
 
 ``CustomCodeActivate()``
    This function will temporarily include custom code in the system. For example, you may use this to redefine a subroutine from another class. This change will persist for remainder of the test. All code will be removed when the Helper object is destroyed.
@@ -360,7 +360,7 @@ Besides this, unit test helper object also provides some helpful methods for com
    1;
       Identifier => 'News',   # (optional) Code identifier to include in file name
    );
-   
+
 
 ``ProvideTestDatabase()``
    This function will provide a temporary database for the test. Please first define test database settings in ``Kernel/Config.pm``
@@ -368,11 +368,11 @@ Besides this, unit test helper object also provides some helpful methods for com
 .. code-block:: perl
 
    $Self->{TestDatabase} = {
-      DatabaseDSN  => 'DBI:mysql:database=otrs_test;host=127.0.0.1;',
-      DatabaseUser => 'otrs_test',
-      DatabasePw   => 'otrs_test',
+      DatabaseDSN  => 'DBI:mysql:database=znuny_test;host=127.0.0.1;',
+      DatabaseUser => 'znuny_test',
+      DatabasePw   => 'znuny_test',
    };
-   
+
 
 The method call will override global database configuration for duration of the test, i.e. temporary database will receive all calls sent over system ``DBObject``.
 
@@ -382,11 +382,11 @@ This method returns ``undef`` in case the test database is not configured. If it
 
 .. code-block:: perl
 
-   $Helper->ProvideTestDatabase(
-      DatabaseXMLString => $XML,# (optional) OTRS database XML schema to execute
-         # or
-      DatabaseXMLFiles => [     # (optional) List of XML files to load and execute
-         '/opt/znuny/scripts/database/otrs-schema.xml',
-         '/opt/znuny/scripts/database/otrs-initial_insert.xml',
+   $HelperObject->ProvideTestDatabase(
+      DatabaseXMLString => $XML,      # (optional) database XML schema to execute
+                                       # or
+      DatabaseXMLFiles => [           # (optional) List of XML files to load and execute
+         '/opt/znuny/scripts/database/schema.xml',
+         '/opt/znuny/scripts/database/initial_insert.xml',
       ],
    );
