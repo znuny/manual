@@ -17,28 +17,25 @@ Manage Attachments
 Template Types
 ***************
 
+When creating a template it is possible to choose one or more of the following types. Based on the type, your template will be selectable in the masks as listed below.
+
 Answer
-    This template will be offered for use within when answering a ticket (AgentTicketCompose).
+    This template will be offered for use within when answering a ticket (Reply, Reply All).
 Create
-    This template will be offered for use within when creating an ticket (AgentTicketEmail, AgentTicketPhone).
+    This template will be offered for use within when creating an ticket (New phone ticket, new email ticket).
 Email
-    This template will be offered for use within when creating an outbound e-mail (AgentTicketEmailOutbound).
+    This template will be offered for use within when creating an outbound e-mail (E-mail outbound).
 Forward
-    This template will be offered for use within when forwarding a e-mail.(AgentTicketForward)
+    This template will be offered for use within when forwarding a e-mail.(Forward).
 Note
-    This template will be offered for use within when adding a note (AgentTicketNote, or wherever an article is present in screens not previously listed.)
+    This template will be offered for use within when adding a note (Note, Owner, Priority, etc., or wherever an article is present in screens not previously listed).
 Phone call
-    This template will be offered for use within when documenting a call. (AgentTicketPhoneOutbound, AgentTicketPhoneInbound)
+    This template will be offered for use within when documenting a call (Phone call inbound and outbound).
 Process Management
-    This template will be offered for use within all process activity dialogs, regardless of queue.
+    This template will be offered for use within all process activity dialogs, regardless of the queue.
 Snippet
-    This template will be offered for use in all dialogs.
+    Snippets can be used where an article can be added.
 
-.. versionadded:: 6.4
-
-    Template type:
-    * Process Management
-    * Snippet
 
 Add/Edit A Template
 *******************
