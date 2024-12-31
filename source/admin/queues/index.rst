@@ -78,3 +78,13 @@ Validity
     If a queue is to be valid for selection within the front end.
 Comment
     Additional comments for the administrator.
+
+.. important::
+
+    If you make changes to the name of a queue be sure to check the following areas for hardcoded refereces to the old quueue names.
+
+    - ACLs
+    - Postmaster Filters
+    - Processes
+    - System Configurations
+    - Web services
