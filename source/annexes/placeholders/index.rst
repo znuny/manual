@@ -1,6 +1,7 @@
+.. _PageNavigation annexes_placeholders_index:
+
 Placeholder Tags
 ################
-.. _PageNavigation annexes_placeholders_index:
 
 Placeholders can be used in many parts of the system to represent the use-case-specific information retrieved from respective ticket data.
 

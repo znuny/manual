@@ -1,6 +1,7 @@
+.. _PageNavigation admin_communication_templates_index:
+
 Communication Templates
 #######################
-.. _PageNavigation admin_communication_templates_index:
 
 The following admin modules are available for managing templates, template queue relations, attachments, and template attachment relations.
 

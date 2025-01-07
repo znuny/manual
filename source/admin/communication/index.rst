@@ -23,3 +23,14 @@ One of the communication features is the ability to send automatic responses to 
    :maxdepth: 2
    
    autoresponses/index
+
+Salutations and Signatures
+**************************
+
+Teams (Queues) will use standard formulated text as a salutation and signature, which is applied to the
+answer templates.
+
+.. toctree::
+   :maxdepth: 2
+   
+   signatures/index
