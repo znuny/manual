@@ -15,7 +15,7 @@ Configure Search
 By default, a full-text search is performed. You may add individual attributes to the search to refine your search.
 
 .. image:: images/add_search_term.gif
-    :alt: Adding a Search Term GIF
+    :alt: Add Search Term GIF
 
 
 Search Profiles
@@ -42,6 +42,27 @@ Search profiles can be bookmarked using the *Profile link* option when searching
 Output Format
 *************
 
-Get your results as a PDF, CSV, or XSLX document, or show them on the screen using the *narmal* option.
+Get your results as a PDF, CSV, or XSLX document, or show them on the screen using the *normal* option.
 
+.. _SectionNavigation agentinterface_ticketviews_agentticketsearch_advanced_search:
 
+Advanced Search
+***************
+
+You can use extended search conditions when searching in the fields. This works in all text fields.
+
+Search using a wildcard
+    **\*SQL** would return MySQL and PostgreSQL.
+Search using an OR operation
+    **SQL||DB** would return tickets containing SQL or DB in the text. 
+Search using the AND operation 
+    **SQL&&DB** would return tickets containing SQL and DB in the text.
+Grouping operations
+    **(MariaDB||MySQL)&&Test** returns tickets containing MariaDB or MySQL and also requiring the word Test be in the ticket.
+Exclusion operation
+    **!Secret** returns all tickets which do not containing the word *Secret*
+
+.. note:: 
+    
+    ''Ticket::Frontend::AgentTicketSearch###ExtendedSearchCondition'' must be activated. The setting is active per default. The 
+    customer interface requires Ticket::Frontend::CustomerTicketSearch###ExtendedSearchCondition.
