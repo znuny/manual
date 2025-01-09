@@ -60,8 +60,6 @@ Snippets are available on a queue-by-queue basis. You may therefore not have a s
 .. image:: images/snippet_animation.gif
     :alt: Snippet Usage Animation
 
-
-
 State Options
 *************
 
@@ -101,7 +99,6 @@ If you want to make setting the priority a locking event, then the configuration
 
     Searching for the **Action** in the system configuration is the quickest way to find available options.
 
-
 Accounting Time
 ***************
 
@@ -127,3 +124,22 @@ Adding A Customer User At Creation
     :alt: Customer User Add At Create
 
 Everywhere you create a ticket it's possible to search for a customer from all data sources. Additionally, if you look at the options link, directly above the editor, you can choose to select a customer user from the database, or add a customer user to a writeable back-end when creating a ticket. When you have added a or selected the customer user, the user will automatically be added to the ticket and the popup will disappear.
+
+Pop-up Windows
+**************
+
+Most all ticket menu options, i.e. Reply, Note, Owner will open a pop-up window. This pop-up window has a predefined position and size. This can be modified by each user individually.
+
+Save size
+=========
+
+Pull the handle at the bottom right of the pop-up.
+
+Save position
+=============
+
+To save the position, reposition the window and then resize the window. If you move the window, and do not resize, or resize before you reposition the window. The position will not be saved.
+
+.. note:: 
+    
+    ``Frontend::RichText::Settings###Width`` is an important setting, to set the percentage of the width of the pop-up which is to be filled by the richtext editor.
