@@ -38,7 +38,7 @@ Search profiles can be bookmarked using the *Profile link* option when searching
 Output Format
 *************
 
-Get your results as a PDF, CSV, or XSLX document, or show them on the screen using the *narmal* option.
+Get your results as a PDF, CSV, or XSLX document, or show them on the screen using the *normal* option.
 
 .. _SectionNavigation agentinterface_ticketviews_agentticketsearch_advanced_search:
 
