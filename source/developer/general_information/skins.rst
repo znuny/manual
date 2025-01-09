@@ -122,37 +122,34 @@ Now follows the second step, adding a new logo and making the new skin known to 
 
 .. code:: xml
 
-   <?xml version="1.0" encoding="utf-8" ?>
-   <otrs_config version="1.0" init="Changes">
-         <ConfigItem Name="AgentLogo" Required="0" Valid="1">
-            <Description Translatable="1">The logo shown in the header of the agent interface. The URL to the image must be a relative URL to the skin image directory.</Description>
-            <Group>Framework</Group>
-            <SubGroup>Frontend::Agent</SubGroup>
-            <Setting>
-               <Hash>
-                     <Item Key="URL">skins/Agent/custom/img/logo.png</Item>
-                     <Item Key="StyleTop">13px</Item>
-                     <Item Key="StyleRight">75px</Item>
-                     <Item Key="StyleHeight">67px</Item>
-                     <Item Key="StyleWidth">244px</Item>
-               </Hash>
-            </Setting>
-         </ConfigItem>
-         <ConfigItem Name="Loader::Agent::Skin###100-custom" Required="0" Valid="1">
-            <Description Translatable="1">Custom skin for the development manual.</Description>
-            <Group>Framework</Group>
-            <SubGroup>Frontend::Agent</SubGroup>
-            <Setting>
-               <Hash>
-                     <Item Key="InternalName">custom</Item>
-                     <Item Key="VisibleName">Custom</Item>
-                     <Item Key="Description">Custom skin for the development manual.</Item>
-                     <Item Key="HomePage">www.yourcompany.com</Item>
-               </Hash>
-            </Setting>
-         </ConfigItem>
-   </otrs_config>
-               
+  <?xml version="1.0" encoding="utf-8" ?>
+  <otrs_config version="2.0" init="Framework">
+      <Setting Name="AgentLogoCustom###custom" Required="0" Valid="1">
+          <Description Translatable="1">The logo shown in the header of the agent interface for the skin "custom". See "AgentLogo" for further description.</Description>
+          <Navigation>Frontend::Agent</Navigation>
+          <Value>
+              <Hash>
+                  <Item Key="URL">skins/Agent/custom/img/logo.png</Item>
+                  <Item Key="StyleTop">24px</Item>
+                  <Item Key="StyleRight">4px</Item>
+                  <Item Key="StyleHeight">55px</Item>
+                  <Item Key="StyleWidth">265px</Item>
+              </Hash>
+          </Value>
+      </Setting>
+      <Setting Name="Loader::Agent::Skin###100-custom" Required="0" Valid="1">
+          <Description Translatable="1">Default skin for the agent interface.</Description>
+          <Navigation>Frontend::Base::Loader</Navigation>
+          <Value>
+              <Hash>
+                  <Item Key="InternalName">custom</Item>
+                  <Item Key="VisibleName" Translatable="1">Custom</Item>
+                  <Item Key="Description" Translatable="1">This is the custom skin.</Item>
+                  <Item Key="HomePage">www.znuny.org</Item>
+              </Hash>
+          </Value>
+      </Setting>
+  </otrs_config>
 
 To make this configuration active, we need to navigate to the SysConfig module in the admin area of OTRS (alternatively, you can run the script ``bin/otrs.Console.pl Maint::Config::Rebuild``). This will regenerate the Perl cache of the XML configuration files, so that our new skin is now known and can be selected in the system. To make it the default skin that new agents see before they made their own skin selection, edit the SysConfig setting ``Loader::Agent::DefaultSelectedSkin`` and set it to "custom".
 
