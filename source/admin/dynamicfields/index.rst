@@ -16,7 +16,6 @@ Each field has it's own set of configuaration options. It starts with the basic 
 
    Dynamic Field General Settings
 
-   
 
 These are similar and contain the following options.
 
@@ -32,17 +31,57 @@ Customer
 Customer User
    These can be attached to customer user objects. It requires a mapping within ``Kernel/Config.pm``
 
+Dyanmic Field General Options
+*****************************
+
+Depending on the field type, you will have the following options.
+
++--------------------------+----------------------------------------------------------+--------------+
+| Option                   | Desorption                                               | Field Type   |
++==========================+==========================================================+==============+
+| Name                     | Machine readable name used in configuration system wide. | All          |
++--------------------------+----------------------------------------------------------+--------------+
+| Label                    | Human readable and translatable name.                    | All          |
++--------------------------+----------------------------------------------------------+--------------+
+| Default Value            | The value shown if no value has been set.                | All          |
++--------------------------+----------------------------------------------------------+--------------+
+|| Possible Values         || A key => value pair for selectable Values               || Dropdown    |
+||                         ||                                                         || Multiselect |
++--------------------------+----------------------------------------------------------+--------------+
+|| Show Link               || A link to jump to an external URI.                      || Dropdown    |
+||                         ||                                                         || Date        |
+||                         ||                                                         || DateTime    |
+||                         ||                                                         || Text        |
++--------------------------+----------------------------------------------------------+--------------+
+|| Preview Link            || A link to preview a resource in a hover over window.    || Dropdown    |
+||                         ||                                                         || Date        |
+||                         ||                                                         || DateTime    |
+||                         ||                                                         || Text        |
++--------------------------+----------------------------------------------------------+--------------+
+|| Check RegEx             || Regular Expression to validate input                    || Text        |
+||                         ||                                                         || TextArea    |
++--------------------------+----------------------------------------------------------+--------------+
+|| Default Date Difference || Difference in seconds from now                          || Date        |
+||                         ||                                                         || DateTime    |
++--------------------------+----------------------------------------------------------+--------------+
+|| Years in the past       || Limit the number of past years allowed                  || Date        |
+||                         ||                                                         || DateTime    |
++--------------------------+----------------------------------------------------------+--------------+
+|| Years in the future     || Limit the number of future years allowed                || Date        |
+||                         ||                                                         || DateTime    |
++--------------------------+----------------------------------------------------------+--------------+
+|| Restrict dates          || Restrict input of future or past dates                  || Date        |
+||                         ||                                                         || DateTime    |
++--------------------------+----------------------------------------------------------+--------------+
+| Number of rows           | Number of rows shown (Height)                            | TextArea     |
++--------------------------+----------------------------------------------------------+--------------+
+| Number of columns        | Number of columns shown (Width)                          | TextArea     |
++--------------------------+----------------------------------------------------------+--------------+
+
+Descriptions are in the add/edit forms as seen in the screens below.
+
 Dynamic Field Types
 *******************
-
-Checkbox
-Date
-Date/Time
-Dropdown 
-Multiselect
-TextArea 
-Web service (Dropdown)
-Web service (Multiselect)
 
 .. toctree::
    :maxdepth: 2
