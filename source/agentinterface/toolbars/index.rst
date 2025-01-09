@@ -86,6 +86,10 @@ Full Text Ticket Search
 
   Additional configuration can be added to limit the search to ticket of specific attributes, by the system administrator. Most any attribute of type STRING can be configured to limit the results of the search.
 
+.. seealso:: 
+
+  :ref:`sectionnavigation agentinterface_ticketviews_agentticketsearch_advanced_search` 
+
 Customer Search
   If ``Frontend::ToolBarModule###230-CICSearchCustomerID`` is enabled, you may search for a customer, and access the customer information center directly.
 
