@@ -7,5 +7,6 @@ There are many basic concepts that you need to understand in order to work with 
 .. toctree::
     :maxdepth: 2
     
+    escalation/index
     states/index
     queues/index
