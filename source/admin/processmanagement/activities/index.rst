@@ -1,6 +1,7 @@
+.. _PageNavigation processmanagement_activities:
+
 Activities Element
 ##################
-.. _PageNavigation processmanagement_activities:
 
 When adding a new activity, enter the following details:
 

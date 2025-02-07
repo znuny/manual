@@ -1,6 +1,7 @@
+.. _PageNavigation admin_processmanagement_index:
+
 Process Management
 ##################
-.. _PageNavigation admin_processmanagement_index:
 
 This chapter covers using process management to create executable workflows from your business processes.
 
@@ -15,5 +16,6 @@ Overview
    transitions/index
    transitionactions/index
    readytoadopt/index
+   processexample/index
 
 .. add new files to list above to include them in toc

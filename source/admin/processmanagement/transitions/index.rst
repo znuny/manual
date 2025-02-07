@@ -1,6 +1,7 @@
+.. _PageNavigation processmanagement_transitions:
+
 Transitions
 ###########
-.. _PageNavigation processmanagement_transitions:
 
 Transitions are the conditions allowing a process to progress. The conditions match ticket data and use different matching types to compare the ticket data with the expression.
 

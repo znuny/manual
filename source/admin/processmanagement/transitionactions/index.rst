@@ -1,6 +1,7 @@
+.. _PageNavigation processmanagement_transitionactions:
+
 Transition Actions
 ##################
-.. _PageNavigation processmanagement_transitionactions:
 
 .. image:: images/process_management_transition_action_add.png
     :alt: Process Management Transition Action Add Image
