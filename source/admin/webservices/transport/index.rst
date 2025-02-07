@@ -1,6 +1,7 @@
+.. _PageNavigation admin_webservices_transport_index:
+
 Network Transport Configuration
 ###############################
-.. _PageNavigation admin_webservices_transport_index:
 
 The software supports two different types of transports per default. REST and SOAP. Below you will find the differences in the configuration.
 
@@ -216,9 +217,21 @@ Authentication Options
 ======================
 .. _PageNavigation admin_webservices_transport_authentication:
 
-For SOAP, you can use HTTPBasic Auth, and provide a user name and password.
+SOAP
+^^^^
 
-For REST, you can additionally use a JWT Token.
+1. HTTPBasic Auth
+2. NTLM
+
+REST
+
+1. HTTPBasic Auth
+2. JWT Token
+3. OAuth Token
+
+.. seealso:: 
+    
+    :ref:`pagenavigation authenticate_token_index`
 
 JSON Web Token (JWT) Authentication Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

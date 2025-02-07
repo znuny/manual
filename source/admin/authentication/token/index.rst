@@ -1,6 +1,7 @@
+.. _PageNavigation authenticate_token_index:
+
 OAuth2 Token Administration
 ###########################
-.. _PageNavigation authenticate_token_index:
 
 .. versionadded:: 6.3
 
@@ -30,7 +31,7 @@ Tokens can currently be used by
 Application Registration
 ************************
 
-An application registration is requried to access resources via OAuth2. Upon registration, you should receive:
+An application registration is required to access resources via OAuth2. Upon registration, you should receive:
 
 * ClientID
 * Client Secret
