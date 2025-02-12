@@ -1,5 +1,6 @@
 Adding a Team (Queue)
 #####################
+.. _PageNavigation admin_queues_index:
 
 Queues are the basis for working with teams in Znuny. Queues contain tickets and build the permissions, in combination with groups and roles, for access to tickets. We’ve added groups, roles, and users and customer users to our system. Now it’s time to consider the queues which will contain our tickets. To add a new queue or manage a queue:
 
