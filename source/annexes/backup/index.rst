@@ -51,7 +51,7 @@ Restoring or Recovery
 Backup Script Example
 *********************
 
-An example script is available to backup your system. We recommend this for small to mid-sized systems only.
+An example script is available to backup your system. We recommend this for small to mid-sized systems only. This script needs to be executed by the application user, typically znuny
 
 .. warning::
 
@@ -90,7 +90,7 @@ Using this script, you can quickly get a backup running on smaller systems. You 
 Restore Script Example
 **********************
 
-Parallel to the backup example script, a restore script as also available.
+Parallel to the backup example script, a restore script as also available. This script needs to be executed by the application user, typically znuny.
 
 .. code-block:: shell
 

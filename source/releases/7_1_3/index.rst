@@ -15,12 +15,12 @@ Znuny 7.1.3
 
 Security Vulnerabilities Fixed
 ******************************
-- Added HTML filter to prevent XSS in the SLA description field of Process Management Activity Dialogues. Thanks for reporting to Tim Püttmanns, Maxcence.
+- Added HTML filter to prevent XSS in the SLA description field of Process Management Activity Dialogues. Thanks for reporting to Tim Püttmanns, Maxence.
 - Mitigating a ReDos via email when parsing HTML of Microsoft Word. Thanks for reporting to Emin Yazi (@eyazi), Efflux.
 
 Changes
 *******
-- Improvement for MySQL/MariaDB user for the bundler backup script backup.pl by using the  --single-transaction.
+- Improvement for MySQL/MariaDB user for the bundled backup script backup.pl by using the  --single-transaction.
 - Updated the CKEditor to 4.25.1-znuny.
 - Improved error logging and visibility for OAuth2 token requests.
 

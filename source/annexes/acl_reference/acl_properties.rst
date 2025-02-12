@@ -135,5 +135,5 @@ PossibleAdd (for cumulating lists)
 +------------------------+---------------------+-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 | Process                | -                   | some id                 |                                                                                                                                         |
 +------------------------+---------------------+-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-| Ticket                 | Any Ticket Property | some name               | IDs do not work in the ticket configuration settings. You can set the returnable state, bun not state id, state type, or state type id. |
+| Ticket                 | Any Ticket Property | some name               | IDs do not work in the ticket configuration settings. You can set the returnable state, but not state id, state type, or state type id. |
 +------------------------+---------------------+-------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
