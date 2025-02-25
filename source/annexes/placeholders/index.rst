@@ -253,6 +253,24 @@ These placeholders are available for calendar notification.
 
     When using templates of the type Create, not every attribute can be used. The reason is that there is still no ticket created. Instead of e.g. <OTRS_OWNER_FullName> use <OTRS_CURRENT_Fullname>. Placeholders from the System Configuration are always available.
 
+Process Management Transition Actions
+*************************************
+
+There are special placeholders for transition actions. You can use information from the first and last article. Replace '*' with FIRST or LAST
+
+<OTRS\_*\_ARTICLE_Body>
+    The first or last body of the current ticket.
+<OTRS\_*\_ARTICLE_To>
+    The first or last list of recipients of the current ticket.
+<OTRS\_*\_ARTICLE_From>
+    The first or last sender of the current ticket.
+<OTRS\_*\_ARTICLE_Cc>
+    The first or last list of recipients in carbon copy of the current ticket.
+<OTRS\_*\_ARTICLE_Subject>
+    The first or last subject of the current ticket.
+
+.. important:: The last or first article may be a system article, may not contain some tags based on communication channel or sender type. There is no filter for article or sender type.
+
 Placeholder Translation
 ***********************
 
