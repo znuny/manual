@@ -36,4 +36,10 @@ Overview
    tickettypeset/index
    ticketwatchset/index
 
+
+.. seealso:: 
+
+    It is possible to use ticket placeholders when assigning values to different transition actions. Read more in the :ref:`pagenavigation annexes_placeholders_index`
+
+
 .. add new files to list above to include them in toc
