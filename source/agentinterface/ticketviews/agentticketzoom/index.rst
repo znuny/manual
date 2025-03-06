@@ -178,6 +178,8 @@ If the ``ViewMode`` is not set to *Complex*, a list of linked ticket will appear
 .. image:: images/link_object_widget.png
     :alt: Link Data Widget Image
 
+.. _PageNavigation ticketviews_agentticketzoom_mentions:
+
 Mentions
 ========
 

@@ -18,3 +18,7 @@ Select one or more mentions from either the new mentions filter or the all menti
 .. important::
 
     The unseen flag references the mention, and not the article count.
+
+.. seealso:: 
+
+    Removing agents from ticket's mention list see :ref:`pagenavigation ticketviews_agentticketzoom_mentions` 
