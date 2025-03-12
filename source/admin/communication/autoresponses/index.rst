@@ -1,4 +1,4 @@
-.. PageNavigation admin_communication_autoresponses:
+.. _PageNavigation admin_communication_autoresponses_index:
 
 Automatic Responses
 ###################
@@ -29,6 +29,8 @@ To create an auto response.
 9. Set the validity
 10. Add a comment
 11. Save
+
+.. _PageNavigation admin_communication_autoresponses_types_index:
 
 Auto Response Types
 ===================
