@@ -1,6 +1,7 @@
+.. _PageNavigation admin_groups_index:
+
 Manage Groups
 #############
-.. _PageNavigation admin_groups_index:
 
 Adding a group is the one of the first things to do in a new system, or when creating a new team within the system. A group is needed in the queue settings screen, and for role or user assignment, and should be the first entity you create.
 
