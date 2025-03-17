@@ -9,6 +9,7 @@ There are many basic concepts that you need to understand in order to work with 
     
     customers/index
     escalation/index
+    priorities/index
     states/index
     types/index
     queues/index
