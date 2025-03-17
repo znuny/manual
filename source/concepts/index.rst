@@ -8,6 +8,7 @@ There are many basic concepts that you need to understand in order to work with 
     :maxdepth: 2
     
     escalation/index
+    priorities/index
     states/index
     types/index
     queues/index
