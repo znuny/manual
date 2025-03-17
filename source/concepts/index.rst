@@ -9,4 +9,5 @@ There are many basic concepts that you need to understand in order to work with 
     
     escalation/index
     states/index
+    types/index
     queues/index
