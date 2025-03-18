@@ -1,0 +1,11 @@
+---
+name: Stale
+
+on:
+  workflow_dispatch:      # Allows you to run this workflow manually from the Actions tab
+  schedule:               # Allows you to run this workflow automatically
+    - cron: '0 1 * * *'   # Runs at 01:00 UTC every day
+
+jobs:
+  Stale:
+    uses: znuny/GitHub/.github/workflows/stale.yml@dev
