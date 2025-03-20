@@ -14,3 +14,4 @@ Maintaining your instance consists of a variety of tasks. More information about
     :maxdepth: 2
 
     ticketarchive/index
+    systemmaintenance/index.rst
