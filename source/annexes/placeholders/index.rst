@@ -75,6 +75,20 @@ Dynamic Fields
 <OTRS_TICKET_DynamicField\_\*_Value>
     Returns the value for fields with key/value pairs, e.g. for dropdown fields.
 
+DateTime and Date Fields
+========================
+
+If the recipient's timezone is known, you can format the time in ticket notifications according to the time formatting in the language translation file.
+
+<OTRS_TICKET_DynamicField_Date_Value>
+    Returns unformatted date YYYY-MM-DD
+<OTRS_TICKET_DynamicField_Date>
+    Returns formatted date DD/MM/YY (for english language)
+<OTRS_TICKET_DynamicField_DateTime_Value>
+    Returns unformatted date/time YYYY-MM-DD HH:MM::SS (UTC)
+<OTRS_TICKET_DynamicField_DateTime>
+    Returns formatted date DD/MM/YY HH:MM (for english language)
+
 Escalations
 ***********
 
