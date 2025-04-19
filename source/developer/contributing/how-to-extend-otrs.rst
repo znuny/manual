@@ -289,8 +289,8 @@ The last thing missing before the new module can run is the relevant HTML templa
          The module is working now and displays the text 'Hello World'
          when called.
 
- Language File
- =============
+Language File
+=============
 
 If the text 'Hello World!' is to be translated into for instance German, you can create a translation file for this language in ``HelloWorld/Kernel/Language/de_AgentHelloWorld.pm``. Example:
 
