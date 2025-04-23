@@ -14,3 +14,4 @@ There are many basic concepts that you need to understand in order to work with 
     states/index
     types/index
     queues/index
+    highavailability/index

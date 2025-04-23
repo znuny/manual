@@ -1,60 +1,68 @@
 .. _PageNavigation concepts_priorities_index:
 
-Ticket Priorities
-#################
+Priorities in Znuny
+###################
 
-The ticket priority is one of the default and required ticket properties which:
+In **Znuny**, **priorities** determine the urgency and importance of a ticket. 
+They aid agents enhancing the ticket with a visual cue (color) about critical issues.
 
-- **Defines the level of urgency for a ticket** in the system.
-- Augments **SLA (Service Level Agreements)** and and queue **escalation times**.
+**Features of the Priorities**
+
+- Defines the level of **urgency** for an issues.
+- Act an an enhancement to the assigned **SLA (Service Level Agreements) enforcement**, or queue assigned **escalation times**.
 - Each ticket has **one priority** at a time, but it can be changed by agents based on circumstances.
 
-
 Default Priorities
-******************
+*******************
+
+Priorities can be added or modified as needed. 
+As usual it's not possible to remove this type of entity for auditing pur.
 
 Znuny comes with **five default priorities**:
 
-+-------------------+------------------------------------------+-------------------+
-| **Priority Name** | **Description**                          | **Default Color** |
-+-------------------+------------------------------------------+-------------------+
-| **1 very low**    | Non-urgent, informational tickets.       | #03C4F0           |
-+-------------------+------------------------------------------+-------------------+
-| **2 low**         | Minor issues, feature requests.          | #83BFC8           |
-+-------------------+------------------------------------------+-------------------+
-| **3 normal**      | Standard customer requests (default).    | #CDCDCD           |
-+-------------------+------------------------------------------+-------------------+
-| **4 high**        | Urgent issues that need quick attention. | #FFAAAA           |
-+-------------------+------------------------------------------+-------------------+
++-------------------+-------------------------------------------------------+--------------------+
+| **Priority Name** | **Description**                                       | **Standard Color** |
++===================+=======================================================+====================+
+| **1 very low**    | Non-urgent, informational tickets.                    | #03C4F0            |
++-------------------+-------------------------------------------------------+--------------------+
+| **2 low**         | Minor issues, feature requests.                       | #83BFC8            |
++-------------------+-------------------------------------------------------+--------------------+
+| **3 normal**      | Standard customer requests (default).                 | #CDCDCD            |
++-------------------+-------------------------------------------------------+--------------------+
+| **4 high**        | Urgent issues that need quick attention.              | #FFAAAA            |
++-------------------+-------------------------------------------------------+--------------------+
+| **5 very high**   | Critical incidents that must be resolved immediately. | #FF505E            |
++-------------------+-------------------------------------------------------+--------------------+
 
+.. note::
+ 
+ These priorities can be **renamed, reordered, or customized** based on business needs.
 
-**How Priorities Affect Ticket Processing**
+Affect Ticket Processing
+************************
 
-1. **Sorting and Filtering**
+**Sorting and Filtering**
 
 - Agents can **sort tickets by priority** in overviews.
-- Agents can **search or filter statistics** based on priorities.
-  
-2. **Workflow Automation**
+- Agents can **search for tickets by priority**.
 
-- Generic agents, Web Service Requests or Responses and Transition Actions can **make priority adjustments**
+**Workflow Automation**
 
-Customizing Priorities
-**********************
+- Administrators can **trigger events**, based on specific priorities.
+  - Priority change
+  - Notifications
+  - Web service events
 
-Administrators can **edit or add new priority levels** in the Znuny **Admin Panel**.
+Changing Priorities in Znuny
+****************************
 
-.. warning:: 
-    
-    Changing the name for the standard priority "3 normal" will result in a configuration change, and 
-    possibly deployment of some additional addons which attempt to use this during installation as a default.
-    Always check the logs and system configuration deployment state after installing an add-on.
+1. Manually by Agents
 
+- Select *Priority* from the ticket action menu.
+- Select the priority in at ticket creation or in any other screen where configured.
 
+2. Automatically via Triggers
 
-Best Practices for Using Priorities
-***********************************
-
-- ✔ **Use clear priority definitions** that align with business needs.  
-- ✔ **Train agents** on when to escalate or downgrade priorities.  
-- ✔ **Automate priority assignments** where possible to reduce manual workload.  
+- Generic Agents
+- Web Service Request or Invoker Responses
+- Process Management Activity Dialogs
