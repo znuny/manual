@@ -192,6 +192,71 @@ Example Configuration
             ],
         };
 
+Customer Backend Options
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+CustomerKey (field name)
+    This is the login attribute and must be the same key as is found in the customer user map for `UserLogin`
+    
+CustomerID (field name)
+    This is the customer id attribute and must be the same key as is found in the customer user map for `UserCustomerID`
+
+CustomerUserListFields (array)
+    This set of field which will be shown in the frontend when searching for a user in an input fields.
+
+CustomerUserSearchFields (array)
+    This list of fields which are searchable in input fields.
+
+CustomerUserSearchPrefix (string)
+    This is the prefix used when searching fields. Most commonly this will be '*'.
+
+CustomerUserSearchSuffix (string)
+    This is the suffix used when searching fields. Most commonly this will be '*'.
+
+CustomerUserSearchListLimit (integer)
+    This is the limit applied to the results returned by the system in total. This also affects the customer user administration area.
+
+CustomerUserPostMasterSearchFields (array)
+    This is attribute used to identity the customer user of the ticket. Most commonly the email. This element can be an array of fields to accommodate
+    multiple email addresses. The field mapped to `UserEmail` remains the primary address used by the system.
+
+CustomerUserNameFields (array)
+    This is the field set used when displaying the customer user's fullname. An example change might be `CustomerUserNameFields => ['title','givenname', 'sn'],`
+    for an academic facility. Additionally, this will be the real name part of the email address `"Dr. Max Musterman" <max.musterman@example.com>`.
+
+CustomerUserNameFieldsJoin (string)
+    This field is used to join the name field parts. Most commonly a space or comma (if the list name fields are [`last_name`, `first_name`])
+
+CustomerUserExcludePrimaryCustomerID (1 or 0)
+    If a user has multiple customer ID's you can hide the primary customer id from the company ticket overview by enablinig this. This gives the user 
+    access to tickets of the additional company tickets via the frontend.
+
+.. note:: 
+    
+    It's possible to assign the customer user to multiple customers, via the mapping or front-end. ``CustomerUserExcludePrimaryCustomerID`` is used 
+    in combination with the mapping element **CustomerIDs**. **CustomerIDs** must contain a comma separated list of values, and will associate the user 
+    with all customerIDs in the list. This allows the customer user to view tickets via the company tickets module, and agents to see these in the 
+    customer information center.
+
+AdminSetPreferences (1 or 0)
+    This setting determines if an administrator may change users preferences, like setting a user to out-of-office, or not.
+
+AutoLoginCreation (1 or 0)
+    Only affects the customer user creation by agents. Self-registered customer users logins will always be their email address.
+
+AutoLoginCreationPrefix (string)
+    The prefix, if used, applied to the auto generated names. By default this is `auto-`
+
+CustomerCompanySupport (1 or 0)
+    Determines if the the value for the `CustomerID` field is referenced to in the table used for the associated `CustomerCompany` backend. Additionally, this makes the field in the customer user admistration an dropdown field. Default is on, requiring an customer company to exist before creating customer users.
+
+CacheTTL (integer)
+    Time in seconds to refresh the cache.
+
+Readonly (1 or 0)
+    Makes this backend read only.
+
+
 Authentication
 ~~~~~~~~~~~~~~
 
