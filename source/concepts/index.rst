@@ -7,6 +7,7 @@ There are many basic concepts that you need to understand in order to work with 
 .. toctree::
     :maxdepth: 2
     
+    articles/index
     customers/index
     escalation/index
     priorities/index
