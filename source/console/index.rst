@@ -155,7 +155,8 @@ The basic formatting options are shown in the example file. There are special na
       Format:
         border: 1
 
-Each YML element should be a column, row, or cell. The formatting options are methods of the module the complete list is shown below. The values for each method are found in the documentation as well. Let's take `set_font_shadow <https://metacpan.org/pod/Excel::Writer::XLSX#set_underline()>`_ for example. To set this for the entire tenth column, the following would be added to the YML file.
+Each YML element should be a column, row, or cell. The formatting options are methods of the module the complete list is shown below. 
+The values for each method are found in the documentation as well. Let's take `set_font_shadow <https://metacpan.org/pod/Excel::Writer::XLSX#set_underline()>`_ for example. To set this for the entire tenth column, the following would be added to the YML file.
 
 .. code-block:: YAML
 
