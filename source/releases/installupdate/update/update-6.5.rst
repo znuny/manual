@@ -114,9 +114,8 @@ Execute the migration script
   su - otrs
   scripts/MigrateToZnuny6_5.pl
 
-
-Update All Packages
-~~~~~~~~~~~~~~~~~~~
+Reinstall or Upgrade Add-ons (Packages)
+***************************************
 
 .. note:: Packages for earlier versions of Znuny LTS (6.0.x) or Znuny (>=6.1.x) might not be compatible with Znuny 6.5 and have to be updated. Please contact the vendor of the packages before upgrading if you have doubts.
 
@@ -142,6 +141,10 @@ You have two options:
   > bin/otrs.Console.pl Admin::Package::Upgrade LOCATIONOFYOURPACKAGE
   #or for renamed packages
   > bin/otrs.Console.pl Admin::Package::Install LOCATIONOFYOURPACKAGE
+
+.. important::
+
+  After reinstalling or updating packages, always run su -c 'scripts/MigrateToZnuny6_5.pl --verbose' - otrs
 
 
 Restart everything
