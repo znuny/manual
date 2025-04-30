@@ -1,4 +1,4 @@
-.. _PageNavigation annexes_entity_type_reference_index
+.. _PageNavigation annexes_entity_type_reference_index:
 
 Entity Type Reference
 #####################

@@ -1,3 +1,5 @@
+.. _PageNavigation glossary_index:
+
 Glossary
 ########
 

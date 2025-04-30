@@ -32,8 +32,8 @@ Migrate to the Filesystem
 
 - Open a terminal on your Znuny server.
 - Navigate to the Znuny installation directory (commonly /opt/znuny).
-- Run the following command to migrates all articles from the database to the file system.
-``bin/znuny.Console.pl Admin::Article::StorageSwitch --target ArticleStorageFS``
+- | Run the following command to migrates all articles from the database to the file system:
+  | ``bin/znuny.Console.pl Admin::Article::StorageSwitch --target ArticleStorageFS``
 
 4. Post-Migration Steps:
    
@@ -42,8 +42,8 @@ Migrate to the Filesystem
 5. Address Potential Issues:
    
 - Permission Issues: Ensure that both the Znuny application and the web server have the necessary permissions to read and write to the new storage location.
-- Skipping Problematic Articles: If certain articles cause errors during migration, you can use the --force option to continue the process despite errors:
-``bin/znuny.Console.pl Admin::Article::StorageSwitch --target ArticleStorageFS --tolerant``
+- | Skipping Problematic Articles: If certain articles cause errors during migration, you can use the --tolerant option to continue the process despite errors:
+  | ``bin/znuny.Console.pl Admin::Article::StorageSwitch --target ArticleStorageFS --tolerant``
 
 Partial Migration
 *****************

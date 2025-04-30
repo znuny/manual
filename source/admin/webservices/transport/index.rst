@@ -218,12 +218,13 @@ Authentication Options
 .. _PageNavigation admin_webservices_transport_authentication:
 
 SOAP
-^^^^
+~~~~
 
 1. HTTPBasic Auth
 2. NTLM
 
 REST
+~~~~
 
 1. HTTPBasic Auth
 2. JWT Token

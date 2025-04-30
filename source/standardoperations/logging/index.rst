@@ -1,4 +1,4 @@
-.. _PageNavigation standardoperations_system_maintenance:
+.. _PageNavigation standardoperations_logging:
 
 Debugging and Logs
 ###################
