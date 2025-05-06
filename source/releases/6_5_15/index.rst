@@ -29,7 +29,6 @@ Fixed Issues
 ************
 - Improved performance by fixing the cache key for linked objects.
 - Disabled date fields have valid input elements. Thanks for reporting to @BuilderNSV. `#649 <https://github.com/znuny/Znuny/issues/649>`_
-- Memory overflow in calendar event when displayed in the ticket detail view.Thanks to @DonMarlowne. `PR#652 <https://github.com/znuny/Znuny/pull/652>`_
 - Admin can now create AppointmentCalendars for all groups.
 
 Read about all changes in the `CHANGES.md <https://raw.githubusercontent.com/znuny/Znuny/rel-6_5_15/CHANGES.md>`_. See the commits on `GitHub <https://github.com/znuny/Znuny/commits/rel-6_5_15>`_ for a list of all changes.
