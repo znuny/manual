@@ -1,3 +1,5 @@
+.. _PageNavigation agentinterface_overviews_index:
+
 Overviews
 #########
 
@@ -33,6 +35,8 @@ Large
 
 .. image:: images/viewing_mode_large.png
     :alt: View Mode Large Image
+
+.. _PageNavigation agentinterface_overviews_column_settings:
 
 Column Settings
 ===============

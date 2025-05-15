@@ -10,6 +10,7 @@ There are many basic concepts that you need to understand in order to work with 
     articles/index
     customers/index
     escalation/index
+    locking/index
     owner/index
     priorities/index
     states/index

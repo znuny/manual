@@ -1,8 +1,7 @@
-Agent Dashboards
-################
-
 .. _PageNavigation agentinterface_dashboards_index:
 
+Agent Dashboards
+################
 
 
 Agent Dashboard
@@ -33,6 +32,8 @@ Dashboard Focus
 
 It is possible to focus on just one dashboard module, by clicking on one of the dashboard module names at the top.
 
+
+.. _PageNavigation agentinterface_dashboards_widget_settigs:
 
 Widget Settings
 ===============
