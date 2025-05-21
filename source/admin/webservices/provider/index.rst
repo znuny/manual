@@ -236,12 +236,13 @@ When an article is created with the operation **TicketCreate** or **TicketUpdate
 
 The following parameters are available for this purpose:
 
-.. code-block:: none
+.. code-block:: perl
 
-	ArticleSend => 1,
-	To          => 'email@example.com',  # E-mail address to which the item should be sent.
-	Cc          => 'email2@example.com', # Optional
-	Bcc         => 'email3@example.com', # Optional
+        AppendSignatureToBody => 1,                    # optional, defaults to 1
+	ArticleSend           => 1,                    # optional, defaults to 0
+	To                    => 'email@example.com',  # E-mail address to which the item should be sent.
+	Cc                    => 'email2@example.com', # Optional
+	Bcc                   => 'email3@example.com', # Optional
 
 Signing or encrypting with S/MIME or PGP is also possible:
 
@@ -271,6 +272,7 @@ Signing or encrypting with S/MIME or PGP is also possible:
 
 	"Article": {
 		"ArticleSend": "1",
+                "AppendSignatureToBody": "0",
 		"To": "email@example.com",
 		"Body": "We welcome you to Znuny, our ticketing solution...",
 		"Charset": "utf-8",
