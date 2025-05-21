@@ -9,7 +9,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Znuny'
+project = u'Znuny Customer User Quickstart'
 copyright = u'2021-%s, Znuny Project' % time.strftime("%Y")
 author = u'The Znuny Community and Team'
 
@@ -34,11 +34,11 @@ html_favicon = 'images/favicon.ico'
 html_theme_options = {
     "switcher": {
         "json_url": "https://doc.znuny.org/version.json",
-        "version_match": "znuny-customer-quickstart"
+        "version_match": "znuny-7_1-customer-user-quickstart"
     },
     "primary_sidebar_end": ["version-switcher"],
     "repository_url": "https://github.com/znuny/manual",
-    "repository_branch": "znuny-customer-quickstart",
+    "repository_branch": "znuny-7_1-customer-user-quickstart",
     "use_repository_button": True,
     "use_issues_button": False,
     "use_edit_page_button": False,
