@@ -1,7 +1,7 @@
 .. _PageNavigation concepts_states_index:
 
-What are States
-###############
+Ticket States
+#############
 
 Ticket states are a way to manage the workflow of tickets. Ticket states can be used to indicate the status of a ticket, such as new, open, closed, pending, etc. Ticket states can also be customized to suit different business needs and scenarios. For example, you can create ticket states for escalation, approval, feedback, or any other process that you want to track. States are typed within the system, which gives the system the capability of displaying multiple state names based on their type in different parts of the system or different purposes. A typical ticket Lifecycle would contain the following state changes:
 
