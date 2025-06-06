@@ -11,7 +11,7 @@ Configuring a type of multiselect, similar to the dropdown, will allow the user 
 
 .. note:: 
 
-    To create a tree stucture the keys should look like this:
+    To create a tree stucture the keys must look like this:
 
     .. code-block::
 
