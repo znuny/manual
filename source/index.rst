@@ -35,7 +35,6 @@ Table of Contents
    standardoperations/index
    console/index
    itsmfeatures/index
-   developer/index
    annexes/index
    glossary/index
 
