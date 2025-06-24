@@ -12,7 +12,7 @@ These breaking changes are necessary for security reasons. We have included safe
 CMD Usage
 =========
 
-Read more in the :ref:`developer manual <PageNavigation system_architecture_CMD>`.
+Read more in the `Znuny Developer Documentation <https://doc.znuny.org/developer/general_information/system_architecture.html>`_.
 
 We removed the CMD function for web-configured generic agents due to a reported security issue. The functionality remains. It's just that the configuration of such is now more secure.
 

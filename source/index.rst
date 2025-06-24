@@ -37,7 +37,6 @@ Table of Contents
    console/index
    itsmfeatures/index
    generalinformation/index
-   developer/index
    annexes/index
    glossary/index
 
