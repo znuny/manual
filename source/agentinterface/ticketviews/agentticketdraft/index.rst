@@ -5,7 +5,7 @@ Creating a Draft
 
 Performing operations to add information or articles to a ticket opens a pop-up window. When filling out the form, attempting to navigate away from the ticket results in the browser window attempting to close the related pop-up. If opening a new tab is not an option, it is possible to save the information entered into the pop-up as a draft. 
 
-.. figure:: images/save_draft_dialog.png
+.. figure:: images/save_draft_dialog.PNG
 
     Save as a draft
 
@@ -40,13 +40,13 @@ The draft created can be applied by any user of the system, based on their permi
 
 Drafts can be edited, updated or a new draft can be created upon opening the current draft. 
 
-.. figure:: images/draft_update_new_save.png
+.. figure:: images/draft_update_new_save.PNG
 
    Editing a draft
 
 If any changes have been made to the ticket in the meantime, this will be indicated in the notification area of the draft.
 
-.. figure:: images/draft_warning.png
+.. figure:: images/draft_warning.PNG
 
    Notification warning
 

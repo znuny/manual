@@ -2,7 +2,7 @@ Installing Features
 ###################
 .. _PageNavigation admin_packagemanagement_index:
 
-Using the package manager you can install many new features in the form of packages. A package is an XML File with the ```.opm`` extension. The package manager has a configurable list of online repositories from which you can directly install the features. Alternatively, install packages by uploading the OPM directly in the front end. For larger multi-stage setups you can also install packages directly from another instance. This allows you to only install pre-approved and tested packages. The package manager also provides access via internet proxy with or without basic authentication, and uploading a package may also be prohibited. For more on creating packages and what the packaging system can do, read the :ref:`developer documentation. <PageNavigation developer_extending_index>`.
+Using the package manager you can install many new features in the form of packages. A package is an XML File with the ```.opm`` extension. The package manager has a configurable list of online repositories from which you can directly install the features. Alternatively, install packages by uploading the OPM directly in the front end. For larger multi-stage setups you can also install packages directly from another instance. This allows you to only install pre-approved and tested packages. The package manager also provides access via internet proxy with or without basic authentication, and uploading a package may also be prohibited. For more on creating packages and what the packaging system can do, read the `Znuny Developer Documentation <https://doc.znuny.org/developer/extending/index.html>`_.
 
 
 Package Manager
