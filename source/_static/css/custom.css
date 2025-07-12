@@ -30,6 +30,10 @@ html[data-theme="dark"] tr.row-odd {
   border: none;
 }
 
+html[data-theme="dark"] .bd-content img:not(.only-dark, .dark-light) {
+  background-color: transparent;
+}
+
 .search-button {
   display: inherit;
 }
