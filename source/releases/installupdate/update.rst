@@ -8,6 +8,7 @@ If you are updating over multiple versions, please know that you must update to 
 .. toctree::
    :maxdepth: 2
 
+   patchlevelupdate
    update/update-6.1
    update/update-6.2
    update/update-6.3

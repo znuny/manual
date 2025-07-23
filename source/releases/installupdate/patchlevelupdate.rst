@@ -1,0 +1,136 @@
+==================
+Patch Level Update
+==================
+
+This documentation explains how to perform a patch level update for Znuny LTS 6.5.
+
+.. note::   Your current system needs to be a Znuny LTS 6.5.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 6.5.4 directly to 6.5.15
+
+
+Prepare
+*******
+
+Stop all services to prevent any data from changing.
+
+.. tab-set::
+  :sync-group: distribution
+
+  .. tab-item:: RHEL based
+    :sync: rhel
+
+      .. code-block::
+
+          systemctl stop httpd
+          # Stop your local MTA, mostly Postfix, sometimes Exim or Sendmail
+          systemctl stop postfix 
+          # Remove crontab, stop daemon
+          su -c 'bin/Cron.sh stop' - otrs
+          su -c 'bin/otrs.Daemon.pl stop' - otrs
+
+  .. tab-item:: Debian based
+    :sync: debian
+
+      .. code-block::
+  
+          systemctl stop apache2
+          # Stop your local MTA, mostly Postfix, sometimes Exim or Sendmail
+          systemctl stop postfix 
+          # Remove crontab, stop daemon
+          su -c 'bin/Cron.sh stop' - otrs
+          su -c 'bin/otrs.Daemon.pl stop' - otrs
+..
+
+
+Backup
+******  
+
+Backup your system like you always do. The easiest way for small system is using the bundled backup script `scripts/backup.pl`.
+
+Update
+******
+
+.. tab-set::
+  :sync-group: distribution
+
+  .. tab-item:: RHEL based
+    :sync: rhel
+
+        .. code-block::
+
+            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.15-01.noarch.rpm
+            su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
+            su - otrs -c 'bin/otrs.Console.pl Admin::Package::ReinstallAll'
+            su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
+            # optional upgrade of the installed addons found in configured repositories
+            su - otrs -c 'bin/otrs.Console.pl Admin::Package::UpgradeAll'
+
+            # Clear log and application cache
+            su - otrs -c 'bin/otrs.Console.pl Maint::Cache::Delete'
+            su - otrs -c 'bin/otrs.Console.pl Maint::Log::Clear'
+        
+  .. tab-item:: Source installation
+    :sync: source
+
+        .. code-block::
+
+            cd /opt
+            curl https://download.znuny.org/releases/znuny-latest-6.5.tar.gz | tar -xz
+
+            # Restore Kernel/Config.pm, articles, etc.
+            cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.15/Kernel/
+            mv /opt/otrs/var/article/* /opt/znuny-6.5.15/var/article/
+
+            # Restore dotfiles from the homedir to the new directory
+            for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.15/; done
+
+            # Restore modified and custom cron job
+            for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.15/var/cron/; done
+
+            # Set the permissions
+            znuny-6.5.15/bin/otrs.SetPermissions.pl
+            ln -snf /opt/znuny-6.5.15 /opt/otrs
+
+            su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
+            su - otrs -c 'bin/otrs.Console.pl Admin::Package::ReinstallAll'
+            su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
+            # optional upgrade of the installed addons found in configured repositories
+            su - otrs -c 'bin/otrs.Console.pl Admin::Package::UpgradeAll'
+
+            # Clear log and application cache
+            su - otrs -c 'bin/otrs.Console.pl Maint::Cache::Delete'
+            su - otrs -c 'bin/otrs.Console.pl Maint::Log::Clear'
+
+..
+
+
+Start Znuny
+***********
+
+Start all services again. We do not start the Znuny daemon manually, instead we wait for cron starting the daemon.
+
+.. tab-set::
+  :sync-group: distribution
+
+  .. tab-item:: RHEL based
+    :sync: rhel
+
+      .. code-block::
+
+          systemctl start httpd
+          # Start your local MTA, mostly Postfix, sometimes Exim or Sendmail
+          systemctl start postfix 
+          # Create Znuny's crontab to start the daemon
+          su -c 'bin/Cron.sh start' - otrs
+
+  .. tab-item:: Debian based
+    :sync: debian
+
+      .. code-block::
+  
+          systemctl start apache2
+          # Start your local MTA, mostly Postfix, sometimes Exim or Sendmail
+          systemctl start postfix 
+          # Create Znuny's crontab to start the daemon
+          su -c 'bin/Cron.sh start' - otrs
+
+..
