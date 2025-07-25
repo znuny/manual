@@ -52,8 +52,8 @@ Update
 .. tab-set::
   :sync-group: distribution
 
-  .. tab-item:: RPM installation for RHEL based systems
-    :sync: rpm
+  .. tab-item:: RHEL based
+    :sync: rhel
 
         .. code-block::
 
@@ -68,7 +68,7 @@ Update
             su - otrs -c 'bin/otrs.Console.pl Maint::Cache::Delete'
             su - otrs -c 'bin/otrs.Console.pl Maint::Log::Clear'
         
-  .. tab-item:: Installation from source archive
+  .. tab-item:: Source installation
     :sync: source
 
         .. code-block:: bash
