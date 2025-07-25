@@ -52,8 +52,8 @@ Update
 .. tab-set::
   :sync-group: distribution
 
-  .. tab-item:: RHEL based
-    :sync: rhel
+  .. tab-item:: RPM installation for RHEL based systems
+    :sync: rpm
 
         .. code-block::
 
@@ -68,10 +68,10 @@ Update
             su - otrs -c 'bin/otrs.Console.pl Maint::Cache::Delete'
             su - otrs -c 'bin/otrs.Console.pl Maint::Log::Clear'
         
-  .. tab-item:: Source installation
+  .. tab-item:: Installation from source archive
     :sync: source
 
-        .. code-block::
+        .. code-block:: bash
 
             cd /opt
             curl https://download.znuny.org/releases/znuny-latest-6.5.tar.gz | tar -xz

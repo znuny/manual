@@ -5,7 +5,7 @@ Installation
 To install Znuny LTS you need:
 
 - A database of your choice (MySQL, MariaDB, Postgresql)
-- MySQL 8 or newer requires Znuny 6.1 or newer
+- MySQL 8 or newer
 - A webserver (Apache)
 - Some additional perl modules, depending on the distribution you are using
 - Disabled SELinux when using Red Hat Linux, CentOS, Rocky Linux, etc.
@@ -22,257 +22,225 @@ Some basic packages are needed to get going.
 This includes the web server, database (MariaDB in this case), cpanminus to install additional.
 Perl modules and tar to extract the source.
 
-**CentOS / Red Hat / Rocky Linux**
+Basics
+******
 
-.. code-block::
+.. important::
 
-  dnf update -y
-  # Enable Powertools
-  dnf config-manager --set-enabled powertools
-  ## CentOS / RHEL / Rocky Linux 9
-  dnf config-manager --enable crb
-  dnf install -y epel-release httpd cpanminus gcc dnf-plugins-core
-  # If you will use mariadb
-  dnf install -y mariadb mariadb-server
+  For RHEL based distributions SELinux needs to be disabled or set to permissive.
+
+Some basic packages are needed to get going.
+This includes the web server, database (MariaDB in this case), cpanminus to install additional Perl modules and Tar to extract the source.
+
+.. tab-set::
+  :sync-group: distribution
+
+  .. tab-item:: RHEL based
+    :sync: rhel
+
+      .. code-block:: bash
+
+        dnf update -y
+        dnf install -y epel-release httpd mariadb mariadb-server cpanminus gcc make dnf-plugins-core tar bash-completion perl-core
+        crb enable
+      ..
+
+  .. tab-item:: Debian based
+    :sync: debian
+
+      .. code-block:: bash
+
+        apt update -y
+        apt install -y apache2 mariadb-client mariadb-server tar bash-completion
+      ..
+
+.. tab-set::
+  .. tab-item:: RPM installation for RHEL based systems
+
+    The installation via RPM
+
+    .. code-block:: bash
+
+      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.15-01.noarch.rpm
+
+
+  .. tab-item:: Installation from source archive
   
-  ## Set selinux to Permissive
-  vi /etc/selinux/config
+    The installation from the source takes some more steps:
 
-  # This file controls the state of SELinux on the system.
-  # SELINUX= can take one of these three values:
-  #     enforcing - SELinux security policy is enforced.
-  #     permissive - SELinux prints warnings instead of enforcing.
-  #     disabled - No SELinux policy is loaded.
-  # See also:
-  # https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-selinux/#getting-started-with-selinux-selinux-states-and-modes
-  #
-  # NOTE: In earlier Fedora kernel builds, SELINUX=disabled would also
-  # fully disable SELinux during boot. If you need a system with SELinux
-  # fully disabled instead of SELinux running with no policy loaded, you
-  # need to pass selinux=0 to the kernel command line. You can use grubby
-  # to persistently set the bootloader to boot with selinux=0:
-  #
-  #    grubby --update-kernel ALL --args selinux=0
-  #
-  # To revert back to SELinux enabled:
-  #
-  #    grubby --update-kernel ALL --remove-args selinux
-  #
-  SELINUX=permissive
-  # SELINUXTYPE= can take one of these three values:
-  #     targeted - Targeted processes are protected,
-  #     minimum - Modification of targeted policy. Only selected processes are protected.
-  #     mls - Multi Level Security protection.
-  SELINUXTYPE=targeted
+    .. code-block::
 
-  reboot
+      # Download Znuny
+      cd /opt
+      wget https://download.znuny.org/releases/znuny-latest-6.5.tar.gz
 
-**Ubuntu / Debian**
+      # Extract
+      tar xfz znuny-latest-6.5.15.tar.gz
 
-.. code-block::
+      # Create a symlink
+      ln -s /opt/znuny-6.5.15 /opt/otrs
 
-  apt update
-  apt install -y apache2 mariadb-client mariadb-server cpanminus
+      # Add user for RHEL
+      useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs
 
-RPM Install
-***********
+      # Add user for Debian/Ubuntu
+      useradd -d /opt/otrs -c 'Znuny user' -g www-data -s /bin/bash -M -N otrs
 
-Install the RPM via `YUM <https://en.wikipedia.org/wiki/Yum_(software)>`_
+      # Copy default Config.pm
+      cp /opt/znuny/Kernel/Config.pm.dist /opt/znuny/Kernel/Config.pm
 
-.. code-block::
+      # Set permissions
+      /opt/otrs/bin/otrs.SetPermissions.pl
 
-  # Znuny LTS (modify version to latest see: https://download.znuny.org/releases/RPMS/rhel/7/)
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.15-01.noarch.rpm
-
-  # Znuny 6.5
-  yum install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.15-01.noarch.rpm
-
-
-Install From Source
-*******************
-
-The installation from the source takes some more steps:
-
-.. code-block::
-
-  # Download Znuny
-  cd /opt
-  wget https://download.znuny.org/releases/znuny-latest-6.5.tar.gz  
-
-  # Extract
-  tar xfz znuny-latest-6.5.tar.gz
-
-  # Create a symlink 
-  sudo ln -s /opt/znuny-6.5.15 /opt/otrs
-
-  # Add user for RHEL/CentOS
-  useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs
-
-  # Add user for Debian/Ubuntu
-  useradd -d /opt/otrs -c 'Znuny user' -g www-data -s /bin/bash -M -N otrs
-
-  # Copy Default Config
-  cp /opt/otrs/Kernel/Config.pm.dist /opt/otrs/Kernel/Config.pm
-
-  # Set permissions
-  /opt/otrs/bin/otrs.SetPermissions.pl
-
-  # As otrs User - Rename default cronjobs
-  su - otrs
-  cd /opt/otrs/var/cron
-  for foo in *.dist; do cp $foo `basename $foo .dist`; done
+      # As Znuny user - create default cronjobs
+      su - otrs
+      cd var/cron
+      for foo in *.dist; do cp $foo `basename $foo .dist`; done
 
 Install Required Perl Modules
 *****************************
 
-Based on your distribution, there are several different was to install the needed modules.
+Based on your distribution there are several different was to install the needed modules.
 
-To see which modules are missing but required, verify these with the following command.
+.. tab-set::
+  :sync-group: distribution
 
-.. code-block::
+  .. tab-item:: RHEL based
+    :sync: rhel
 
-  ~otrs/bin/otrs.CheckModules.pl --all
+      Some of the needed Perl modules are installed, when installing the RPM. You just need
+      to complete the missing ones.
 
-**CentOS / Red Hat / Rocky Linux**
+      .. code-block:: bash
 
-Some of the needed Perl Modules are installed, when installing the RPM. You just need
-to complete the missing ones.
+        dnf install -y "perl(Moo)"  "perl(Text::CSV_XS)" "perl(YAML::XS)" "perl(ModPerl::Util)" "perl(Mail::IMAPClient)" "perl(JSON::XS)" "perl(Encode::HanExtra)" "perl(Crypt::Eksblowfish::Bcrypt)" "perl(Data::UUID)" "perl(Date::Format)" "perl(DateTime::TimeZone)" "perl(DateTime)" "perl(DBD::mysql)" "perl(DBI)" "perl(Hash::Merge)" "perl(Net::LDAP)" "perl(Net::DNS)" "perl(Template)" "perl(Template::Stash::XS)" "perl(XML::LibXML)" "perl(XML::LibXSLT)" "perl(XML::Parser)" "perl(Spreadsheet::XLSX)" "perl(Package::Stash)"
 
-.. code-block::
+        cpanm JavaScript::Minifier::XS CSS::Minifier::XS iCal::Parser
 
-  yum install -y jq
+  .. tab-item:: Debian based
+    :sync: debian
 
-  yum install -y "perl(Moo)"  "perl(Text::CSV_XS)" "perl(YAML::XS)" "perl(ModPerl::Util)" "perl(Mail::IMAPClient)" "perl(JSON::XS)" "perl(Encode::HanExtra)" "perl(Crypt::Eksblowfish::Bcrypt)" "perl(Data::UUID)"
+      .. code-block::
 
-  cpanm Jq JavaScript::Minifier::XS iCal::Parser Hash::Merge Crypt::JWT CSS::Minifier::XS Data::UUID Spreadsheet::XLSX Crypt::OpenSSL::X509
-
-  # Note to install the Crypt::OpenSSL::X509, you will need to install openssl-devel
-
-  # If you will use MySQL or MariaDB
-
-
-**Ubuntu / Debian**
-
-.. code-block::
-
-  apt -y install apache2 mariadb-client mariadb-server cpanminus libapache2-mod-perl2 libdbd-mysql-perl libtimedate-perl libnet-dns-perl libnet-ldap-perl libio-socket-ssl-perl libpdf-api2-perl libsoap-lite-perl libtext-csv-xs-perl libjson-xs-perl libapache-dbi-perl libxml-libxml-perl libxml-libxslt-perl libyaml-perl libarchive-zip-perl libcrypt-eksblowfish-perl libencode-hanextra-perl libmail-imapclient-perl libtemplate-perl libdatetime-perl libmoo-perl bash-completion libyaml-libyaml-perl libjavascript-minifier-xs-perl libcss-minifier-xs-perl libauthen-sasl-perl libauthen-ntlm-perl libhash-merge-perl libical-parser-perl libspreadsheet-xlsx-perl libcrypt-jwt-perl libcrypt-openssl-x509-perl jq
-
-  cpanm install Jq
+        apt -y install libapache2-mod-perl2 libdbd-mysql-perl libtimedate-perl libnet-dns-perl libnet-ldap-perl libio-socket-ssl-perl libpdf-api2-perl libsoap-lite-perl libtext-csv-xs-perl libjson-xs-perl libapache-dbi-perl libxml-libxml-perl libxml-libxslt-perl libyaml-perl libarchive-zip-perl libcrypt-eksblowfish-perl libencode-hanextra-perl libmail-imapclient-perl libtemplate-perl libdatetime-perl libmoo-perl bash-completion libyaml-libyaml-perl libjavascript-minifier-xs-perl libcss-minifier-xs-perl libauthen-sasl-perl libauthen-ntlm-perl libhash-merge-perl libical-parser-perl libspreadsheet-xlsx-perl libdata-uuid-perl
 
 Database Configuration
 **********************
 
-MySQL / Maria DB needs some config modifications. If you are using
-postgresql you can skip this step:
+MySQL and Maria DB needs some configuation modifications. If you are using
+PostgreSQL you can skip this step:
 
 
-Create a new file for the mysql config:
+Create a new configuration file for MariaDB:
 
-**CentOS / Red Hat**
+.. tab-set::
+  :sync-group: distribution
+
+  .. tab-item:: RHEL based
+    :sync: rhel
+
+      .. code-block::
+
+        vi /etc/my.cnf.d/znuny_config.cnf
+
+  .. tab-item:: Debian based
+    :sync: debian
+
+      .. code-block::
+
+        vi /etc/mysql/mariadb.conf.d/50-znuny_config.cnf
+      ..
+
+
 
 .. code-block::
-
-  /etc/my.cnf.d/znuny_config.cnf
-
-**Ubuntu / Debian**
-
-.. code-block::
-
-	/etc/mysql/mariadb.conf.d/50-znuny_config.cnf
-
-.. code-block::
+  :caption: Content for the configuration file
 
   [mysql]
   max_allowed_packet=256M
   [mysqldump]
   max_allowed_packet=256M
 
+
   [mysqld]
-  innodb_file_per_table
   innodb_log_file_size = 256M
   max_allowed_packet=256M
-  character-set-server  = utf8
-  collation-server      = utf8_general_ci
+
 
 .. important::
 
-  The web installer requires a password. The networking "bind-address" should be localhost. By default, 127.0.0.1, a synonym for skip-networking, is set. Additionally, there is no information about the requirement for utf8 whereas the default is utf8mb4
+  The web installer requires a password. Check your Linux distributions manual how to set a passwort for the database admin user.
 
-If started, restart the MariaDB database to apply the changes otherwise enable and start the MariaDB.
+Restart the MariaDB database to apply the changes
 
 .. code-block::
 
   systemctl restart mariadb
-  # or
-  systemctl enable --now mariadb 
-
-Run mysql_secure_installation
 
 Webserver Configuration
 ***********************
 
-**CentOS / Red Hat**
+.. tab-set::
+  :sync-group: distribution
 
-The Apache config is already in place if you used the RPM install.
+  .. tab-item:: RHEL based
+    :sync: rhel
 
-Enable MPM prefork module:
+      The Apache config is already in place if you used the RPM install, for the source install create a symbolic link:
 
-.. code-block:: bash
+      .. code-block:: bash
 
-  sed -i '/^LoadModule mpm_event_module modules\/mod_mpm_event.so/s/^/#/' /etc/httpd/conf.modules.d/00-mpm.conf
-  sed -i '/^#LoadModule mpm_prefork_module modules\/mod_mpm_prefork.so/s/^#//' /etc/httpd/conf.modules.d/00-mpm.conf
+        ln -s /opt/otrs/scripts/apache2-httpd.include.conf /etc/httpd/conf.d/znuny.conf
 
-.. note:: In case you did a source install on an RPM based system
+      Enable MPM prefork module:
 
-  To enable the Znuny Apache config you need to create a symlink to our sample config.
+      .. code-block:: bash
 
-  .. code-block::
-
-    ln -s /opt/otrs/scripts/apache2-httpd.include.conf /etc/httpd/conf.d/zzz_znuny.conf
-
-
-**Ubuntu / Debian**
-
-To enable the Znuny Apache config you need to create a symlink to our sample config.
-
-.. code-block:: bash
-
-  ln -s /opt/otrs/scripts/apache2-httpd.include.conf /etc/apache2/conf-available/zzz_znuny.conf
+        sed -i '/^LoadModule mpm_event_module modules\/mod_mpm_event.so/s/^/#/' /etc/httpd/conf.modules.d/00-mpm.conf
+        sed -i '/^#LoadModule mpm_prefork_module modules\/mod_mpm_prefork.so/s/^#//' /etc/httpd/conf.modules.d/00-mpm.conf
 
 
-Enable the needed Apache modules:
+  .. tab-item:: Debian based
+    :sync: debian
 
-.. code-block:: bash
 
-  a2enmod perl headers deflate filter cgi
-  a2dismod mpm_event
-  a2enmod mpm_prefork
-  a2enconf zzz_znuny
+      To enable the Znuny Apache configuration you need to create a symlink to our included configuration file.
 
-.. code-block::
+      .. code-block:: bash
 
-  ## RHEL / CentOS / Rocky Linux
-  systemctl restart httpd
-  # or
-  systemctl enable --now httpd
-  ## Ubuntu / Debian
-  systemctl restart apache2
-  # or
-  systemctl enable --now apache2
+        ln -s /opt/otrs/scripts/apache2-httpd.include.conf /etc/apache2/conf-available/znuny.conf
 
-**CentOS / Red Hat**
 
-.. code-block:: bash
+      Enable the needed Apache modules and configuration:
 
-  systemctl restart httpd
+      .. code-block:: bash
 
-**Ubuntu / Debian**
+        a2dismod mpm_event
+        a2enmod mpm_prefork headers filter perl
+        a2enconf znuny
 
-.. code-block:: bash
 
-  systemctl restart apache2
+Start / Restart the web server to apply the changes.
 
-You should be able to access the installer script using:
+.. tab-set::
+  :sync-group: distribution
+
+  .. tab-item:: RHEL based
+    :sync: rhel
+
+      .. code-block:: bash
+
+        systemctl restart httpd
+
+  .. tab-item:: Debian based
+    :sync: debian
+
+      .. code-block:: bash
+
+        systemctl restart apache2
+
+
+Now start the web based installer:
 
 ``http://HOSTNAME/otrs/installer.pl``
 
@@ -281,22 +249,29 @@ Start-up Configuration
 
 You should enable the web server and the database to get started on boot.
 
-**CentOS / Red Hat**
+.. tab-set::
+  :sync-group: distribution
 
-.. code-block:: bash
+  .. tab-item:: RHEL based
+    :sync: rhel
 
-  systemctl enable mariadb httpd
 
-**Ubuntu / Debian**
+      .. code-block:: bash
 
-.. code-block:: bash
+        systemctl enable mariadb httpd
 
-  systemctl enable mariadb apache2
+  .. tab-item:: Debian based
+    :sync: debian
+
+
+      .. code-block:: bash
+
+        systemctl enable mariadb apache2
 
 Enable Znuny Cron
 *****************
 
-Switch to the application user:
+Switch to the znuny user and fill the crontab
 
 .. code-block:: bash
 
