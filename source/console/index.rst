@@ -58,7 +58,7 @@ STAT_NUMBER.yml
             right => 1,
             bottom => 1,
             bg_color => 'silver
-            valign => 'vcentre',
+            valign => 'vcenter',
             align => 'center',
         }
     },
@@ -81,7 +81,7 @@ STAT_NUMBER.yml
                    "right" => 1,
                    "bottom" => 1,
                    "bg_color" => "silver",
-                   "Valign" => "vcentre",
+                   "valign" => "vcenter",
                    align => 'center',
                },
            },
@@ -130,20 +130,20 @@ The basic formatting options are shown in the example file. There are special na
         bg_color: silver
         bold: 1
         border: 1
-        valign: vcentre
+        valign: vcenter
     D:
       Format:
         align: center
         bold: 1
         color: red
-        valign: vcentre
+        valign: vcenter
     H:
       Format:
         align: center
         bold: 1
         bg_color: ccffff
         color: ED053B
-        valign: vcentre
+        valign: vcenter
     B3:
       Format:
         bold: 1
