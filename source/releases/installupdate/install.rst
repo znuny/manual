@@ -87,7 +87,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
       useradd -d /opt/otrs -c 'Znuny user' -g www-data -s /bin/bash -M -N otrs
 
       # Copy default Config.pm
-      cp /opt/znuny/Kernel/Config.pm.dist /opt/znuny/Kernel/Config.pm
+      cp /opt/otrs/Kernel/Config.pm.dist /opt/otrs/Kernel/Config.pm
 
       # Set permissions
       /opt/otrs/bin/otrs.SetPermissions.pl
