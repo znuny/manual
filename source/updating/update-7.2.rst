@@ -1,24 +1,15 @@
-Update to Znuny 7.1
+Update to Znuny 7.2
 ###################
 
-.. important::	We highly recommend to update on a test instance first. Znuny 7.1 performs database changes during the migration. Backup your data!
+.. important::	We highly recommend to update on a test instance first. Znuny 7.2 performs database changes during the migration. Backup your data!
 
-This documentation explains how to update to the Znuny 7.1 release.
+This documentation explains how to update to the Znuny 7.2 release.
 
 Please note that your current system needs to be a
 
-- Znuny 7.0.x for a minor level update or
-- Znuny 7.1.x for a patch level update
+- Znuny 7.1.x for a minor level update
 
-We do not support direct updates from any version before Znuny 7.0.
-
-.. note::
-
-	The base settings have been changed to reflect the product name since Znuny 7.0. We use ``znuny`` as the application user, ``/opt/znuny`` the application home and also a different web server configuration. Please verify these settings:
-
-    - ``Home`` - typically in Kernel/Config.pm as ``$Self->{Home}``
-    - System Configuration ``FrontEnd::WebPath`` has the default value `/znuny-web/`
-    - System Configuration ``ScriptAlias`` has the default value `znuny/`
+We do not support direct updates from any version before Znuny 7.1.
 	
 
 Preparations
@@ -26,7 +17,7 @@ Preparations
 
 .. note::
 
-  Check if every add-on your are using is available for version 7.1 **before** you continue. Add-ons for Znuny 7.0 or older versions are not compatible with Znuny 7.1 and needs to be updated. Ask the vendor of the add-on when in doubt.
+  Check if every add-on your are using is available for version 7.2 **before** you continue. Add-ons for Znuny 7.1 or older versions are not compatible with Znuny 7.2 and needs to be updated. Ask the vendor of the add-on when in doubt.
 
 Before the update can started we need to perform some tasks to prepare the update.
 
@@ -80,8 +71,8 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 
 .. code-block:: 
 
-	# Update to Znuny 7.1
-	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.1.7-01.noarch.rpm
+	# Update to Znuny 7.2
+	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.2.1-01.noarch.rpm
 
 	# Check for missing modules and add required modules and install at least **required** modules.
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -95,28 +86,28 @@ The installation from source takes more steps. If there are more file to restore
 
 .. code-block::
 
-	# Download latest Znuny 7.1
+	# Download latest Znuny 7.2
 	cd /opt
-	wget https://download.znuny.org/releases/znuny-latest-7.1.tar.gz
+	wget https://download.znuny.org/releases/znuny-latest-7.2.tar.gz
 
 	# Extract
-	tar xfz znuny-latest-7.1.tar.gz
+	tar xfz znuny-latest-7.2.tar.gz
 
 	# Set permissions
-	/opt/znuny-7.1.7/bin/znuny.SetPermissions.pl
+	/opt/znuny-7.2.1/bin/znuny.SetPermissions.pl
 
 	# Restore Kernel/Config.pm, articles, etc.
-	cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.1.7/Kernel/
-	mv /opt/znuny/var/article/* /opt/znuny-7.1.7/var/article/
+	cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.2.1/Kernel/
+	mv /opt/znuny/var/article/* /opt/znuny-7.2.1/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
-	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.1.7/; done
+	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.1/; done
 
 	# Restore modified and custom cron job
-	for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.1.7/var/cron/; done
+	for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.1/var/cron/; done
 
 	# Create/overwrite a symlink 
-	ln -snf /opt/znuny-7.1.7 /opt/znuny
+	ln -snf /opt/znuny-7.2.1 /opt/znuny
 
 	# Check for missing modules and add **required** modules
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -126,9 +117,9 @@ The installation from source takes more steps. If there are more file to restore
 Execute the migration script
 ****************************
 
-.. code-block::
+.. code-block::shell
 
-    su -c 'scripts/MigrateToZnuny7_1.pl --verbose' - znuny
+    su -c 'scripts/MigrateToZnuny7_2.pl --verbose' - znuny
 
 ..
 
@@ -139,14 +130,14 @@ Reinstall or Upgrade Add-ons (Packages)
 	
 .. note:: UpgradeAll can fail, if repositories are not reachable or configured, versions for your framework are not available, or packages have been renamed. In this case, you should upgarde your packages manually via the commandline or by installing/updating them via the package manager.
 
-.. code-block::
+.. code-block::shell
 
     # Make sure all add-ons are correct installed after a patch level update
     su -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll' - znuny
-    su -c 'scripts/MigrateToZnuny7_1.pl --verbose' - znuny
+    su -c 'scripts/MigrateToZnuny7_2.pl --verbose' - znuny
     # Upgrade all packages
     su -c 'bin/znuny.Console.pl Admin::Package::UpgradeAll' - znuny
-    su -c 'scripts/MigrateToZnuny7_1.pl --verbose' - znuny
+    su -c 'scripts/MigrateToZnuny7_2.pl --verbose' - znuny
     
 
 ..
