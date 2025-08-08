@@ -47,6 +47,7 @@ The general rules are:
    webservices/index
    packagemanagement/index
    systemconfiguration/index
+   translation/index
 
 Additional Resouces
 *******************

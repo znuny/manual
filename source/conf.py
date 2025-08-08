@@ -63,6 +63,8 @@ linkcheck_allowed_redirects = {
 linkcheck_ignore = [
     r'https://download.znuny.org/releases/znuny-\d.\d.\d+.tar.gz',
     r'https://github.com/znuny/Znuny/commits/rel-.+',
+    r'https://github.com/znuny/Znuny/tree/rel-.+',
+    r'https://raw.githubusercontent.com/znuny/Znuny/rel-\d_\d_\d{1,2}/CHANGES.md',
     r'https://github.com/znuny/Znuny/blob/.+#L\d+',
     r'.+/cgi-bin/.+'
 ]

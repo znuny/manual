@@ -1,6 +1,7 @@
+.. _PageNavigation agentinterface_personalsettings_index:
+
 Personal Settings
 #################
-.. _PageNavigation agentinterface_personalsettings_index:
 
 There are some settings every user can and should make. This page discusses them.
 
