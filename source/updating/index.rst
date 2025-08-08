@@ -8,4 +8,4 @@ If you are updating over multiple versions, please know that you must update to 
 .. toctree::
    :maxdepth: 2
 
-   update-7.1
+   update-7.2
