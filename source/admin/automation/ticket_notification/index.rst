@@ -142,3 +142,7 @@ Create export and filter visible notifications in the actions menu of the notifi
 .. figure:: images/notification_area_actions.PNG
 
    Actions Area
+
+.. seealso:: 
+
+	:ref:`pagenavigation annexes_entity_management_index` for more information on how to manage entities. There is also information about import and export of entities.

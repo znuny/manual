@@ -87,3 +87,7 @@ A snippet is used in any mask where HTML is enabled and the ticket is in the que
     Snippet Use in our :ref:`common features <PageNavigation ticketviews_agentticketactioncommon_snippet>` section
 
 Using <OTRS_*> tags is also possible. A limited amount of tags is available in the ticket create screens.
+
+.. seealso:: 
+
+	:ref:`pagenavigation annexes_entity_management_index` for more information on how to manage entities. There is also information about import and export of entities.

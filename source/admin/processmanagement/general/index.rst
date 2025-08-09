@@ -214,3 +214,7 @@ Add a Transition Action
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Create a transition action by expanding the **Transition Actions** section then clicking on the :ref:`Create New Transition Action <PageNavigation processmanagement_transitionactions>` button.
+
+.. seealso:: 
+
+	:ref:`pagenavigation annexes_entity_management_index` for more information on how to manage entities. There is also information about import and export of entities.

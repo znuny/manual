@@ -37,3 +37,7 @@ See :ref:`pagenavigation admin_index_systemconfiguration`
 .. figure:: images/Setting_Frontend__Agent__View__TicketCompose.png
 
    System Configuration Edit Screen
+
+.. seealso:: 
+
+	:ref:`pagenavigation annexes_entity_management_index` for more information on how to manage entities. There is also information about import and export of entities.

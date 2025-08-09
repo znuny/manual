@@ -69,3 +69,7 @@ SendNoAutoResponseRegExp
 
 .. hint::
  	Auto-responses are also suppressed if the optional email header X-OTRS-Loop is set to true. Some emails, mostly automated generated, are also designed to skip auto-responses. Check the ticket history and communication log if needed.
+
+.. seealso:: 
+
+	:ref:`pagenavigation annexes_entity_management_index` for more information on how to manage entities. There is also information about import and export of entities. 
