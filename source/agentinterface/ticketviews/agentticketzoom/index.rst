@@ -127,8 +127,12 @@ To respond to tickets, you can use one of other options.
 
 * Resend - Resend a failed communication.
 
-.. image:: images/menu_article_resend.png
+.. figure:: images/menu_article_resend.png
     :alt: Resend Article Image
+
+    The Resend option is only available for failed communications. If the communication was successful, this option will not be available.
+
+.. _zoom_communication_table:
 
 Communications Table
 ********************

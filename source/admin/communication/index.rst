@@ -34,3 +34,13 @@ answer templates.
    :maxdepth: 2
    
    signatures/index
+
+Article Colors
+**************
+
+All communication articles can be assigned a color. This is useful for quickly identifying the type of article, such as an email, phone call, or chat message.
+
+.. toctree::
+   :maxdepth: 2
+   
+   articlecolors/index
