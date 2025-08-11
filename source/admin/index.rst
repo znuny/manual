@@ -36,6 +36,7 @@ The general rules are:
 
    usermanagement/index
    queues/index
+   servicemanagement/index
    communication/index
    authentication/index
    email/index
