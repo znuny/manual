@@ -10,4 +10,5 @@ There are also modules for email notifications, sending mails to agents, and a l
 
    system_email
    postmaster_mail_account
+   smtp_settings
 
