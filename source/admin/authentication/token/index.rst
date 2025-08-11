@@ -3,16 +3,21 @@
 OAuth2 Token Administration
 ###########################
 
-.. versionadded:: 6.3
+OAuth2 Flow Support
+*******************
 
-   It is possible to administer OAuth tokens in the administration area. Tokens added to the system are used by the :ref:`PostMaster Mail Account <PageNavigation email_postmaster_mail_account>` module for email authentication.
+We support the following authorization flows:
 
-   As this is an advanced task, you're required to understand how to configure your provider's service.
+* Authorization Flow
+* Client Credentials Flow
 
-OAuth Flow Support
-******************
 
-We support code grant type, or auth code flow, which enables a client application to obtain authorized access to protected resources like web APIs. The auth code flow requires an user-agent that supports redirection from the authorization server back to your application.
+.. important::
+
+    The authorization flow is the most common OAuth2 flow. It is used by most providers, including Google and Microsoft. 
+    It requires user interaction to authorize the application to access the user's data.
+
+    The client credentials flow is used for server-to-server communication where no user interaction is required.
 
 More background information about OAuth on `Wikipedia <https://en.wikipedia.org/wiki/OAuth>`_
 
@@ -23,10 +28,6 @@ Tokens can currently be used by
 
 * PostMaster Mail Accounts
 * Web Service Invokers
-
-.. versionadded:: 6.4
-
-    It is now possible to use the tokens in ::ref:`an Invoker <AuthenticationMethod generic_interface_invoker>`.
 
 Application Registration
 ************************
@@ -77,7 +78,7 @@ Adding a token will generates a YAML configuration in the database. This file ha
 .. image:: images/oauth2_admin_add.png
     :alt: Image Add Token
 
-The following fields are needed:
+The following fields are needed, depending on the OAuth2 flow:
 
 Name
     A name for the token.
@@ -88,13 +89,11 @@ Client ID
 Client secret
     Your client secret. (The application’s own password.)
 
-.. versionadded:: 6.4.4
+URL
+    Enter the endpoints required for authorization, token, and/or token refresh.
 
-    URL *
-        Enter the endpoints required for authorization, token, and token refresh.
-
-    Scope
-        Add the scope for the token.
+Scope
+    Add the scope for the token.
 
 Validity
     The validity of the setting.
@@ -151,18 +150,13 @@ Export and import settings using the function provided in the left sidebar.
 Vendor-Specific Documentation
 *****************************
 
-.. important::
+.. important:: 
 
-    Redirect URI: The redirect_uri for Znuny is built from the system variables in the following manner:
+    Redirect URI
+        The redirect_uri for Znuny is built from the system variables in the following manner:
 
     ``${HttpType}://${FQDN}/${ScriptAlias}/get-oauth2-token-by-authorization-code.pl``
 
     i.e.
 
     ``https://znuny.example.com/otrs/get-oauth2-token-by-authorization-code.pl``
-
-.. versionadded:: 6.4
-
-    Starting in this release, we've added a special switch to conform to Microsoft's requirement for POP3 and OAuth2. This is pre-configured for the hosts listed in the `Microsoft KBA <https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-8361e398-8af4-4e97-b147-6c6c4ac95353>`_. Hosts that need a separate info about authentication method and token (instead of both in one line) can be added to the system configuration option. ``MailAccount::POP3::Auth::SplitOAuth2MethodAndToken::Hosts``
-
-    Most commonly needed for Office365.
