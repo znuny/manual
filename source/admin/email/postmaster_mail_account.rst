@@ -1,6 +1,7 @@
+.. _PageNavigation email_postmaster_mail_account:
+
 Configure Mailbox Collection
 ############################
-.. _PageNavigation email_postmaster_mail_account:
 
 Schedule e-mail collection from any number of accounts by adding them to the system here. All standard protocols are supported.
 
@@ -10,6 +11,7 @@ Schedule e-mail collection from any number of accounts by adding them to the sys
 * POP3
 * POP3S
 * POP3TLS
+* MSGraph
 
 .. note:: 
     
@@ -42,6 +44,11 @@ OAuth2 token configuration *
     Choose the correct :ref:`authentication token <PageNavigation authenticate_token_index>` for the user.
 IMAP Folder *
     If using one of the IMAP protocols, you may choose the folder to be collected.
+
+.. important:: 
+    
+    This may not be the folder INBOX. Leave empty, or check with your mail administrator for the proper setting.
+
 Trusted
     Choosing 'yes' allows mails to contain X-OTRS headers. X-OTRS headers will allow you to set ticket data without using a postmaster filter and is an advanced option.
 Dispatching
