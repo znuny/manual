@@ -19,6 +19,8 @@ Enable the setting ``PreferencesGroups###MattermostUsername`` in the system conf
          :width: 100%
          :alt: View of the Notication Settings in the Personal Preferences
 
+.. seealso:: :ref:`XSLT Editor<xslt_editor_webservice>` for more details about the XSLT editor.
+
 Mattermost Username Preference
 ++++++++++++++++++++++++++++++
 

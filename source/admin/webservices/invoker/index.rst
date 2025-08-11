@@ -27,6 +27,8 @@ By modifying the response with inbound mapping, e.g. with XSLT, it is possible t
 
 .. note:: Only the affected ticket can be changed.
 
+.. seealso:: :ref:`XSLT Editor<xslt_editor_webservice>` for more details about the XSLT editor.
+
 The resulting data requires this format:
 
 .. code-block:: XML

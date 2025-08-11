@@ -63,6 +63,8 @@ Insights
 
 The used XSLT for the outbound mapping contains some interesting parts:
 
+.. seealso:: :ref:`XSLT Editor<xslt_editor_webservice>` for more details about the XSLT editor.
+
 
 .. code-block:: XML
     :linenos:

@@ -1,19 +1,28 @@
+.. _PageNavigation ticketviews_agentticketactioncommon:
+
 Common Features
 ###############
-.. _PageNavigation ticketviews_agentticketactioncommon:
 
 Article Options
 ***************
 
-.. image:: images/common_options.png
+.. figure:: images/ck_editor.png
     :alt: Article Common Image
+
+    CKEditor
 
 An article may be attached to a ticket. Any time this is an option you must enter a subject and a body. You may add images in-line and other attachments via the upload feature. These may be dragged and dropped or you may select the attachments by browsing (Just click on the attachment icon :fa:`download`.)
 
 Editor Options
 ==============
 
-Using the CKEditor is mostly self-explanatory. Your administrator can add additional options by activating the *EnhancedMode*. This enables among other options:
+.. figure:: images/ck_editor_comparison.png
+    :alt: CKEditor Comparison Image
+
+    CKEditor Comparison
+  
+
+Using the CKEditor is mostly self-explanatory. Your administrator can add additional options by activating the *EnhancedMode*. This enables among other options such as:
 
 * tables
 * find and replace
@@ -21,13 +30,33 @@ Using the CKEditor is mostly self-explanatory. Your administrator can add additi
 * superscript
 * paste from word
 
-.. versionadded:: 6.4
+Formatting with Markdown
+========================
 
-    Mentions and Text Snippet.
+It is possible to format text with Markdown. This is done by using the following syntax:
+
+* **Bold**: `**text**`
+* *Italic*: `*text*`
+* Strikethrough: `~~text~~`
+* `Inline Code`: \`text`\
+* `Open a Code Block`: \`\`\`
+* Headings: `# )Heading 1)`, `## Heading 2)`, `### Heading 3), ..., `###### Heading 6)`
+
+
+Full Screen Mode
+================
+
+.. figure:: images/full_screen_editor.PNG
+    :alt: Full Screen Editor Image
+
+    Full Screen Editor
+
+To access the full screen editor, click on the full screen icon in the toolbar. This will expand the editor to fill the entire browser window, allowing for easier text entry and formatting. Or use the keyboard shortcut `Ctrl + Shift + F` to toggle full screen mode.
+
+.. _PageNavigation_agentinterface_ticketviews_agentticketactioncommon_mentions:
 
 Mention Someone
 ~~~~~~~~~~~~~~~
-.. _PageNavigation_agentinterface_ticketviews_agentticketactioncommon_mentions:
 
 In the CKEditor, it's now possible to mention a single or group of users. Unlike notifying a user via a note or putting yourself on a watch list, a user or group can be mentioned inline.
 
@@ -48,10 +77,10 @@ All those receiving a text body with a mention will have a ``mailto:`` link to d
 .. image:: images/mentions_animation.gif
     :alt: Animated GIF Mention Function
 
+.. _PageNavigation ticketviews_agentticketactioncommon_snippet:
 
 Use a Snippet
 ~~~~~~~~~~~~~
-.. _PageNavigation ticketviews_agentticketactioncommon_snippet:
 
 In order to trigger a text snippet, just prefix your text with `##` and type at least three characters. If a match is found in the text, name, or comment of a configured snippet, you can select if from the list. This applies the snippet in-line. You can add as many snippets as desired. They are also combinable with text templates.
 
@@ -104,8 +133,6 @@ Accounting Time
 
 **Time Accounting**
 
-.. versionadded:: 6.3
-
 It's possible to enter time units in all screens where composing an article. These time units can be a positive or negative number, which will increase or decrease the total time accounted
 on the ticket respectively.
 
@@ -143,3 +170,8 @@ To save the position, reposition the window and then resize the window. If you m
 .. note:: 
     
     ``Frontend::RichText::Settings###Width`` is an important setting, to set the percentage of the width of the pop-up which is to be filled by the richtext editor.
+
+Operation, Shortcuts and Key Bindings
+Bold text,Ctrl+B
+Copy selected content,Ctrl+C
+Create link,Ctrl+K

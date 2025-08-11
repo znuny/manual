@@ -199,3 +199,49 @@ This feature is used with the :ref:`Mattermost example<Example Web Service Matte
 .. tip::  Keep often used settings like usernames, passwords, hostname, etc in the system configuration and share web service configurations between staging systems.
 
 	Why? E.g. to change credentials used in multiple web services by modifying a single setting.
+
+.. _xslt_editor_webservice:
+
+XSLT Editor
+************
+
+Znuny provides data modification with XSLT. It's then possible to modify the incoming and outgoing data for provider and requester operations.
+It provides syntax highlighting, code completion, and validation features to help you write correct XSLT code. After adding the XSLT option, and 
+saving the provider or invoker configuration, you can than edit the XSLT code in the editor.
+
+Configure XSLT
+++++++++++++++
+
+.. figure:: images/xslt_basic_setup.PNG
+   :width: 100%
+   :alt: Operation Edit
+
+   Configuring XSLT
+
+To use XSLT in a web service configuration, you need to:
+
+1. Select the mapping type "XSLT"
+2. Click on "Save".
+3. Click on "Configure" to open the XSLT editor.
+
+Auto-completion
++++++++++++++++
+
+Here is an example of the XSLT editor, with auto-completion.
+
+.. figure:: images/xsl_auto_complete.PNG
+   :width: 100%
+   :alt: XSLT Editor
+
+   Validate with auto-completion
+
+Shortcuts
+++++++++++++++
+You can use the following shortcuts in the XSLT editor:
+
+.. figure:: images/xslt_editory_shortcuts.PNG
+   :width: 100%
+   :alt: XSLT Editor Shortcuts
+
+   XSLT Editor Shortcuts
+
