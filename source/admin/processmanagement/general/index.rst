@@ -128,19 +128,29 @@ Copy
 Print
     Generate a PDF file containing all process information.
 
-Add a New Process
-******************
+.. _PageNavigation processmanagement_createprocess:
 
-Click the *Create a New Process* button. This action brings you to the modeler screen. Upon reaching there, you must enter general information about the process:
+Process Details
+***************
 
-.. image:: images/process_management_new_process.png
-    :alt: Process Management New Process Image
+You can create a new process by clicking the *Create a New Process* button, or you can edit by selecting an available process. The the modeler screen appears.
+
+There are three sections in the modeler:
+
+**General Information**
+    Modify the name, validity, description, category or icon for the process.
+    Modify process parts.
+
+.. figure:: images/pm_general_info.png
+    :alt: Process Management General Information
+
+    Process Management General Information
 
 Name
     The name of the process, as seen by the agents and customer users.
 Description
     A description for the process administrator.
-Validity
+State
     The process validity.
 
 A process can be Active, Inactive, or set to "FadeAway". 
@@ -151,29 +161,41 @@ A process can be Active, Inactive, or set to "FadeAway".
     
     The first process activity must contain an activity dialog for the process to be selectable when set to active.
 
+**Process Categories**
 
-Click *Save*. Then you can then start adding process elements and organizing them on the canvas using the modeler.
+.. figure:: images/pm_categories.png
+    :alt: Process Management Categories
+    
+    Process Management Categories
 
-You may also use the import function to import your process or use the :ref:`Ready2Adopt <PageNavigation processmanagement_readytoadopt_index>` processes available to you in the system. Pay special attention when importing them, the parts must be manually removed if the process is deleted later. Additionally, dynamic fields and other settings may be imported when using them.
+Process Category
+    The process category to which the process belongs. This is used for filtering processes in the overview.
+Link Target
+    How the link should open. Blank is the default and opens in the same window.
+Icon
+    The icon for the process, as seen by the agents and customer users in the process ticket category overview.
 
-Editing a Process
-*****************
+.. note:: 
 
-To edit a process, select a process from the overview. This starts the modeler.
+    Process preferences are set in the system configuration and are optional.
 
-.. image:: images/process_management_modeller.png
-    :alt: Process Management Modeller
+Categories
+    The process categories to which the process belongs. This is used for filtering processes in the process ticket categories overview.
 
-In the above example, you'll see the imported Ready2Adopt process: *Application for Leave*. 
+**Process Canvas**
 
-The modeler has three sections: 
+.. figure:: images/pm_map.png
+    :alt: Process Management Map
+    
+    Process Management Map
 
-Sidebar
-    Create process elements or go back to the overview.
-General Information
-    Modify the name, validity, or description for the process.
 Canvas
     Build the processes visually.
+
+You may also use the import function to import your process or use the :ref:`Ready2Adopt <PageNavigation processmanagement_readytoadopt_index>` processes available to you in the system (see Application for Leave example above). Pay special attention when importing them, the parts must be manually removed if the process is deleted later. Additionally, dynamic fields and other settings may be imported when using them.
+
+Working with the Canvas
+***********************
 
 Available Process Elements
 ==========================

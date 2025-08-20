@@ -34,10 +34,11 @@ Using the provided interface can be a great enhancement for your customer servic
 .. toctree::
     :maxdepth: 2
 
-    customer_user_dashboard/index.rst
-    customer_user_preferences/index.rst
-    starting_processes/index.rst
-    creating_tickets/index.rst
-    viewing_tickets/index.rst
-    answering_tickets/index.rst
-    searching_tickets/index.rst
+    customer_user_dashboard/index
+    customer_user_preferences/index
+    starting_processes/index
+    process_categories/index
+    creating_tickets/index
+    viewing_tickets/index
+    answering_tickets/index
+    searching_tickets/index
