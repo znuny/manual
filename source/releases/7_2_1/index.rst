@@ -4,7 +4,7 @@ Znuny 7.2.1
 **Release Information:**
 
 +---------------------+--------------------------------------------------------------+
-| Release Date        | 13-AUG-2025                                                  |
+| Release Date        | 20-AUG-2025                                                  |
 +---------------------+--------------------------------------------------------------+
 | Release Type        | Minor version release                                        |
 +---------------------+--------------------------------------------------------------+
@@ -15,25 +15,29 @@ Znuny 7.2.1
 
 Features
 ********
+- Added Outh2 Client Credentials Flow
+- Added Microsoft Graph as an available protocol for fetching and sending emails.
+- Integrated the addon SMTPRatelimit
+- Replaced the CKEditor 4 with CKEditor 5
+- A graphical, categorized overview was added to select processes from, aka the process shop.
+- Import, export, copy, and delete functionality for auto responses, salutations, signatures, and templates.
+- New communication channel web for articles created via he customer portal.
+- Integrated the addon Znuny-Translations to edit custom translations in the admin area.
+- Article colors for the article overview of the ticket details view can now be modified in the admin area.
 
 Changes
 *******
-- GenericInterface: TicketCreate and TicketUpdate operations now accept multiple articles.
-- Added start and end log messages to the Znuny daemon. Thanks to Paweł Bogusławski (@pboguslawski). `#392 <https://github.com/znuny/Znuny/pull/392>`_
-- Added display hint when a draft for the same action already exists.
-- PostMaster now support also IDs for state, priority, ticket type, service, queue, and SLA headers.
-- New console command to export only the changed system configuration settings.
-- Added configurable timeout for DNS resolver queries. Thanks to Paweł Bogusławski (@pboguslawski). `#390 <https://github.com/znuny/Znuny/pull/390>`_
-- New backend (DBJSON) for user preferences to improve performance on large systems.
-- All table have now primary keys.
+- Added missing sort parameter for the mention view.
+- Users mentioned in quoted articles will not be notified again.
+
 
 Fixed Issues
 ************
-- Fixed filtering of columns on the agent dashboard and in ticket overviews. `#510 <https://github.com/znuny/Znuny/issues/510>`_ and `#555 <https://github.com/znuny/Znuny/issues/555>`_
-- Improved and fixed links to the CustomerUser and Customer Information Center in several views.
-- Fixed missing translations on title hovers on the generic dashboard.
-- Updated JavaScript dependencies Moment.js and jQueryUI.
-- Fixed event registration regular expressions in the system configuration Thanks to Paweł Bogusławski (@pboguslawski) for reporting. `#440 <https://github.com/znuny/Znuny/issues/440>`_
-- Fixed unwanted logout when some personal settigs are saved.
+- Improved the handling of mentions for archived tickets. Thanks for reporting to `@Fainsy <https://github.com/Fainsy>`_. (`#620 <https://github.com/znuny/Znuny/issues/620>`_)
+- Fixed displaying the customer name in the customer ticket overview.
+- Fixed the order of the mention toolbar icons and changed their priority to prevent display collision with other toolbar icons.
+- Fixed the handling of attachments when processing an invoker's response. `#694 <https://github.com/znuny/Znuny/issues/694>`_)
+- Fixed the tree view icon for dynamic fields of the type drop-down and multiselect.
+- Fixed the TLD of check email addresses in S/MIME certificates. Thanks for reporting to `@dsm-museum-it <https://github.com/dsm-museum-it>`_.
 
 Read about all changes in the `CHANGES.md <https://raw.githubusercontent.com/znuny/Znuny/rel-7_2_1/CHANGES.md>`_. See the commits on `GitHub <https://github.com/znuny/Znuny/commits/rel-7_2_1>`_ for a list of all changes.
