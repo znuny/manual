@@ -125,7 +125,7 @@ For example, a filter named **"Ignore Mails from Tracking Service"**:
 
 **Set email header:** X-OTRS-Ignore
 
-**Value:** 1
+**Value:** yes
 
 These mails will be logged to the communication log, but not create a ticket and be deleted immediately.
 
