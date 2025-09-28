@@ -1,7 +1,7 @@
 .. _PageNavigation admin_automation_ticket-notification_index:
 
 Ticket Notifications
-##################
+####################
 
 Automatically communicate ticket events to customers, agents, and external users. Each event triggered can pass on valuable information to its recipients. Some notifications are provided by default.
 
@@ -126,7 +126,7 @@ Further Help
 A tag reference list is seen at the bottom of the add/edit screen.
 
 Notification Mangement
-=====================
+======================
 
 In the table of configured notifications, you will have three distinct options for managing notifications.
 

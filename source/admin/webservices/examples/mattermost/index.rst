@@ -118,5 +118,4 @@ The used XSLT for the outbound mapping contains some interesting parts:
 .. rubric:: Links to external documentation
 
 .. [#f1] https://developers.mattermost.com/integrate/webhooks/incoming/
-.. [#f2] https://developers.mattermost.com/integrate/webhooks/incoming/
 
