@@ -1,6 +1,7 @@
+.. _PageNavigation admin_authentication_two_factor_index:
+
 Two-Factor Authentication
 #########################
-.. _PageNavigation admin_authentication_two_factor_index:
 
 The framework supports 2FA or two-factor authentication by providing for the use of Time-based One-Time Passwords (TOTP). This requires the user to use an authenticator app. This can be:
 

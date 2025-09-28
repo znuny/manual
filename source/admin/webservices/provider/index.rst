@@ -18,6 +18,31 @@ These headers are:
 
 .. note:: The authentication feature `ImpersonateAsUser` is not included in this version.
 
+Authentication in Request Parameters
+************************************
+
+It is possible to send the authentication data in the request parameters. The following parameters are supported:
+
+**Credentials**:
+
+UserLogin
+    The login name of an agent with access to the web service.
+CustomerUserLogin
+    The login name of a customer user with access to the web service.
+Password
+    The password of the agent or customer user.
+TwoFactorToken
+    The token for two factor authentication (TOTP) when required by system configuration. (See :ref:`pagenavigation admin_authentication_two_factor_index` for more information.)
+
+**Optionally**: 
+
+SessionID
+    The session ID of an already authenticated session.
+
+.. seealso:: 
+
+    The `Operations API <https://doc.znuny.org/znuny-dev-api/API/Kernel/GenericInterface/Operation/index.html>`_ for mare information.
+    
 
 Searching for a ticket
 **********************
