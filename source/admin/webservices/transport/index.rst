@@ -110,6 +110,10 @@ Route mapping for Operation 'GetATicket':
 
     Define the route that should get mapped to this operation. Variables marked by a ':' will get mapped to the entered name and passed along with the others to the mapping. (e.g. /Ticket/:TicketID).
 
+    You may use any of the ticket data in the routing, (e.g. /Ticket/:TicketID?UserLogin=:UserLogin&Password=:Password or /Ticket/:Ticket.DynamicField_MyField)
+
+    XSLT Mapping is applied, before the transport variable is used! So you must use the resulting structure in the route mapping.
+
 .. important::
 
     If you rename an operation, this setting will be lost and you must configure it again for the new name.
