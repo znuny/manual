@@ -40,7 +40,7 @@ Default Header Table:
 +-----------------------------+---------------+------------------------------------------------------------------------+
 | X-OTRS-Lock                 | lock          | Any valid ticket lock.                                                 |
 +-----------------------------+---------------+------------------------------------------------------------------------+
-| X-OTRS-Ignore               | 1             | Ignore mail (1) keep mail (Default:0)                                  |
+| X-OTRS-Ignore               | Yes           | Ignore mail (Yes) keep mail (Default: No)                              |
 +-----------------------------+---------------+------------------------------------------------------------------------+
 | X-OTRS-State                | open          | Any valid ticket state.                                                |
 +-----------------------------+---------------+------------------------------------------------------------------------+
@@ -123,3 +123,8 @@ List of included headers. See `this resource <https://www.iana.org/assignments/m
 * X-Envelope-To
 * Return-Path
 
+Relevant Documentation
+***********************
+
+:ref:`pagenavigation admin_automation_postmaster_filter_index`
+ 

@@ -26,7 +26,7 @@ Adding a New PostMaster Filter
 
 To create a new filter that processes incoming emails based on specific criteria:
 
-.. figure:: images/postmaster_filter_overview.PNG
+.. figure:: images/postmaster_filter_overview.png
 
    PostMaster Filter Overview
 
@@ -110,7 +110,7 @@ Managing Existing Filters
 
     The filter entity has no valid type. To invalidate a filter, choose an invalid key or filter when editing it, so that it will not match.
 
-    .. image:: images/postmaster_edit_invalid.PNG
+    .. image:: images/postmaster_edit_invalid.png
     
 
 Example Use Case: Ignoring Automated Emails

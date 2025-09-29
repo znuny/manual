@@ -7,7 +7,7 @@ Planned Maintenance
 Maintenance Overview
 ********************
 
-.. figure:: images/system_maintenance_overview.PNG
+.. figure:: images/system_maintenance_overview.png
 
     System Maintenance Overview
 
@@ -21,7 +21,7 @@ This screen allows **administrators** to **schedule and manage system maintenanc
 Maintenance Window Settings
 ***************************
 
-.. figure:: images/system_maintenance_add.PNG
+.. figure:: images/system_maintenance_add.png
 
     System Maintenance Item
 
@@ -73,12 +73,12 @@ User Notifications
 
 Customer users and agents received notifications in the notification area about upcoming maintenance periods.
 
-.. figure:: images/system_maintenance_notify_message.PNG
+.. figure:: images/system_maintenance_notify_message.png
 
    User Notification
 
 When maintenance begins, the agents and users will also see a login message, if configured.
 
-.. figure:: images/system_maintenance_login_message.PNG
+.. figure:: images/system_maintenance_login_message.png
 
    Login Message

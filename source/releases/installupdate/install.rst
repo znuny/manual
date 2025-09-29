@@ -62,7 +62,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
     .. code-block:: bash
 
       dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.18-01.noarch.rpm
-7
+
   .. tab-item:: Installation from source archive
   
     The installation from the source takes some more steps:

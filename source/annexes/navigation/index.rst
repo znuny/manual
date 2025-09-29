@@ -16,7 +16,7 @@ Use the following charts to find out how to navigate with the keyboard. The foll
 
 .. seealso::
 
-    Mozilla Web Developer information about `access keys <https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey>`_.
+    Mozilla Web Developer information about `access keys <https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/accesskey>`_.
 
 
 Agent interface

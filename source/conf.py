@@ -54,6 +54,7 @@ linkcheck_allowed_redirects = {
     #r'https?://.*': r'https?://.*',
     r'https://(www\.)?znuny\.(com|org).*': r'https://www\.znuny\.(com|org).*',
     r'https://github\.com.*': r'https://github\.com.*',
+    r'https://github.com/znuny/.*': r'https://raw.githubusercontent.com/znuny/.*',
     r'https://.+.microsoft.com/.*': r'https://.+.microsoft.com/.*',
     r'http://.+': r'https://.+',
     r'https://discord.gg/.+': r'https://discord.com/.+'
