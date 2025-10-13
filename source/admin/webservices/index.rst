@@ -17,6 +17,7 @@ Overview
    specials/index
    notification/index
    examples/index
+   readytoadopt/index
 
 
 .. add new files to list above to include them in toc

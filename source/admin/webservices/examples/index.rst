@@ -1,11 +1,12 @@
 Example web services
 ###############################
 
-It is our goal to help you to get the most out of Znunyl That's why we added some example configurations for web services.
+It is our goal to help you to get the most out of Znuny That's why we added some example configurations for web services.
 
 .. toctree::
    :maxdepth: 2
 
+   GenericTicketConnectorREST/index
    mattermost/index
    msteams/index
 
