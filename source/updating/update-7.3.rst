@@ -1,16 +1,16 @@
-Update to Znuny 7.2
+Update to Znuny 7.3
 ###################
 
-.. important::	We highly recommend to update on a test instance first. Znuny 7.2 performs database changes during the migration. Backup your data!
+.. important::	We highly recommend to update on a test instance first. Backup your data!
 
-This documentation explains how to update to the Znuny 7.2 release.
+This documentation explains how to update to the Znuny 7.3 release.
 
 Please note that your current system needs to be a
 
-- Znuny 7.1.x for a minor level update or
-- Znuny 7.2.x for a patch level update
+- Znuny 7.2.x for a minor level update or
+- Znuny 7.3.x for a patch level update
 
-We do not support direct updates from any version before Znuny 7.1.
+We do not support direct updates from any version before Znuny 7.2.
 	
 
 Preparations
@@ -18,7 +18,7 @@ Preparations
 
 .. note::
 
-  Check if every add-on your are using is available for version 7.2 **before** you continue. Add-ons for Znuny 7.1 or older versions are not compatible with Znuny 7.2 and needs to be updated. Ask the **vendor** of the add-on when in doubt.
+  Check if every add-on your are using is available for version 7.3 **before** you continue. Add-ons for Znuny 7.2 or older versions are not compatible with Znuny 7.3 and needs to be updated. Ask the **vendor** of the add-on when in doubt.
 
 Before the update can started we need to perform some tasks to prepare the update.
 
@@ -72,8 +72,8 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 
 .. code-block:: 
 
-	# Update to Znuny 7.2
-	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.2.2-01.noarch.rpm
+	# Update to Znuny 7.3
+	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.1-01.noarch.rpm
 
 	# Check for missing modules and add required modules and install at least **required** modules.
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -87,28 +87,28 @@ The installation from source takes more steps. If there are more file to restore
 
 .. code-block::
 
-	# Download latest Znuny 7.2
+	# Download latest Znuny 7.3
 	cd /opt
-	wget https://download.znuny.org/releases/znuny-latest-7.2.tar.gz
+	wget https://download.znuny.org/releases/znuny-latest-7.3.tar.gz
 
 	# Extract
-	tar xfz znuny-latest-7.2.tar.gz
+	tar xfz znuny-latest-7.3.tar.gz
 
 	# Set permissions
-	/opt/znuny-7.2.2/bin/znuny.SetPermissions.pl
+	/opt/znuny-7.3.1/bin/znuny.SetPermissions.pl
 
 	# Restore Kernel/Config.pm, articles, etc.
-	cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.2.2/Kernel/
-	mv /opt/znuny/var/article/* /opt/znuny-7.2.2/var/article/
+	cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.1/Kernel/
+	mv /opt/znuny/var/article/* /opt/znuny-7.3.1/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
-	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.2/; done
+	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.1/; done
 
 	# Restore modified and custom cron job
-	for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.2/var/cron/; done
+	for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.1/var/cron/; done
 
 	# Create/overwrite a symlink 
-	ln -snf /opt/znuny-7.2.2 /opt/znuny
+	ln -snf /opt/znuny-7.3.1 /opt/znuny
 
 	# Check for missing modules and add **required** modules
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -120,7 +120,7 @@ Execute the migration script
 
 .. code-block::shell
 
-    su -c 'scripts/MigrateToZnuny7_2.pl --verbose' - znuny
+    su -c 'scripts/MigrateToZnuny7_3.pl --verbose' - znuny
 
 ..
 
@@ -135,10 +135,10 @@ Reinstall or Upgrade Add-ons (Packages)
 
     # Make sure all add-ons are correct installed after a patch level update
     su -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll' - znuny
-    su -c 'scripts/MigrateToZnuny7_2.pl --verbose' - znuny
+    su -c 'scripts/MigrateToZnuny7_3.pl --verbose' - znuny
     # Upgrade all packages
     su -c 'bin/znuny.Console.pl Admin::Package::UpgradeAll' - znuny
-    su -c 'scripts/MigrateToZnuny7_2.pl --verbose' - znuny
+    su -c 'scripts/MigrateToZnuny7_3.pl --verbose' - znuny
     
 
 ..

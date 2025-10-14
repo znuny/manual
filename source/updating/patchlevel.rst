@@ -2,9 +2,9 @@
 Patch Level Update
 ==================
 
-This documentation explains how to perform a patch level update for Znuny 7.2.
+This documentation explains how to perform a patch level update for Znuny 7.3.
 
-.. note::   Your current system needs to be a Znuny 7.2.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 7.2.1 directly to 7.2.6
+.. note::   Your current system needs to be a Znuny 7.3.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 7.3.1 directly to 7.3.6
 
 
 Prepare
@@ -57,10 +57,10 @@ Update
 
         .. code-block::
 
-            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.2.2-01.noarch.rpm
-            su - znuny -c 'scripts/MigrateToZnuny7_2.pl --verbose'
+            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.1-01.noarch.rpm
+            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll'
-            su - znuny -c 'scripts/MigrateToZnuny7_2.pl --verbose'
+            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
             # optional upgrade of the installed addons found in configured repositories
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::UpgradeAll'
 
@@ -74,25 +74,25 @@ Update
         .. code-block:: bash
 
             cd /opt
-            curl https://download.znuny.org/releases/znuny-latest-7.2.tar.gz | tar -xz
+            curl https://download.znuny.org/releases/znuny-latest-7.3.tar.gz | tar -xz
 
             # Restore Kernel/Config.pm, articles, etc.
-            cp -av /opt/znuny/Kernel/Config.pm /opt/znuny-6.5.17/Kernel/
-            mv /opt/znuny/var/article/* /opt/znuny-6.5.17/var/article/
+            cp -av /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.1/Kernel/
+            mv /opt/znuny/var/article/* /opt/znuny-7.3.1/var/article/
 
             # Restore dotfiles from the homedir to the new directory
-            for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.12/; done
+            for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.1/; done
 
             # Restore modified and custom cron job
-            for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.2/var/cron/; done
+            for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.1/var/cron/; done
 
             # Set the permissions
-            znuny-7.2.2/bin/znuny.SetPermissions.pl
-            ln -snf /opt/znuny-7.2.2 /opt/znuny
+            znuny-7.3.1/bin/znuny.SetPermissions.pl
+            ln -snf /opt/znuny-7.3.1 /opt/znuny
 
-            su - znuny -c 'scripts/MigrateToZnuny7_2.pl --verbose'
+            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll'
-            su - znuny -c 'scripts/MigrateToZnuny7_2.pl --verbose'
+            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
             # optional upgrade of the installed addons found in configured repositories
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::UpgradeAll'
 
