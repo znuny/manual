@@ -418,11 +418,12 @@ Here is an example data for a valid request:
 
 .. code-block:: JSON
 
-	{
-	  "OutOfOfficeEntriesCSVString": "UserEmail,OutOfOffice,StartDate,EndDate\r\nroot@localhost,1,,\r\njd@test.znuny.com,1,2021-08-01,2021-07-31\n",
-	  "UserLogin": "user",
-	  "Password": "password"
-	}
+    {
+      "OutOfOfficeEntriesCSVString": "UserEmail,OutOfOffice,StartDate,EndDate\r\nroot@localhost,1,2021-06-01,2021-06-15\r\njd@test.znuny.com,1,2021-07-31,2021-08-01\r\n",
+      "UserLogin": "user",
+      "Password": "password"
+    }
+
 
 ...
 
