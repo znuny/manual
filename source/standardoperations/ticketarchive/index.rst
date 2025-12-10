@@ -47,3 +47,4 @@ A ticket will automatically be restored by a change in state. This can happen wh
 - A generic agent triggers a state change
 - A follow-up email is received on a pending or closed ticket
 - An agent or customer reopens using the customer interface
+

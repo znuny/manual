@@ -64,5 +64,6 @@ linkcheck_ignore = [
     r'https://download.znuny.org/releases/znuny-\d.\d.\d+.tar.gz',
     r'https://github.com/znuny/Znuny/commits/rel-.+',
     r'https://github.com/znuny/Znuny/blob/.+#L\d+',
+    r'https://.+\.wikipedia\.org/.+',
     r'.+/cgi-bin/.+'
 ]
