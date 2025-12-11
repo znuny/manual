@@ -11,7 +11,7 @@ Configuring a type of dropdown will allow the user to select one option from a p
 
 .. note:: 
 
-    To create a tree stucture the keys should look like this:
+    To create a tree stucture the keys must look like this:
 
     .. code-block::
 
