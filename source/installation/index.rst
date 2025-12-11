@@ -169,7 +169,7 @@ Create a new configuration file for MariaDB:
 
 .. important::
 
-  The web installer requires a password. Check your Linux distributions manual how to set a passwort for the database admin user.
+  The web installer requires a password. Check your Linux distributions manual how to set a password for the database admin user.
 
 Restart the MariaDB database to apply the changes
 
