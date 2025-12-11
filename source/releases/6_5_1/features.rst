@@ -24,7 +24,7 @@ See feature description in :ref:`Copy an Article to Another Ticket <PageNavigati
 
 * Added new event module to store customer company data in ticket dynamic fields: Ticket::EventModulePost DynamicFieldFromCustomerCompany.
 
-See more about :ref:`Event Moldues <PageNavigation annexes_event_reference_index_event_modules>`
+See more about :ref:`Event Modules <PageNavigation annexes_event_reference_index_event_modules>`
 
 * Show PackageRequired- and ModuleRequired-information while package installation & update.
 
