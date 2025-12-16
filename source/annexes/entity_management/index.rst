@@ -73,12 +73,3 @@ Entity actions
     :alt: Entity Actions
 
 You can perform various actions on entities, such as exporting, copying, or deleting them. These actions help you manage your entities effectively and keep your system organized.
-
-
-.. note:: 
-    
-    It's also possible to export and import via ``bin/znuny.Console.pl``. For more information, refer to the :ref:`pagenavigation console_admin` documentation.
-
-
-   
-   

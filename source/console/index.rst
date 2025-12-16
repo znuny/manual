@@ -3,217 +3,37 @@
 Command Line Interface
 ######################
 
-There are many things solely configurable via the command line. Most tasks require understanding how to remotely log on to the server and move about on the console.
-
-Advanced Statistics
-*******************
-.. _AdvancedFeatures excel-stat-formatting:
-
-**Functionality**
-
-This feature provides extended (advanced) features for exporting data in Excel format. 
-
-In addition, it is possible to define format templates to use for pre-formatting most of the Excel statistics.
-
-Formatting Excel Statistics
-===========================
-
-A multi-level loading system formats the Excel output. Formatting information merges or overwrites formatting as declared in the source files. Merging overwrites duplicate source information. 
-
-The loading sequence is as follows:
-
-* Function 'ExcelFormatDefinition' of the statistics backend
-* ``DEFAULT.yml`` file in the definition directory
-* Statistics number as name with file extension ``.yml`` in the definition directory
-* Formatting in the statistical data itself
-
-The definition directory is located in ``var/stats/formatdefinition/excel/``.
-
-Excel Format Sources
-=====================
-
-.. note::
-
-   Function ExcelFormatDefinition()
-      An additional Perl function extends statistics backends. The function is called ``ExcelFormatDefinition`` and takes no parameters. Depending on the statistic, ``ExcelFormatDefinition`` must return a hash (one-sided) or an array (multi-sided).
-
-DEFAULT.yml
-   If the file 'var/statsformatdefinition/excel/DEFAULT.yml' is available, it loads during statistic generation and builds the basis of Excel format.
-
-STAT_NUMBER.yml
-   Creating optional YAML definition files, per statistic, gives you finer grain control. The file exists in the definition directory named with the stat number. If the stat number is '12345', the correct file path would be 'var/statsformatdefinition/excel/12345.yml'.
-
-.. note::
-
-   Static Configuration
-      A purely technical possibility. It comes into play when calling the function 'Array2Excel' of the Excel backend. Alternatively, pass a hash structure into the key 'Value. Formatting information is stored in individual keys. A section of the structure could then look as follows:
-   
-.. code-block::
-
-    {
-        Value => 'Service',
-        Width => 12,
-        Heigth => 10,
-        Format => {
-            right => 1,
-            bottom => 1,
-            bg_color => 'silver
-            valign => 'vcenter',
-            align => 'center',
-        }
-    },
-
-.. note::
-
-   Custom formatting
-      Using the function ``ExcelFormatDefinition`` to include own formatting. Using the parameter ``MergeFormatDefinitions`` in your statistic. ``MergeFormatDefinitions`` includes changes from the statistics in the default formatting.
-
-.. code-block::
-
-   sub ExcelFormatDefinition {
-       my ( $Self, %Param ) = @_;
-
-       return {
-           MergeFormatDefinitions' => 1,
-           'J' => {
-               "Width" => "15",
-               'Format' => {
-                   "right" => 1,
-                   "bottom" => 1,
-                   "bg_color" => "silver",
-                   "valign" => "vcenter",
-                   align => 'center',
-               },
-           },
-           'D' => {
-               Width => '12'.
-           },
-           'H' => {
-               "Width" => "40
-           },
-           'K' => {
-               Width => '16'.
-           },
-       };
-   };
-
-**An example:**
-
-To test this functionality, rename the distribution example file.
-
-.. code-block:: shell
-
-    su - <APP_USER>
-    cd var/stats/formatdefinition/excel 
-    cp 10001.example.yml.dist 10001.yml
-
-Then you can run the stat 10001 (default on a new system). The resulting image is seen below.
-
-.. image:: images/stat_format_example.png
-    :alt: Statistic example
-    :width: 960 px
-
-**Basics:**
-
-The basic formatting options are shown in the example file. There are special named worksheet options, and you can address any column, row or individual cell.
-
-.. code-block:: yaml
-
-    ---
-    Name: Worksheet 12345
-    FreezePanes:
-      - Column: 0
-        Row: 1
-    1:
-      Format:
-        align: center
-        bg_color: silver
-        bold: 1
-        border: 1
-        valign: vcenter
-    D:
-      Format:
-        align: center
-        bold: 1
-        color: red
-        valign: vcenter
-    H:
-      Format:
-        align: center
-        bold: 1
-        bg_color: ccffff
-        color: ED053B
-        valign: vcenter
-    B3:
-      Format:
-        bold: 1
-    LASTROW:
-      Format:
-        bold: 1
-        bottom: 1
-    LASTCOLUMN:
-      Format:
-        border: 1
-
-Each YML element should be a column, row, or cell. The formatting options are methods of the module the complete list is shown below. 
-The values for each method are found in the documentation as well. Let's take `set_font_shadow <https://metacpan.org/pod/Excel::Writer::XLSX#set_underline()>`_ for example. To set this for the entire tenth column, the following would be added to the YML file.
-
-.. code-block:: YAML
-
-    10:
-      Format:
-        underline: 2
-
-**Keys for columns, rows and cells:**
-
-A, B, C, ..., AA, ..., GD, ...
-    Column labels are always letters.
-
-1, 2, 3, ..., 10, ...
-    Rows are always numbers.
-
-A1, B3, ..., CC33, ...
-    Cells are always in column row format.
-
-**Optional Named Keys:**
-
-Name
-    The name of the worksheet.
-FreezePanes
-    An option to allow you to set the panes to lock at a specific row and column.
-LASTROW
-    This option should only be used if a sum row is selected in the statistic.
-LASTCOLUMN
-    This option should only be used if a sum column is selected in the statistic.
-
-
-Further details
-================
-
-Read more about this feature and format requirements:
-
-* `YAML format <https://de.wikipedia.org/wiki/YAML>`_
-* `Format options <https://metacpan.org/pod/Excel::Writer::XLSX#CELL-FORMATTING>`_
+There are often technical tasks to be done on a Znuny system that do have a component in the graphical user interface. For these tasks, the administrator will need to have remote shell access to Znuny. Once logged in, the administrator can use the shell to perform various tasks. Znuny provides a command line interface (CLI) to perform many of these tasks. The CLI is implemented as a Perl script called ``otrs.Console.pl``, located in the ``bin`` directory of your Znuny installation. Other tasks or features may have configurations files located in the application directory of your Znuny installation.
 
 Console Commands
-################
+****************
 
-Here you find the list of new console commands, added over the releases.
+Console commands offer the possibility to execute various tasks from the command line. These can be maintenance tasks, administrative tasks, or development tasks. Here you find an overview of all available console commands.
 
-Console commands help automate processes using scripts to manage Znuny, without using a GUI. 
-
-Commands are parameter of the console: 
+Commands are parameter of the console script:
 
 ``bin/znuny.Console.pl <COMMAND>``
 
-Most of the commands take multiple parameters. 
+A full list of available commands can be obtained by executing the console script with the following command:
 
-.. note::   We keep adding commands to the documentation with every release. This list can be incomplete. To get an overview of available commands, call ``bin/znuny.Console.pl`` without any parameter as the application user (znuny or otrs).
+``bin/znuny.Console.pl List``
+
+You can search for a specific command by using the ``Search`` command. For example, to search for all commands related to users, you would execute:
+
+``bin/znuny.Console.pl Search User``
+
+Most of the commands take multiple parameters and or arguments. For detailed information on a specific command, please refer to the respective documentation page. All commands have a help option that can be accessed by executing the command with the ``--help`` parameter. For example, to get help on the ``Admin::User::Add`` command, you would execute:
+
+``bin/znuny.Console.pl Admin::User::Add --help``
+
+.. note::   We keep adding commands to the documentation with every release. This list can be incomplete. To get an overview of available commands, call ``bin/otrs.Console.pl List`` without any parameter or arguments as the application user (znuny or otrs).
+
+
+Advanced Features
+*****************
+Some tasks or advanced features are not directly related to a specific administration module, and have configurations which need shell access. These features are documented in this section.
 
 .. toctree::
    :maxdepth: 2
 
-   admin
-   development
-   maintenance
-
+   advanced_stats
