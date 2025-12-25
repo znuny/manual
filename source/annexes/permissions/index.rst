@@ -1,6 +1,7 @@
+.. _PageNavigation annexes_permissions:
+
 System Permissions
 ##################
-.. _PageNavigation annexes_permissions:
 
 Permissions are used to access queues and modules. There are seven basic permissions in the system.
 

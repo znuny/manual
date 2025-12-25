@@ -66,5 +66,6 @@ linkcheck_ignore = [
     r'https://github.com/znuny/Znuny/tree/rel-.+',
     r'https://raw.githubusercontent.com/znuny/Znuny/rel-\d_\d_\d{1,2}/CHANGES.md',
     r'https://github.com/znuny/Znuny/blob/.+#L\d+',
+    r'https://.+\.wikipedia\.org/.+',
     r'.+/cgi-bin/.+'
 ]

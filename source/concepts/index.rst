@@ -10,10 +10,11 @@ There are many basic concepts that you need to understand in order to work with 
     articles/index
     customers/index
     escalation/index
+    groups/index
+    highavailability/index
     locking/index
     owner/index
     priorities/index
+    queues/index
     states/index
     types/index
-    queues/index
-    highavailability/index
