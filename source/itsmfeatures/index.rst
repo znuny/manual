@@ -41,7 +41,8 @@ Depending on if you want the individual feature set or the bundle, your settings
 Search for and configure the setting ``Package:RepositoryList`` as seen below and deploy the setting. 
 
 .. seealso::
-    :ref:`Installing Features <PageNavigation admin_packagemanagement_index>` 
+
+    :ref:`pagenavigation admin_package_index`
 
 Then navigate to the package manager and update the online repository to install from the online repository. Make sure to install the prerequisites in the order 
 
