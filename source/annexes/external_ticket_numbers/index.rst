@@ -45,25 +45,29 @@ See :ref:`pagenavigation admin_dynamicfields_index`
 
 The values are important:
 
-DynamicFieldName
+DynamicFieldName (mandatory)
     The name, not the label, of the dynamic field to store the ticket number.
-FromAddressRegExp
-    A regular expression to check the sender email adress. A match is needed to have this filter running.
-IsVisibleForCustomer
+FromAddressRegExp (optional)
+    A regular expression to check the sender email address. A match is needed to have this filter running.
+ToAddressRegExp (optional)
+    A regular expression to check the recipient email address. A match is needed to have this filter running.
+CcAddressRegExp (optional)
+    A regular expression to check the copied email address. A match is needed to have this filter running.
+IsVisibleForCustomer (mandatory)
     Indicates with a 1 that the incoming communication should be visible in the customer user front end. A 0 will make the incoming communication not visible to the customer user.
-Module
+Module (mandatory)
     Please do not change this setting. This is the module that's used.
-Name
+Name (mandatory)
     The name of the filter which will appear in the communication log.
-NumberRegExp
+NumberRegExp (mandatory)
     The regular expression used to determine the ticket number from the body and/or subject.
-SearchInBody
+SearchInBody (optional, if SearchInSubject is used)
     Set this to 1 if the number should be searched in the body of the email.
-SearchInSubject
+SearchInSubject (optional, if SearchInBody is used)
     Set this to 1 if the number should be searched in the subject of the email.
-SenderType
+SenderType (mandatory)
     The sender type for email that are recognized by this filter.
-TicketStateTypes
+TicketStateTypes (optional)
     The state types allowed when searching for a ticket to match the ticket number. This setting is optional.
 
 How it works
