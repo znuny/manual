@@ -191,3 +191,14 @@ A list of users which are mentioned in this ticket are visible. Users on the men
 
 .. image:: images/agent_ticket_mention_widget.png
     :alt: Mention Data Widget Image
+
+.. versionadded:: 7.3.1
+
+    It's now possible to copy the ticket number, and the ticket title to the clipboard by clicking on the ticket number in the header.
+
+.. figure:: images/ticket_number_copy.PNG
+    :alt: Copy Ticket Number Image
+
+    Copy Ticket Number and Title to Clipboard
+
+   
