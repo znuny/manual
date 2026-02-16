@@ -19,3 +19,4 @@ You can filter for ticket number or ticket title. Initially, only open tickets f
 
 A link to the ticket with a ghost article Remains for audit purposes.
 
+A system administrator may limit the list of tickets available as targets for merging by state type (see :ref:`pagenavigation concepts_states_index`  using the system configuration option ``Ticket::Frontend::AgentTicketMerge###SearchFilter``.
