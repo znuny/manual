@@ -37,7 +37,14 @@ The first thing you will see, when you access the menu (and that which is focuse
 
     Search options
 
-When searching for a setting name, there is an assumed prefix and suffix of '*' and the search is case-insensitive. Wildcards in the search term like *N\*te* do not work. Searching for *Note* for example, will return any setting beginning with *Note*, having *Note* in the setting name, or ending with *Note*. Only the settings found with the search term in the name will be displayed as a result. Selecting a setting, will direct you to the single setting view, and just hitting enter will perform a search returning all settings matching any of the above listed values.
+When searching for a setting name, there is an assumed prefix and suffix of '*' and the search is case-insensitive. Wildcards in the search like *No\*Body* are also possible. 
+
+.. figure:: images/system_config_wildcard_search.PNG
+    :alt: Wildcard Search
+
+    Wildcard Search
+
+Searching for *Note* for example, will return any setting beginning with *Note*, having *Note* in the setting name, or ending with *Note*. Only the settings found with the search term in the name will be displayed as a result. Selecting a setting, will direct you to the single setting view, and just hitting enter will perform a search returning all settings matching any of the above listed values.
 
 .. _PageNavigation admin_systemconfiguration_edit:
 
