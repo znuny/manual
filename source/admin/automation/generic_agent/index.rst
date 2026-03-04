@@ -5,7 +5,31 @@ Scheduled Tasks (Generic Agent)
 
 It's very helpful to automatically perform tasks at any given time or when other actions occur within the system. The generic agent provides you with such flexibility.
 
-Programming a generic agent to run a scheduled task is available via the web interface.
+Accessing Generic Agent Management
+**********************************
+
+.. figure:: images/generic_agent_admin.PNG
+
+   Admin Module Generic Agent
+
+1. **Log in** to Znuny.
+2. Click on **"Admin"** in the top navigation menu.
+3. Navigate to **Generic Agent**.
+
+Filter Overview
+***************
+The Generic Agent management interface consists of:
+
+- **Left Panel**: Contains options to add new agents and a search bar to filter existing ones. Additionally you can export and import individual generic agents, or entire sets.
+- **Main Table**: Displays a list of existing agents with details such as Name, Execution Type, and Schedule.
+- **Action Icons**: Options to copy, export, edit or delete generic agents.
+
+.. figure:: images/generic_agent_overview.PNG
+
+   Generic Agent Overview
+
+Adding a New Generic Agent
+**************************
 
 You must enter a name and an execution type.
 

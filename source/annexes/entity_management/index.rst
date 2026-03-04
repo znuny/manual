@@ -5,18 +5,18 @@ Managing Entities
 
 An entity is any reusable item within the system. It has, in most cases, a canonical name, a valid setting, and a comment. Typical entities are (but not limited to):
 
-- Auto responses
-- Notifications
-- States
-- Priorities
-- Types
-- Roles
-- Groups
 - Attachments
-- Templates
+- Auto responses
+- Groups
+- Notifications
+- Priorities
 - Processes
+- Roles
 - Salutations
 - Signatures
+- States
+- Templates
+- Types
 
 There are two types of screens when dealing with entities.
 
@@ -52,11 +52,13 @@ Exporting and importing entities
 The following entities can be exported and imported:
 
 - Auto responses
+- Generic Agents
 - Notifications
-- Templates
+- PostMaster Filters
 - Processes
 - Salutations
 - Signatures
+- Templates
 
 Bulk export and import
 =======================

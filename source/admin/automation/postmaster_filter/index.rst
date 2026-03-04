@@ -8,8 +8,6 @@ Overview
 The administration module, **PostMaster Filters** allows administrators to **automate email processing** by defining rules for incoming messages. 
 This helps in **organizing tickets**, **filtering unnecessary emails**, and **setting other various details** on tickets as required.
 
-This guide explains how to **add, search, and manage PostMaster filters** effectively.
-
 Accessing PostMaster Filter Management
 ***************************************
 
@@ -21,14 +19,20 @@ Accessing PostMaster Filter Management
 2. Click on **"Admin"** in the top navigation menu.
 3. Navigate to **PostMaster Filters**.
 
-Adding a New PostMaster Filter
-*******************************
+Filter Overview
+****************
+The PostMaster Filter management interface consists of:
 
-To create a new filter that processes incoming emails based on specific criteria:
+- **Left Panel**: Contains options to add new filters and a search bar to filter existing ones. Additionally you can export and import individual postmaster filters, or entire sets.
+- **Main Table**: Displays a list of existing filters with details such as Name, Search Header Field, Value, Set Email Header, and Value.
+- **Action Icons**: Options to copy, export, edit or delete filters.
 
 .. figure:: images/postmaster_filter_overview.PNG
 
    PostMaster Filter Overview
+
+Adding a New PostMaster Filter
+*******************************
 
 1. Click the **"Add PostMaster Filter"** button in the left panel.
 2. Configure the filter settings:
@@ -71,6 +75,7 @@ To create a new filter that processes incoming emails based on specific criteria
     Value can be the value of a named or single matching group, or any text value.
 
 3. Click **"Save"** to apply the filter.
+
 
 Additional Value Handling
 =========================
@@ -139,3 +144,4 @@ Additional Information
 **********************
 
 For a list of all available headers see :ref:`pagenavigation annexes_headers_index`.
+
