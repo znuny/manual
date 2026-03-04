@@ -13,6 +13,7 @@ Maintaining your instance consists of a variety of tasks. More information about
 .. toctree::
     :maxdepth: 2
 
+    advancedstats/index
     articlestorage/index
     logging/index
     systemcloning/index
