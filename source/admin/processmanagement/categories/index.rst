@@ -1,3 +1,5 @@
+.. _Pagenavigation admin_processmanagement_categories:
+
 Process Ticket Categories
 #########################
 

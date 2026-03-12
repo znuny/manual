@@ -76,10 +76,3 @@ Statistics:
    :maxdepth: 3
 
    statistics/index
-
-Process Categories:
-
-.. toctree:: 
-   :maxdepth: 3
-
-   process_categories/index

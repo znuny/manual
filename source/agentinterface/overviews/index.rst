@@ -55,6 +55,7 @@ All Overviews
    agentticketqueue/index
    agentticketservice/index
    agentticketlockedview/index
+   agentticketprocesscategory/index
    agentticketresponsibleview/index
    agentticketwatchview/index
    agentticketstatusview/index
