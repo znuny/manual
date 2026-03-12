@@ -40,7 +40,18 @@ Output Format
 
 Get your results as a PDF, CSV, or XSLX document, or show them on the screen using the *normal* option.
 
-.. _SectionNavigation agentinterface_ticketviews_agentticketsearch_advanced_search:
+
+.. important:: 
+    
+    Fields that should be output to the CSV, or XSLX document, must be configured under 
+    
+    * ``Ticket::Frontend::CustomerTicketSearch###SearchCSVData``
+    * ``Ticket::Frontend::AgentTicketSearch###SearchCSVData``
+    * ``Ticket::Frontend::CustomerTicketSearch###SearchCSVDynamicField``
+    * ``Ticket::Frontend::AgentTicketSearch###SearchCSVDynamicField``
+
+
+.. _agentinterface_ticketviews_agentticketsearch_advanced_search:
 
 Advanced Search
 ***************

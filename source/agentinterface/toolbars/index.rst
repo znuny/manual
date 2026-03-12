@@ -90,7 +90,7 @@ Full Text Ticket Search
 
 .. seealso:: 
 
-  :ref:`sectionnavigation agentinterface_ticketviews_agentticketsearch_advanced_search` 
+  :ref:`agentinterface_ticketviews_agentticketsearch_advanced_search` 
 
 Customer Search
   If ``Frontend::ToolBarModule###230-CICSearchCustomerID`` is enabled, you may search for a customer, and access the customer information center directly.
