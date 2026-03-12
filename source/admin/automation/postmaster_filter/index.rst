@@ -88,6 +88,10 @@ Additional Value Handling
     You can also use named captures (?<name>) and use the names as the **Value** of any field.
     like this: ``[**\name**]``
 
+.. versionadded:: 7.3.1
+
+    It's now possible to save values to a multi-selection field. To do this, use the following format for the value: ``value1,value2,value3`` or ``value1;value2;value3``. This will set the field to all three values.
+
 .. note::
 
     Using EMAILADDRESS avoids having to parse around the Real Name (e.d. "Max Musterman" <mmuster@example.com>) and directly address the 
