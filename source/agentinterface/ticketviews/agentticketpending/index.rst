@@ -1,6 +1,7 @@
+.. _PageNavigation ticketviews_agentticketreminder:
+
 Set a Reminder
 ##############
-.. _PageNavigation ticketviews_agentticketreminder:
 
 Access this screen by selecting *Pending* the :ref:`ticket menu <PageNavigation ticketviews_agentticketzoom_ticketmenu>`.
 

@@ -1,6 +1,7 @@
+.. _PageNavigation ticketviews_agentticketpriority:
+
 Set the Priority
 ################
-.. _PageNavigation ticketviews_agentticketpriority:
 
 Select *Priority* in the :ref:`ticket menu <PageNavigation ticketviews_agentticketzoom_ticketmenu>`.
 

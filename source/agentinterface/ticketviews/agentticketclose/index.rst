@@ -1,6 +1,7 @@
+.. _PageNavigation ticketviews_agentticketactionclose:
+
 Close a Ticket
 ##############
-.. _PageNavigation ticketviews_agentticketactionclose:
 
 You may use this screen to close a ticket.
 

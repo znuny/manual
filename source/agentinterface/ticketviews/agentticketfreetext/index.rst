@@ -1,6 +1,7 @@
+.. _PageNavigation ticketviews_agentticketfreetext:
+
 Change Metadata (FreeText)
 ##########################
-.. _PageNavigation ticketviews_agentticketfreetext:
 
 One of the most powerful things that the software provides is the ability to record metadata in each ticket. The primary metadata is the ticket data. Secondarily the dynamic fields contain user-defined metadata. The software provides an individual mask for rewriting the metadata of a ticket.
 

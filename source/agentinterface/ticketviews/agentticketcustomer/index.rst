@@ -1,6 +1,7 @@
+.. _PageNavigation ticketviews_agentticketcustomer:
+
 Assign a Customer User
 ######################
-.. _PageNavigation ticketviews_agentticketcustomer:
 
 Use this screen to assign a customer user to a ticket. Select *Customer* under *People* in the :ref:`ticket menu <PageNavigation ticketviews_agentticketzoom_ticketmenu>`.
 

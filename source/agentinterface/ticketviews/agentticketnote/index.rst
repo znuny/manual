@@ -1,6 +1,7 @@
+.. _PageNavigation ticketviews_agentticketnote:
+
 Create a Note
 #############
-.. _PageNavigation ticketviews_agentticketnote:
 
 Creating a note is communicating exclusively over the software without sending a mail. To view the notes (Znuny or Phone Channel), you must have an agent or customer user login and read access to the ticket.
 

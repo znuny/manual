@@ -1,6 +1,7 @@
+.. _PageNavigation ticketviews_agentticketowner:
+
 Assign the Ticket
 #################
-.. _PageNavigation ticketviews_agentticketowner:
 
 Assign a new owner to the ticket. Choose from anyone with *owner* or *rw* permissions in the queue.
 

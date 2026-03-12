@@ -17,6 +17,7 @@ Maintaining your instance consists of a variety of tasks. More information about
     articlestorage/index
     daemoncrontask/index
     logging/index
+    screen_configuration/index
     systemcloning/index
     systemmaintenance/index
     ticketarchive/index
