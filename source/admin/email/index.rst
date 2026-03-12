@@ -9,6 +9,7 @@ There are also modules for email notifications, sending mails to agents, and a l
    :maxdepth: 2
 
    system_email
-   postmaster_mail_account
    smtp_settings
+   postmaster_mail_account
+   outbound_email_profiles
 

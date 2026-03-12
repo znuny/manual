@@ -25,6 +25,25 @@ Configure the following settings:
 * ``SendmailModule::Host``: The hostname of your SMTP server.
 * ``SendmailModule::Port``: The port number for your SMTP server (usually 25, 465, or 587).
 
+Available SMTP Modules
+**********************
+
+It is possible to use different SMTP modules for sending emails. The following modules are available:
+
+* ``Kernel::System::Email::DonNotSendEmail``: A module that simulates email sending without actually sending emails, useful for testing.
+* ``Kernel::System::Email::MSGraph``: An SMTP module that uses the Microsoft Graph API for sending emails.
+* ``Kernel::System::Email::MultiSendmail``: A module to provide multiple sendmail configurations for different sender addresses.
+* ``Kernel::System::Email::Sendmail``: A module that uses the sendmail command for sending emails.
+* ``Kernel::System::Email::SMTP``: The standard SMTP module for sending emails.
+* ``Kernel::System::Email::SMTPS``: An SMTP module that supports SSL/TLS encryption.
+* ``Kernel::System::Email::SMTPTLS``: An SMTP module that supports STARTTLS encryption.
+* ``Kernel::System::Email::Test``: A module for testing email sending without actually sending emails. Mails are saved to the var/tmp/Cache/EmailTest directory.
+
+Test SMTP Configuration
+***********************
+
+``bin/znuny.Console.pl  Dev::Tools::TestEmails`` Reads the mails send to the Kernel::System::Email::Test module and outputs them to the console. This is useful for testing the SMTP configuration without sending actual emails. Once read by the console command, the mails are removed from the var/tmp/Cache/EmailTest directory. You can redirect the output to a file for further analysis, e.g., ``bin/znuny.Console.pl  Dev::Tools::TestEmails > test_emails_output.txt``.
+
 MS-Graph API
 ************
 
@@ -98,3 +117,8 @@ To limits the number of emails that can be sent at once, which is occasionally n
 .. seealso:: 
 
     For receiving mail, please use the :ref:`pagenavigation email_postmaster_mail_account` configuration module.
+
+Multiple SMTP Configurations
+****************************
+
+See :ref:`pagenavigation outbound_email_profiles` for information on how to set up multiple SMTP configurations for different sender addresses or purposes.
