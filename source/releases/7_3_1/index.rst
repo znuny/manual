@@ -4,7 +4,7 @@ Znuny 7.3.1
 **Release Information:**
 
 +---------------------+--------------------------------------------------------------+
-| Release Date        | 12-NOV-2025                                                  |
+| Release Date        | 25-MAR-2026                                                  |
 +---------------------+--------------------------------------------------------------+
 | Release Type        | Minor version release                                        |
 +---------------------+--------------------------------------------------------------+
@@ -31,7 +31,7 @@ Features
 - Integrated package **Znuny-MultiSendmail**.
 - Added **Znuny XSLT helper** and updated mappings to use it.
 - Added **Sender column** support for dashboard ticket widgets.
-- Added **preview and download** function to AttachmentList.
+- Added **download** function to AttachmentList.
 - Added **AgentSession module** to store ``UserClosedMessages`` in the current UserSession (AuthSession).
 - Added wildcard ``*`` support to system configuration setting search.
 - Added new **ToolBarModule** ``161-Ticket::AgentTicketProcessCategory``.
