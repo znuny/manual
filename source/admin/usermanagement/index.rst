@@ -38,6 +38,7 @@ For user authentication the system can use the following sources:
 * Directory Service
 * HTTP Basic Authentication (the basis for Singe-Sign-On)
 * Radius server
+* SAML Authentication via Identity Provider (IDP)
   
 Data Source
 ===========
@@ -46,7 +47,8 @@ For maintainability it's easier to use the Active Directory or other directory s
 
 * Database
 * Directory Service
-
+* IDP Synchronization
+  
 .. note::
 
     Synchronization of agent user data is possible but the data source is always a database table.
@@ -81,9 +83,10 @@ In the rest of this chapter we will discuss how to use groups and rolls to manag
 .. toctree::
    :maxdepth: 2
    
+   customer_users/index
    groups/index
    roles/index
-   users/index
-   customer_users/index
    user_backends/index
    user_synchronization/index
+   saml_configuration/index
+   users/index

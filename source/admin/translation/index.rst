@@ -1,3 +1,5 @@
+.. _PageAdminTranslationIndex:
+
 Translating Terminology
 #######################
 
