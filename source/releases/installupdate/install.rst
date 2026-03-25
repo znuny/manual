@@ -61,7 +61,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
     .. code-block:: bash
 
-      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.18-01.noarch.rpm
+      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.19-01.noarch.rpm
 
   .. tab-item:: Installation from source archive
 
@@ -74,10 +74,10 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
       wget https://download.znuny.org/releases/znuny-latest-6.5.tar.gz
 
       # Extract
-      tar xfz znuny-latest-6.5.18.tar.gz
+      tar xfz znuny-latest-6.5.19.tar.gz
 
       # Create a symlink
-      ln -s /opt/znuny-6.5.18 /opt/otrs
+      ln -s /opt/znuny-6.5.19 /opt/otrs
 
       # Add user for RHEL
       useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs

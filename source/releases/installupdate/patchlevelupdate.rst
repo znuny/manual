@@ -4,7 +4,7 @@ Patch Level Update
 
 This documentation explains how to perform a patch level update for Znuny LTS 6.5.
 
-.. note::   Your current system needs to be a Znuny LTS 6.5.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 6.5.4 directly to 6.5.18
+.. note::   Your current system needs to be a Znuny LTS 6.5.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 6.5.4 directly to 6.5.19
 
 
 Prepare
@@ -57,7 +57,7 @@ Update
 
         .. code-block::
 
-            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.18-01.noarch.rpm
+            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.19-01.noarch.rpm
             su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
             su - otrs -c 'bin/otrs.Console.pl Admin::Package::ReinstallAll'
             su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
@@ -77,18 +77,18 @@ Update
             curl https://download.znuny.org/releases/znuny-latest-6.5.tar.gz | tar -xz
 
             # Restore Kernel/Config.pm, articles, etc.
-            cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.18/Kernel/
-            mv /opt/otrs/var/article/* /opt/znuny-6.5.18/var/article/
+            cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.19/Kernel/
+            mv /opt/otrs/var/article/* /opt/znuny-6.5.19/var/article/
 
             # Restore dotfiles from the homedir to the new directory
-            for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.18/; done
+            for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.19/; done
 
             # Restore modified and custom cron job
-            for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.18/var/cron/; done
+            for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.19/var/cron/; done
 
             # Set the permissions
-            znuny-6.5.18/bin/otrs.SetPermissions.pl
-            ln -snf /opt/znuny-6.5.18 /opt/otrs
+            znuny-6.5.19/bin/otrs.SetPermissions.pl
+            ln -snf /opt/znuny-6.5.19 /opt/otrs
 
             su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
             su - otrs -c 'bin/otrs.Console.pl Admin::Package::ReinstallAll'
