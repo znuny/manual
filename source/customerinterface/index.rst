@@ -1,7 +1,7 @@
 Customer Interface
 ##################
 
-The customer user interface is a separate interface meant to provive access to resources such as, but not limited to, tickets. From the very start, customer users can self-register with your system and begin creating requests. In addition to self-registration, your customers can also request automatic password resets from the login page, if they've forgotten their password. In this section we want to dive into the customer interface and it's functions.
+The customer user interface is a separate interface meant to provide access to resources such as, but not limited to, tickets. From the very start, customer users can self-register with your system and begin creating requests. In addition to self-registration, your customers can also request automatic password resets from the login page, if they've forgotten their password. In this section we want to dive into the customer interface and it's functions.
 
 The main interface components are:
 
@@ -17,7 +17,7 @@ Content area
 Customer User Navigation
 ************************
 
-The full navigation menu, as seen below, may vary form your system depending on configuration and add-ons. Each add-on installed can bring new menu items with it. The functions are described in more detail in the following sections.
+The full navigation menu, as seen below, may vary from your system depending on configuration and add-ons. Each add-on installed can bring new menu items with it. The functions are described in more detail in the following sections.
 
 Create Process Ticket
 Create Ticket

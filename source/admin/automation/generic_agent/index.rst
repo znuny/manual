@@ -104,7 +104,7 @@ Execute Commands
 ****************
 .. _PageNavigation automation_generic_agent:
 
-Using Perl program modules it a way to integrate customizations. This is also the only possibility to execute commands outside of the software API within Znuny.
+Using Perl program modules is a way to integrate customizations. This is also the only possibility to execute commands outside of the software API within Znuny.
 
 .. image:: images/custom_module.png
   :alt: Generic Agent Custom Module Image

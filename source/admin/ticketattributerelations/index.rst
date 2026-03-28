@@ -1,7 +1,7 @@
 Ticket Attribute Relations
 ##########################
 
-.. note:: Implemented in Version 6.2. Thie feature is also available as add-on for Znuny LTS.
+.. note:: Implemented in Version 6.2. This feature is also available as an add-on for Znuny LTS.
 
 Ticket Attribute Relations is a feature for create and manage relations between all kind of ticket attributes. The dependencies are managed via CSV/XLSX files and can be used to create relations/dependencies between ticket attributes.
 

@@ -64,7 +64,7 @@ Navigate to the administration menu, and click on the badge:
 .. image:: images/admin_customer_user_group_edit.png
     :alt: Admin Badge Customer User Group
 
-You may also set the default customer user groups using the button under actions menu on the left. This redirects you to the system configuration. All customer userss will have these groups per default.
+You may also set the default customer user groups using the button under actions menu on the left. This redirects you to the system configuration. All customer users will have these groups by default.
 
 .. image:: images/system_config_customer_user_default_group.png
     :alt: System Configuration Default Customer User Group

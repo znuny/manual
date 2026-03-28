@@ -1,6 +1,6 @@
 Manage User Backends
 ####################
-.. _PageNavigation admin_usermanagment_user_backends:
+.. _PageNavigation admin_usermanagement_user_backends:
 
 There are different backend types available for configuration all of which are found in the default configuration file ``Kernel/Config/Defaults.pm``. You may have up to 11 of each. Each backend can be used for either authentication or data. These backends are listed, as well as their examples, below. The backends can be also added multiple times by suffixing the appropriate key with a number, the first backend has no suffix.
 
@@ -39,7 +39,7 @@ Agent Authentication LDAP Example
 
     `AuthBackend in Defaults.pm <https://github.com/znuny/Znuny/blob/dev/Kernel/Config/Defaults.pm#L406>`_
 
-.. _PageNavigation admin_usermangement_user_backends_usersyncbackend_config:
+.. _PageNavigation admin_usermanagement_user_backends_usersyncbackend_config:
 
 User Synchronization Backend
 *****************************

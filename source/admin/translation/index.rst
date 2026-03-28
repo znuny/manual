@@ -13,7 +13,7 @@ Under Admin -> Translation you can add new terms and their translations. The sys
 
 .. important:: 
     
-    Files found und directories like `Kernel/Language/` are still used for translation in addition to the changes maed here. The translation module is used to add or change custom translations and will be found under the directory above, after deployment.
+    Files found under directories like `Kernel/Language/` are still used for translation in addition to the changes made here. The translation module is used to add or change custom translations and will be found under the directory above, after deployment.
 
 **What is translated?**
 
@@ -82,4 +82,4 @@ Clicking on copy allows the administrator to copy the term to another language. 
 
     There are console commands for import and export.
 
-    ``bin/znuny.Conosole.pl Admin::Translation::Export`` and ``bin/znuny.Conosole.pl Admin::Translation::Import`` use *--help* to see the options.
+    ``bin/znuny.Console.pl Admin::Translation::Export`` and ``bin/znuny.Console.pl Admin::Translation::Import`` use *--help* to see the options.

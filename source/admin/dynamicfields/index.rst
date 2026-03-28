@@ -3,16 +3,16 @@
 Extend Ticket Data (Dynamic Fields)
 ###################################
 
-Dynamic fields extend the capability to collect additional data within your tickets. Dynamic fields can be connected to not just tickets, but any objects within the system. Each dynamic field has, in addtion to it's object, a specific type and a specific configuration.
+Dynamic fields extend the capability to collect additional data within your tickets. Dynamic fields can be connected to not just tickets, but any objects within the system. Each dynamic field has, in addition to its object, a specific type and a specific configuration.
 
 .. note::
 
    Installing add-ons may also introduce additional types or objects with them.
 
-Each field has it's own set of configuaration options. It starts with the basic options, for each field. 
+Each field has its own set of configuration options. It starts with the basic options, for each field. 
 
 .. figure:: images/dynamic_field_general_7.png
-   :alt: Dynamic Field General Settinsg
+   :alt: Dynamic Field General Settings
 
    Dynamic Field General Settings
 
@@ -31,13 +31,13 @@ Customer
 Customer User
    These can be attached to customer user objects. It requires a mapping within ``Kernel/Config.pm``
 
-Dyanmic Field General Options
+Dynamic Field General Options
 *****************************
 
 Depending on the field type, you will have the following options.
 
 +--------------------------+----------------------------------------------------------+--------------+
-| Option                   | Desorption                                               | Field Type   |
+| Option                   | Description                                              | Field Type   |
 +==========================+==========================================================+==============+
 | Name                     | Machine readable name used in configuration system wide. | All          |
 +--------------------------+----------------------------------------------------------+--------------+

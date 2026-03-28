@@ -3,7 +3,7 @@
 Synchronization Options
 #######################
 
-In the chapter :ref:`pagenavigation admin_usermangement_user_backends_usersyncbackend_config`, you see the basic setup needed for synchronization of users. If you do not use this, you will possibly be authenticated, but have no user data. In order to prevent this, you should always use the ``#    $Self->{'AuthModule::UseSyncBackend'} = '';`` in your backends, and add which synchronization backend should be used. The basic synchronization is:
+In the chapter :ref:`pagenavigation admin_usermanagement_user_backends_usersyncbackend_config`, you see the basic setup needed for synchronization of users. If you do not use this, you will possibly be authenticated, but have no user data. In order to prevent this, you should always use the ``#    $Self->{'AuthModule::UseSyncBackend'} = '';`` in your backends, and add which synchronization backend should be used. The basic synchronization is:
 
 - UserLogin
 - UserFirstname

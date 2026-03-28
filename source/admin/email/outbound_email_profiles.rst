@@ -7,7 +7,7 @@ Outbound email profiles are used to manage different email sending configuration
 
 .. important::
     
-    To use this feature, it mus first be activated by selecting the ``SendmailModule`` setting to ``Kernel::System::Email::MultiSendmail``. Once activated, you can create and manage multiple outbound email profiles. (see :ref:`admin_smtp_settings`  )
+    To use this feature, it must first be activated by selecting the ``SendmailModule`` setting to ``Kernel::System::Email::MultiSendmail``. Once activated, you can create and manage multiple outbound email profiles. (see :ref:`admin_smtp_settings`  )
 
 Navigate to Admin ->  Outbound Email Profiles to create and manage your email profiles.
 

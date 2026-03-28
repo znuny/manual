@@ -94,7 +94,7 @@ Additional Value Handling
 
 .. note::
 
-    Using EMAILADDRESS avoids having to parse around the Real Name (e.d. "Max Musterman" <mmuster@example.com>) and directly address the 
+    Using EMAILADDRESS avoids having to parse around the Real Name (e.g. "Max Musterman" <mmuster@example.com>) and directly address the 
     email address. It also avoids the localpart being overriden and matches the localpart exclusively. Otherwise your regular expression
     must perform this part properly.
 

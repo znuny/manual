@@ -1,4 +1,4 @@
-.. PageNavigation admin_communication_signature:
+.. _PageNavigation admin_communication_signature:
 
 Team Signatures
 ###############

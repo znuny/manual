@@ -21,9 +21,10 @@ Default notifications
 * Ticket pending reminder notification (locked) - A notification to the involved agents that the waiting time has expired.
 * Ticket pending reminder notification (unlocked) - A notification to all agents with permission that the waiting time has expired.
 * Ticket queue update notification - A notification to users that another team has passed them a ticket.
-* Ticket responsible update notification  - Notify an agent about their assignment to the ticket* Ticket service update notification - A notification to users that a ticket has been assigned to their subscribed service.
+* Ticket responsible update notification - Notify an agent about their assignment to the ticket.
+* Ticket service update notification - A notification to users that a ticket has been assigned to their subscribed service.
 
-Adding or Editiing notifications
+Adding or Editing Notifications
 ********************************
 
 The following settings are required when creating or modifying a notification.
@@ -49,7 +50,7 @@ Filters
 
     Filter Settings
    
-* Ticket Filter - Use ticket attitude to determine if the notification applies to this ticket.
+* Ticket Filter - Use ticket attributes to determine if the notification applies to this ticket.
 * Article Filter - A filter for the article create an event. Only the article create event will respect these filter items.
 
 Recipients Groups Settings
@@ -91,7 +92,7 @@ Notification Method Options Mail
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Enable this notification method - Require this email channel for notification.
-* Additional recipient email addresses - Additional recipients can also be part of a dynamic field. et.
+* Additional recipient email addresses - Additional recipients can also be part of a dynamic field.
 * Article visible for customer - An article will be created if the notification is sent to the customer or an additional email address.
 * Email template - HTML Template for the notification
 * Enable email security settings - Only if PGP or SMIME is enabled.
@@ -125,8 +126,8 @@ Further Help
 
 A tag reference list is seen at the bottom of the add/edit screen.
 
-Notification Mangement
-======================
+Notification Management
+=======================
 
 In the table of configured notifications, you will have three distinct options for managing notifications.
 

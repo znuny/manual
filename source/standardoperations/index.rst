@@ -3,12 +3,12 @@
 Operating Znuny
 ###############
 
-This chapter will introduce you into topics which are recommended in normal system oerations. These include best practices as well as configuration options. This chapter exapands on topics touched upon in the administration chapters.
+This chapter will introduce you to topics which are recommended in normal system operations. These include best practices as well as configuration options. This chapter expands on topics touched upon in the administration chapters.
 
 Maintenance Tasks
-******************
+*****************
 
-Maintaining your instance consists of a variety of tasks. More information about some of these tasks ore found in this chapter.
+Maintaining your instance consists of a variety of tasks. More information about some of these tasks are found in this chapter.
 
 .. toctree::
     :maxdepth: 2

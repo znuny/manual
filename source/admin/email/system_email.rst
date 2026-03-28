@@ -3,7 +3,7 @@
 System Email
 ############
 
-Each system requires one ore more dedicated system email addresses. System email addresses are used for sending and receiving. Once an email address is added to the system, it can be used for sending and routing inbound emails. You can add a new, or manage existing system email address on the System Email page. Navigate to Admin -> Email Addresses to access the System Email page.
+Each system requires one or more dedicated system email addresses. System email addresses are used for sending and receiving. Once an email address is added to the system, it can be used for sending and routing inbound emails. You can add a new, or manage existing system email address on the System Email page. Navigate to Admin -> Email Addresses to access the System Email page.
 
 .. figure:: images/email_addresses.png
     :alt: Email Address Management

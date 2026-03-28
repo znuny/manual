@@ -54,7 +54,7 @@ You can assign a field to one or multiple views:
 
 **OR**
 
-1) Use drag and drop and move one view to the desired colmun
+1) Use drag and drop and move one view to the desired column
 2) Save
 
 
@@ -74,7 +74,7 @@ The import / export feature is available on the left menu, in the overview of Dy
          :width: 70%
 
 
-You can select on or multiple fields + their currently assigned views for the export. 
+You can select one or multiple fields + their currently assigned views for the export. 
 
 As a result you get a YAML file as download, which then can be imported on other 
 instances. 

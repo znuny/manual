@@ -33,7 +33,7 @@ Queue settings
 Notify before
     The notified before time is a percentage of time that is reached before a pre-notification event has been triggered. Upon triggering this pre notification event, a notification can be sent to anyone using the ticket notification system. Generally speaking, this notification will be sent to agents or managers.
 Follow-up Option
-    The follow-up option dictates what sh....e are three possible options *possible*, *reject* and *new ticket*. Possible, allows the ticket to be reopened. Reject denies the ticket to be reopened. The setting new ticket creates a new ticket and links the old ticket to the new ticket. Further follow-ups will always create a new ticket.
+    The follow-up option dictates which of three possible options applies: *possible*, *reject*, and *new ticket*. Possible allows the ticket to be reopened. Reject denies the ticket to be reopened. The setting new ticket creates a new ticket and links the old ticket to the new ticket. Further follow-ups will always create a new ticket.
 Ticket lock after follow up:
     This setting determines whether the ticket should be locked to the last known owner of the ticket, if a follow-up is received on a closed ticket and follow-ups are allowed.
 System address
@@ -81,7 +81,7 @@ Comment
 
 .. important::
 
-    If you make changes to the name of a queue be sure to check the following areas for hardcoded refereces to the old quueue names.
+    If you make changes to the name of a queue, be sure to check the following areas for hardcoded references to the old queue names.
 
     - ACLs
     - Postmaster Filters

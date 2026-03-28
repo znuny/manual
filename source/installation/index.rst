@@ -100,7 +100,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 Install Required Perl Modules
 *****************************
 
-Based on your distribution there are several different was to install the needed modules.
+Based on your distribution there are several different ways to install the needed modules.
 
 .. tab-set::
   :sync-group: distribution

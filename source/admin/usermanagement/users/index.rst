@@ -14,7 +14,7 @@ Manage users preferences, add new users to database sources, or invalidate users
 Adding A New User
 *****************
 
-Added users manually to the system using this module. Regardless of the data source agents musts be exist in the database table. 
+Added users manually to the system using this module. Regardless of the data source, agents must exist in the database table. 
 
 There are two ways to accomplish this:
 
