@@ -118,7 +118,7 @@ The installation from source takes more steps. If there are more file to restore
 Execute the migration script
 ****************************
 
-.. code-block::shell
+.. code-block::
 
     su -c 'scripts/MigrateToZnuny7_3.pl --verbose' - znuny
 
