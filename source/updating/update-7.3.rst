@@ -131,7 +131,7 @@ Reinstall or Upgrade Add-ons (Packages)
 	
 .. note:: UpgradeAll can fail, if repositories are not reachable or configured, versions for your framework are not available, or packages have been renamed. In this case, you should upgarde your packages manually via the commandline or by installing/updating them via the package manager.
 
-.. code-block::shell
+.. code-block:: shell
 
     # Make sure all add-ons are correct installed after a patch level update
     su -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll' - znuny
