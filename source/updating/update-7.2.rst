@@ -73,7 +73,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block:: 
 
 	# Update to Znuny 7.2
-	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.2.2-01.noarch.rpm
+	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.2.3-01.noarch.rpm
 
 	# Check for missing modules and add required modules and install at least **required** modules.
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -95,20 +95,20 @@ The installation from source takes more steps. If there are more file to restore
 	tar xfz znuny-latest-7.2.tar.gz
 
 	# Set permissions
-	/opt/znuny-7.2.2/bin/znuny.SetPermissions.pl
+	/opt/znuny-7.2.3/bin/znuny.SetPermissions.pl
 
 	# Restore Kernel/Config.pm, articles, etc.
-	cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.2.2/Kernel/
-	mv /opt/znuny/var/article/* /opt/znuny-7.2.2/var/article/
+	cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.2.3/Kernel/
+	mv /opt/znuny/var/article/* /opt/znuny-7.2.3/var/article/
 
 	# Restore dotfiles from the homedir to the new directory
-	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.2/; done
+	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.3/; done
 
 	# Restore modified and custom cron job
-	for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.2/var/cron/; done
+	for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.3/var/cron/; done
 
 	# Create/overwrite a symlink 
-	ln -snf /opt/znuny-7.2.2 /opt/znuny
+	ln -snf /opt/znuny-7.2.3 /opt/znuny
 
 	# Check for missing modules and add **required** modules
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -118,7 +118,7 @@ The installation from source takes more steps. If there are more file to restore
 Execute the migration script
 ****************************
 
-.. code-block::shell
+.. code-block:: shell
 
     su -c 'scripts/MigrateToZnuny7_2.pl --verbose' - znuny
 
@@ -131,7 +131,7 @@ Reinstall or Upgrade Add-ons (Packages)
 	
 .. note:: UpgradeAll can fail, if repositories are not reachable or configured, versions for your framework are not available, or packages have been renamed. In this case, you should upgarde your packages manually via the commandline or by installing/updating them via the package manager.
 
-.. code-block::shell
+.. code-block:: shell
 
     # Make sure all add-ons are correct installed after a patch level update
     su -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll' - znuny

@@ -18,7 +18,7 @@ Stop all services to prevent any data from changing.
   .. tab-item:: RHEL based
     :sync: rhel
 
-      .. code-block::
+      .. code-block:: shell
 
           systemctl stop httpd
           # Stop your local MTA, mostly Postfix, sometimes Exim or Sendmail
@@ -30,7 +30,7 @@ Stop all services to prevent any data from changing.
   .. tab-item:: Debian based
     :sync: debian
 
-      .. code-block::
+      .. code-block:: shell
   
           systemctl stop apache2
           # Stop your local MTA, mostly Postfix, sometimes Exim or Sendmail
@@ -87,7 +87,7 @@ Update
             for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.2.3/var/cron/; done
 
             # Set the permissions
-            znuny-7.2.2/bin/znuny.SetPermissions.pl
+            znuny-7.2.3/bin/znuny.SetPermissions.pl
             ln -snf /opt/znuny-7.2.3 /opt/znuny
 
             su - znuny -c 'scripts/MigrateToZnuny7_2.pl --verbose'
