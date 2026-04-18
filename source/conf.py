@@ -2,6 +2,7 @@
 #
 # 
 
+import os
 import time
 
 source_suffix = '.rst'
@@ -24,8 +25,26 @@ language = 'en'
 extensions = [
     'sphinx_copybutton',
     'sphinxcontrib.mermaid',
-    'sphinx_design'
+    'sphinx_design',
+    'sphinxext.opengraph',
 ]
+
+# SEO role, set by CI per branch build: 'stable' | 'lts' | 'archived'.
+DOCS_ROLE   = os.environ.get('ZNUNY_DOCS_ROLE', 'archived')
+DOCS_BRANCH = os.environ.get('ZNUNY_DOCS_BRANCH', 'znuny-7_3')
+
+_ALIAS = {'stable': 'znuny', 'lts': 'znuny_lts'}
+
+if DOCS_ROLE in _ALIAS:
+    html_baseurl = f'https://doc.znuny.org/{_ALIAS[DOCS_ROLE]}/'
+    extensions.append('sphinx_sitemap')
+    sitemap_url_scheme = '{link}'
+else:
+    html_baseurl = f'https://doc.znuny.org/{DOCS_BRANCH}/'
+    html_meta = {'robots': 'noindex, follow'}
+
+ogp_site_url  = html_baseurl
+ogp_site_name = 'Znuny Documentation'
 
 pygments_style = 'sphinx'
 html_theme = 'sphinx_book_theme'
@@ -34,11 +53,11 @@ html_favicon = 'images/favicon.ico'
 html_theme_options = {
     "switcher": {
         "json_url": "https://doc.znuny.org/version.json",
-        "version_match": "znuny-lts_6_5"
+        "version_match": DOCS_BRANCH,
     },
     "primary_sidebar_end": ["version-switcher"],
     "repository_url": "https://github.com/znuny/manual",
-    "repository_branch": "znuny-lts_6_5",
+    "repository_branch": DOCS_BRANCH,
     "use_repository_button": True,
     "use_issues_button": False,
     "use_edit_page_button": False,
