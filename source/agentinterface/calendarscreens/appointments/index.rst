@@ -1,3 +1,7 @@
+.. meta::
+   :description: Create Znuny calendar appointments — set title, description, attendees, recurrence and auto-generate a ticket on a relative period or on the appointment date.
+   :keywords: znuny appointment, calendar event, ticket creation, appointment recurrence, appointment create, calendar entry, relative period ticket
+
 Adding Calendar Events
 #######################
 .. _PageNavigation agentinterface_appointments_index:

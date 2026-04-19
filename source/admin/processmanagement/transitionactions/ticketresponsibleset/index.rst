@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketResponsibleSet transition action in Znuny to set the responsible agent on a ticket by login or user ID from within a process workflow.
+   :keywords: ticketresponsibleset, znuny transition action, set responsible, responsibleid, ticket responsible, process responsible, assign responsible
+
 .. _TransitionAction TicketResponsibleSet:
 
 Set a Ticket Responsible

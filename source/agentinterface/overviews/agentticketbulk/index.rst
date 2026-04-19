@@ -1,3 +1,7 @@
+.. meta::
+   :description: Apply bulk actions to Znuny tickets — update state, priority, queue, owner, type, responsible or send notes to many tickets at once from any overview screen.
+   :keywords: znuny bulk action, mass ticket update, bulk state change, bulk queue move, bulk owner change, advanced bulk action
+
 Perform a Bulk Action
 #####################
 .. _PageNavigation agentinterface_overviews_agentticketbulk:

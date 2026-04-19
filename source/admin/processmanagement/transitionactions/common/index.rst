@@ -1,3 +1,7 @@
+.. meta::
+   :description: Generic Znuny transition action reference — use the parameter helper to pre-fill required and optional keys and read perldoc for every TransitionAction module.
+   :keywords: transition action helper, znuny transition parameters, parameter helper, perldoc, processmanagement api, module parameters, generic info
+
 .. _TransitionAction Generic Parameter Helper:
 
 Generic Information

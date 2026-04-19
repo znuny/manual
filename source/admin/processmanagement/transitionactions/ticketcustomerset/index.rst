@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketCustomerSet transition action in Znuny to assign or change a ticket customer and customer user from within a process workflow.
+   :keywords: ticketcustomerset, znuny transition action, set customer, assign customer, customer user, process customer, ticket customer
+
 .. _TransitionAction TicketCustomerSet:
 
 Set a Ticket Customer

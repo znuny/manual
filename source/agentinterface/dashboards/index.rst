@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure the Znuny agent dashboard — arrange large and small widgets with drag and drop, focus on a single module and tune each widget via its individual settings.
+   :keywords: znuny dashboard, agent dashboard, dashboard widgets, widget settings, dashboard focus, dashlets, dashboard configuration
+
 .. _PageNavigation agentinterface_dashboards_index:
 
 Agent Dashboards

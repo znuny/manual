@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketTypeSet transition action in Znuny to assign a ticket type by name or ID during a process — requires Ticket::Type to be enabled in system configuration.
+   :keywords: tickettypeset, znuny transition action, set ticket type, typeid, ticket type, process type, ticket classification, type assignment
+
 .. _TransitionAction TicketTypeSet:
 
 Set a Ticket Type

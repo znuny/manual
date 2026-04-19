@@ -1,3 +1,7 @@
+.. meta::
+   :description: Take responsibility for a Znuny ticket — once activated, the responsible agent gains full ticket permissions across queues, acting as a second ticket owner.
+   :keywords: znuny responsible agent, ticket responsible, second owner, take responsibility, responsible permission, responsible feature
+
 .. _PageNavigation ticketviews_agentticketresponsible:
 
 Become the Responsible Agent

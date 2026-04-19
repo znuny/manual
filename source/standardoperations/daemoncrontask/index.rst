@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny daemon cron tasks — view, edit and schedule the background jobs that run SchedulerCronTaskManager, add custom tasks and tune execution cadence.
+   :keywords: znuny daemon cron, schedulercrontaskmanager, cron scheduler, background jobs, scheduled tasks, daemon task
+
 Cron Scheduler Task Management
 ##############################
 

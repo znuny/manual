@@ -1,3 +1,7 @@
+.. meta::
+   :description: Create Znuny auto responses for ticket events — configure auto-reply, auto follow-up, reject and new-ticket notifications sent to requesters and assigned to queues.
+   :keywords: auto response, znuny auto reply, ticket auto response, auto follow-up, queue responses, email auto reply, automated customer response
+
 .. _PageNavigation admin_communication_autoresponses_index:
 
 Automatic Responses

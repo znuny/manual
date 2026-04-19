@@ -1,3 +1,7 @@
+.. meta::
+   :description: Define Znuny process activities — configure an activity name, scope and the ordered activity dialogs a user completes at each step of a workflow.
+   :keywords: process activity, znuny process management, activity element, workflow activity, activity dialogs, process step, activity scope
+
 .. _PageNavigation processmanagement_activities:
 
 Activities Element

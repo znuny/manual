@@ -1,3 +1,7 @@
+.. meta::
+   :description: Track Znuny tickets you have marked as watched — grants read access across all queues so you can monitor critical tickets without changing queue permissions.
+   :keywords: znuny watched tickets, watcher view, watch ticket, ticket watcher, subscribed tickets, watch list
+
 View Watched Tickets
 ####################
 .. _PageNavigation agentinterface_overviews_agentticketwatchview:

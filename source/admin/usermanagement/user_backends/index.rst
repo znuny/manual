@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny authentication and data backends for agents and customer users — HTTP BasicAuth, database, LDAP or Radius, with up to 11 stacked backends.
+   :keywords: znuny user backend, auth backend, ldap authentication, database backend, radius auth, httpbasicauth, customer user backend, multiple backends
+
 Manage User Backends
 ####################
 .. _PageNavigation admin_usermanagement_user_backends:

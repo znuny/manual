@@ -1,3 +1,7 @@
+.. meta::
+   :description: Install Ready2Adopt processes in Znuny with one click — out-of-the-box Application for Leave and other workflows bring dynamic fields and settings preconfigured.
+   :keywords: ready2adopt, znuny process templates, application for leave, preinstalled process, process quick start, example process install
+
 Process Quick Start (Ready2Adopt)
 #################################
 .. _PageNavigation processmanagement_readytoadopt_index:

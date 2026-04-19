@@ -1,3 +1,7 @@
+.. meta::
+   :description: Reference of every Znuny ACL match and set property — restrict ticket actions, queue moves, dynamic field values and menu entries using Properties or PropertiesDatabase.
+   :keywords: znuny acl reference, acl properties, match properties, set properties, propertiesdatabase, acl match criteria
+
 ACL Reference Guide
 ####################
 

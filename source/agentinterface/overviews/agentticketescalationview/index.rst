@@ -1,3 +1,7 @@
+.. meta::
+   :description: Monitor escalating Znuny tickets — filter by today, tomorrow or next week to spot SLA breaches early and react before response or solution times expire.
+   :keywords: znuny escalation view, ticket escalation, sla breach, escalated tickets, response time, solution time, escalation filter
+
 View Escalated Tickets
 ######################
 .. _PageNavigation agentinterface_overviews_agentticketescalationview:

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny SMTP sending — set SendmailModule, host, port, OAuth2 or password authentication and choose between SMTP, SMTPS, SMTPTLS, MSGraph or Sendmail.
+   :keywords: znuny smtp, sendmail module, smtps, smtptls, oauth2 smtp, msgraph email, smtp authentication, email sending
+
 .. _admin_smtp_settings:
 
 SMTP Settings

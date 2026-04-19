@@ -1,3 +1,7 @@
+.. meta::
+   :description: Reference table of Znuny Ticket Dynamic List attributes — accounted time, age, created, first response and solution times — with meaning and example values.
+   :keywords: znuny statistics attributes, ticket dynamic list, accounted time, first response time, stat values, statistics reference
+
 .. _PageNavigation annex_stat_values:
 
 Statistics Attributes

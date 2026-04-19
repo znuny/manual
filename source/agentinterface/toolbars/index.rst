@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use Znuny user toolbars for one-click access to filtered overviews — escalation, status, queue, service and process category views plus quick-create buttons.
+   :keywords: znuny toolbars, user toolbars, toolbar overviews, quick access, escalation view, status view, queue view, personal views
+
 User Toolbars
 #############
 

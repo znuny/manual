@@ -1,3 +1,7 @@
+.. meta::
+   :description: Assign Znuny dynamic fields to views, overviews and dashboards with Dynamic Field Screens — includes import and export for staging between environments.
+   :keywords: dynamic field screens, znuny dynamic fields, assign fields, view configuration, field import export, dashboard fields, overview fields
+
 ****************************
 Dynamic Field Screens
 ****************************

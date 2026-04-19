@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure a web service dynamic field in Znuny — retrieve and store external data via invokers, with text and multiselect variants backed by REST or SOAP.
+   :keywords: web service dynamic field, znuny web service field, generic tunnel invoker, external data, rest invoker, soap invoker, ticket web service
+
 Web Service
 ###########
 

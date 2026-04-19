@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny developer console commands — generate unit tests, scaffold packages and run developer tooling via bin/znuny.Console.pl to accelerate extension work.
+   :keywords: znuny developer commands, znuny cli development, unit test ticket, developer console, dev commands, znuny.Console.pl dev
+
 ###############################
 Console Commands - Developer
 ###############################

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Clone a Znuny production system into staging or dev safely — disable outbound email, customer access and integrations, and avoid accidental writes to PROD.
+   :keywords: znuny system cloning, clone to dev, staging system, disable outbound email, test environment, znuny staging
+
 Cloning a System for Staging or Development
 ###########################################
 

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Save a Znuny ticket action pop-up as a draft — name the draft, resume later, share it with colleagues or delete it so no work is lost mid-action.
+   :keywords: znuny ticket draft, save draft, draft dialog, resume draft, share draft, draft management
+
 .. _PageNavigation ticketviews_agentticketdraft:
 
 Creating a Draft

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny web service requesters — HTTP::REST options, SSL hostname verification, content type, custom headers and client certificate or basic authentication.
+   :keywords: znuny requester, http rest requester, content type, custom headers, client certificate auth, api key, znuny outbound webservice, ssl verification
+
 Requester
 #########
 

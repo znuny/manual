@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny templates and attachments — build reusable answer, create, email, forward, note, phone-call, process and snippet templates and relate them to queues.
+   :keywords: znuny templates, response templates, ticket templates, template types, attachments, queue relations, snippet template
+
 .. _PageNavigation admin_communication_templates_index:
 
 Communication Templates

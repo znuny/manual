@@ -1,3 +1,7 @@
+.. meta::
+   :description: Customer users set their Znuny preferences — change password, language, notification settings and personal details from the customer portal personal menu.
+   :keywords: znuny customer preferences, customer user preferences, customer password, language preference, customer settings, personal menu
+
 Customer User Preferences
 #########################
 .. _PageNavigation customerinderface_customer_user_preferences_index:

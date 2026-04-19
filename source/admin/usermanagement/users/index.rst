@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny agent users — add, synchronize from a directory server, edit personal preferences, invalidate departed agents and configure notification settings.
+   :keywords: znuny agents, manage users, add agent, directory sync, agent preferences, invalidate user, user admin, user management
+
 Manage Users (Agents)
 #####################
 .. _PageNavigation admin_usermanagement_users_index:

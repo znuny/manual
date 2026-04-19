@@ -1,3 +1,7 @@
+.. meta::
+   :description: Update Znuny step by step — per-version upgrade instructions including patchlevel updates and the 7.3 migration path for existing installations.
+   :keywords: update znuny, znuny upgrade, patchlevel update, znuny 7.3 update, znuny migration, version upgrade
+
 Update instructions
 ###################
 

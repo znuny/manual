@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use Znuny transition actions to mutate tickets during a process — set owner, queue, state, priority, SLA, dynamic fields, execute web service invokers and more.
+   :keywords: transition actions, znuny process actions, ticket set actions, set owner, set queue, set state, execute invoker, dynamic field set
+
 .. _PageNavigation processmanagement_transitionactions:
 
 Transition Actions

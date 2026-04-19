@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny time zones — set OTRSTimeZone, UserDefaultTimeZone, personal preferences and understand how cron, statistics and database timestamps behave.
+   :keywords: znuny time zone, otrstimezone, utc, userdefaulttimezone, statistics time zone, cron time zone, personal time zone
+
 .. _Pagenavigation admin_systemconfiguration_timezones_index:
 
 Managing Time Zones

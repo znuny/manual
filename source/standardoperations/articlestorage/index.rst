@@ -1,3 +1,7 @@
+.. meta::
+   :description: Choose the right Znuny article storage backend — ArticleStorageDB for small systems or ArticleStorageFS for large ones, with migration scripts in both directions.
+   :keywords: znuny article storage, articlestoragedb, articlestoragefs, article migration, database storage, filesystem storage
+
 .. _PageNavigation standardoperations_articlestorage_index:
 
 Article Storage

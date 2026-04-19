@@ -1,3 +1,7 @@
+.. meta::
+   :description: Let Znuny customer users create a new ticket from the portal — pick a queue, fill in subject, text and attachments and submit the request to your service team.
+   :keywords: znuny customer create ticket, new ticket, customer portal ticket, self service ticket, create request, customer submission
+
 Creating Tickets
 ################
 .. _PageNavigation customerinderface_creating_tickets_index:

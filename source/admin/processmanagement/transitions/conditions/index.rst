@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use Znuny transition condition operators — compare ticket data with equal, not equal, contains, greater-than and less-than operators on numbers and date values.
+   :keywords: transition conditions, znuny operators, condition types, string comparison, regex transition, numeric condition, dynamic field condition
+
 Condition Types in Transitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Reply to Znuny ticket articles using response templates — Reply, Reply all and internal responses include quoted history, placeholders, attachments and signatures.
+   :keywords: znuny compose reply, reply template, reply all, answer ticket, quoted reply, email reply
+
 Answering Communications
 #########################
 .. _PageNavigation ticketviews_agentticketcompose:

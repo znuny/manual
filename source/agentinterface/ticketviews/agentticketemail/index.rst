@@ -1,3 +1,7 @@
+.. meta::
+   :description: Create a new Znuny ticket by email — contact a customer user proactively, confirm a call record or start a fresh communication chain outside an existing ticket.
+   :keywords: znuny new email ticket, create email ticket, outbound email ticket, new ticket, customer email, proactive contact
+
 E-Mail New Ticket
 #################
 .. _PageNavigation ticketviews_agentticketemail:

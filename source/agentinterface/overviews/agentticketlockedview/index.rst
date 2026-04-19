@@ -1,3 +1,7 @@
+.. meta::
+   :description: Review all Znuny tickets locked to you — filter by All, New, Reminder Reached or Pending so you can work your personal queue without losing track of items.
+   :keywords: znuny locked tickets, my tickets, lock view, personal ticket queue, reminder reached, pending tickets
+
 My Locked Tickets
 #################
 .. _PageNavigation agentinterface_overviews_agentticketlockview:

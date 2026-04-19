@@ -1,3 +1,7 @@
+.. meta::
+   :description: Close a Znuny ticket from the ticket menu — only states of type closed are offered, with optional note, time accounting and dynamic field updates on submission.
+   :keywords: znuny close ticket, ticket close, closed state, close successful, close unsuccessful, ticket resolution
+
 .. _PageNavigation ticketviews_agentticketactionclose:
 
 Close a Ticket

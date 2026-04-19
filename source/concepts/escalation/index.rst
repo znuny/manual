@@ -1,3 +1,7 @@
+.. meta::
+   :description: Ticket escalation in Znuny — first response, update and solution times from SLAs or queue defaults, plus the events that drive notifications, automations and web services.
+   :keywords: znuny escalation, ticket escalation, sla, first response time, update time, solution time, escalation events
+
 .. _PageNavigation concepts_escalation_index:
 
 Ticket Escalation

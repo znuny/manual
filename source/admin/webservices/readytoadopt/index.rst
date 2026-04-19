@@ -1,3 +1,7 @@
+.. meta::
+   :description: Install Znuny Ready2Adopt web services with one click — preconfigured GenericTicketConnectorREST, Mattermost, MS Teams, OutOfOffice and TimeAccounting templates.
+   :keywords: ready2adopt web service, znuny web service template, generictticketconnectorrest, mattermost template, ms teams template, webservice quick start
+
 Web Service Quick Start (Ready2Adopt)
 #####################################
 

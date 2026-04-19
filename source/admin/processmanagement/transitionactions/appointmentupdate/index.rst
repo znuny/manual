@@ -1,6 +1,10 @@
+.. meta::
+   :description: Use the AppointmentUpdate transition action in Znuny to modify an existing calendar appointment — change title, calendar, start time or end time within a process.
+   :keywords: appointmentupdate, znuny transition action, update appointment, modify calendar, calendar start time, process appointment update
+
 .. _TransitionAction AppointmentUpdate:
 
-Update an Appointment 
+Update an Appointment
 #####################
 
 Summary

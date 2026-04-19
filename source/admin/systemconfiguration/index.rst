@@ -1,3 +1,7 @@
+.. meta::
+   :description: Tune Znuny with the System Configuration — search, edit and deploy settings for screens, modules, outgoing email, calendars, storage, indexes, logging and add-ons.
+   :keywords: znuny system configuration, sysconfig, settings search, configuration deploy, znuny config, system settings, admin configuration
+
 .. _PageNavigation admin_index_systemconfiguration:
 
 System Configuration

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Running Znuny with multiple frontend servers — pros and cons of high-availability topologies for performance, redundancy, scalability, sessions and disaster recovery.
+   :keywords: znuny high availability, ha setup, multiple frontend servers, load balancer, failover, znuny scalability, redis sessions
+
 .. _PageNavigation concepts_ha_index:
 
 Using Multiple Frontend Servers

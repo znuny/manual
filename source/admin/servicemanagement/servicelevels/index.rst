@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny service level agreements — set first response, update and solution escalation times, warning thresholds, working calendars and service links.
+   :keywords: znuny sla, service level agreement, escalation first response, escalation update, escalation solution, sla calendar, sla warning
+
 Managing Service Level Agreements
 #################################
 .. _PageNavigation admin_servicemanagement_servicelevels_index:

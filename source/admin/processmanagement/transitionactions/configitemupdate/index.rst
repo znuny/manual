@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the ConfigItemUpdate transition action to modify ITSM configuration items from a Znuny process — requires GeneralCatalog, ITSMCore and ConfigurationManagement packages.
+   :keywords: configitemupdate, znuny transition action, itsm cmdb, configuration item update, generalcatalog, itsmcore, itsm package
+
 .. _TransitionAction ConfigItemUpdate:
 
 Update a Configuration Item

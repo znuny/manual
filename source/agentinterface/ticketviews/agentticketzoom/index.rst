@@ -1,3 +1,7 @@
+.. meta::
+   :description: Open the Znuny ticket zoom to review articles, properties and link data — launch every agent action from the ticket and article menus in a single screen.
+   :keywords: znuny ticket zoom, ticket detail view, article menu, ticket menu, ticket overview, ticket zoom screen
+
 View Ticket Details
 ###################
 .. _PageNavigation ticketviews_agentticketzoom_index:

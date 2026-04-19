@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny 7.3.1 release notes — download links, fixed issues, packaged changes and developer information for this minor version, released 25 March 2026.
+   :keywords: znuny 7.3.1, znuny release notes, znuny changelog, 7.3.1 fixes, znuny minor release, znuny update 7.3.1
+
 Znuny 7.3.1
 ###########
 

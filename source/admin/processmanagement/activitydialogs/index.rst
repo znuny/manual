@@ -1,3 +1,7 @@
+.. meta::
+   :description: Build Znuny activity dialogs to collect structured input for a process — select fields, set visibility, permissions, advice and button text for each dialog.
+   :keywords: activity dialogs, znuny process management, process input, process fields, visibility acl, process permissions, dialog configuration
+
 .. _PageNavigation processmanagement_activitiydialogs:
 
 Activity Dialogs

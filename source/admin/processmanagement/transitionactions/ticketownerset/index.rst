@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketOwnerSet transition action in Znuny to assign or reassign a ticket owner by login or user ID from within a process workflow.
+   :keywords: ticketownerset, znuny transition action, set owner, assign ticket owner, ownerid, process owner assignment, ticket ownership
+
 .. _TransitionAction TicketOwnerSet:
 
 Set a Ticket Owner

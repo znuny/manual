@@ -1,3 +1,7 @@
+.. meta::
+   :description: Add a Znuny internal note without sending an email — decide whether the note is visible to customer users and update ticket state, priority or dynamic fields.
+   :keywords: znuny ticket note, add note, internal note, customer visible, reply to note, internal communication
+
 .. _PageNavigation ticketviews_agentticketnote:
 
 Create a Note

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Define Znuny process transitions — match ticket data against string, regular expression or validation modules to advance a workflow and trigger transition actions.
+   :keywords: process transitions, znuny workflow, transition conditions, string match, regex match, transition validation, ticket data conditions
+
 .. _PageNavigation processmanagement_transitions:
 
 Transitions

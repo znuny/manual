@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure a date/time dynamic field in Znuny — let users pick a calendar date plus hours and minutes, with the TimeInputMinutesStep option for granularity.
+   :keywords: znuny date time field, dynamic field datetime, ticket datetime, timestamp field, calendar time picker, time input minutes step
+
 Date/Time
 #########
 

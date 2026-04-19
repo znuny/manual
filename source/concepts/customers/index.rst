@@ -1,3 +1,7 @@
+.. meta::
+   :description: Customers and Customer Users in Znuny — how organizational entities relate to individual end-users who submit tickets and access the self-service customer portal.
+   :keywords: znuny customer, customer user, customer entity, end user, customer portal, customer relationship
+
 .. _PageNavigation concepts_customers_index:
 
 Customers and Customer Users

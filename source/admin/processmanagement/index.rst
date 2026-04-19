@@ -1,3 +1,7 @@
+.. meta::
+   :description: Model business workflows in Znuny with process management — build activities, activity dialogs, transitions, transition actions and categorized process tickets.
+   :keywords: znuny process management, workflow, business process, bpmn, activities, activity dialogs, transitions, process tickets
+
 .. _PageNavigation admin_processmanagement_index:
 
 Process Management

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Let Znuny customer users reply to their own tickets online — reply, close or reopen a request, attach files and track the agent's response without leaving the portal.
+   :keywords: znuny customer reply, customer answer ticket, customer portal reply, reopen ticket, close ticket, customer communication
+
 Answering Tickets
 #################
 .. _PageNavigation customerinderface_answering_tickets_index:

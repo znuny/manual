@@ -1,3 +1,7 @@
+.. meta::
+   :description: Record a phone call as a Znuny ticket — capture caller details, request and owner in a single screen; owner assignment also locks the ticket automatically.
+   :keywords: znuny phone ticket, new phone ticket, record call, phone ticket, call log, telephone request
+
 Record a Ticket
 ###############
 .. _PageNavigation ticketviews_agentticketphone:

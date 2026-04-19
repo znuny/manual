@@ -1,3 +1,7 @@
+.. meta::
+   :description: Work with Znuny tickets in the agent interface — an index of every out-of-the-box screen for answering, moving, merging, escalating and closing tickets.
+   :keywords: znuny ticket screens, agent ticket interface, ticket actions, ticket views, working with tickets, agent screens
+
 Working with Tickets
 ####################
 

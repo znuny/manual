@@ -1,3 +1,7 @@
+.. meta::
+   :description: Extend Znuny tickets, articles, customers and customer users with dynamic fields — configure text, date, dropdown, multiselect, checkbox and web service types.
+   :keywords: znuny dynamic fields, ticket fields, custom fields, extend ticket data, dynamic field types, article fields, customer fields
+
 .. _PageNavigation admin_dynamicfields_index:
 
 Extend Ticket Data (Dynamic Fields)

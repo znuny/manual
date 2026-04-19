@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny ticket mentions — filter new or all mentions, mark them seen or unsubscribe yourself from tickets directly from the mention overview.
+   :keywords: znuny manage mentions, mention overview, unsubscribe mention, filter mentions, seen mentions, mention management
+
 Manage Mentions
 ###############
 

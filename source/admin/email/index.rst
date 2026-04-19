@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny system mail management — system email addresses, SMTP sending, PostMaster mail account collection and outbound email profiles for multi-sender setups.
+   :keywords: znuny email, system email, smtp settings, postmaster mail account, outbound email, email management, mail configuration
+
 System Mail Management
 ######################
 

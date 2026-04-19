@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny reusable entities such as queues, priorities, roles and salutations — the common lifecycle for adding, validating, renaming and retiring entities.
+   :keywords: znuny entity management, reusable entities, entity lifecycle, entity validity, entity comment, manage entities
+
 .. _PageNavigation annexes_entity_management_index:
 
 Managing Entities

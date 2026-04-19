@@ -1,3 +1,7 @@
+.. meta::
+   :description: Browse the Znuny calendar overview — switch between month, week, day and timeline views, filter by appointment or calendar, and manage calendars as administrator.
+   :keywords: znuny calendar overview, month view, week view, day view, timeline view, appointment filter, calendar filter, manage calendars
+
 Calendar Overview
 #################
 .. _PageNavigation agentinterface_appointments_overview:

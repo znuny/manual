@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the LinkAdd transition action in Znuny to link tickets, appointments, services, FAQs or ITSM objects together from within a process workflow.
+   :keywords: linkadd, znuny transition action, link objects, link tickets, itsm link, faq link, service link, object relations
+
 .. _TransitionAction LinkAdd:
 
 Link Objects Together

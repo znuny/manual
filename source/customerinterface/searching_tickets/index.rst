@@ -1,3 +1,7 @@
+.. meta::
+   :description: Let Znuny customer users find their tickets through full-text and attribute-based search — filter by state, creation date or subject to locate any past request.
+   :keywords: znuny customer search, customer ticket search, search my tickets, full text search, customer portal search, find ticket
+
 Searching Tickets
 #################
 .. _PageNavigation customerinderface_searching_tickets_index:

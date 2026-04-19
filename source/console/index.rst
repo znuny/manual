@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny command-line interface — automate administration and maintenance using bin/znuny.Console.pl commands grouped by admin, development and maintenance tasks.
+   :keywords: znuny console, znuny cli, znuny.Console.pl, command line, znuny scripts, console commands
+
 .. _PageNavigation console_index:
 
 Command Line Interface

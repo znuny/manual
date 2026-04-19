@@ -1,3 +1,7 @@
+.. meta::
+   :description: Articles in Znuny — individual units of ticket communication (email, phone, internal note, system message) that form the immutable chronological history of a ticket.
+   :keywords: znuny articles, ticket article, article types, ticket communication, article storage, article tree
+
 .. _PageNavigation concepts_articles_index:
 
 Articles in Znuny

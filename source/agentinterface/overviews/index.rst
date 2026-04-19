@@ -1,3 +1,7 @@
+.. meta::
+   :description: Explore Znuny ticket overview screens — choose small, medium or large viewing modes, configure columns and filter queue, service, search and watched views.
+   :keywords: znuny ticket overviews, viewing mode, column settings, queue view, service view, status view, agent overview
+
 .. _PageNavigation agentinterface_overviews_index:
 
 Overviews

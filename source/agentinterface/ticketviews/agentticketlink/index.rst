@@ -1,3 +1,7 @@
+.. meta::
+   :description: Link Znuny tickets to other tickets, FAQ articles, CMDB items and appointments — choose relation types such as parent, child or normal to model dependencies.
+   :keywords: znuny ticket links, link tickets, link objects, parent child link, ticket dependencies, link relation
+
 Linking Tickets To Objects
 ##########################
 .. _PageNavigation ticketviews_agentticketlink:

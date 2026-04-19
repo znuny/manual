@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny user synchronization — map login, first name, last name and more from LDAP or security attributes, and sync groups and roles at every login.
+   :keywords: znuny user synchronization, ldap sync, role sync, group sync, usersyncbackend, attribute mapping, ldap filter, sync on login
+
 .. _PageNavigation admin_usermanagement_user_synchronization_index:
 
 Synchronization Options

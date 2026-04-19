@@ -1,3 +1,7 @@
+.. meta::
+   :description: Match incoming email follow-ups to Znuny tickets by external ticket numbers — configure up to six recognition filters with regex, dynamic fields and PostMaster rules.
+   :keywords: znuny external ticket numbers, external ticket recognition, follow up filter, external ticket regex, external id, recognition filter
+
 Processing External Ticket Numbers
 ##################################
 

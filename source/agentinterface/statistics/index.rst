@@ -1,3 +1,7 @@
+.. meta::
+   :description: Build Znuny statistics and reports — dynamic matrix, dynamic list and static Perl statistics, exportable to CSV or Excel, with optional dashboard integration.
+   :keywords: znuny statistics, reports, dynamic matrix, dynamic list, static statistics, pivot chart, export csv, dashboard statistic
+
 Working with Statistics
 #######################
 

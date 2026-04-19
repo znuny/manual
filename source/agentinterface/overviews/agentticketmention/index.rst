@@ -1,4 +1,8 @@
-View Mentions 
+.. meta::
+   :description: See every Znuny ticket where you have been @mentioned — filter between locked tickets, My Queues, My Services or all tickets to stay on top of requests.
+   :keywords: znuny mentions, ticket mention, @mention, mention view, mention dashboard, my mentions
+
+View Mentions
 *************
 
 View your mentions, by clicking on the mention icon in the Personal Views toolbar.

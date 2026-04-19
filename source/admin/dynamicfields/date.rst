@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure a date dynamic field in Znuny — let users pick a calendar date on tickets, articles, customers or customer user objects without a time component.
+   :keywords: znuny date field, dynamic field date, ticket date field, calendar picker, date dynamic field, date input
+
 Date
 ####
 

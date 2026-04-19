@@ -1,3 +1,7 @@
+.. meta::
+   :description: View every Znuny ticket for which you are the responsible agent — filter by state and reminder status to stay accountable for tickets assigned to you.
+   :keywords: znuny responsible view, my responsible tickets, ticket responsible, responsibility view, responsible agent, accountability
+
 View My Responsible
 ###################
 .. _PageNavigation agentinterface_overviews_agentticketresponsibleview:

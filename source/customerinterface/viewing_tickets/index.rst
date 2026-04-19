@@ -1,3 +1,7 @@
+.. meta::
+   :description: Let Znuny customer users view ticket details — see ticket number, state, articles, attachments and configured dynamic fields for every request they have access to.
+   :keywords: znuny customer view ticket, customer ticket zoom, ticket detail customer, customer ticket details, customer portal view, ticket data
+
 Viewing Tickets
 ###############
 .. _PageNavigation customerinderface_viewing_tickets_index:

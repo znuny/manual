@@ -1,3 +1,7 @@
+.. meta::
+   :description: Forward a Znuny email article to a third party with all original attachments and inline images, keeping the ticket history intact for future reference.
+   :keywords: znuny forward email, article forward, forward communication, forward attachments, email forward, third party forward
+
 Forward a Communication
 #######################
 .. _PageNavigation ticketviews_agentticketforward:

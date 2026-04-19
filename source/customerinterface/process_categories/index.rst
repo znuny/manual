@@ -1,3 +1,7 @@
+.. meta::
+   :description: Let Znuny customer users browse processes by category — a tile-based gallery that makes it easy to find and start the right guided workflow from the portal.
+   :keywords: znuny customer processes, browse processes, process categories, process gallery, customer process ticket, start process
+
 Browse Processes
 ################
 

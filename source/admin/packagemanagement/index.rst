@@ -1,3 +1,7 @@
+.. meta::
+   :description: Install and manage Znuny features with the Package Manager — use OPM packages from online repositories, local uploads, or another instance for staged rollouts.
+   :keywords: znuny package manager, opm package, install features, package repository, znuny add-on, package upload, package management
+
 Installing Features
 ###################
 .. _PageNavigation admin_packagemanagement_index:

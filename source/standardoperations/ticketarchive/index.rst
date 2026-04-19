@@ -1,3 +1,7 @@
+.. meta::
+   :description: Enable Znuny ticket archiving to speed up search and reporting on large systems — configure flags, exclude archived tickets by default and archive automatically.
+   :keywords: znuny ticket archive, archive system, archivesystem, archived tickets, ticket archiving, performance archiving
+
 .. _PageNavigation standardoperations_ticketarchive:
 
 The Archive System

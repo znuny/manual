@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny Administrator Interface — manage queues, users, roles, email, automation, web services, ACLs, processes and system configuration from one central area.
+   :keywords: znuny administrator, admin interface, queue management, user management, znuny acl, system configuration, znuny automation
+
 Administrator Interface
 #######################
 

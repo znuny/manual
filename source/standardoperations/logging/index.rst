@@ -1,3 +1,7 @@
+.. meta::
+   :description: Debug Znuny issues using application, communication, daemon, web server and web service logs — know which log to check for which class of problem.
+   :keywords: znuny logging, application log, communication log, daemon log, web service log, znuny debugging, log reference
+
 .. _PageNavigation standardoperations_logging:
 
 Debugging and Logs

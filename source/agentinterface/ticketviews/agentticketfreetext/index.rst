@@ -1,3 +1,7 @@
+.. meta::
+   :description: Update Znuny ticket metadata and dynamic fields in one dialog — correct the title, add a purchase-order number or reassign a queue from the Free Fields screen.
+   :keywords: znuny free fields, ticket metadata, freetext, dynamic fields, ticket title change, change metadata
+
 .. _PageNavigation ticketviews_agentticketfreetext:
 
 Change Metadata (FreeText)

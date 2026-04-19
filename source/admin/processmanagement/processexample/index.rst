@@ -1,3 +1,7 @@
+.. meta::
+   :description: Walk through an end-to-end Znuny process example — build a Building Access Request workflow covering registration, check-in and check-out activities.
+   :keywords: znuny process example, example workflow, building access process, process tutorial, model process, process design steps
+
 .. _PageNavigation admin_processmanagement_processexample_index:
 
 An Example Process

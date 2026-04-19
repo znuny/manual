@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketLockSet transition action in Znuny to lock or unlock a ticket from within a process — useful for auto-unlocking after a workflow step completes.
+   :keywords: ticketlockset, znuny transition action, lock ticket, unlock ticket, lockid, ticket lock, process lock, auto unlock
+
 .. _TransitionAction TicketLockSet:
 
 Lock a Ticket

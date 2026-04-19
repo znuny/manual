@@ -1,3 +1,7 @@
+.. meta::
+   :description: Enable TOTP two-factor authentication for Znuny agents and customers using Google Authenticator, Microsoft Authenticator, 1Password or any RFC 6238 compliant app.
+   :keywords: two-factor authentication, totp, znuny 2fa, google authenticator, rfc 6238, login security, authenticator app
+
 .. _PageNavigation admin_authentication_two_factor_index:
 
 Two-Factor Authentication

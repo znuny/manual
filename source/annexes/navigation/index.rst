@@ -1,3 +1,7 @@
+.. meta::
+   :description: Navigate Znuny faster with keyboard shortcuts — complete access-key list for Firefox, Chrome, Edge and Safari on Windows and macOS, plus how to add custom hotkeys.
+   :keywords: znuny keyboard shortcuts, access keys, hot keys, znuny navigation, browser shortcuts, accesskeys config
+
 Keyboard Navigation (Hot Keys)
 ##############################
 

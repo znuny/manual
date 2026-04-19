@@ -1,3 +1,7 @@
+.. meta::
+   :description: Post Znuny notifications to MS Teams via a webhook — example web service that builds Office 365 Connector MessageCards, triggered by events from the Znuny requester.
+   :keywords: znuny ms teams, teams webhook, messagecard, office 365 connector, teams notification, teams integration, event trigger
+
 .. _Example Web Service MS Teams:
 
 MS Teams

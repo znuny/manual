@@ -1,3 +1,7 @@
+.. meta::
+   :description: Plan Znuny backup and recovery — understand the database, filesystem and external dependencies that must be saved and restored for full disaster recovery.
+   :keywords: znuny backup, disaster recovery, backup strategy, database backup, filesystem backup, recovery plan
+
 Backing Up Your System
 ######################
 

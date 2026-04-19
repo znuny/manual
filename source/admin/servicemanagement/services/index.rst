@@ -1,3 +1,7 @@
+.. meta::
+   :description: Build and assign a Znuny service catalog — create services, link them to customer users or default services, and control unknown customer visibility.
+   :keywords: znuny services, service catalog, itil 4 service, service assignment, default services, customer services, ticket service
+
 .. _PageNavigation admin_servicemanagement_services_index:
 
 Managing Services

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the DynamicFieldPendingTimeSet transition action in Znuny to set ticket pending time relative to a date/time dynamic field with an optional offset and target state.
+   :keywords: dynamicfieldpendingtimeset, znuny transition action, pending time, pending auto close, date offset, ticket pending, process pending
+
 .. _TransitionAction DynamicFieldPendingTimeSet:
 
 Set a Pending Time

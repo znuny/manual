@@ -1,3 +1,7 @@
+.. meta::
+   :description: Ticket locking in Znuny — how exclusive agent locks prevent conflicts, when the system auto-locks tickets, lock states, and the interplay between lock and ownership.
+   :keywords: znuny ticket lock, ticket locking, lock state, unlocked ticket, tmp_lock, agent lock, take ownership
+
 .. _PageNavigation concepts_locking_index:
 
 Ticket Lock

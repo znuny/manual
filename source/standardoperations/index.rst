@@ -1,3 +1,7 @@
+.. meta::
+   :description: Operating Znuny — standard operations for administrators covering statistics, article storage, daemon cron tasks, logging, screen configuration, cloning and archives.
+   :keywords: znuny operations, znuny maintenance, article storage, daemon cron, znuny logging, system maintenance, ticket archive
+
 .. _PageNavigation standardoperations_index:
 
 Operating Znuny

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny release overview — per-version changelogs, fixed issues and developer information covering breaking changes, new APIs and renamed functions for extensions.
+   :keywords: znuny release notes, znuny changelog, release overview, breaking changes, developer information, znuny versions
+
 .. _PageNavigation release_overview:
 
 Release overview

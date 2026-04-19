@@ -1,3 +1,7 @@
+.. meta::
+   :description: Automate incoming email processing in Znuny with PostMaster filters — route, classify or discard messages using header-based rules and regular expressions.
+   :keywords: postmaster filter, email filtering, znuny email rules, incoming email, email automation, header match, ticket routing
+
 .. _PageNavigation admin_automation_postmaster_filter_index:
 
 Email Filtering

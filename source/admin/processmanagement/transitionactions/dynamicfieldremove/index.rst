@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the DynamicFieldRemove transition action in Znuny to fully delete a dynamic field value from a ticket during a process — not the same as clearing a value.
+   :keywords: dynamicfieldremove, znuny transition action, delete dynamic field, remove field value, clear dynamic field, process dynamic field
+
 .. _TransitionAction DynamicFieldRemove:
 
 Delete a Dynamic Field

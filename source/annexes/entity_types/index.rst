@@ -1,3 +1,7 @@
+.. meta::
+   :description: Reference of all Znuny entity types — auto-responses, notifications, salutations and more — with the admin modules and selection lists that use each type.
+   :keywords: znuny entity types, entity type reference, auto response type, notification type, salutation type, entity categories
+
 .. _PageNavigation annexes_entity_type_reference_index:
 
 Entity Type Reference

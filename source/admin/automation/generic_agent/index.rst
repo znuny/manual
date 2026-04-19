@@ -1,3 +1,7 @@
+.. meta::
+   :description: Schedule and event-trigger ticket actions in Znuny with the Generic Agent — automate bulk updates across tickets using filter criteria and execution plans.
+   :keywords: generic agent, scheduled tasks, znuny automation, event based jobs, ticket automation, cron jobs, bulk ticket update
+
 .. _Page automation_generic_agent:
 
 Scheduled Tasks (Generic Agent)

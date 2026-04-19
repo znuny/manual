@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny team signatures for answer templates — create HTML signatures with images and placeholders, assigned via queue settings for consistent outbound replies.
+   :keywords: znuny signatures, team signatures, email signatures, queue signatures, html signatures, answer template, ckeditor signature
+
 .. _PageNavigation admin_communication_signature:
 
 Team Signatures

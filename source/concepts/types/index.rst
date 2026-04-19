@@ -1,3 +1,7 @@
+.. meta::
+   :description: Ticket types in Znuny — categorize tickets as incident, service request, problem and more to drive workflow automation, prioritization and reporting.
+   :keywords: znuny ticket type, incident, service request, problem, ticket categorization, ticket workflow automation
+
 .. _PageNavigation concepts_types_index:
 
 Ticket Types

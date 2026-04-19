@@ -1,3 +1,7 @@
+.. meta::
+   :description: Format Znuny Excel statistics exports with multi-level templates — merge and override cell styles, apply reusable formats and automate repeatable reporting.
+   :keywords: znuny advanced statistics, excel statistics, excel export, statistics templates, excel formatting, reporting
+
 .. _AdvancedFeatures excel-stat-formatting:
 
 Advanced Statistics

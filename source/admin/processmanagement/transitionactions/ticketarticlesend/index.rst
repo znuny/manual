@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the ArticleSend transition action in Znuny to send an article as email from a process — with To, Cc, Bcc, attachments and body, including attachment reuse.
+   :keywords: articlesend, znuny transition action, send email, process email, attachments reuse, outbound email, ticket email, send article
+
 .. _TransitionAction ArticleSend:
 
 Send an Article

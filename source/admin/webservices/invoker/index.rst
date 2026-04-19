@@ -1,3 +1,7 @@
+.. meta::
+   :description: Build Znuny web service invokers — Ticket::Generic and Generic::Tunnel send ticket, article and attachment data and mutate tickets via XSLT response mapping.
+   :keywords: znuny invoker, ticket generic invoker, generic tunnel, web service invoker, xslt mapping, outbound webservice, invoker response
+
 .. _PageNavigation admin_webservices_invoker_index:
 
 Invokers

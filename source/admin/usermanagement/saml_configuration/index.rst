@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny single sign-on with SAML 2.0 — use HTTPBasicAuth with CAS, Kerberos, OpenID Connect or mod_auth_mellon, or native Kernel::System::Auth::SAML.
+   :keywords: znuny saml, single sign-on, sso, kernel::system::auth::saml, mod_auth_mellon, kerberos sso, openid connect, idp authentication
+
 Configure SAML backends for single sign-on (SSO)
 ################################################
 

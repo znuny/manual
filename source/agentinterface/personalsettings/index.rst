@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny personal settings per agent — Google Authenticator, avatar, password, time zone, out-of-office periods and notification preferences.
+   :keywords: znuny personal settings, user preferences, google authenticator, gravatar, change password, time zone, out of office, notification settings
+
 .. _PageNavigation agentinterface_personalsettings_index:
 
 Personal Settings

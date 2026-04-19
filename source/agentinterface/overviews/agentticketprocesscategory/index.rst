@@ -1,3 +1,7 @@
+.. meta::
+   :description: Launch Znuny ticket processes from a tile-based gallery — filter by category, search for processes and start the right workflow for every request at a glance.
+   :keywords: znuny process category, process overview, ticket process launcher, process gallery, process categories, start process
+
 Ticket Process Category Overview
 ################################
 

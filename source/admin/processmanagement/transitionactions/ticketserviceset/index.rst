@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketServiceSet transition action in Znuny to assign a service to a ticket from within a process — commonly combined with TicketSLASet for full SLA handling.
+   :keywords: ticketserviceset, znuny transition action, set service, assign service, serviceid, service level, process service, ticket service
+
 .. _TransitionAction TicketServiceSet:
 
 Set a Ticket Service

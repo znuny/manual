@@ -1,3 +1,7 @@
+.. meta::
+   :description: Send a Znuny outbound email from an existing ticket to a third party — add recipient, subject, text and attachments without quoting prior communications.
+   :keywords: znuny email outbound, outbound email, send email, third party email, ticket outbound, new mail from ticket
+
 Compose a New Mail
 ##################
 .. _PageNavigation ticketviews_agentticketemailoutbound:

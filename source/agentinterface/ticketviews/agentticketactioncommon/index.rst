@@ -1,3 +1,7 @@
+.. meta::
+   :description: Learn the common Znuny article features — rich-text CKEditor, attachments, inline images, time accounting, state changes and dynamic fields available across ticket actions.
+   :keywords: znuny article options, ckeditor, ticket attachments, time accounting, inline images, common ticket actions
+
 .. _PageNavigation ticketviews_agentticketactioncommon:
 
 Common Features

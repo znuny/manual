@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny glossary — plain-language definitions of agents, customers, customer users, groups, queues, interfaces and OPM packages used across the ticket system.
+   :keywords: znuny glossary, ticket system terms, agent, customer user, opm package, groups, znuny definitions
+
 .. _PageNavigation glossary_index:
 
 Glossary

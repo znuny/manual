@@ -1,3 +1,7 @@
+.. meta::
+   :description: Customize Znuny translations for interface labels, ticket states, priorities, dynamic field values, template names and process data per configured language.
+   :keywords: znuny translation, custom translation, terminology, interface translation, language override, kernel language, localized ui
+
 .. _PageAdminTranslationIndex:
 
 Translating Terminology

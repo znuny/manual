@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny roles — bind group permissions to roles, assign roles to users, and simplify large-scale permissions administration across your agent base.
+   :keywords: znuny roles, role based permissions, role group assignment, user role, rbac, permissions management, role administration
+
 Manage Roles
 ############
 .. _PageNavigation roles_index:

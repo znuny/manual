@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny system email addresses — add sender addresses with display name, route inbound email to queues, and prevent mail loops between system addresses.
+   :keywords: system email, znuny email addresses, sender address, queue routing, email loop prevention, display name, sending address
+
 .. _PageNavigation system_email:
 
 System Email

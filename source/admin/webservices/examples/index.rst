@@ -1,3 +1,7 @@
+.. meta::
+   :description: Browse Znuny example web services — REST-based integrations for GenericTicketConnector, Mattermost notifications and MS Teams adaptive cards that work out of the box.
+   :keywords: znuny web service examples, rest example, mattermost example, ms teams example, generic ticket connector, example invokers
+
 Example web services
 ###############################
 

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the Znuny GenericTicketConnectorREST web service — manage sessions and tickets via REST endpoints for create, get, history, search and update operations.
+   :keywords: generictticketconnectorrest, znuny rest api, ticket create api, ticket search api, session api, ticket update api, ticket history api
+
 .. _Example Web Service GenericTicketConnectorREST:
 
 GenericTicketConnectorREST

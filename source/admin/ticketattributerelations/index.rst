@@ -1,3 +1,7 @@
+.. meta::
+   :description: Define Znuny ticket attribute relations via CSV or XLSX — link queues, dynamic fields, states, priorities, types, owners, services and SLAs for dependent selections.
+   :keywords: ticket attribute relations, znuny dependencies, csv relations, xlsx upload, dependent fields, cascading dropdowns, ticket relations
+
 Ticket Attribute Relations
 ##########################
 

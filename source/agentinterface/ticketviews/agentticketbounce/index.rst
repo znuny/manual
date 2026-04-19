@@ -1,3 +1,7 @@
+.. meta::
+   :description: Bounce misdirected Znuny email articles to another mailbox — forward the message externally while preserving the original sender and without altering the ticket.
+   :keywords: znuny bounce, bounce email, redirect email, article bounce, misdirected mail, bounce article
+
 Bounce a Communication
 ######################
 .. _PageNavigation ticketviews_agentticketactionbounce:

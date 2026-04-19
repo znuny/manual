@@ -1,3 +1,7 @@
+.. meta::
+   :description: Reference of all X-OTRS email headers — automatically set ticket attributes during inbound email processing via PostMaster filters, gated by mailbox trust levels.
+   :keywords: znuny x-otrs headers, email headers, postmaster filter, trust level, x-otrs, header reference
+
 .. _PageNavigation annexes_headers_index:
 
 E-Mail Headers

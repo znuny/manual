@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny ticket notifications — notify agents, customers and mentioned users on events such as creation, escalation, follow-up, owner changes and reminders.
+   :keywords: ticket notifications, znuny notifications, escalation notification, mention notification, follow-up notification, event notification, ticket alerts
+
 .. _PageNavigation admin_automation_ticket-notification_index:
 
 Ticket Notifications

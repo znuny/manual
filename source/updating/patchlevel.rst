@@ -1,3 +1,7 @@
+.. meta::
+   :description: Patch-level update guide for Znuny 7.3 — stop services, replace sources and run the migration steps to move from any 7.3.x version to a newer 7.3 patch level.
+   :keywords: znuny patchlevel, patch level update, znuny 7.3 update, 7.3.x update, patch update, znuny upgrade
+
 ==================
 Patch Level Update
 ==================

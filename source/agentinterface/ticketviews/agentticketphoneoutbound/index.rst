@@ -1,3 +1,7 @@
+.. meta::
+   :description: Log a Znuny outbound phone call on an existing ticket — document what you told the customer, set a new state or pending reminder and book the time worked.
+   :keywords: znuny phone outbound, outbound call, phone call outbound, call customer, outbound log, phone record
+
 Call a Customer
 ################
 .. _PageNavigation ticketviews_agentticketphoneoutbound:

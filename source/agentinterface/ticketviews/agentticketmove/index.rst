@@ -1,3 +1,7 @@
+.. meta::
+   :description: Move a Znuny ticket between queues either instantly via dropdown or with the dedicated screen — update metadata, add notes and apply extra permission checks.
+   :keywords: znuny ticket move, move ticket, queue move, move dropdown, move screen, redistribute ticket
+
 Sort a Ticket
 #############
 .. _PageNavigation ticketviews_agentticketmove:

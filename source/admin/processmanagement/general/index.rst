@@ -1,3 +1,7 @@
+.. meta::
+   :description: Learn the building blocks of Znuny process management — activities, activity dialogs, transitions and transition actions that orchestrate ticket-based workflows.
+   :keywords: manage processes, znuny process management, process elements, workflow orchestration, business process, process design, workflow
+
 Manage Processes
 ################
 .. _PageNavigation processmanagement_general:

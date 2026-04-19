@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the DynamicFieldSet transition action in Znuny to set values on text, multiselect, datetime, date or checkbox dynamic fields during a process workflow.
+   :keywords: dynamicfieldset, znuny transition action, set dynamic field, multiselect value, date dynamic field, checkbox field, process dynamic field
+
 .. _TransitionAction DynamicFieldSet:
 
 Set a Dynamic Field

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Inspect the complete Znuny ticket history — every action, owner change and communication entry with timestamp and author, collapsible for quick scanning.
+   :keywords: znuny ticket history, ticket audit log, action log, history view, who changed what, ticket trace
+
 View the History
 ################
 .. _PageNavigation ticketviews_agenttickethistory:

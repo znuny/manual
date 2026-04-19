@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny Customer Interface — a self-service portal for creating, viewing, answering and searching tickets and starting processes, with self-registration and password reset.
+   :keywords: znuny customer interface, customer portal, self service, customer user, ticket portal, create ticket, customer dashboard
+
 Customer Interface
 ##################
 

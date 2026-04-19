@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure a text dynamic field in Znuny — let users add a single line of free-form text to tickets, articles, customers or customer user objects.
+   :keywords: znuny text field, dynamic field text, ticket text field, single line text, free text input, dynamic text
+
 Text
 ####
 

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the AppointmentRemove transition action in Znuny to delete a calendar appointment from a process workflow by referencing its appointment ID.
+   :keywords: appointmentremove, znuny transition action, delete appointment, remove calendar entry, process appointment, appointmentid
+
 .. _TransitionAction AppointmentRemove:
 
 Remove an Appointment

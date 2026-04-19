@@ -1,3 +1,7 @@
+.. meta::
+   :description: Notify agents on Mattermost from Znuny — example web service using a Mattermost webhook, ticket notifications, per-agent Mattermost username preference and XSLT mapping.
+   :keywords: znuny mattermost, mattermost webhook, mattermost notification, agent chat notification, incoming webhook, xslt mapping, mattermost integration
+
 .. _Example Web Service Mattermost:
 
 Mattermost

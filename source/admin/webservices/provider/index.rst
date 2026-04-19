@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny as a web service provider — authenticate consumers via custom X-OTRS-Header fields, request parameters, sessions or two-factor tokens.
+   :keywords: znuny web service provider, x-otrs-header, userlogin, customeruserlogin, sessionid, provider authentication, twofactortoken, webservice auth
+
 Provider
 ########
 .. _PageNavigation admin_webservices_provider_index:

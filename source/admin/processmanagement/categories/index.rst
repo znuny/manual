@@ -1,3 +1,7 @@
+.. meta::
+   :description: Organize Znuny process tickets with categories — configure ProcessPreferences settings, enable the agent module and deactivate the customer frontend feature.
+   :keywords: process ticket categories, znuny process management, process grouping, processpreferences, agent ticket process category, customer process category
+
 .. _Pagenavigation admin_processmanagement_categories:
 
 Process Ticket Categories

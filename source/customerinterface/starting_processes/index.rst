@@ -1,3 +1,7 @@
+.. meta::
+   :description: Customers start a Znuny process ticket from Create Process Ticket — guided activity dialogs collect required data and can be reopened via emailed links.
+   :keywords: znuny customer process, start process ticket, create process ticket, activity dialog, guided ticket, process customer portal
+
 Starting Processes
 ##################
 .. _PageNavigation customerinderface_starting_processes_index:

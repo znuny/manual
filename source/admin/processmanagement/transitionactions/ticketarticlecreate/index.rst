@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketArticleCreate transition action in Znuny to create an article on a ticket — set body, content type, communication channel and sender during a process.
+   :keywords: ticketarticlecreate, znuny transition action, create article, process article, communication channel, ticket article, article body
+
 .. _TransitionAction TicketArticleCreate:
 
 Create an Article

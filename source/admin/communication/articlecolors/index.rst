@@ -1,3 +1,7 @@
+.. meta::
+   :description: Assign colors to Znuny article channels and sender types — quickly distinguish email, phone and chat articles in the ticket zoom communication table.
+   :keywords: article colors, znuny colors, article channel, sender type, ticket zoom, communication color, visual differentiation
+
 Manage Article Colors
 #####################
 

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Send Znuny ticket notifications over a web service transport — target any HTTP endpoint such as Mattermost with asynchronous invokers and user preference toggles.
+   :keywords: web service notification, znuny notification transport, mattermost notification, webhook notification, asynchronous invoker, notification recipient
+
 Web Service Notification Transport
 ##################################
 

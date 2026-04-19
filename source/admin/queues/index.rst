@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny queues (teams) — set group permissions, escalation times, follow-up options, system addresses, salutations, signatures and calendars.
+   :keywords: znuny queue, team queue, queue settings, escalation times, follow-up, queue permissions, ticket queue, queue signature
+
 .. _PageNavigation admin_queues_index:
 
 Adding a Team (Queue)

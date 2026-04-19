@@ -1,3 +1,7 @@
+.. meta::
+   :description: Queues in Znuny — permission objects that group tickets for a team, typically organized by department, service, product or country, with escalations and calendars.
+   :keywords: znuny queues, ticket queue, queue structure, my queues, queue permissions, team routing, queue view
+
 What are Queues
 ###############
 

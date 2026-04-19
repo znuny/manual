@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny Agent Interface — the dashboard-driven workspace agents use to navigate, search, triage and work on tickets through overviews, ticket screens and module views.
+   :keywords: znuny agent interface, agent dashboard, ticket overview, ticket screens, agent workspace, znuny navigation
+
 Agent Interface
 ###############
 

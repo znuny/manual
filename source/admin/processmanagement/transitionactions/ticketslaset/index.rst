@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketSLASet transition action in Znuny to assign a service level agreement to a ticket during a process — pair with TicketServiceSet for a valid service context.
+   :keywords: ticketslaset, znuny transition action, set sla, service level agreement, slaid, process sla, ticket sla, sla assignment
+
 .. _TransitionAction TicketSLASet:
 
 Set a Ticket SLA

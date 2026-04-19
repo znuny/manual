@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketStateSet transition action in Znuny to move a ticket to a new state by name or ID from within a process workflow.
+   :keywords: ticketstateset, znuny transition action, set state, change state, stateid, ticket state, process state, state transition
+
 .. _TransitionAction TicketStateSet:
 
 Set a Ticket State

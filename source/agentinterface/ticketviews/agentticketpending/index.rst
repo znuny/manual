@@ -1,3 +1,7 @@
+.. meta::
+   :description: Set a Znuny pending state with a future reminder date — choose between auto close+, auto close- or pending reminder to trigger automated actions when the time arrives.
+   :keywords: znuny pending state, ticket reminder, pending auto close, pending reminder, reminder date, pending ticket
+
 .. _PageNavigation ticketviews_agentticketreminder:
 
 Set a Reminder

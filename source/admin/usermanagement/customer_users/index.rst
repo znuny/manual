@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny customers and customer users — add organizations and contacts, choose writeable backends, map data sources and control customer user visibility.
+   :keywords: znuny customer users, customer organization, customer user management, writeable backend, customer id, contact management, customer admin
+
 .. _PageNavigation usermangement_customer_users_index:
 
 Manage Customers (Customer User)

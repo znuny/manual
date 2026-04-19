@@ -1,3 +1,7 @@
+.. meta::
+   :description: Work Znuny tickets grouped by queue — drill down the queue hierarchy, focus on My Queues from personal settings and pick the next ticket to process.
+   :keywords: znuny queue view, view by queue, my queues, queue hierarchy, ticket queue, queue overview
+
 View by Queue
 #############
 .. _PageNavigation agentinterface_overviews_agentticketqueueview:

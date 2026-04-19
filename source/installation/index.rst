@@ -1,3 +1,7 @@
+.. meta::
+   :description: Install Znuny step by step — prerequisites, MariaDB, MySQL, PostgreSQL or Oracle setup, Apache configuration and required Perl modules on Debian or RHEL systems.
+   :keywords: install znuny, znuny installation, mariadb, apache, perl modules, debian install, rhel install, znuny setup
+
 .. _PageNavigation installupdate_install:
 
 Installation Instructions

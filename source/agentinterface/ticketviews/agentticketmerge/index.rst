@@ -1,3 +1,7 @@
+.. meta::
+   :description: Combine duplicate Znuny tickets with the merge action — target ticket inherits all history and articles, with an optional note back to the customer on the merge.
+   :keywords: znuny merge tickets, ticket merge, duplicate tickets, combine tickets, merge target, merge notification
+
 Merge Tickets
 #############
 .. _PageNavigation ticketviews_agentticketmerge:

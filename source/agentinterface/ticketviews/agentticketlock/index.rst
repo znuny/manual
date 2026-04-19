@@ -1,3 +1,7 @@
+.. meta::
+   :description: Lock or unlock a Znuny ticket to claim or release ownership — automatic locking triggers on communication actions or owner changes, configurable by administrators.
+   :keywords: znuny ticket lock, lock ticket, unlock ticket, ticket ownership, auto lock, lock state
+
 Lock/Unlock a Ticket
 ####################
 .. _PageNavigation ticketviews_agentticketlock:

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Secure Znuny email communication with PGP or S/MIME — verify, sign, encrypt and decrypt messages using managed keyrings, certificates and system configuration.
+   :keywords: znuny security, pgp email, s/mime email, email encryption, sign email, email certificates, secure communication
+
 Securing Communication
 ######################
 .. _PageNavigation admin_security_index:

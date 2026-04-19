@@ -1,3 +1,7 @@
+.. meta::
+   :description: About Znuny — the open-source service desk forked from the OTRS Community Edition in 2020 by Znuny GmbH. History, typical use cases and audit-proof advantages.
+   :keywords: about znuny, znuny history, otrs fork, open source helpdesk, gpl v3, znuny gmbh, audit proof ticket system
+
 About Znuny
 ###########
 

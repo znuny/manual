@@ -1,3 +1,7 @@
+.. meta::
+   :description: Watch a Znuny ticket to get read access via the watched list regardless of queue — a toolbar shows counts for new messages and reminders on watched tickets.
+   :keywords: znuny watch ticket, ticket watcher, watch feature, watched tickets, read access, watcher toolbar
+
 Watch a Ticket
 ##############
 .. _PageNavigation ticketviews_agentticketwatcher:

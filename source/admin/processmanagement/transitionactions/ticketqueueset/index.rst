@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketQueueSet transition action in Znuny to move a ticket to a new queue by queue name or ID from within a process workflow.
+   :keywords: ticketqueueset, znuny transition action, move ticket, change queue, queueid, ticket routing, process queue, ticket queue
+
 .. _TransitionAction TicketQueueSet:
 
 Set a Ticket Queue

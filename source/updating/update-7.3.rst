@@ -1,3 +1,7 @@
+.. meta::
+   :description: Upgrade from Znuny 7.2.x to 7.3 — follow the migration steps, test on a staging system first and back up your data before running the upgrade scripts.
+   :keywords: znuny update 7.3, znuny 7.2 to 7.3, minor level update, znuny upgrade, znuny migration, znuny 7.3 install
+
 Update to Znuny 7.3
 ###################
 

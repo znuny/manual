@@ -1,3 +1,7 @@
+.. meta::
+   :description: Customer user dashboard in Znuny — default landing page after login showing My Tickets with sortable columns, quick ticket creation and progress overview.
+   :keywords: znuny customer dashboard, customer user dashboard, my tickets, customer landing page, ticket overview, customer home
+
 Customer User Dashboard
 #######################
 .. _PageNavigation customerinderface_customer_user_dashboard_index:

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketPrioritySet transition action in Znuny to change the priority of a ticket by name or ID from within a process workflow.
+   :keywords: ticketpriorityset, znuny transition action, set priority, change priority, priorityid, ticket priority, process priority
+
 .. _TransitionAction TicketPrioritySet:
 
 Set a Ticket Priority

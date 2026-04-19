@@ -1,3 +1,7 @@
+.. meta::
+   :description: Search Znuny tickets using full-text, attribute filters or toolbar search — add ticket and dynamic field criteria, save templates and reuse searches later.
+   :keywords: znuny ticket search, full text search, configure search, search template, ticket attributes, agent search
+
 Search for Tickets
 ##################
 

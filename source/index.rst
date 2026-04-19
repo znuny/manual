@@ -1,5 +1,9 @@
 
 
+.. meta::
+   :description: Official Znuny documentation — install, administer and operate the open-source service desk: agent interface, customer portal, ITSM features and console commands.
+   :keywords: znuny documentation, service desk, helpdesk, ticket system, open source, otrs fork, administrator manual, znuny manual
+
 .. image:: images/logo_header_documentation.png
          :alt: Znuny documentation logo
          :width: 100%

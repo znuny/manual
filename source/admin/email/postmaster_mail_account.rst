@@ -1,3 +1,7 @@
+.. meta::
+   :description: Schedule Znuny mailbox collection via IMAP, IMAPS, IMAPTLS, POP3, POP3S, POP3TLS or MSGraph — supports OAuth2 tokens and multi-account fetching.
+   :keywords: postmaster mail account, znuny mailbox, imap, pop3, msgraph, oauth2 mailbox, email fetch, ticket ingest
+
 .. _PageNavigation email_postmaster_mail_account:
 
 Configure Mailbox Collection

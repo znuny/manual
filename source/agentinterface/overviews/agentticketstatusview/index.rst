@@ -1,3 +1,7 @@
+.. meta::
+   :description: Browse Znuny tickets grouped by open or closed state — see the last 10,000 tickets across queues you have read access to and drill into any individual ticket.
+   :keywords: znuny status view, view by status, open tickets, closed tickets, ticket state, status overview
+
 View by Status
 ##############
 .. _PageNavigation agentinterface_overviews_agentticketstatusview:

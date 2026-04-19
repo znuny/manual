@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketWatchSet transition action in Znuny to subscribe, unsubscribe or bulk-unsubscribe watching agents from a ticket during a process workflow.
+   :keywords: ticketwatchset, znuny transition action, ticket watch, ticket subscription, unsubscribe all, watcher, process subscription, ticket watchers
+
 .. _TransitionAction TicketWatchSet:
 
 Manage Ticket Subscriptions

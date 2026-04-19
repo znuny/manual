@@ -1,3 +1,7 @@
+.. meta::
+   :description: Assign a new owner to a Znuny ticket — choose from agents with owner or rw permission in the queue; the ticket locks to the new owner automatically.
+   :keywords: znuny ticket owner, assign ticket, change owner, owner permission, owner lock, ticket assignment
+
 .. _PageNavigation ticketviews_agentticketowner:
 
 Assign the Ticket

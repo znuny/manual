@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny agents and customer users — configure authentication backends, directory service synchronization, SAML SSO, groups, roles and user permissions.
+   :keywords: znuny user management, agents, customer users, authentication backend, ldap auth, saml sso, groups roles, user permissions
+
 Manage User Access
 ##################
 .. _PageNavigation admin_usermanagement_index:

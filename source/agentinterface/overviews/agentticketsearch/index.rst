@@ -1,3 +1,7 @@
+.. meta::
+   :description: Review Znuny ticket search results — rerun the last search with modified options, save the query as a template and export matching tickets for later reuse.
+   :keywords: znuny ticket search, search results, save search, search template, last search, change search options
+
 Search Results
 ##############
 .. _PageNavigation overviews_agentticketsearch:

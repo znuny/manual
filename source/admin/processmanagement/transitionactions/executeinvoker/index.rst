@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the ExecuteInvoker transition action in Znuny to trigger a web service invoker from a process — supports synchronous and asynchronous execution via the Daemon.
+   :keywords: executeinvoker, znuny transition action, web service invoker, process invoker, asynchronous invoker, daemon, znuny webservice
+
 .. _TransitionAction ExecuteInvoker:
 
 Invoke a Web Service

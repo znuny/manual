@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny maintenance console commands — manage the mail queue, object links and other housekeeping via bin/znuny.Console.pl for routine operations and troubleshooting.
+   :keywords: znuny maintenance commands, console maintenance, mail queue command, objectlink cli, maint commands, console reference
+
 .. _PageNavigation console_maintenance:
 
 Console Commands - Maintenance

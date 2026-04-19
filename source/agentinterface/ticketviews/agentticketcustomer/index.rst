@@ -1,3 +1,7 @@
+.. meta::
+   :description: Assign or change the customer user on a Znuny ticket — optionally keep the CustomerID independent of the customer user through the CustomerIDReadOnly setting.
+   :keywords: znuny assign customer, change customer user, ticket customer, customer id, customer assignment, customer user
+
 .. _PageNavigation ticketviews_agentticketcustomer:
 
 Assign a Customer User

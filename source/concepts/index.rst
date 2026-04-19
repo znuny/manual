@@ -1,3 +1,7 @@
+.. meta::
+   :description: Understand the core Znuny concepts — articles, customers, escalations, locking, ownership, priorities, queues, states, types and high-availability frontend setups.
+   :keywords: znuny concepts, service desk basics, ticket concepts, znuny terminology, ticket lifecycle, service desk fundamentals
+
 Understanding the Software
 ##########################
 

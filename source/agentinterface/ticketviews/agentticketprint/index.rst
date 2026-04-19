@@ -1,3 +1,7 @@
+.. meta::
+   :description: Print a Znuny ticket as a PDF containing all articles and ticket metadata — or use the browser print to include HTML formatting and inline images.
+   :keywords: znuny print ticket, ticket pdf, print ticket, ticket export, ticket pdf export, printable ticket
+
 Print a Ticket
 ##############
 .. _PageNavigation ticketviews_agentticketprint:

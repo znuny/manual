@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the TicketCreate transition action in Znuny to create a new ticket from a process — set title, queue, lock, priority and other ticket attributes on creation.
+   :keywords: ticketcreate, znuny transition action, create ticket, process ticket, new ticket, queue, priority, ticket attributes
+
 .. _TransitionAction TicketCreate:
 
 Create a Ticket

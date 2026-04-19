@@ -1,3 +1,7 @@
+.. meta::
+   :description: Review Znuny tickets grouped by service — focus on services selected in personal preferences so you only see requests that match your area of responsibility.
+   :keywords: znuny service view, view by service, my services, ticket service, service overview, service filter
+
 View by Service
 ###############
 .. _PageNavigation agentinterface_overviews_agentticketserviceview:

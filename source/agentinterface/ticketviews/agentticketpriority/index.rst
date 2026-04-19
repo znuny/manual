@@ -1,3 +1,7 @@
+.. meta::
+   :description: Raise or lower the priority on a Znuny ticket — affects sorting and can colorize overview rows so urgent tickets stand out for agents and escalation monitors.
+   :keywords: znuny ticket priority, set priority, priority level, colorized priority, urgent tickets, change priority
+
 .. _PageNavigation ticketviews_agentticketpriority:
 
 Set the Priority

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Full list of Znuny placeholder tags — OTRS_TICKET, OTRS_CUSTOMER, OTRS_CONFIG and more for templates, notifications, auto-responses, transitions and web services.
+   :keywords: znuny placeholders, otrs_ticket, otrs_customer, placeholder tags, notification placeholder, template variable
+
 .. _PageNavigation annexes_placeholders_index:
 
 Placeholder Tags

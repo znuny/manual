@@ -1,3 +1,7 @@
+.. meta::
+   :description: Schedule Znuny system maintenance windows — announce to agents and customers, block new logins and disable integrations during planned downtime.
+   :keywords: znuny system maintenance, planned maintenance, maintenance window, scheduled downtime, maintenance announcement, maintenance overview
+
 .. _PageNavigation standardoperations_system_maintenance:
 
 Planned Maintenance

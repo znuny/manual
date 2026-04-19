@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the Znuny Last Views feature for quick access to recently used tickets and objects — configure the limit and position per agent from personal preferences.
+   :keywords: znuny last views, recent tickets, quick access, agent preferences, last view limit, last view position, avatar, context switching
+
 Last views
 ###########
 .. _PageNavigation agentinterface_lastviews_index:

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny communications — configure response templates, auto responses, team signatures and article colors for consistent agent–customer conversations.
+   :keywords: znuny communication, response templates, auto responses, signatures, article colors, communication management, email templates
+
 Managing Communication
 ######################
 .. _PageNavigation admin_communication_index:

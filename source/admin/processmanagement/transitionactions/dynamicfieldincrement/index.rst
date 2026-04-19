@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the DynamicFieldIncrement transition action in Znuny to increase or decrease a numeric value stored in a text-type dynamic field during a process.
+   :keywords: dynamicfieldincrement, znuny transition action, increment dynamic field, counter field, decrement value, numeric dynamic field, process counter
+
 .. _TransitionAction DynamicFieldIncrement:
 
 Incrementing a Dynamic Field Value

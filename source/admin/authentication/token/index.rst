@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure OAuth2 tokens for Znuny PostMaster mail accounts and web service invokers — supports authorization and client credentials flows plus Microsoft Modern Auth.
+   :keywords: oauth2 token, modern authentication, znuny oauth, client credentials flow, microsoft oauth, imap oauth, smtp oauth
+
 .. _PageNavigation authenticate_token_index:
 
 OAuth2 Token Administration

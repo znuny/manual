@@ -1,3 +1,7 @@
+.. meta::
+   :description: Customize every Znuny agent screen through system configuration — show, hide, require or default fields on ticket close, note, move, owner and free-text dialogs.
+   :keywords: znuny screen configuration, customize ticket screens, frontend agent view, mandatory fields, hide fields, agent screens
+
 Screen Configuration
 ####################
 

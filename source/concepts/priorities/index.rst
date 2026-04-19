@@ -1,3 +1,7 @@
+.. meta::
+   :description: Ticket priorities in Znuny — five default priority levels from very low to very high, their colors, how they interact with SLA escalations and how to customize them.
+   :keywords: znuny priorities, ticket priority, priority levels, priority color, sla priority, ticket urgency
+
 .. _PageNavigation concepts_priorities_index:
 
 Priorities in Znuny

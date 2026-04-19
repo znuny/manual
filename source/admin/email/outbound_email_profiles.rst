@@ -1,3 +1,7 @@
+.. meta::
+   :description: Manage Znuny outbound email profiles — configure per-sender SMTP host, port, authentication and fallback profiles using the MultiSendmail module.
+   :keywords: outbound email profiles, znuny smtp profile, multisendmail, per-sender smtp, email routing, fallback profile, sender configuration
+
 .. _PageNavigation outbound_email_profiles:
 
 Manage Outbound Email Profiles

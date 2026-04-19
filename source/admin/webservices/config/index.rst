@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny web service basics — endpoint from FQDN and ScriptAlias, name, description, remote system, debug threshold and validity in the Generic Interface.
+   :keywords: znuny web service configuration, generic interface endpoint, fqdn scriptalias, debug threshold, webservice name, webservice validity
+
 General Configuration
 #####################
 .. _Webservices Configuration:

@@ -1,3 +1,7 @@
+.. meta::
+   :description: Create and manage Znuny groups — assign users to groups, link groups to queues and roles, and understand how groups drive permissions across modules and packages.
+   :keywords: znuny groups, user groups, group permissions, queue groups, role groups, group assignment, group management
+
 .. _PageNavigation admin_groups_index:
 
 Manage Groups

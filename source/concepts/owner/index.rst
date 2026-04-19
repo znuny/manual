@@ -1,3 +1,7 @@
+.. meta::
+   :description: Ticket owner and responsible in Znuny — how ownership is assigned, transferred and taken, manual locking, and the difference between the owner and the responsible agent.
+   :keywords: znuny ticket owner, responsible agent, ownership transfer, lock take, agent responsible, owner assignment
+
 .. _PageNavigation concepts_owner_index:
 
 Ticket Owner and Responsible

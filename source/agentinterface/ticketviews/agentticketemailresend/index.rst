@@ -1,3 +1,7 @@
+.. meta::
+   :description: Resend a failed Znuny email after SMTP hard failure — opens the compose screen with the original data so you can correct the address and send it again.
+   :keywords: znuny email resend, resend email, smtp failure, hard bounce, email retry, resend article
+
 Resend an Email
 ###############
 .. _PageNavigation ticketviews_agentticketmailresend:

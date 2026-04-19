@@ -1,3 +1,7 @@
+.. meta::
+   :description: Create a Znuny mini-admin role to delegate partial administrator access — grant a group permissions to specific admin modules via Frontend::Module configuration.
+   :keywords: mini admin, limited admin, znuny delegation, admin role, frontend module, admin permissions, group admin access
+
 Granting Limited Admin Privileges
 #################################
 

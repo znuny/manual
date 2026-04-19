@@ -1,3 +1,7 @@
+.. meta::
+   :description: Znuny admin console commands — create users, fix frontend files, manage groups, queues and system tasks from bin/znuny.Console.pl without the web UI.
+   :keywords: znuny admin commands, znuny.Console.pl, admin console, cli admin, admin scripts, console reference
+
 .. _PageNavigation console_admin:
 
 Console Commands - Admin

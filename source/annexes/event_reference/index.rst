@@ -1,3 +1,7 @@
+.. meta::
+   :description: Complete Znuny event reference — every ticket, article, queue, process and dynamic field event the system emits, with where each event can be used in triggers.
+   :keywords: znuny event reference, ticket events, article events, event triggers, generic agent events, event table
+
 .. _PageNavigation annexes_event_reference_index_event_reference:
 
 Event Reference

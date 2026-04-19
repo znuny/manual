@@ -1,3 +1,7 @@
+.. meta::
+   :description: Trigger Znuny web service invokers from a Generic Agent or a process Transition Action — execute invokers manually, on events or on a schedule, synchronously or asynchronously.
+   :keywords: znuny web service invoker trigger, generic agent invoker, executeinvoker transition, asynchronous invoker, invoker schedule, event invoker
+
 Special Features
 ################
 

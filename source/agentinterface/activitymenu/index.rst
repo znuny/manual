@@ -1,3 +1,7 @@
+.. meta::
+   :description: Use the Znuny activity menu to receive in-frontend notifications — see, mark as read, open and delete alerts via the bell icon in the top navigation.
+   :keywords: activity menu, znuny notifications, in-app notifications, agent activity menu, notification bell, mark as seen, frontend alerts
+
 Activity Notifications
 ######################
 .. _PageNavigation agentinterface_activitymenu_index:

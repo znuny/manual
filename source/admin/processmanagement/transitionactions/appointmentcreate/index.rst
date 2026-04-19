@@ -1,6 +1,10 @@
+.. meta::
+   :description: Use the AppointmentCreate transition action in Znuny to create a calendar appointment from a process — set calendar, title, start and end times via ISO timestamps.
+   :keywords: appointmentcreate, znuny transition action, calendar appointment, process appointment, calendarid, calendarname, create appointment
+
 .. _TransitionAction AppointmentCreate:
 
-Create an Appointment 
+Create an Appointment
 #####################
 
 Summary

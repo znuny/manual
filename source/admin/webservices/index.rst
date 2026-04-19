@@ -1,3 +1,7 @@
+.. meta::
+   :description: Build Znuny web services with the Generic Interface — configure transports, providers, requesters, invokers, notifications and import ready-to-adopt templates.
+   :keywords: znuny web services, generic interface, rest webservice, soap webservice, invoker, requester, provider, web service transport
+
 Web Services
 ############
 .. _PageNavigation admin_webservices_index:

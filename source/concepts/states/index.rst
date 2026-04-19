@@ -1,3 +1,7 @@
+.. meta::
+   :description: Ticket states in Znuny — new, open, pending and closed workflows, how state types drive technical behavior, and how to customize states to fit your processes.
+   :keywords: znuny ticket states, state types, pending reminder, pending auto, closed successful, ticket workflow
+
 .. _PageNavigation concepts_states_index:
 
 Ticket States

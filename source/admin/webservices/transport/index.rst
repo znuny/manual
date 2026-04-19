@@ -1,3 +1,7 @@
+.. meta::
+   :description: Configure Znuny web service network transports — REST and SOAP provider and requester settings, SOAPAction, namespace and independent requester/invoker protocols.
+   :keywords: znuny network transport, rest transport, soap transport, soapaction, namespace, webservice transport, http transport, web service protocol
+
 .. _PageNavigation admin_webservices_transport_index:
 
 Network Transport Configuration
