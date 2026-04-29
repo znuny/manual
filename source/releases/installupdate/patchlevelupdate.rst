@@ -52,8 +52,14 @@ Update
 .. tab-set::
   :sync-group: distribution
 
-  .. tab-item:: RHEL based
-    :sync: rhel
+  .. tab-item:: RPM installation
+
+        Starting with version 7.3.2 we sign our RPMs. Please import our GPG key with these instructions:
+
+        .. code-block:: bash
+
+            curl -LO https://download.znuny.org/znuny-release-key.asc
+            rpm --import znuny-release-key.asc
 
         .. code-block::
 
@@ -74,21 +80,32 @@ Update
         .. code-block:: bash
 
             cd /opt
-            curl https://download.znuny.org/releases/znuny-latest-6.5.tar.gz | tar -xz
+            wget https://download.znuny.org/releases/znuny-latest-6.5.tar.gz
+            tar -xfz znuny-latest-6.5.tar.gz
+
+            # Optional: verify the checksum of the downloaded version
+            curl -LO https://download.znuny.org/releases/znuny-latest-6.5.tar.gz.sha256
+            sha256sum -c znuny-latest.tar-5.6.gz.sha256
+
+            # Optional: verify the GPG signature for the downloaded version, the import is only required once
+            curl -LO https://download.znuny.org/znuny-release-key.asc
+            gpg --import znuny-release-key.asc
+            curl -LO https://download.znuny.org/releases/znuny-latest-6.5.tar.gz.asc
+            gpg --verify znuny-latest-6.5.tar.gz.asc znuny-latest-6.5.tar.gz
 
             # Restore Kernel/Config.pm, articles, etc.
-            cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.19/Kernel/
-            mv /opt/otrs/var/article/* /opt/znuny-6.5.19/var/article/
+            cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.20/Kernel/
+            mv /opt/otrs/var/article/* /opt/znuny-6.5.20/var/article/
 
             # Restore dotfiles from the homedir to the new directory
-            for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.19/; done
+            for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.20/; done
 
             # Restore modified and custom cron job
-            for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.19/var/cron/; done
+            for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.20/var/cron/; done
 
             # Set the permissions
             znuny-6.5.19/bin/otrs.SetPermissions.pl
-            ln -snf /opt/znuny-6.5.19 /opt/otrs
+            ln -snf /opt/znuny-6.5.20 /opt/otrs
 
             su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
             su - otrs -c 'bin/otrs.Console.pl Admin::Package::ReinstallAll'
