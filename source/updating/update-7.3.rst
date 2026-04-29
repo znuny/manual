@@ -72,12 +72,21 @@ Update via RPM
 
 The update via RPM for RHEL based Linux distributions.
 
+.. important::
+
+  Starting with version 7.3.2 we sign our RPMs. Please import our GPG key with these instructions:
+
+  .. code-block:: bash
+
+    curl -LO https://download.znuny.org/znuny-release-key.asc
+    rpm --import znuny-release-key.asc
+
 You can find the correct URL for your RPM at https://www.znuny.org/releases. 
 
-.. code-block:: 
+.. code-block:: bash
 
 	# Update to Znuny 7.3
-	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.1-01.noarch.rpm
+	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.2-01.noarch.rpm
 
 	# Check for missing modules and add required modules and install at least **required** modules.
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -89,33 +98,44 @@ Update via source
 
 The installation from source takes more steps. If there are more file to restore than mentioned in the restore block, add them by yourself.
 
-.. code-block::
+.. code-block:: bash
 
-	# Download latest Znuny 7.3
-	cd /opt
-	wget https://download.znuny.org/releases/znuny-latest-7.3.tar.gz
+  # Download latest Znuny 7.3
+  cd /opt
+  wget https://download.znuny.org/releases/znuny-latest-7.3.tar.gz
 
-	# Extract
-	tar xfz znuny-latest-7.3.tar.gz
+  # Optional: verify the checksum of the downloaded version
+  curl -LO https://download.znuny.org/releases/znuny-latest-7.3.tar.gz.sha256
+  sha256sum -c znuny-latest.tar-7.3.gz.sha256
 
-	# Set permissions
-	/opt/znuny-7.3.1/bin/znuny.SetPermissions.pl
+  # Optional: verify the GPG signature for the downloaded version,
+  # the import is only required once
+  curl -LO https://download.znuny.org/znuny-release-key.asc
+  gpg --import znuny-release-key.asc
+  curl -LO https://download.znuny.org/releases/znuny-latest-7.3.tar.gz.asc
+  gpg --verify znuny-latest-7.3.tar.gz.asc znuny-latest-7.3.tar.gz
 
-	# Restore Kernel/Config.pm, articles, etc.
-	cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.1/Kernel/
-	mv /opt/znuny/var/article/* /opt/znuny-7.3.1/var/article/
+  # Extract
+  tar xfz znuny-latest-7.3.tar.gz
 
-	# Restore dotfiles from the homedir to the new directory
-	for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.1/; done
+  # Set permissions
+  /opt/znuny-7.3.2/bin/znuny.SetPermissions.pl
 
-	# Restore modified and custom cron job
-	for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.1/var/cron/; done
+  # Restore Kernel/Config.pm, articles, etc.
+  cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.2/Kernel/
+  mv /opt/znuny/var/article/* /opt/znuny-7.3.2/var/article/
 
-	# Create/overwrite a symlink 
-	ln -snf /opt/znuny-7.3.1 /opt/znuny
+  # Restore dotfiles from the homedir to the new directory
+  for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.2/; done
 
-	# Check for missing modules and add **required** modules
-	/opt/znuny/bin/znuny.CheckModules.pl --all
+  # Restore modified and custom cron job
+  for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.2/var/cron/; done
+
+  # Create/overwrite a symlink 
+  ln -snf /opt/znuny-7.3.2 /opt/znuny
+
+  # Check for missing modules and add **required** modules
+  /opt/znuny/bin/znuny.CheckModules.pl --all
 
 ..
 
