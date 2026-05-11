@@ -106,7 +106,7 @@ The installation from source takes more steps. If there are more file to restore
 
   # Optional: verify the checksum of the downloaded version
   curl -LO https://download.znuny.org/releases/znuny-latest-7.3.tar.gz.sha256
-  sha256sum -c znuny-latest.tar-7.3.gz.sha256
+  sha256sum -c znuny-latest-7.3.tar.gz.sha256
 
   # Optional: verify the GPG signature for the downloaded version,
   # the import is only required once
