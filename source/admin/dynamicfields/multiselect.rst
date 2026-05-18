@@ -6,3 +6,15 @@ Configuring a type of multiselect, similar to the dropdown, will allow the user 
 .. figure:: images/dynamicfield_multiselect.png
 
     Add a multiselect field
+
+- **Tree View**: displays values as a expandable tree. 
+
+.. note:: 
+
+    To create a tree stucture the keys must look like this:
+
+    .. code-block::
+
+        Level1
+        Level1::Sublevel1
+        Level1::Sublevel2
