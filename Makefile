@@ -7,6 +7,13 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
 
+# Pin the mermaid.js / d3.js versions served from source/_static/js/.
+# Keep in sync with `mermaid_version` and `d3_version` in source/conf.py.
+MERMAID_VERSION = 11.2.0
+MERMAID_DIR     = source/_static/js/mermaid
+D3_VERSION      = 7.9.0
+D3_DIR          = source/_static/js/d3
+
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
@@ -43,10 +50,28 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 	@echo "  coverage   to run coverage check of the documentation (if enabled)"
 	@echo "  dummy      to check syntax errors of document sources"
+	@echo "  vendor-js  download mermaid.js $(MERMAID_VERSION) and d3.js $(D3_VERSION) into source/_static/js/"
 
 .PHONY: clean
 clean:
 	rm -rf $(BUILDDIR)/*
+
+.PHONY: vendor-js
+vendor-js:
+	@tmp=$$(mktemp -d) && \
+	 echo "Fetching mermaid $(MERMAID_VERSION)..." && \
+	 curl -fsSL https://registry.npmjs.org/mermaid/-/mermaid-$(MERMAID_VERSION).tgz -o $$tmp/mermaid.tgz && \
+	 rm -rf $(MERMAID_DIR) && \
+	 mkdir -p $(MERMAID_DIR)/chunks/mermaid.esm.min && \
+	 tar -xzf $$tmp/mermaid.tgz -C $(MERMAID_DIR) --strip-components=2 package/dist/mermaid.esm.min.mjs && \
+	 tar -xzf $$tmp/mermaid.tgz -C $$tmp package && \
+	 cp $$tmp/package/dist/chunks/mermaid.esm.min/*.mjs $(MERMAID_DIR)/chunks/mermaid.esm.min/ && \
+	 echo "Fetching d3 $(D3_VERSION)..." && \
+	 curl -fsSL https://registry.npmjs.org/d3/-/d3-$(D3_VERSION).tgz -o $$tmp/d3.tgz && \
+	 rm -rf $(D3_DIR) && mkdir -p $(D3_DIR) && \
+	 tar -xzf $$tmp/d3.tgz -C $(D3_DIR) --strip-components=2 package/dist/d3.min.js && \
+	 rm -rf $$tmp && \
+	 echo "Vendored mermaid $(MERMAID_VERSION) ($$(du -sh $(MERMAID_DIR) | cut -f1)) and d3 $(D3_VERSION) ($$(du -sh $(D3_DIR) | cut -f1))."
 
 .PHONY: html
 html:

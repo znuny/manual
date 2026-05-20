@@ -46,6 +46,15 @@ else:
 ogp_site_url  = html_baseurl
 ogp_site_name = 'Znuny Documentation'
 
+# Self-host mermaid.js so a strict CSP (script-src 'self') can serve it without
+# whitelisting jsdelivr. Must match the version vendored under
+# source/_static/js/mermaid/ (refresh via `make vendor-mermaid`).
+mermaid_version     = '11.2.0'
+mermaid_use_local   = f'{html_baseurl}_static/js/mermaid/mermaid.esm.min.mjs'
+mermaid_include_elk = ''  # default is '0.1.4' which pulls from jsdelivr; disable since no diagram uses ELK
+d3_version          = '7.9.0'
+d3_use_local        = f'{html_baseurl}_static/js/d3/d3.min.js'
+
 pygments_style = 'sphinx'
 html_theme = 'sphinx_book_theme'
 html_favicon = 'images/favicon.ico'
