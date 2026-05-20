@@ -37,3 +37,26 @@ html[data-theme="dark"] .bd-content img:not(.only-dark, .dark-light) {
 .search-button {
   display: inherit;
 }
+
+/* Mermaid edges/arrowheads render in near-black on the dark theme; lift them
+   to a light gray so flowchart lines stay visible. Only flowcharts are used
+   in these docs, so this covers `.. mermaid:: graph TD/TB` output. */
+html[data-theme="dark"] .mermaid .edgePath .path,
+html[data-theme="dark"] .mermaid .flowchart-link {
+  stroke: #c9d1d9 !important;
+}
+
+html[data-theme="dark"] .mermaid .marker,
+html[data-theme="dark"] .mermaid .arrowheadPath,
+html[data-theme="dark"] .mermaid marker path {
+  stroke: #c9d1d9 !important;
+  fill: #c9d1d9 !important;
+}
+
+html[data-theme="dark"] .mermaid .node rect,
+html[data-theme="dark"] .mermaid .node circle,
+html[data-theme="dark"] .mermaid .node ellipse,
+html[data-theme="dark"] .mermaid .node polygon,
+html[data-theme="dark"] .mermaid .node path {
+  stroke: #c9d1d9 !important;
+}
