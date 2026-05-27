@@ -18,7 +18,7 @@ The framework supports 2FA or two-factor authentication by providing for the use
 2FA Setup
 *********
 
-To activate this, you must go to the system configuration in the administrator area, and navigate to **Core⇾Auth⇾(Agent or Customer)⇾TwoFactor**. The module is called GoogleAuthenticator, but complies to `RFC 6238 <https://www.rfc-editor.org/rfc/rfc6238>`_ and works with compliant software token generators.
+To activate this, you must go to the system configuration in the administrator area, and navigate to **Core⇾Auth⇾(Agent or Customer)⇾TwoFactor**. The module is called GoogleAuthenticator, but complies to `RFC 6238 <https://www.rfc-editor.org/info/rfc6238>`_ and works with compliant software token generators.
 
 Once activated, unless your administrator should manually generate the shared secret for the users, navigate to **Frontend⇾Agent⇾View⇾Preferences** and enable the preference module. Do this in ``PreferencesGroups###GoogleAuthenticatorSecretKey`` by setting it to **Active => 1**.
 

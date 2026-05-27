@@ -86,7 +86,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block:: bash
 
 	# Update to Znuny 7.3
-	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.2-01.noarch.rpm
+	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.3-01.noarch.rpm
 
 	# Check for missing modules and add required modules and install at least **required** modules.
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -119,20 +119,20 @@ The installation from source takes more steps. If there are more file to restore
   tar xfz znuny-latest-7.3.tar.gz
 
   # Set permissions
-  /opt/znuny-7.3.2/bin/znuny.SetPermissions.pl
+  /opt/znuny-7.3.3/bin/znuny.SetPermissions.pl
 
   # Restore Kernel/Config.pm, articles, etc.
-  cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.2/Kernel/
-  mv /opt/znuny/var/article/* /opt/znuny-7.3.2/var/article/
+  cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.3/Kernel/
+  mv /opt/znuny/var/article/* /opt/znuny-7.3.3/var/article/
 
   # Restore dotfiles from the homedir to the new directory
-  for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.2/; done
+  for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.3/; done
 
   # Restore modified and custom cron job
-  for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.2/var/cron/; done
+  for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.3/var/cron/; done
 
   # Create/overwrite a symlink 
-  ln -snf /opt/znuny-7.3.2 /opt/znuny
+  ln -snf /opt/znuny-7.3.3 /opt/znuny
 
   # Check for missing modules and add **required** modules
   /opt/znuny/bin/znuny.CheckModules.pl --all
