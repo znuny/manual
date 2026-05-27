@@ -19,11 +19,7 @@ Basics
 ******
 
 Some basic packages are needed to get going.
-This includes the web server, database (MariaDB in this case), cpanminus to install additional.
-Perl modules and tar to extract the source.
-
-Basics
-******
+This includes the web server, database (MariaDB in this case), cpanminus to install additional Perl modules and Tar to extract the source.
 
 .. important::
 
@@ -35,10 +31,6 @@ Basics
 
       curl -LO https://download.znuny.org/znuny-release-key.asc
       rpm --import znuny-release-key.asc
-
-
-Some basic packages are needed to get going.
-This includes the web server, database (MariaDB in this case), cpanminus to install additional Perl modules and Tar to extract the source.
 
 .. tab-set::
   :sync-group: distribution
@@ -69,7 +61,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
     .. code-block:: bash
 
-      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.20-01.noarch.rpm
+      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.21-01.noarch.rpm
 
   .. tab-item:: Installation from source archive
 
@@ -83,7 +75,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
       # Optional: verify the checksum of the downloaded version
       curl -LO https://download.znuny.org/releases/znuny-latest-6.5.tar.gz.sha256
-      sha256sum -c znuny-latest.tar-5.6.gz.sha256
+      sha256sum -c znuny-latest-6.5.tar.gz.sha256
 
       # Optional: verify the GPG signature for the downloaded version, the import is only required once
       curl -LO https://download.znuny.org/znuny-release-key.asc
@@ -92,10 +84,10 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
       gpg --verify znuny-latest-6.5.tar.gz.asc znuny-latest-6.5.tar.gz
 
       # Extract
-      tar xfz znuny-latest-6.5.20.tar.gz
+      tar xfz znuny-latest-6.5.tar.gz
 
       # Create a symlink
-      ln -s /opt/znuny-6.5.20 /opt/otrs
+      ln -s /opt/znuny-6.5.21 /opt/otrs
 
       # Add user for RHEL
       useradd -d /opt/otrs -c 'Znuny user' -g apache -s /bin/bash -M -N otrs

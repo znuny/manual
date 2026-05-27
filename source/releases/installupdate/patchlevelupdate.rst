@@ -4,7 +4,7 @@ Patch Level Update
 
 This documentation explains how to perform a patch level update for Znuny LTS 6.5.
 
-.. note::   Your current system needs to be a Znuny LTS 6.5.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 6.5.4 directly to 6.5.19
+.. note::   Your current system needs to be a Znuny LTS 6.5.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 6.5.4 directly to 6.5.21
 
 
 Prepare
@@ -54,7 +54,7 @@ Update
 
   .. tab-item:: RPM installation
 
-        Starting with version 7.3.2 we sign our RPMs. Please import our GPG key with these instructions:
+        Starting with LTS version 6.5.20 we sign our RPMs. Please import our GPG key with these instructions:
 
         .. code-block:: bash
 
@@ -63,7 +63,7 @@ Update
 
         .. code-block::
 
-            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.19-01.noarch.rpm
+            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.21-01.noarch.rpm
             su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
             su - otrs -c 'bin/otrs.Console.pl Admin::Package::ReinstallAll'
             su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
@@ -85,7 +85,7 @@ Update
 
             # Optional: verify the checksum of the downloaded version
             curl -LO https://download.znuny.org/releases/znuny-latest-6.5.tar.gz.sha256
-            sha256sum -c znuny-latest.tar-5.6.gz.sha256
+            sha256sum -c znuny-latest-6.5.tar.gz.sha256
 
             # Optional: verify the GPG signature for the downloaded version, the import is only required once
             curl -LO https://download.znuny.org/znuny-release-key.asc
@@ -94,18 +94,18 @@ Update
             gpg --verify znuny-latest-6.5.tar.gz.asc znuny-latest-6.5.tar.gz
 
             # Restore Kernel/Config.pm, articles, etc.
-            cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.20/Kernel/
-            mv /opt/otrs/var/article/* /opt/znuny-6.5.20/var/article/
+            cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.21/Kernel/
+            mv /opt/otrs/var/article/* /opt/znuny-6.5.21/var/article/
 
             # Restore dotfiles from the homedir to the new directory
-            for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.20/; done
+            for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.21/; done
 
             # Restore modified and custom cron job
-            for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.20/var/cron/; done
+            for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.21/var/cron/; done
 
             # Set the permissions
-            znuny-6.5.19/bin/otrs.SetPermissions.pl
-            ln -snf /opt/znuny-6.5.20 /opt/otrs
+            znuny-6.5.21/bin/otrs.SetPermissions.pl
+            ln -snf /opt/znuny-6.5.21 /opt/otrs
 
             su - otrs -c 'scripts/MigrateToZnuny6_5.pl --verbose'
             su - otrs -c 'bin/otrs.Console.pl Admin::Package::ReinstallAll'
