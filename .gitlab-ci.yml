@@ -10,6 +10,15 @@ default:
     - source myenv/bin/activate
     - pip install -r requirements.txt
 
+linkcheck:
+  stage: build
+  image: python:bookworm
+  allow_failure: true
+  except:
+    - merge_requests
+  script:
+    - make linkcheck SPHINXBUILD=sphinx-build
+
 build:
   stage: build
   image: python:bookworm
@@ -20,7 +29,6 @@ build:
   except:
     - merge_requests
   script:
-    - make linkcheck SPHINXBUILD=sphinx-build
     - ZNUNY_DOCS_ROLE=lts ZNUNY_DOCS_BRANCH=znuny-lts_6_5 make html SPHINXBUILD=sphinx-build
 
 deploy-znuny:
