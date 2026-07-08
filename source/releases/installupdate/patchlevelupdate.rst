@@ -81,7 +81,7 @@ Update
 
             cd /opt
             wget https://download.znuny.org/releases/znuny-latest-6.5.tar.gz
-            tar -xfz znuny-latest-6.5.tar.gz
+            tar -xzf znuny-latest-6.5.tar.gz
 
             # Optional: verify the checksum of the downloaded version
             curl -LO https://download.znuny.org/releases/znuny-latest-6.5.tar.gz.sha256
