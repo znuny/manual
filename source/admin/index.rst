@@ -40,6 +40,7 @@ The general rules are:
 
    usermanagement/index
    queues/index
+   ticketclassification/index
    servicemanagement/index
    communication/index
    authentication/index
