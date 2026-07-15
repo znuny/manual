@@ -90,7 +90,7 @@ A snippet is used in any mask where HTML is enabled and the ticket is in the que
 
     Snippet Use in our :ref:`common features <PageNavigation ticketviews_agentticketactioncommon_snippet>` section
 
-Using <OTRS_*> tags is also possible. A limited amount of tags is available in the ticket create screens.
+Placeholders are also supported in templates. A limited set of placeholders is available in ticket create screens.
 
 .. seealso:: 
 

@@ -36,7 +36,8 @@ answer templates.
 
 .. toctree::
    :maxdepth: 2
-   
+
+   salutations/index
    signatures/index
 
 Article Colors

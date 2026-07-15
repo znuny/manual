@@ -72,7 +72,7 @@ SendNoAutoResponseRegExp
 	Configure which addresses should receive no auto response.
 
 .. hint::
- 	Auto-responses are also suppressed if the optional email header X-OTRS-Loop is set to true. Some emails, mostly automated generated, are also designed to skip auto-responses. Check the ticket history and communication log if needed.
+ 	Auto-responses are also suppressed if the incoming message contains a loop-prevention header. Some automated emails are designed to skip auto-responses by default. Check the ticket history and communication log if needed.
 
 .. seealso:: 
 
