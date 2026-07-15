@@ -94,3 +94,4 @@ In the rest of this chapter we will discuss how to use groups and rolls to manag
    user_synchronization/index
    saml_configuration/index
    users/index
+   session/index
