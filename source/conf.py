@@ -65,6 +65,7 @@ html_theme_options = {
         "version_match": DOCS_BRANCH,
     },
     "primary_sidebar_end": ["version-switcher"],
+    "navbar_persistent": [],
     "repository_url": "https://github.com/znuny/manual",
     "repository_branch": DOCS_BRANCH,
     "use_repository_button": True,
