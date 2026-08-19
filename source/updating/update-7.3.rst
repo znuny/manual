@@ -86,7 +86,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block:: bash
 
 	# Update to Znuny 7.3
-	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.5-01.noarch.rpm
+	dnf update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.6-01.noarch.rpm
 
 	# Check for missing modules and add required modules and install at least **required** modules.
 	/opt/znuny/bin/znuny.CheckModules.pl --all
@@ -102,37 +102,37 @@ The installation from source takes more steps. If there are more file to restore
 
   # Download latest Znuny 7.3
   cd /opt
-  wget https://download.znuny.org/releases/znuny-latest-7.3.tar.gz
+  wget https://download.znuny.org/releases/znuny-7.3.6.tar.gz
 
   # Optional: verify the checksum of the downloaded version
-  curl -LO https://download.znuny.org/releases/znuny-latest-7.3.tar.gz.sha256
-  sha256sum -c znuny-latest-7.3.tar.gz.sha256
+  curl -LO https://download.znuny.org/releases/znuny-7.3.6.tar.gz.sha256
+  sha256sum -c znuny-7.3.6.tar.gz.sha256
 
   # Optional: verify the GPG signature for the downloaded version,
   # the import is only required once
   curl -LO https://download.znuny.org/znuny-release-key.asc
   gpg --import znuny-release-key.asc
-  curl -LO https://download.znuny.org/releases/znuny-latest-7.3.tar.gz.asc
-  gpg --verify znuny-latest-7.3.tar.gz.asc znuny-latest-7.3.tar.gz
+  curl -LO https://download.znuny.org/releases/znuny-7.3.6.tar.gz.asc
+  gpg --verify znuny-7.3.6.tar.gz.asc znuny-7.3.6.tar.gz
 
   # Extract
-  tar xfz znuny-latest-7.3.tar.gz
+  tar xfz znuny-7.3.6.tar.gz
 
   # Set permissions
-  /opt/znuny-7.3.5/bin/znuny.SetPermissions.pl
+  /opt/znuny-7.3.6/bin/znuny.SetPermissions.pl
 
   # Restore Kernel/Config.pm, articles, etc.
-  cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.5/Kernel/
-  mv /opt/znuny/var/article/* /opt/znuny-7.3.5/var/article/
+  cp -a /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.6/Kernel/
+  mv /opt/znuny/var/article/* /opt/znuny-7.3.6/var/article/
 
   # Restore dotfiles from the homedir to the new directory
-  for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.5/; done
+  for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.6/; done
 
   # Restore modified and custom cron job
-  for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.5/var/cron/; done
+  for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.6/var/cron/; done
 
   # Create/overwrite a symlink
-  ln -snf /opt/znuny-7.3.5 /opt/znuny
+  ln -snf /opt/znuny-7.3.6 /opt/znuny
 
   # Check for missing modules and add **required** modules
   /opt/znuny/bin/znuny.CheckModules.pl --all
@@ -158,8 +158,8 @@ Reinstall or Upgrade Add-ons (Packages)
 .. code-block:: shell
 
     # Make sure all add-ons are correct installed after a patch level update
-    su -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll' - znuny
     su -c 'scripts/MigrateToZnuny7_3.pl --verbose' - znuny
+    su -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll' - znuny
     # Upgrade all packages
     su -c 'bin/znuny.Console.pl Admin::Package::UpgradeAll' - znuny
     su -c 'scripts/MigrateToZnuny7_3.pl --verbose' - znuny

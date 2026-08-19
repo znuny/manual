@@ -72,7 +72,7 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
     .. code-block:: bash
 
-      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.5-01.noarch.rpm
+      dnf install -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.6-01.noarch.rpm
 
 
   .. tab-item:: Installation from source archive
@@ -83,23 +83,23 @@ This includes the web server, database (MariaDB in this case), cpanminus to inst
 
       # Download Znuny
       cd /opt
-      wget https://download.znuny.org/releases/znuny-latest-7.3.tar.gz
+      wget https://download.znuny.org/releases/znuny-7.3.6.tar.gz
 
       # Optional: verify the checksum of the downloaded version
-      curl -LO https://download.znuny.org/releases/znuny-latest-7.3.tar.gz.sha256
-      sha256sum -c znuny-latest-7.3.tar.gz.sha256
+      curl -LO https://download.znuny.org/releases/znuny-7.3.6.tar.gz.sha256
+      sha256sum -c znuny-7.3.6.tar.gz.sha256
 
       # Optional: verify the GPG signature for the downloaded version, the import is only required once
       curl -LO https://download.znuny.org/znuny-release-key.asc
       gpg --import znuny-release-key.asc
-      curl -LO https://download.znuny.org/releases/znuny-latest-7.3.tar.gz.asc
-      gpg --verify znuny-latest-7.3.tar.gz.asc znuny-latest-7.3.tar.gz
+      curl -LO https://download.znuny.org/releases/znuny-7.3.6.tar.gz.asc
+      gpg --verify znuny-7.3.6.tar.gz.asc znuny-7.3.6.tar.gz
 
       # Extract
-      tar xfz znuny-latest-7.3.tar.gz
+      tar xfz znuny-7.3.6.tar.gz
 
       # Create a symlink
-      ln -s /opt/znuny-7.3.5 /opt/znuny
+      ln -s /opt/znuny-7.3.6 /opt/znuny
 
       # Add user for RHEL
       useradd -d /opt/znuny -c 'Znuny user' -g apache -s /bin/bash -M -N znuny
