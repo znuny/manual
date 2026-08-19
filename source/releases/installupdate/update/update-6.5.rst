@@ -72,7 +72,7 @@ You can find the correct URL for your RPM at https://www.znuny.org/releases.
 .. code-block::
 
   # Update to Znuny 6.5 (RHEL 7 / CentOS 7)
-  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.20-01.noarch.rpm
+  yum update -y https://download.znuny.org/releases/RPMS/rhel/7/znuny-6.5.24-01.noarch.rpm
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
@@ -87,40 +87,40 @@ The installation from source takes some more steps. If there are more file to re
 
   # Download latest Znuny 6.5
   cd /opt
-  wget https://download.znuny.org/releases/znuny-latest-6.5.tar.gz
+  wget https://download.znuny.org/releases/znuny-6.5.24.tar.gz
 
   # Optional: verify the checksum of the downloaded version
-  curl -LO https://download.znuny.org/releases/znuny-latest-6.5.tar.gz.sha256
-  sha256sum -c znuny-latest.tar-6.5.gz.sha256
+  curl -LO https://download.znuny.org/releases/znuny-6.5.24.tar.gz.sha256
+  sha256sum -c znuny-6.5.24.tar.gz.sha256
 
   # Optional: verify the GPG signature for the downloaded version,
   # the import is only required once
   curl -LO https://download.znuny.org/znuny-release-key.asc
   gpg --import znuny-release-key.asc
-  curl -LO https://download.znuny.org/releases/znuny-latest-6.5.tar.gz.asc
-  gpg --verify znuny-latest-6.5.tar.gz.asc znuny-latest-6.5.tar.gz
+  curl -LO https://download.znuny.org/releases/znuny-6.5.24.tar.gz.asc
+  gpg --verify znuny-6.5.24.tar.gz.asc znuny-6.5.24.tar.gz
 
   # Extract
-  tar xfz znuny-latest-6.5.tar.gz
+  tar xfz znuny-6.5.24.tar.gz
 
   # Set permissions
-  /opt/znuny-6.5.19/bin/otrs.SetPermissions.pl
+  /opt/znuny-6.5.24/bin/otrs.SetPermissions.pl
 
   # Restore Kernel/Config.pm, articles, etc.
-  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.20/Kernel/
-  mv /opt/otrs/var/article/* /opt/znuny-6.5.20/var/article/
+  cp -av /opt/otrs/Kernel/Config.pm /opt/znuny-6.5.24/Kernel/
+  mv /opt/otrs/var/article/* /opt/znuny-6.5.24/var/article/
 
   # Restore dotfiles from the homedir to the new directory
-  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.20/; done
+  for f in $(find -L /opt/otrs -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.24/; done
 
   # Restore modified and custom cron job
-  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.20/var/cron/; done
+  for f in $(find -L /opt/otrs/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-6.5.24/var/cron/; done
 
   # Delete the old symlink
   rm /opt/otrs
 
   # Create a symlink 
-  ln -sf /opt/znuny-6.5.20 /opt/otrs
+  ln -sf /opt/znuny-6.5.24 /opt/otrs
 
   # Check for missing modules and add required modules
   /opt/otrs/bin/otrs.CheckModules.pl --all
