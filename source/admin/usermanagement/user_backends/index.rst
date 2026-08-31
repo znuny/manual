@@ -2,9 +2,10 @@
    :description: Configure Znuny authentication and data backends for agents and customer users — HTTP BasicAuth, database, LDAP or Radius, with up to 11 stacked backends.
    :keywords: znuny user backend, auth backend, ldap authentication, database backend, radius auth, httpbasicauth, customer user backend, multiple backends
 
+.. _PageNavigation admin_usermanagement_user_backends:
+
 Manage User Backends
 ####################
-.. _PageNavigation admin_usermanagement_user_backends:
 
 There are different backend types available for configuration all of which are found in the default configuration file ``Kernel/Config/Defaults.pm``. You may have up to 11 of each. Each backend can be used for either authentication or data. These backends are listed, as well as their examples, below. The backends can be also added multiple times by suffixing the appropriate key with a number, the first backend has no suffix.
 

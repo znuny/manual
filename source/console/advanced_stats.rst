@@ -187,3 +187,4 @@ Read more about this feature and format requirements:
 
 * `YAML format <https://de.wikipedia.org/wiki/YAML>`_
 * `Format options <https://metacpan.org/pod/Excel::Writer::XLSX#CELL-FORMATTING>`_
+
