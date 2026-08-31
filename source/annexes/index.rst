@@ -22,4 +22,5 @@ List of annexes.
    placeholders/index
    x_headers/index
    stat_values/index
+   stats_module_reference/index
    backup/index

@@ -85,3 +85,4 @@ Upgrading ITSM
 **************
 
 Upgrading ITSM just like with other add-ons. Once you've updated your framework you may then update ITSM.
+
