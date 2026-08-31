@@ -42,6 +42,7 @@ The general rules are:
    queues/index
    ticketclassification/index
    servicemanagement/index
+   calendar/index
    communication/index
    authentication/index
    email/index
