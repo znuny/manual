@@ -11,9 +11,6 @@ Manage users preferences, add new users to database sources, or invalidate users
 .. image:: images/admin_users.png
     :alt: Admin Badge Users
 
-.. seealso::
-
-    The :ref:`Admin Console <PageNavigation console_admin>` for adding users over the command-line interface.
 
 Adding A New User
 *****************

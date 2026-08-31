@@ -65,8 +65,7 @@ Sending E-Mails via Microsoft Graph
 
 .. important::
     
-    Before configuring dispatch via Graph, all mails that are still in the mail queue must be sent, otherwise they will be sent with encoding errors.
-    see ::ref:`pagenavigation console_maintenance` 
+    Before configuring dispatch via Microsoft Graph, all mails that are still in the mail queue must be sent, otherwise they will be sent with encoding errors. The Mail Queue can be managed using the console command. See more :ref:`pagenavigation console_index`.
 
 System Specific Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~

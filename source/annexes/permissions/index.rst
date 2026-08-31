@@ -2,9 +2,10 @@
    :description: Reference the seven Znuny base permissions — ro, create, note, owner, priority, rw and move — and see how they combine across queues, groups, roles and modules.
    :keywords: znuny permissions, ro permission, rw permission, create permission, owner permission, queue permissions, system permissions
 
+.. _PageNavigation annexes_permissions:
+
 System Permissions
 ##################
-.. _PageNavigation annexes_permissions:
 
 Permissions are used to access queues and modules. There are seven basic permissions in the system.
 
