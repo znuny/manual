@@ -118,6 +118,43 @@ To prevent certain fields to be populated into the request data it is possible t
 Example: The recipients of all articles will be removed:
 `Articles->To;Articles->Cc;Articles->Bcc`
 
+.. _invoker_request_mapping:
+
+Request mapping
+================
+
+The outbound data (see :ref:`invoker example data<Invoker example data>`) can be transformed with a request mapping, e.g. with XSLT, before it is sent to the remote system.
+
+.. seealso:: :ref:`XSLT Editor<xslt_editor_webservice>` for more details about the XSLT editor.
+
+The network transport's ``Controller mapping for Invoker`` setting (see :ref:`Network Transport Configuration<PageNavigation admin_webservices_transport_index>`) can contain placeholders marked with a leading ``:``, e.g. ``/messages/:TicketID``. These placeholders are replaced with a value taken from the **top level** of the outbound data, as it exists **after** the request mapping has run, not from the original invoker data structure.
+
+.. important::
+
+    If no request mapping is configured, some invokers nest their data, for example ``Ticket::Generic`` provides the ticket under a ``Ticket`` key. In that case, use dotted notation to reach the nested value, e.g. ``:Ticket.TicketID`` or ``:Ticket.DynamicField_MyField``.
+
+    If a request mapping **is** configured, the nesting from the original invoker no longer applies. The mapping must instead produce a top-level element whose name matches the placeholder exactly, or the placeholder is sent through unreplaced.
+
+Once a placeholder is successfully replaced, the matching field is removed from the outbound data, so its value is only sent as part of the URL and not duplicated in the request body.
+
+.. code-block:: XML
+    :caption: XSLT request mapping producing a top-level ZulipMessageID element for the controller mapping "/messages/:ZulipMessageID"
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                    xmlns:date="http://exslt.org/dates-and-times"
+                    extension-element-prefixes="date">
+        <xsl:output method="xml" encoding="utf-8" indent="yes"/>
+        <xsl:template match="RootElement">
+            <xsl:copy>
+                <ZulipMessageID><xsl:value-of select="//Ticket/DynamicField_ZulipMessageID" /></ZulipMessageID>
+                <propagate_mode>change_all</propagate_mode>
+            </xsl:copy>
+        </xsl:template>
+    </xsl:transform>
+
+..
+
 Generic::Tunnel
 ***************
 

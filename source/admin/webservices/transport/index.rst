@@ -181,6 +181,10 @@ Use SSL Options
 Controller mapping for Invoker 'UpdateAThirdParty`
     The controller that the invoker should send requests to. Variables marked by a ':' will get replaced by the data value and passed along with the request. (e.g. /Ticket/:TicketID?UserLogin=:UserLogin&Password=:Password).
 
+.. important::
+
+    If a request mapping (e.g. XSLT) is configured for this invoker, it is applied before the controller mapping variables are resolved. A variable is only replaced if the **mapped** data has a matching top-level field; the original, unmapped invoker data structure (e.g. its ``Ticket`` nesting) no longer applies at this point. See :ref:`Request mapping<invoker_request_mapping>` for details and an example.
+
 Valid request command for Invoker 'UpdateAThirdParty'
     A specific HTTP command to use for the requests with this Invoker (optional).
 
