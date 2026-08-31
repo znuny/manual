@@ -46,6 +46,7 @@ The general rules are:
    authentication/index
    email/index
    security/index
+   acl/index
    dynamicfields/index
    ticketattributerelations/index
    automation/index
