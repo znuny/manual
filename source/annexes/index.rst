@@ -24,3 +24,4 @@ List of annexes.
    stat_values/index
    stats_module_reference/index
    backup/index
+   database/index
