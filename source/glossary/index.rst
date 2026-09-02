@@ -400,9 +400,6 @@ The table below maps common ITIL Foundation and general IT service desk terms to
    * - Agent Portal / Resolver Interface
      - Agent Interface
      - The web application at ``/index.pl`` where agents work tickets.
-   * - Self-Service Portal
-     - Customer Interface
-     - The web portal at ``/customer.pl`` where customer users raise and track tickets.
    * - Canned Text / Snippet
      - Template
      - Reusable text blocks available to agents when composing replies.
