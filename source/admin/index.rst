@@ -7,18 +7,18 @@ Administrator Interface
 
 Administrating an instance requires a bit of experience and understanding of how the administration area works and how modules are interconnected.
 
-As an administrator you will need to be able to 
+As an administrator you will need to be able to
 
-* Create And Manage Queues
-* Add And Manage Email Addresses And Accounts
+* Create and Manage Queues
+* Add and Manage Email Addresses and Accounts
 * Filter Emails
 * Perform Automated Tasks
 * Add, Expand, Maintain Processes
 * Add and Maintain Web Services
-* Manage Users, Customers, And Customer Users
-* Manage Roles, Permissions (Groups), And Access (ACLs).
-* Activate And Deactivate Features
-* Maintain And Read Logs
+* Manage Users, Customers, and Customer Users
+* Manage Roles, Permissions (Groups), and Access (ACLs)
+* Activate and Deactivate Features
+* Maintain and Read Logs
 
 In the following chapters all of the required modules for this work are outlined.
 
@@ -30,8 +30,8 @@ The general rules are:
 * Modules allow users to access tickets and features.
 * Modules can be affected by ACLs or role permissions.
 * Processes are specially designed and have built-in automation.
-* E-mails can be received in multiple ways and dispatch by recipient, queue, filter, or generic agent.
-* Cases can be created by e-mail, phone and web, or generic interface.
+* E-mails can be received in multiple ways and dispatched by recipient, queue, filter, or generic agent.
+* Cases can be created by e-mail, phone, web, or a generic interface.
 * Configuring a module or feature is done centrally in the system configuration.
 
 
@@ -56,13 +56,14 @@ The general rules are:
    packagemanagement/index
    systemconfiguration/index
    translation/index
-   
-Additional Resouces
-*******************
+
+Additional Resources
+********************
 
 Here's additional information and chapters regarding administering your system, including some small use cases.
 
-.. toctree:: 
+.. toctree::
    :maxdepth: 2
 
    miniadmin/index
+   systemfiles/index
