@@ -56,7 +56,8 @@ The general rules are:
    packagemanagement/index
    systemconfiguration/index
    translation/index
-
+   supportdatacollector/index
+   
 Additional Resources
 ********************
 
