@@ -88,6 +88,7 @@ In the rest of this chapter we will discuss how to use groups and rolls to manag
    :maxdepth: 2
    
    customer_users/index
+   customer_user_customer/index
    groups/index
    roles/index
    user_backends/index
