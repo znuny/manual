@@ -40,7 +40,7 @@ in the system. Assignments take effect immediately without a cache flush.
 
    This module only manages **additional** company relations. The primary
    company is always set on the customer user record itself via
-   :ref:`Customer Users <PageNavigation usermangement_customer_users_index>`.
+   :ref:`Customer Users <PageNavigation admin_usermanagement_customer_users_index>`.
 
 Using the Module
 *****************
@@ -156,5 +156,5 @@ access models:
 
 .. seealso::
 
-   - :ref:`Manage Customer Users <PageNavigation usermangement_customer_users_index>`
+   - :ref:`Manage Customer Users <PageNavigation admin_usermanagement_customer_users_index>`
    - :ref:`Manage Customers <PageNavigation admin_usermanagement_index>`

@@ -114,11 +114,7 @@ Configuration is first available after saving the general information. After thi
      Sorting for Lists
 
 
-<<<<<<< HEAD
 When you configure your X and Y axis or filters, you can choose to allow for changes at runtime, or not. If you do allow changes, only the values selected during stat creation will be available. To make all values available, leave the attribute list empty.
-=======
-When you configure your X and Y axis or fiters, you can choose to allow for changes at runtime, or not. If you do allow changes, only the values selected during stat creation will be available. To make all values available, leave the attribute list empty.
->>>>>>> znuny
 
 .. figure:: images/stats_agent_configure_axis.png
 

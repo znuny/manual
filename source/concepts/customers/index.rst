@@ -32,7 +32,7 @@ They are the **end-users** who submit tickets, request support, and have access 
 
     .. seealso:: 
 
-       :ref:`PageNavigation usermangement_customer_users_index`
+       :ref:`PageNavigation admin_usermanagement_customer_users_index`
 
 
 Key Relationships Between Customers and Customer Users
@@ -53,4 +53,4 @@ Usage in Znuny
 Related Content
 ***************
 
-:ref:`pagenavigation usermangement_customer_users_index`
+:ref:`pagenavigation admin_usermanagement_customer_users_index`

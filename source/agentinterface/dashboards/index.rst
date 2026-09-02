@@ -117,4 +117,4 @@ When using the add a customer feature the CustomerID will automatically be pre-p
 
 .. seealso::
 
-    Read more in :ref:`Manage Customers <PageNavigation usermangement_customer_users_index>`.
+    Read more in :ref:`Manage Customers <PageNavigation admin_usermanagement_customer_users_index>`.
