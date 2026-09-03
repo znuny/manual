@@ -1,10 +1,11 @@
+.. _PageNavigation itsmfeatures_index:
+
 .. meta::
    :description: Znuny ITSM features — incident, problem, change, configuration and service level management based on ITIL, with CMDB support, delivered via package installation.
    :keywords: znuny itsm, itil, cmdb, configuration management, incident management, change management, service level management, general catalog
 
 ITSM Features
 #############
-.. _PageNavigation itsmfeatures_index:
 
 ITSM Features are provided by way of package installation. The following feature set is available as a bundle or individual packages and can be installed after installing the prerequisite modules.
 
@@ -20,6 +21,12 @@ Incident and Problem Management
     Service criticality and incident impact calculate the priority of issues. Set a minimum time between incidents to prevent service desk flooding.
 Configuration Management
     Declare, manage, and track the status of configuration items. Create relationships between configuration items, services, requests, and customer and customer users.
+
+.. toctree:: 
+    :maxdepth: 2
+
+    configurationmanagement/index
+
 Service Level Management
     Extended service level reporting with added statistic templates.
 Change Management
