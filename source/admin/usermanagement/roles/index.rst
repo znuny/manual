@@ -2,9 +2,10 @@
    :description: Manage Znuny roles — bind group permissions to roles, assign roles to users, and simplify large-scale permissions administration across your agent base.
    :keywords: znuny roles, role based permissions, role group assignment, user role, rbac, permissions management, role administration
 
+.. _PageNavigation roles_index:
+
 Manage Roles
 ############
-.. _PageNavigation roles_index:
 
 As previously mentioned, groups are resources and roles are permissions to those resources. Assigning a user to a role, and assigning the roles to a group, provides more efficient user management. If at any time your permissions concept should change, all that is necessary to do is to reassign the permissions to the roles, or create new roles for a user.
 

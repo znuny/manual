@@ -1,3 +1,7 @@
+.. meta::
+   :description: Understand ticket participation in Znuny — watchers, mentions, notifications and the read-access permissions that come with following a ticket.
+   :keywords: znuny watchers, znuny mentions, ticket participation, ticket notifications, watcher permissions, mention permissions
+
 .. _PageNavigation concepts_participants_index:
 
 Ticket Participation in Znuny
@@ -6,9 +10,9 @@ Ticket Participation in Znuny
 What does "Participation" mean?
 *******************************
 
-In Znuny, **participants** are all people involved in a ticket's lifecycle, not just the owner or responsible agent. Participation enables collaboration, transparency, and efficient communication throughout the ticket’s progress and resolution.
+In Znuny, **participants** are all people involved in a ticket's lifecycle, not just the owner or responsible agent. Participation enables collaboration, transparency, and efficient communication throughout the ticket's progress and resolution.
 
-Participants can include anyone who is added to the ticket through features like **Watcher** and **Mention**, or agents or customres who are involved in discussions or actions related to the ticket.
+Participants can include anyone who is added to the ticket through features like **Watcher** and **Mention**, or agents or customers who are involved in discussions or actions related to the ticket.
 
 How to Participate in a Ticket
 ******************************
@@ -17,10 +21,10 @@ Znuny provides several ways for users to participate in a ticket:
 
 - **Watcher:** Agents can add themselves or others as watchers to a ticket. Watchers receive notifications about ticket updates, ensuring they stay informed even if they are not directly responsible for the ticket.
 - **Mention:** Using the mention feature, agents or customers can mention other users in ticket articles or notes. Mentioned users are notified and can join the conversation or provide input as needed.
-- **Email**: Users can reply to ticket emails, which automatically adds their responses to the ticket as articles. This allows for seamless communication without needing to log into the system.
+- **Email:** Users can reply to ticket emails, which automatically adds their responses to the ticket as articles. This allows for seamless communication without needing to log into the system.
 - **Web interface:** Users can log into the Znuny web interface to view, comment on, or update tickets they are involved in.
 - **Telephone:** Agents can also participate in tickets by taking calls and updating ticket information based on customer interactions.
-- **Notes**: Internal notes can be added to tickets, allowing agents to share information with each other without notifying the customer.
+- **Notes:** Internal notes can be added to tickets, allowing agents to share information with each other without notifying the customer.
 
 .. note::
 
@@ -48,12 +52,17 @@ All changes to the list of participants, including watchers and mentions, are tr
 User Notification
 =================
 
-By default, Znuny sends notifications to all participants—owners, responsible agents, watchers, and mentioned users when ticket events occur, such as follow-ups. This ensures everyone stays informed and can take action if needed.
+When an agent mentions another user in an article, Znuny sends a notification directly to the mentioned user — this happens automatically when the article is saved, independent of ticket notification rules. Administrators can control whether a user is notified once per ticket or once per article via the ``Mentions###Notifications`` system configuration setting.
+
+Watchers do not receive notifications automatically. Ticket notification rules determine whether watchers are notified when ticket events occur. Administrators configure which events trigger notifications and can add the ``Watcher`` recipient group to those rules.
 
 Permissions Granted for Participation
-**************************************
+*************************************
 
-Watching or mentioned users receive at least read permissions for the ticket. Agents must not have appropriate permissions in the ticket's queue to be mentioned users. The user needs at least "read" rights to become a watcher.
+Watching or being mentioned grants at least read access to the ticket.
+
+- **Watchers**: An agent needs existing read access to subscribe to a ticket as a watcher. Once subscribed, that read access is maintained through the watcher relationship even if queue permissions change.
+- **Mentioned users**: An agent does not need queue-level permissions to be mentioned. Being mentioned itself grants read access to the ticket.
 
 Workflow Implications of Participation
 **************************************
@@ -66,7 +75,7 @@ Best Practices for Managing Participants
 - **Watch relevant tickets:** Agents should add themselves as watchers to tickets they are involved in or need to monitor.
 - **Use mentions for targeted communication:** Mention users when their input or action is needed.
 - **Review participants regularly:** Remove unnecessary tickets from your watch list or mentioned users on the ticket to avoid notification overload.
-- **Leverage automatic participation:** Configure Znuny to add participants based on workflow triggers. (see :ref:`page automation_generic_agent` or :ref:`pagenavigation processmanagement_transitionactions` more details on responsible assignment).
+- **Leverage automatic participation:** Configure Znuny to add participants based on workflow triggers. (see :ref:`page automation_generic_agent` or :ref:`pagenavigation processmanagement_transitionactions` for more details on responsible assignment).
 
 By following these practices, support teams can collaborate more effectively, maintain transparency, and ensure timely resolution of customer issues.
 
@@ -85,4 +94,4 @@ Automatic Watcher Assignment
 Collaborative Resolution
     Multiple agents are added as watchers and mentioned throughout the ticket's lifecycle, ensuring all necessary expertise is available and the ticket is resolved efficiently.
 
-These scenarios illustrate how participation features in Znuny support collaboration and effective ticket management in dynamic support
+These scenarios illustrate how participation features in Znuny support collaboration and effective ticket management in dynamic support environments.

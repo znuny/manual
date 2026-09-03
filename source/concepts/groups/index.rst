@@ -5,7 +5,7 @@
 .. _PageNavigation concepts_groups_index:
 
 Groups and Roles in Znuny
-##########################
+#########################
 
 The Znuny authorization system is built on two complementary concepts: **groups** and **roles**. Together they answer the question: *who is allowed to do what, and where*.
 
@@ -14,7 +14,7 @@ The Znuny authorization system is built on two complementary concepts: **groups*
 
 Think of groups as resources and roles as the permissions you build from them.
 
----
+----
 
 Groups
 ******
@@ -42,6 +42,8 @@ Group Permissions
 =================
 
 Each group grants permissions using the flags found in :ref:`pagenavigation annexes_permissions`.
+
+Important: **rw does not equal admin**. It applies only to the specific object (queue, module, field, etc.) that the group's permission covers.
 
 How Groups Connect to Other Znuny Concepts
 ==========================================
@@ -81,7 +83,7 @@ Examples:
 This enables delegated administration without granting unrestricted system access.
 
 Why Groups Matter in Daily Operations
-======================================
+=====================================
 
 Queue Accessibility
 -------------------
@@ -118,7 +120,7 @@ One Znuny instance can support completely separate organizational units:
 
 Each department sees only its own queues, enforced by group permissions.
 
----
+----
 
 Roles
 *****
@@ -152,7 +154,7 @@ The full authorization path in Znuny is:
 An agent can receive group permissions either through a role or through direct assignment. Both paths are equally valid; roles are the recommended approach for anything beyond a handful of agents.
 
 Roles vs. Direct Assignment
-============================
+===========================
 
 +----------------------------+------------------------------+----------------------------------+
 | Aspect                     | Direct Assignment            | Via Role                         |
@@ -173,10 +175,10 @@ Roles vs. Direct Assignment
 +----------------------------+------------------------------+----------------------------------+
 
 Enforcing Roles-Only Assignment
-================================
+===============================
 
 To prevent direct agent-to-group assignment entirely, disable the
-``Kernel/Modules/AdminUserGroup.pm`` module via SysConfig. This removes the
+``AdminUserGroup`` frontend module via SysConfig. This removes the
 **Agents ↔ Groups** admin screen.
 
 Navigate to **Admin → System Configuration**, search for
@@ -254,14 +256,14 @@ Consider a service desk with three tiers of agents.
 Any agent assigned to "Team Lead" automatically has access to escalation tickets and read-only admin visibility. Adding a new team lead requires one role assignment — no per-agent group configuration needed.
 
 Stacking Roles and Direct Permissions
-======================================
+=====================================
 
 An agent can hold multiple roles simultaneously. Znuny merges the permissions from all roles and any direct group assignments using a **most-permissive wins** rule: if one path grants ``rw`` and another grants ``ro`` on the same group, the agent receives ``rw``.
 
 This makes roles additive — you can grant a temporary exception via direct assignment without creating a dedicated role for a one-off case.
 
 Identity Provider Synchronization
-===================================
+=================================
 
 When using LDAP, Active Directory, or SAML, Znuny can synchronize group membership automatically. The typical mapping is:
 
@@ -274,10 +276,10 @@ This allows onboarding and offboarding to flow from your directory service witho
 
     When group membership is synchronized from an identity provider, manual changes made in Znuny will be overwritten on the next sync. Treat the identity provider as the authoritative source.
 
----
+----
 
 How Groups and Roles Work Together
-************************************
+**********************************
 
 The permission system is designed to be composed in layers:
 
@@ -326,6 +328,5 @@ No per-agent configuration is needed.
 .. seealso::
 
     - :ref:`pagenavigation annexes_permissions` — full list of permission flags and their meaning.
-    - Administrator Interface → Groups — configure groups in the admin panel.
-    - Administrator Interface → Roles — create and assign roles.
-    - Administrator Interface → Roles ↔ Groups — map group permissions onto roles.
+    - :ref:`pagenavigation admin_groups_index` — configure groups in the admin panel.
+    - :ref:`pagenavigation roles_index` — create and assign roles, including mapping roles to groups.

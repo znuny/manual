@@ -2,21 +2,21 @@
    :description: Format Znuny Excel statistics exports with multi-level templates — merge and override cell styles, apply reusable formats and automate repeatable reporting.
    :keywords: znuny advanced statistics, excel statistics, excel export, statistics templates, excel formatting, reporting
 
-.. _AdvancedFeatures excel-stat-formatting:
+.. _PageNavigation standardoperations_advancedstats:
 
 Advanced Statistics
-####################
+###################
 
 **Functionality**
 
-This feature provides extended (advanced) features for exporting data in Excel format. 
+This feature provides extended (advanced) features for exporting data in Excel format.
 
 In addition, it is possible to define format templates to use for pre-formatting most of the Excel statistics.
 
 Formatting Excel Statistics
 ***************************
 
-A multi-level loading system formats the Excel output. Formatting information merges or overwrites formatting as declared in the source files. Merging overwrites duplicate source information. 
+A multi-level loading system formats the Excel output. Formatting information merges or overwrites formatting as declared in the source files. Merging overwrites duplicate source information.
 
 The loading sequence is as follows:
 
@@ -36,16 +36,16 @@ Excel Format Sources
       An additional Perl function extends statistics backends. The function is called ``ExcelFormatDefinition`` and takes no parameters. Depending on the statistic, ``ExcelFormatDefinition`` must return a hash (one-sided) or an array (multi-sided).
 
 DEFAULT.yml
-   If the file 'var/statsformatdefinition/excel/DEFAULT.yml' is available, it loads during statistic generation and builds the basis of Excel format.
+   If the file 'var/stats/formatdefinition/excel/DEFAULT.yml' is available, it loads during statistic generation and builds the basis of Excel format.
 
 STAT_NUMBER.yml
-   Creating optional YAML definition files, per statistic, gives you finer grain control. The file exists in the definition directory named with the stat number. If the stat number is '12345', the correct file path would be 'var/statsformatdefinition/excel/12345.yml'.
+   Creating optional YAML definition files, per statistic, gives you finer grain control. The file exists in the definition directory named with the stat number. If the stat number is '12345', the correct file path would be 'var/stats/formatdefinition/excel/12345.yml'.
 
 .. note::
 
    Static Configuration
-      A purely technical possibility. It comes into play when calling the function 'Array2Excel' of the Excel backend. Alternatively, pass a hash structure into the key 'Value. Formatting information is stored in individual keys. A section of the structure could then look as follows:
-   
+      A purely technical possibility. It comes into play when calling the function 'Array2Excel' of the Excel backend. Alternatively, pass a hash structure into the key ``Value``. Formatting information is stored in individual keys. A section of the structure could then look as follows:
+
 .. code-block::
 
     {
@@ -55,7 +55,7 @@ STAT_NUMBER.yml
         Format => {
             right => 1,
             bottom => 1,
-            bg_color => 'silver
+            bg_color => 'silver',
             valign => 'vcenter',
             align => 'center',
         }
@@ -72,7 +72,7 @@ STAT_NUMBER.yml
        my ( $Self, %Param ) = @_;
 
        return {
-           MergeFormatDefinitions' => 1,
+           'MergeFormatDefinitions' => 1,
            'J' => {
                "Width" => "15",
                'Format' => {
@@ -84,13 +84,13 @@ STAT_NUMBER.yml
                },
            },
            'D' => {
-               Width => '12'.
+               Width => '12',
            },
            'H' => {
-               "Width" => "40
+               "Width" => "40",
            },
            'K' => {
-               Width => '16'.
+               Width => '16',
            },
        };
    };
@@ -102,7 +102,7 @@ To test this functionality, rename the distribution example file.
 .. code-block:: shell
 
     su - <APP_USER>
-    cd var/stats/formatdefinition/excel 
+    cd var/stats/formatdefinition/excel
     cp 10001.example.yml.dist 10001.yml
 
 Then you can run the stat 10001 (default on a new system). The resulting image is seen below.
@@ -154,7 +154,7 @@ The basic formatting options are shown in the example file. There are special na
       Format:
         border: 1
 
-Each YML element should be a column, row, or cell. The formatting options are methods of the module the complete list is shown below. 
+Each YML element should be a column, row, or cell. The formatting options are methods of the module; the complete list is shown below.
 The values for each method are found in the documentation as well. Let's take `set_font_shadow <https://metacpan.org/pod/Excel::Writer::XLSX#set_underline()>`_ for example. To set this for the entire tenth column, the following would be added to the YML file.
 
 .. code-block:: YAML
