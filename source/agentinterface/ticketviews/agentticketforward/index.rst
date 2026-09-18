@@ -16,3 +16,10 @@ Do this by clicking *Forward* in the :ref:`article menu <PageNavigation ticketvi
 .. note:: 
 
     The forwarded mail contains all attachments and inline images.
+
+While forwarding an email to a system address, you may get this error:
+
+> Note that it's not possible to forward a communication to an address 
+
+If you get this error, that is intended, as a ticket can only live in one queue.
+If you need to move one ticket instead, use the "Move" feature instead than manual forwarding.
