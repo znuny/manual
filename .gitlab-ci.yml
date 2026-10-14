@@ -12,7 +12,7 @@ default:
 
 linkcheck:
   stage: build
-  image: python:bookworm
+  image: python:3.13-bookworm
   allow_failure: true
   except:
     - merge_requests
@@ -21,7 +21,7 @@ linkcheck:
 
 build:
   stage: build
-  image: python:bookworm
+  image: python:3.13-bookworm
   artifacts:
     paths:
       - build/
