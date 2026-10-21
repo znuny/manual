@@ -27,7 +27,7 @@ There are three groups of settings to choose from.
 User Profile :fa:`user`
 
 Google Authenticator
-    Enter your shared secret to enable two factor authentication. There is a generate function, to ensure a proper code is generated. 
+    Enter your shared secret to enable two-factor authentication. The **Generate** button next to the **Shared Secret** field creates a valid secret. Add it to your authenticator app first and save it here last, otherwise you cannot log in without a code. See :ref:`PageNavigation admin_authentication_two_factor_index` for the full procedure.
 
 .. note::
 
