@@ -29,7 +29,7 @@ build:
   except:
     - merge_requests
   script:
-    - ZNUNY_DOCS_ROLE=stable ZNUNY_DOCS_BRANCH=znuny-7_3 make html SPHINXBUILD=sphinx-build
+    - ZNUNY_DOCS_ROLE=lts ZNUNY_DOCS_BRANCH=znuny-lts_7_5 make html SPHINXBUILD=sphinx-build
 
 deploy-znuny:
   stage: deploy

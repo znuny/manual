@@ -93,7 +93,7 @@ The used XSLT for the outbound mapping contains some interesting parts:
                     <potentialActiontype>ViewAction</potentialActiontype>
                     <potentialActioncontext>http://schema.org</potentialActioncontext>
                     <name>View ticket in Znuny</name>
-                    <target>&lt;OTRS_CONFIG_HttpType&gt;://&lt;OTRS_CONFIG_FQDN&gt;/&lt;OTRS_CONFIG_ScriptAlias&gt;/index.pl?Action=AgentTicketZoom;TicketID=<xsl:value-of select="//Ticket/TicketID" /></target>
+                    <target>&lt;ZNUNY_CONFIG_HttpType&gt;://&lt;ZNUNY_CONFIG_FQDN&gt;/&lt;ZNUNY_CONFIG_ScriptAlias&gt;/index.pl?Action=AgentTicketZoom;TicketID=<xsl:value-of select="//Ticket/TicketID" /></target>
                 </potentialAction>
             </xsl:copy>
         </xsl:template>

@@ -35,6 +35,13 @@ Advice Text
     The advice text is shown under the button to give the user more detailed information about what submitting entails.
 Button Text
     This text is the actual text shown on the button. *Submit* is the default text.
+One-click execution
+    If set to *Yes*, the activity dialog is submitted immediately when the user clicks its button in the ticket zoom; no popup is opened. All fields of the dialog are set to their configured default values. Advice Text and Button Text are hidden for such dialogs. Use it for dialogs that do not need any input, e.g. to confirm a step. Available in the agent and customer interface.
+
+    .. versionadded:: 7.5.1
+
+.. image:: images/activity_dialog_one_click.png
+    :alt: Image activity_dialog_one_click
 
 Fields Listing
 **************

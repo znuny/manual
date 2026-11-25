@@ -28,3 +28,17 @@ All
 Available
     List of open tickets, not currently locked.
 
+Navigation Layout
+*****************
+.. _PageNavigation agentinterface_overviews_agentticketserviceview_navlayout:
+
+.. versionadded:: 7.5.1
+
+The service navigation above the ticket list can be shown in different layouts. The system default is defined by ``Ticket::Frontend::AgentTicketService###NavLayout``:
+
+Top
+    (Default) Shows one service level at a time, without hover menus.
+Top + Hover
+    Shows the hierarchical navigation bar. Sub-services open as hover submenus.
+
+Each agent can override the system default in the settings dialog of the ticket list (cog wheel icon). In addition to *Top* and *Top + Hover*, agents can select *Sidebar*: the service tree is shown as a filterable sidebar next to the ticket list. The *Position* option places the sidebar on the left or right side. The sidebar remembers expanded and collapsed services.

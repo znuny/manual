@@ -92,16 +92,20 @@ Tags
 
 You can use the following place holder (tags) in the value field of transition actions:
 
-* <OTRS_OWNER_*>
-* <OTRS_CURRENT_*>
-* <OTRS_RESPONSIBLE_*>
-* <OTRS_CUSTOMER_DATA_*>
-* <OTRS_AGENT_*>
-* <OTRS_CUSTOMER_*>
-* <OTRS_TICKET_*>
-* <OTRS_FIRST_ARTICLE_*>
-* <OTRS_LAST_ARTICLE_*>
-* <OTRS_CONFIG_*>
+.. versionchanged:: 7.5.1
+
+    Tags with the prefix ``OTRS_`` are still accepted. See :ref:`Placeholder Tags <PageNavigation annexes_placeholders_index>`.
+
+* <ZNUNY_OWNER_*>
+* <ZNUNY_CURRENT_*>
+* <ZNUNY_RESPONSIBLE_*>
+* <ZNUNY_CUSTOMER_DATA_*>
+* <ZNUNY_AGENT_*>
+* <ZNUNY_CUSTOMER_*>
+* <ZNUNY_TICKET_*>
+* <ZNUNY_FIRST_ARTICLE_*>
+* <ZNUNY_LAST_ARTICLE_*>
+* <ZNUNY_CONFIG_*>
 
 Common Parameters
 *****************

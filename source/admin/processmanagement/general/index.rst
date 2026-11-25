@@ -113,7 +113,7 @@ There is an overview of all processes in the system under Admin -> Process Manag
 
 Here you can create, modify, import, export, deactivate, and delete processes.
 
-You see three icons for each process: Export, Copy, Print.
+You see four icons for each process: Export, Copy, Clone, Print.
 
 Export
     An export is a YAML file for backup or import to another system.
@@ -128,6 +128,16 @@ Copy
 
 .. image:: images/notification_usage_warning.png
     :alt: Notification Usage Warning
+
+Clone
+    Create an independent, inactive copy of a process. Enter a name for the clone; the original process stays unchanged. A process can also be cloned with the *Clone Process* button in the process editor.
+
+    .. image:: images/process_management_clone.png
+        :alt: Image process_management_clone
+
+    Every activity, activity dialog, transition and transition action of the process gets a new EntityID. All references inside the clone (path, layout, start activity, scope) point to the cloned elements. Dynamic fields used by dialogs or transition actions are reused, not duplicated. Process icons and other file preferences are copied. ACLs, ticket history and statistics are not copied.
+
+    .. versionadded:: 7.5.1
 
 Print
     Generate a PDF file containing all process information.
@@ -220,6 +230,18 @@ Editing Elements
 ~~~~~~~~~~~~~~~~
 
 You can drill down into a process to edit process elements by double clicking on any element or the canvas or in an activity or transition edit screen, or you can select the pen and paper icon from the element in the element listing.
+
+Cloning Elements
+~~~~~~~~~~~~~~~~
+
+.. versionadded:: 7.5.1
+
+Activities, activity dialogs, transitions and transition actions can be cloned with the :fa:`clone` icon in the element listing. Activity dialogs can also be cloned from the *Edit Activity* screen, transition actions from the *Edit Path* screen. Enter a name for the clone; the original element stays unchanged.
+
+Cloning an activity also clones its activity dialogs. The cloned dialogs get the scope of the cloned activity.
+
+.. image:: images/process_management_activity_clone.png
+    :alt: Image process_management_activity_clone
 
 Add an Activity
 ~~~~~~~~~~~~~~~

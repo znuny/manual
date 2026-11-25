@@ -17,6 +17,34 @@ Article Options
 
 An article may be attached to a ticket. Any time this is an option you must enter a subject and a body. You may add images in-line and other attachments via the upload feature. These may be dragged and dropped or you may select the attachments by browsing (Just click on the attachment icon :fa:`download`.)
 
+.. _PageNavigation ticketviews_agentticketactioncommon_reuseattachments:
+
+Reuse Attachments of Other Articles
+===================================
+
+.. versionadded:: 7.5.1
+
+    This feature is part of the integrated former package Znuny-AdvancedAttachments.
+
+Attachments that already exist in the ticket can be added to a new article without downloading and uploading them again. Below the upload field, the section *Add attachments of other articles* lists the attachments of all articles of the ticket. Select the attachments you want to add, or click *Select all attachments*. Click the :fa:`search` icon to preview an attachment before you select it. The selected files are attached to the new article when you submit the dialog.
+
+.. image:: images/attachments_reuse.png
+    :alt: Image attachments_reuse
+
+The section is available in the dialogs enabled in the system configuration setting ``Attachment###SelectionActions``. By default these are:
+
+- Close (``AgentTicketClose``)
+- Reply (``AgentTicketCompose``)
+- Outbound email (``AgentTicketEmailOutbound``)
+- Forward (``AgentTicketForward``)
+- Note (``AgentTicketNote``)
+- Owner (``AgentTicketOwner``)
+- Pending (``AgentTicketPending``)
+- Inbound phone call (``AgentTicketPhoneInbound``)
+- Outbound phone call (``AgentTicketPhoneOutbound``)
+
+If ``Attachment###ShowDuplicateFiles`` is deactivated, files that exist more than once in the ticket are listed only once.
+
 Editor Options
 ==============
 

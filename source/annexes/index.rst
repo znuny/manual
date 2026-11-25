@@ -1,5 +1,5 @@
 .. meta::
-   :description: Znuny annexes — reference material for ACLs, permissions, events, entity management, external ticket numbers, placeholders, X-OTRS headers, stat values and backups.
+   :description: Znuny annexes — reference material for ACLs, permissions, events, entity management, external ticket numbers, placeholders, X-Znuny headers, stat values and backups.
    :keywords: znuny annexes, acl reference, event reference, placeholders, x-otrs headers, znuny permissions, backup reference
 
 Annexes

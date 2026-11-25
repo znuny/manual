@@ -14,6 +14,10 @@ Transitions are the conditions allowing a process to progress. The conditions ma
 
 The ticket data (entered in the Name field) is compared to the string in the value field. If the condition evaluates to ``True``, the process transitions and all transition actions are applied.
 
+.. versionadded:: 7.5.1
+
+    If a transition action changes ticket data in the same request, e.g. a dynamic field set by a web service invoker, the next transition can be evaluated immediately. ``Process::Transition::MaxTransitionsPerRequest`` defines how many transitions are evaluated for one ticket in a single request (``1`` to ``99``, default ``1``). With a higher value, a cyclic process runs until the limit on every ticket update. Reaching the limit writes a notice to the system log.
+
 Common Ticket Data for Comparison:
 
 +----------------+--------------------------+

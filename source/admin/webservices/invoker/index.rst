@@ -43,21 +43,25 @@ The resulting data requires this format:
 
 These element are available, if not mentioned value is the new value:
 
-- OTRS_TicketDynamicFieldSet_FieldName1
-- OTRS_TicketTitleUpdate
-- OTRS_TicketServiceSet
-- OTRS_TicketTypeSet
-- OTRS_TicketQueueSet
-- OTRS_TicketSLASet
-- OTRS_TicketCustomerSet - The value contains the CustomerID and CustomerUserID, separated with a **;**
-- OTRS_TicketStateSet
-- OTRS_TicketOwnerSet
-- OTRS_TicketResponsibleSet
-- OTRS_TicketPrioritySet
-- OTRS_TicketHistoryAdd - Requires subelements HistoryType and HistoryComment
-- OTRS_TicketArticleAdd - Supports subelements IsVisibleForCustomer, Body, Subject, MimeType, From, SenderType, Charset, HistoryType, HistoryComment and many more. Check the API for mode details.
-- OTRS_AsynchronousInvokerExecution - Parameter are the WebserviceID, the Invoker name and Data with additional values. This invoker will be called. OTRS_AsynchronousInvokerExecution must be an array.
-- OTRS_TicketArticleCreateEvent - A comma-separated list of ArticleIDs is passed as the value. For each ArticleID the ArticleCreate event is triggered in order to process them again in the web service.
+.. versionchanged:: 7.5.1
+
+    The elements use the prefix ``ZNUNY_``. Elements with the prefix ``OTRS_`` are still accepted.
+
+- ZNUNY_TicketDynamicFieldSet_FieldName1
+- ZNUNY_TicketTitleUpdate
+- ZNUNY_TicketServiceSet
+- ZNUNY_TicketTypeSet
+- ZNUNY_TicketQueueSet
+- ZNUNY_TicketSLASet
+- ZNUNY_TicketCustomerSet - The value contains the CustomerID and CustomerUserID, separated with a **;**
+- ZNUNY_TicketStateSet
+- ZNUNY_TicketOwnerSet
+- ZNUNY_TicketResponsibleSet
+- ZNUNY_TicketPrioritySet
+- ZNUNY_TicketHistoryAdd - Requires subelements HistoryType and HistoryComment
+- ZNUNY_TicketArticleAdd - Supports subelements IsVisibleForCustomer, Body, Subject, MimeType, From, SenderType, Charset, HistoryType, HistoryComment and many more. Check the API for mode details.
+- ZNUNY_AsynchronousInvokerExecution - Parameter are the WebserviceID, the Invoker name and Data with additional values. This invoker will be called. ZNUNY_AsynchronousInvokerExecution must be an array.
+- ZNUNY_TicketArticleCreateEvent - A comma-separated list of ArticleIDs is passed as the value. For each ArticleID the ArticleCreate event is triggered in order to process them again in the web service.
 
 .. code-block:: XML
 	:caption: Updating the ticket title with the response body:
@@ -69,7 +73,7 @@ These element are available, if not mentioned value is the new value:
     	<xsl:output method="xml" encoding="utf-8" indent="yes"/>
     	<xsl:template match="RootElement">
         	<xsl:copy>
-            	<OTRS_TicketTitleUpdate>The title is "<xsl:value-of select="//Body" />"</OTRS_TicketTitleUpdate>
+            	<ZNUNY_TicketTitleUpdate>The title is "<xsl:value-of select="//Body" />"</ZNUNY_TicketTitleUpdate>
         	</xsl:copy>
     	</xsl:template>
 	</xsl:transform>
@@ -85,10 +89,10 @@ These element are available, if not mentioned value is the new value:
     	<xsl:output method="xml" encoding="utf-8" indent="yes"/>
     	<xsl:template match="RootElement">
         	<xsl:copy>
-            	<OTRS_TicketHistoryAdd>
+            	<ZNUNY_TicketHistoryAdd>
               		<HistoryType>Misc</HistoryType>
               		<HistoryComment>Request successful send</HistoryComment>
-            	</OTRS_TicketHistoryAdd>
+            	</ZNUNY_TicketHistoryAdd>
         	</xsl:copy>
     	</xsl:template>
 	</xsl:transform>

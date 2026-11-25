@@ -19,6 +19,7 @@ Maintaining your instance consists of a variety of tasks. More information about
 
     advancedstats/index
     articlestorage/index
+    configsecrets/index
     daemoncrontask/index
     logging/index
     performancelog/index

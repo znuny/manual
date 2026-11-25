@@ -54,7 +54,7 @@ IMAP Folder *
     This may not be the folder INBOX. Leave empty, or check with your mail administrator for the proper setting.
 
 Trusted
-    Choosing 'yes' allows mails to contain X-OTRS headers. X-OTRS headers will allow you to set ticket data without using a postmaster filter and is an advanced option.
+    Choosing 'yes' allows mails to contain X-Znuny headers (or the older X-OTRS headers). These headers will allow you to set ticket data without using a postmaster filter and is an advanced option.
 Dispatching
     Choose to dispatch all mails to a single queue 'Dispatched by selected Queue.' or use the recipient to determine the queue 'Dispatched by To: field'.
 Queue *

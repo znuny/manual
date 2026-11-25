@@ -3,3 +3,12 @@ build
 source/_build
 .vscode
 
+
+# local Python virtualenv in repo root
+/bin/
+/lib/
+/include/
+/pyvenv.cfg
+
+# Playwright MCP browser session output
+/.playwright-mcp/

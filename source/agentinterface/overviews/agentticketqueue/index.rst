@@ -26,3 +26,30 @@ All tickets
 Available tickets
     (Default) List tickets that are not locked
 
+Navigation Layout
+*****************
+.. _PageNavigation agentinterface_overviews_agentticketqueueview_navlayout:
+
+.. versionadded:: 7.5.1
+
+The queue navigation above the ticket list can be shown in different layouts. The system default is defined by ``Ticket::Frontend::AgentTicketQueue###NavLayout``:
+
+Top
+    (Default) Shows one queue level at a time, without hover menus.
+
+    .. image:: images/queue_view_nav_top.png
+        :alt: Image queue_view_nav_top
+
+Top + Hover
+    Shows the hierarchical navigation bar. Sub-queues open as hover submenus.
+
+    .. image:: images/queue_view_nav_tophover.png
+        :alt: Image queue_view_nav_tophover
+
+Each agent can override the system default in the settings dialog of the ticket list (cog wheel icon). In addition to *Top* and *Top + Hover*, agents can select *Sidebar*: the queue tree is shown as a filterable sidebar next to the ticket list. The *Position* option places the sidebar on the left or right side. The sidebar remembers expanded and collapsed queues.
+
+.. image:: images/queue_view_nav_settings.png
+    :alt: Image queue_view_nav_settings
+
+.. image:: images/queue_view_nav_sidebar.png
+    :alt: Image queue_view_nav_sidebar

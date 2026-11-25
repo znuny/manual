@@ -1,6 +1,6 @@
 .. meta::
-   :description: Full list of Znuny placeholder tags — OTRS_TICKET, OTRS_CUSTOMER, OTRS_CONFIG and more for templates, notifications, auto-responses, transitions and web services.
-   :keywords: znuny placeholders, otrs_ticket, otrs_customer, placeholder tags, notification placeholder, template variable
+   :description: Full list of Znuny placeholder tags — ZNUNY_TICKET, ZNUNY_CUSTOMER, ZNUNY_CONFIG and more for templates, notifications, auto-responses, transitions and web services.
+   :keywords: znuny placeholders, znuny_ticket, otrs_ticket, otrs_customer, placeholder tags, notification placeholder, template variable
 
 .. _PageNavigation annexes_placeholders_index:
 
@@ -8,6 +8,10 @@ Placeholder Tags
 ################
 
 Placeholders can be used in many parts of the system to represent the use-case-specific information retrieved from respective ticket data.
+
+.. versionchanged:: 7.5.1
+
+    Placeholders use the prefix ``ZNUNY_``, e.g. ``<ZNUNY_TICKET_Title>``, and the smart tag help screens show this prefix. Placeholders with the prefix ``OTRS_`` still work, so existing templates, notifications and transition actions do not have to be changed.
 
 * :ref:`Auto Responses <PageNavigation admin_communication_index>`
 * :ref:`Appointment Notifications <PageNavigation admin_communication_index>`
@@ -22,7 +26,7 @@ Placeholders can be used in many parts of the system to represent the use-case-s
 Ticket Attributes
 ******************
 
-Ticket attributes are used with the placeholder <OTRS\_TICKET\_\*>. Replace "*" with the term of the desired attribute from the list below.
+Ticket attributes are used with the placeholder <ZNUNY\_TICKET\_\*>. Replace "*" with the term of the desired attribute from the list below.
 
 Age
     Age of ticket in seconds
@@ -74,9 +78,9 @@ Type
 Dynamic Fields
 **************
 
-<OTRS_TICKET_DynamicField\_\*>
+<ZNUNY_TICKET_DynamicField\_\*>
     Returns the value of a field, for fields with key/value pairs like dropdown, the key is returned.
-<OTRS_TICKET_DynamicField\_\*_Value>
+<ZNUNY_TICKET_DynamicField\_\*_Value>
     Returns the value for fields with key/value pairs, e.g. for dropdown fields.
 
 DateTime and Date Fields
@@ -84,19 +88,19 @@ DateTime and Date Fields
 
 If the recipient's timezone is known, you can format the time in ticket notifications according to the time formatting in the language translation file.
 
-<OTRS_TICKET_DynamicField_Date_Value>
+<ZNUNY_TICKET_DynamicField_Date_Value>
     Returns unformatted date YYYY-MM-DD
-<OTRS_TICKET_DynamicField_Date>
+<ZNUNY_TICKET_DynamicField_Date>
     Returns formatted date DD/MM/YY (for english language)
-<OTRS_TICKET_DynamicField_DateTime_Value>
+<ZNUNY_TICKET_DynamicField_DateTime_Value>
     Returns unformatted date/time YYYY-MM-DD HH:MM::SS (UTC)
-<OTRS_TICKET_DynamicField_DateTime>
+<ZNUNY_TICKET_DynamicField_DateTime>
     Returns formatted date DD/MM/YY HH:MM (for english language)
 
 Escalations
 ***********
 
-Escalation details are used like ticket attributes with the placeholder <OTRS_TICKET\_\*> Attributes with the term WorkingTime are calculated with considering the assigned calendar.
+Escalation details are used like ticket attributes with the placeholder <ZNUNY_TICKET\_\*> Attributes with the term WorkingTime are calculated with considering the assigned calendar.
 
 
 EscalationDestinationIn
@@ -161,26 +165,26 @@ Article Attributes
 
 These placeholders are available for the last article of an agent or customer user. Replace the "*" with AGENT or CUSTOMER.
 
-<OTRS\_\*_From>
+<ZNUNY\_\*_From>
     The sender of the article
-<OTRS\_\*_To>
+<ZNUNY\_\*_To>
     Recipient(s) of the article
-<OTRS\_\*_Cc>
+<ZNUNY\_\*_Cc>
     Recipients (CC) of the article
-<OTRS\_\*_Subject>
+<ZNUNY\_\*_Subject>
     Subject
-<OTRS\_\*_Subject\[20\]
+<ZNUNY\_\*_Subject\[20\]
     Subject, limited to a specific number of character
-<OTRS\_\*_Body>
+<ZNUNY\_\*_Body>
     Body of the article
-<OTRS\_\*_Body\[5\]
+<ZNUNY\_\*_Body\[5\]
     Specific amount of lines of the article’s body
 
 .. note::
 
     Remove the [n] to get all lines or characters of the body or subject.
 
-<OTRS\_CUSTOMER\_REALNAME>
+<ZNUNY\_CUSTOMER\_REALNAME>
     To get the name of the ticket's customer user (if given).
 
 User (Agent)
@@ -188,25 +192,25 @@ User (Agent)
 
 This placeholder may vary for every single instance. Replace the "*" with one of these values: UserFirstname, UserLastname, UserEmail, UserLogin, UserID, UserFullname. More attributes are possible and can be found in the session data from agents.
 
-<OTRS_OWNER\_\*>
-    Values of the owner <OTRS_OWNER_UserFullname>
-<OTRS_CURRENT\_\*>
-    Value of the agent who performed the current action <OTRS_CURRENT_UserLogin>
-<OTRS_RESPONSIBLE\_\*>
-    Value of the responsible <OTRS_RESPONSIBLE_UserFirstname>
+<ZNUNY_OWNER\_\*>
+    Values of the owner <ZNUNY_OWNER_UserFullname>
+<ZNUNY_CURRENT\_\*>
+    Value of the agent who performed the current action <ZNUNY_CURRENT_UserLogin>
+<ZNUNY_RESPONSIBLE\_\*>
+    Value of the responsible <ZNUNY_RESPONSIBLE_UserFirstname>
 
 Customer User and Customer
 ***************************
 
-These placeholders may also differ for every instance. Possible values for * in the placeholder <OTRS_CUSTOMER_DATA\_\*> can be found in the first column of the CustomerUser and CustomerCompany mapping. If needed contact the support for help. The table shows only some examples:
+These placeholders may also differ for every instance. Possible values for * in the placeholder <ZNUNY_CUSTOMER_DATA\_\*> can be found in the first column of the CustomerUser and CustomerCompany mapping. If needed contact the support for help. The table shows only some examples:
 
-<OTRS_CUSTOMER_DATA_UserLastname>
+<ZNUNY_CUSTOMER_DATA_UserLastname>
     The last name of the customer user
-<OTRS_CUSTOMER_DATA_UserPhone>
+<ZNUNY_CUSTOMER_DATA_UserPhone>
     Phone number
-<OTRS_CUSTOMER_DATA_DynamicField_Extra>
+<ZNUNY_CUSTOMER_DATA_DynamicField_Extra>
     Example for a dynamic field with the identifier Extra
-<OTRS_CUSTOMER_DATA_CustomerCompanyName>
+<ZNUNY_CUSTOMER_DATA_CustomerCompanyName>
     Company name
 
 Automatic Responses
@@ -214,21 +218,21 @@ Automatic Responses
 
 There are some special tags which you can use especially for automatic responses. These you parse the e-mail and give you some additional tags for use.
 
-<OTRS\_CUSTOMER\_SUBJECT\[20\]>
+<ZNUNY\_CUSTOMER\_SUBJECT\[20\]>
     To get the first 20 character of the subject.
-<OTRS\_CUSTOMER\_EMAIL\[5\]>
+<ZNUNY\_CUSTOMER\_EMAIL\[5\]>
     To get the first 5 lines of the email.
-<OTRS\_CUSTOMER\_REALNAME>
+<ZNUNY\_CUSTOMER\_REALNAME>
     To get the name of the ticket's customer user (if given).
-<OTRS\_CUSTOMER\_\*>
-    To get the article attribute ( e. g. <OTRS\_CUSTOMER\_From>, <OTRS\_CUSTOMER\_To>, <OTRS\_CUSTOMER\_Cc>, <OTRS\_CUSTOMER\_Subject>, <OTRS\_CUSTOMER\_BODY>).
+<ZNUNY\_CUSTOMER\_\*>
+    To get the article attribute ( e. g. <ZNUNY\_CUSTOMER\_From>, <ZNUNY\_CUSTOMER\_To>, <ZNUNY\_CUSTOMER\_Cc>, <ZNUNY\_CUSTOMER\_Subject>, <ZNUNY\_CUSTOMER\_BODY>).
 
 System Configuration
 *********************
 
 It doesn't make sense to use all possible configuration settings in templates, but they can also be used. These are the most useful.
 
-<OTRS\_CONFIG\_FQDN>
+<ZNUNY\_CONFIG\_FQDN>
     FQDN of your instance
 
 .. note::
@@ -236,7 +240,7 @@ It doesn't make sense to use all possible configuration settings in templates, b
     Example:
     test.example.com
 
-<OTRS\_CONFIG\_HttpType>
+<ZNUNY\_CONFIG\_HttpType>
     Type of HTTP connection
 
 .. note::
@@ -244,7 +248,7 @@ It doesn't make sense to use all possible configuration settings in templates, b
     Example:
     https
 
-<OTRS\_CONFIG\_TicketHook>
+<ZNUNY\_CONFIG\_TicketHook>
     The ticket hook.
 
 Appointment Calendar
@@ -252,42 +256,49 @@ Appointment Calendar
 
 These placeholders are available for calendar notification.
 
-<OTRS\_APPOINTMENT\_TITLE>
+<ZNUNY\_APPOINTMENT\_TITLE>
     Title of the appointment, limitation with [xx] is possible
 
-<OTRS\_APPOINTMENT\_STARTTIME>
+<ZNUNY\_APPOINTMENT\_STARTTIME>
     Start of the appointment
 
-<OTRS\_APPOINTMENT\_DESCRIPTION>
+<ZNUNY\_APPOINTMENT\_DESCRIPTION>
     Appointment description
 
-<OTRS\_APPOINTMENT\_CALENDARNAME>
+<ZNUNY\_APPOINTMENT\_CALENDARNAME>
     Calendar name
 
-<OTRS\_APPOINTMENT\_COLOR>
+<ZNUNY\_APPOINTMENT\_COLOR>
     HTML color code of the calendar
 
 .. important::
 
-    When using templates of the type Create, not every attribute can be used. The reason is that there is still no ticket created. Instead of e.g. <OTRS_OWNER_FullName> use <OTRS_CURRENT_Fullname>. Placeholders from the System Configuration are always available.
+    When using templates of the type Create, not every attribute can be used. The reason is that there is still no ticket created. Instead of e.g. <ZNUNY_OWNER_FullName> use <ZNUNY_CURRENT_Fullname>. Placeholders from the System Configuration are always available.
 
 Process Management Transition Actions
 *************************************
 
 There are special placeholders for transition actions. You can use information from the first and last article. Replace '*' with FIRST or LAST
 
-<OTRS\_*\_ARTICLE_Body>
+<ZNUNY\_*\_ARTICLE_Body>
     The first or last body of the current ticket.
-<OTRS\_*\_ARTICLE_To>
+<ZNUNY\_*\_ARTICLE_To>
     The first or last list of recipients of the current ticket.
-<OTRS\_*\_ARTICLE_From>
+<ZNUNY\_*\_ARTICLE_From>
     The first or last sender of the current ticket.
-<OTRS\_*\_ARTICLE_Cc>
+<ZNUNY\_*\_ARTICLE_Cc>
     The first or last list of recipients in carbon copy of the current ticket.
-<OTRS\_*\_ARTICLE_Subject>
+<ZNUNY\_*\_ARTICLE_Subject>
     The first or last subject of the current ticket.
 
 .. important:: The last or first article may be a system article, may not contain some tags based on communication channel or sender type. There is no filter for article or sender type.
+
+Empty Values
+************
+
+.. versionadded:: 7.5.1
+
+If a placeholder has no value (e.g. an empty dynamic field), it is replaced by ``-``. Change this text with the system configuration setting ``TemplateGenerator::EmptyValueReplacement``.
 
 Placeholder Translation
 ***********************

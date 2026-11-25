@@ -136,7 +136,7 @@ For example, a filter named **"Ignore Mails from Tracking Service"**:
 
 **Value:** tracker@example.com
 
-**Set email header:** X-OTRS-Ignore
+**Set email header:** X-Znuny-Ignore
 
 **Value:** yes
 

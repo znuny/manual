@@ -183,8 +183,8 @@ In addition to the network transport configuration, this is also possible direct
 	  <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 	  <xsl:template match="RootElement">
 	    <xsl:copy>
-	      <User>&lt;OTRS_CONFIG_GI_User1&gt;</User>
-	      <Password>&lt;OTRS_CONFIG_GI_PW1&gt;</Password>
+	      <User>&lt;ZNUNY_CONFIG_GI_User1&gt;</User>
+	      <Password>&lt;ZNUNY_CONFIG_GI_PW1&gt;</Password>
 	    </xsl:copy>
 	  </xsl:template>
 	</xsl:transform>

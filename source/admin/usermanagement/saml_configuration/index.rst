@@ -21,6 +21,68 @@ Utilizing ``Kernel::System::Auth::SAML`` as a backend, SAML 2.0 authentication c
 
 Here we discuss the settings available for SAML Authentication and Synchronization.
 
+.. important::
+
+    Since Znuny 7.5.1, SAML login requires Net::SAML2 0.89 or higher, and the assertion signatures are verified against the configured IdP certificate (``AuthModule::SAML::IdPCACert`` / ``Customer::AuthModule::SAML::IdPCACert``). Without this certificate the SAML login fails.
+
+.. note::
+
+    Two-factor authentication of Znuny is skipped for SAML logins. Enforce multi-factor authentication at the Identity Provider instead.
+
+.. _PageAdminSAMLConfigurationAdminModule:
+
+Authentication Management
+*************************
+
+.. versionadded:: 7.5.1
+
+Instead of editing ``Kernel/Config.pm``, SAML 2.0 authentication for agents and customers can be configured in the admin interface under *Admin* → *Users, Groups & Roles* → *Authentication*. Only members of the group ``admin`` can use this module.
+
+.. image:: images/admin_authentication_overview.png
+    :alt: Image admin_authentication_overview
+
+The overview lists all agent and customer authentication configurations with their slot, sync status, validity and status. From here you can:
+
+* Start the *SAML wizard* for a guided setup.
+* Add an agent or customer SAML authentication with the full edit screen.
+* Download the SP metadata XML of a configuration to register Znuny at the Identity Provider.
+* Deploy the configuration.
+
+Slot
+    Each configuration occupies one numbered slot, i.e. ``AuthModule<N>`` for agents or ``Customer::AuthModule<N>`` for customers. Only slots not used yet, e.g. in ``Kernel/Config.pm``, are offered.
+Login button text
+    The text of the SAML login button on the login screen.
+Assertion consumer URL
+    Derived automatically from ``HttpType``, ``FQDN`` and ``ScriptAlias``. Copy it to the Identity Provider.
+Issuer (SP entity ID)
+    The unique identifier of the Znuny instance.
+Requested NameID format
+    Unspecified (default), Persistent, Transient or Email address. Change this only if the Identity Provider requires a specific format.
+Login attribute
+    Optional. By default the NameID is the login. Enter one or more SAML attribute names (Name or FriendlyName), separated by commas, to take the login from the first of these attributes instead. The attribute must have exactly one value, otherwise the login fails.
+Metadata
+    Load the IdP metadata from a URL (with optional SSL options) or paste the metadata XML.
+Certificates and keys
+    The SP signing key and certificate (used to sign outgoing requests and published in the SP metadata), the signing algorithm (SHA-256 by default), the option to decrypt encrypted assertions, and the Identity provider CA certificate. Keys and certificates can be uploaded, pasted, generated as self-signed certificate, or, for the IdP certificate, taken from the metadata. They are stored in the virtual file system.
+Attribute, group and role sync
+    Agent configurations only. Enables ``Kernel::System::Auth::Sync::SAML`` for the same slot and maps SAML attributes to user attributes, initial groups, groups and roles (see :ref:`Synchronization <PageAdminSAMLConfigurationSync>`).
+
+The *SAML wizard* guides you through the setup in six steps. The SAML request settings step shows the assertion consumer URL to register at the Identity Provider:
+
+.. image:: images/admin_authentication_wizard.png
+    :alt: Image admin_authentication_wizard
+
+In the certificates step, the Identity Provider certificate can be taken from the metadata:
+
+.. image:: images/admin_authentication_wizard_certificates.png
+    :alt: Image admin_authentication_wizard_certificates
+
+.. important::
+
+    Saved configurations are not active until you click *Deploy configuration* on the overview. The deployment writes all valid configurations to ``Kernel/Config/Files/ZZZZnunyGeneratedAuthentication.pm``. If the deployment fails, fix the listed configurations or set them to invalid and deploy the rest.
+
+If the Identity Provider supports Single Logout, Znuny also logs the user out at the Identity Provider.
+
 Configuration Defaults
 **********************
 
@@ -176,8 +238,8 @@ Issuer
 
     Unique identifier for your Znuny instance, included in SAML requests. Often the URL of your Znuny instance.
 
-Identity Provider Trust (Optional)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Identity Provider Trust
+~~~~~~~~~~~~~~~~~~~~~~~
 
 IdP CA Certificate
 ^^^^^^^^^^^^^^^^^^
@@ -188,7 +250,38 @@ IdP CA Certificate
 
 .. note::
 
-    Optional CA certificate of the Identity Provider.
+    Signing certificate of the Identity Provider. It is used to verify the signatures of the SAML response and assertion. Required since Znuny 7.5.1.
+
+Login Attribute (Optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: perl
+
+   $Self->{'AuthModule::SAML::UserLoginAttribute1'} = [ 'uid', 'mail' ];
+
+.. note::
+
+    Takes the login from an attribute of the signed assertion instead of the NameID, e.g. if the Identity Provider sends a persistent NameID. The first of the given attributes (Name or FriendlyName) contained in the assertion is used. It must have exactly one value, otherwise the login fails. There is no fallback to the NameID.
+
+    .. versionadded:: 7.5.1
+
+Further Optional Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: perl
+
+   # NameIDPolicy format sent in the request and published in the SP metadata
+   $Self->{'AuthModule::SAML::RequestNameIDFormat1'} = 'urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified';
+
+   # Hash algorithm for signing the request: sha256, sha384, sha512 or sha1
+   $Self->{'AuthModule::SAML::RequestSignSigAlg1'} = 'sha256';
+
+   # Private key to decrypt encrypted assertions
+   $Self->{'AuthModule::SAML::ResponseEncryptKey1'} = '/path/to/private.key';
+
+.. note::
+
+    The same settings are available for customers with the prefix ``Customer::AuthModule::SAML::``.
 
 Customer Authentication (Customer::AuthModule)
 ==============================================
@@ -297,7 +390,17 @@ Identity Provider Trust
 
 .. note::
 
-    Optional CA certificate of the Identity Provider for customer authentication.
+    Signing certificate of the Identity Provider for customer authentication. Required since Znuny 7.5.1.
+
+.. code-block:: perl
+
+   $Self->{'Customer::AuthModule::SAML::UserLoginAttribute1'} = [ 'uid', 'mail' ];
+
+.. note::
+
+    Optional. Takes the customer login from an assertion attribute instead of the NameID, see the agent setting above.
+
+.. _PageAdminSAMLConfigurationSync:
 
 Synchronization (AuthSyncModule)
 ================================

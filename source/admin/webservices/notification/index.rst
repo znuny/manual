@@ -30,7 +30,7 @@ Multiple transport methods can be used in one ticket notification, or just e-mai
 - **Webservice name** List of all available and enabled web services.
 - **Invoker name** - List of all invoker of the selected web service.
 - **Asynchronous** - How to execute the request, we recommend to use this option always.
-- **Additional recipients** - For additional recipients, values from dynamic fields like `<OTRS_TICKET_DynamicField_xxx>` can be used.
+- **Additional recipients** - For additional recipients, values from dynamic fields like `<ZNUNY_TICKET_DynamicField_xxx>` can be used.
 - **Article visible for customer** - Creates an article, visibile to the customer, for the notification.
 
 User preferences

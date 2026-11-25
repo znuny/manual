@@ -271,7 +271,7 @@ Payload
     Key1=Value1;Key2=Value2;Key3=Value3
 
 Available Placeholders
-    Placeholders can be used in the payload. These must be prefixed with OTRS_JWT.
+    Placeholders can be used in the payload. These must be prefixed with ZNUNY_JWT (``OTRS_JWT`` is still accepted).
 
 .. note::
 
@@ -290,7 +290,7 @@ Available Placeholders
 
 .. note::
 
-    Placeholder usage example: Key1=<OTRS_JWT_ExpirationDateTimestamp>
+    Placeholder usage example: Key1=<ZNUNY_JWT_ExpirationDateTimestamp>
 
 Additional header data
     Additional header data for JWT.
@@ -320,4 +320,4 @@ Additional header data
 
 .. note::
 
-    Placeholder usage example: Key1=<OTRS_JWT_ExpirationDateTimestamp>
+    Placeholder usage example: Key1=<ZNUNY_JWT_ExpirationDateTimestamp>

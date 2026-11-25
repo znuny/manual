@@ -24,7 +24,7 @@ Since version 6.2 the content-type `text/xml` is also available.
 Additional Request Headers
 ==========================
 
-If needed, custom HTTP headers can be added to the request. They can also overwrite the default headers which are generated, like `Content-Type`. This option might be useful for certain situation where you need additional headers. Authentication with API keys might be on scenario. The value can be a literal, a system configuration (<OTRS_CONFIG_*>) or a combination of both.
+If needed, custom HTTP headers can be added to the request. They can also overwrite the default headers which are generated, like `Content-Type`. This option might be useful for certain situation where you need additional headers. Authentication with API keys might be on scenario. The value can be a literal, a system configuration (<ZNUNY_CONFIG_*>) or a combination of both.
 
 
 .. image:: images/webservice_Requester-Transport.png

@@ -1,5 +1,5 @@
 .. meta::
-   :description: Configure Znuny as a web service provider — authenticate consumers via custom X-OTRS-Header fields, request parameters, sessions or two-factor tokens.
+   :description: Configure Znuny as a web service provider — authenticate consumers via custom X-Znuny-Header fields, request parameters, sessions or two-factor tokens.
    :keywords: znuny web service provider, x-otrs-header, userlogin, customeruserlogin, sessionid, provider authentication, twofactortoken, webservice auth
 
 Provider
@@ -13,11 +13,16 @@ To prevent revealing of information like passwords, usernames, etc, in the URL f
 
 These headers are:
 
-- X-OTRS-Header-UserLogin
-- X-OTRS-Header-CustomerUserLogin
-- X-OTRS-Header-SessionID
-- X-OTRS-Header-Password
-- X-OTRS-Header-ImpersonateAsUser
+- X-Znuny-Header-UserLogin
+- X-Znuny-Header-CustomerUserLogin
+- X-Znuny-Header-SessionID
+- X-Znuny-Header-Password
+- X-Znuny-Header-ImpersonateAsUser
+- X-Znuny-Header-TwoFactorToken
+
+.. versionchanged:: 7.5.1
+
+    The ``X-Znuny-Header-*`` headers have been added. The previous ``X-OTRS-Header-*`` headers are still accepted.
 
 
 .. note:: The authentication feature `ImpersonateAsUser` is not included in this version.
@@ -317,7 +322,7 @@ Signing or encrypting with S/MIME or PGP is also possible:
 Time Accounting operation
 *************************
 
-This operation returns the accounted times which a specific agent has entered. Besides the start and end date, the credentials of an agent with rw permission for the group `timeaccounting_webservice` are required. The timezone for the start and end date is the same like you system configuration setting for `OTRSTimeZone`.
+This operation returns the accounted times which a specific agent has entered. Besides the start and end date, the credentials of an agent with rw permission for the group `timeaccounting_webservice` are required. The timezone for the start and end date is the same like you system configuration setting for ``ZnunyTimeZone``.
 
 
 .. code-block:: JSON

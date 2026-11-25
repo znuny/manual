@@ -32,4 +32,4 @@ Transition Action Module Configuration
 .. note:: Multiple Values
 
     Multiple values for ``PostMasterSearch``, ``UserIDs`` and ``UserLogin`` are possible. They need to be separated with a ``,``.
-    Smart tags like <OTRS_TICKET_OwnerID> for the values are also allowed.
+    Smart tags like <ZNUNY_TICKET_OwnerID> for the values are also allowed.

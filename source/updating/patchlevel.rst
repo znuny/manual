@@ -1,14 +1,14 @@
 .. meta::
-   :description: Patch-level update guide for Znuny 7.3 — stop services, replace sources and run the migration steps to move from any 7.3.x version to a newer 7.3 patch level.
-   :keywords: znuny patchlevel, patch level update, znuny 7.3 update, 7.3.x update, patch update, znuny upgrade
+   :description: Patch-level update guide for Znuny LTS 7.5 — stop services, replace sources and run the migration steps to move from any 7.5.x version to a newer 7.5 patch level.
+   :keywords: znuny patchlevel, patch level update, znuny 7.5 update, 7.5.x update, znuny lts, patch update, znuny upgrade
 
 ==================
 Patch Level Update
 ==================
 
-This documentation explains how to perform a patch level update for Znuny 7.3.
+This documentation explains how to perform a patch level update for Znuny LTS 7.5.
 
-.. note::   Your current system needs to be a Znuny 7.3.x where the x stands for the patch level. You can skip intermediate **patch levels**, e.g. update from 7.3.1 directly to 7.3.8
+.. note::   Your current system needs to be a Znuny 7.5.x where the x stands for the patch level. You can skip intermediate **patch levels**. To update from Znuny 7.3, see :doc:`update-7.5`.
 
 
 Prepare
@@ -58,7 +58,7 @@ Update
 
   .. tab-item:: RPM installation
 
-        Starting with version 7.3.2 we sign our RPMs. Please import our GPG key with these instructions:
+        All Znuny RPMs are signed. Please import our GPG key with these instructions:
 
         .. code-block:: bash
 
@@ -67,10 +67,10 @@ Update
 
         .. code-block::
 
-            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.3.8-01.noarch.rpm
-            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
+            rpm -Uvh https://download.znuny.org/releases/RPMS/rhel/7/znuny-7.5.1-01.noarch.rpm
+            su - znuny -c 'scripts/MigrateToZnuny7_5.pl --verbose'
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll'
-            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
+            su - znuny -c 'scripts/MigrateToZnuny7_5.pl --verbose'
             # optional upgrade of the installed addons found in configured repositories
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::UpgradeAll'
 
@@ -84,36 +84,36 @@ Update
         .. code-block:: bash
 
             cd /opt
-            wget https://download.znuny.org/releases/znuny-7.3.8.tar.gz
-            tar -xzf znuny-7.3.8.tar.gz
+            wget https://download.znuny.org/releases/znuny-7.5.1.tar.gz
+            tar -xzf znuny-7.5.1.tar.gz
 
             # Optional: verify the checksum of the downloaded version
-            curl -LO https://download.znuny.org/releases/znuny-7.3.8.tar.gz.sha256
-            sha256sum -c znuny-7.3.8.tar.gz.sha256
+            curl -LO https://download.znuny.org/releases/znuny-7.5.1.tar.gz.sha256
+            sha256sum -c znuny-7.5.1.tar.gz.sha256
 
             # Optional: verify the GPG signature for the downloaded version, the import is only required once
             curl -LO https://download.znuny.org/znuny-release-key.asc
             gpg --import znuny-release-key.asc
-            curl -LO https://download.znuny.org/releases/znuny-7.3.8.tar.gz.asc
-            gpg --verify znuny-7.3.8.tar.gz.asc znuny-7.3.8.tar.gz
+            curl -LO https://download.znuny.org/releases/znuny-7.5.1.tar.gz.asc
+            gpg --verify znuny-7.5.1.tar.gz.asc znuny-7.5.1.tar.gz
 
             # Restore Kernel/Config.pm, articles, etc.
-            cp -av /opt/znuny/Kernel/Config.pm /opt/znuny-7.3.8/Kernel/
-            mv /opt/znuny/var/article/* /opt/znuny-7.3.8/var/article/
+            cp -av /opt/znuny/Kernel/Config.pm /opt/znuny-7.5.1/Kernel/
+            mv /opt/znuny/var/article/* /opt/znuny-7.5.1/var/article/
 
             # Restore dotfiles from the homedir to the new directory
-            for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.8/; done
+            for f in $(find -L /opt/znuny -maxdepth 1 -type f -name .\* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.5.1/; done
 
             # Restore modified and custom cron job
-            for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.3.8/var/cron/; done
+            for f in $(find -L /opt/znuny/var/cron -maxdepth 1 -type f -name \* -not -name \*.dist); do cp -av "$f" /opt/znuny-7.5.1/var/cron/; done
 
             # Set the permissions
-            znuny-7.3.8/bin/znuny.SetPermissions.pl
-            ln -snf /opt/znuny-7.3.8 /opt/znuny
+            znuny-7.5.1/bin/znuny.SetPermissions.pl
+            ln -snf /opt/znuny-7.5.1 /opt/znuny
 
-            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
+            su - znuny -c 'scripts/MigrateToZnuny7_5.pl --verbose'
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::ReinstallAll'
-            su - znuny -c 'scripts/MigrateToZnuny7_3.pl --verbose'
+            su - znuny -c 'scripts/MigrateToZnuny7_5.pl --verbose'
             # optional upgrade of the installed addons found in configured repositories
             su - znuny -c 'bin/znuny.Console.pl Admin::Package::UpgradeAll'
 

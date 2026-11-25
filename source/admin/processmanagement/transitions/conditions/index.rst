@@ -22,4 +22,4 @@ The types ``==`` and ``!=`` work for all data types, ``>``, ``>=``, ``<`` and ``
          :width: 100%
          :alt: Available condition types
 
-The existing smart tags like <OTRS_TICKET_*> can be used for both, the Name and the Value. If you use dynamic fields of the type Dropdown or Multiselect their keys are used in the conditions.
+The existing smart tags like <ZNUNY_TICKET_*> can be used for both, the Name and the Value. If you use dynamic fields of the type Dropdown or Multiselect their keys are used in the conditions.

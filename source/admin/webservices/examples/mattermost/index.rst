@@ -105,7 +105,7 @@ The used XSLT for the outbound mapping contains some interesting parts:
         <xsl:output method="xml" encoding="utf-8" indent="yes"/>
         <xsl:template match="RootElement">
             <xsl:copy>
-                <username>&lt;OTRS_CONFIG_ProductName&gt;</username>
+                <username>&lt;ZNUNY_CONFIG_ProductName&gt;</username>
                 <icon_url>https://www.znuny.org/favicon.ico</icon_url>
                 <channel>@<xsl:value-of select="//Recipient/MattermostUsername" /></channel>
                 <text>A new ticket has been created in queue&#x20;**<xsl:value-of select="//Ticket/Queue" />**&#x20;with the title&#x20;**<xsl:value-of select="//Ticket/Title" />**.</text>
@@ -115,7 +115,7 @@ The used XSLT for the outbound mapping contains some interesting parts:
 
 ..
 
-- In line 6 we use a new feature, system configuration values. Scalar values can be accessed via `<OTRS_CONFIG_ConfigurationName>`. It's XML so the `<` and `>` needs to be encoded.
+- In line 6 we use a new feature, system configuration values. Scalar values can be accessed via `<ZNUNY_CONFIG_ConfigurationName>`. It's XML so the `<` and `>` needs to be encoded.
 - The agent's Mattermost username is taken from the incoming date in line 8. Check the web service debugger and discover which values are available. The node `Recipient` contains nearly everything about the agent oder customer.
 
 

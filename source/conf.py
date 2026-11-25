@@ -30,8 +30,8 @@ extensions = [
 ]
 
 # SEO role, set by CI per branch build: 'stable' | 'lts' | 'archived'.
-DOCS_ROLE   = os.environ.get('ZNUNY_DOCS_ROLE', 'archived')
-DOCS_BRANCH = os.environ.get('ZNUNY_DOCS_BRANCH', 'znuny-7_3')
+DOCS_ROLE   = os.environ.get('ZNUNY_DOCS_ROLE', 'lts')
+DOCS_BRANCH = os.environ.get('ZNUNY_DOCS_BRANCH', 'znuny-lts_7_5')
 
 _ALIAS = {'stable': 'znuny', 'lts': 'znuny_lts'}
 

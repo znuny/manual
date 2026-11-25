@@ -17,3 +17,12 @@ Choose from one of the pending state types configured in your system, select the
 .. note:: Pending State Types
 
     Pending states may have automatic actions applied to them. By default, *pending auto close+* and *pending auto close-* close your ticket as successful or unsuccessful accordingly. The *pending reminder*-state just sends a reminder message. Contact your system administrator for more information.
+
+Default Pending Date
+********************
+
+The pending date is pre-filled with the current time plus ``Ticket::Frontend::PendingDiffTime``.
+
+.. versionadded:: 7.5.1
+
+    If ``TimePendingSkipUnavailableDays`` is enabled, the default pending date skips holidays and days without working hours. The settings ``TimePendingSkipUnavailableDays::Calendar1`` to ``TimePendingSkipUnavailableDays::Calendar9`` do the same for tickets that use one of the system calendars, e.g. through their queue. These settings are disabled by default.

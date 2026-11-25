@@ -5,7 +5,11 @@
 Customer Interface
 ##################
 
-The customer user interface is a separate interface meant to provide access to resources such as, but not limited to, tickets. From the very start, customer users can self-register with your system and begin creating requests. In addition to self-registration, your customers can also request automatic password resets from the login page, if they've forgotten their password. In this section we want to dive into the customer interface and it's functions.
+The customer user interface is a separate interface meant to provide access to resources such as, but not limited to, tickets. If self-registration is enabled, customer users can register with your system and begin creating requests. In addition, your customers can request automatic password resets from the login page, if they've forgotten their password. In this section we want to dive into the customer interface and it's functions.
+
+.. versionchanged:: 7.5.1
+
+    Customer self-registration is disabled by default. Enable it with the system configuration setting ``CustomerPanelCreateAccount``. The registration only accepts the fields listed in ``CustomerPanelCreateAccount::AllowedFields`` (default: title, first name, last name and email address). The login and the customer ID are taken from the email address. Registrations are rate-limited per IP address: ``CustomerPanelCreateAccount::RateLimitMaxAttempts`` attempts (default ``5``, ``0`` disables the limit) within ``CustomerPanelCreateAccount::RateLimitWindow`` seconds (default ``600``).
 
 The main interface components are:
 

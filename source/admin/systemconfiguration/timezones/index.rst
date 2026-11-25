@@ -1,6 +1,6 @@
 .. meta::
-   :description: Configure Znuny time zones — set OTRSTimeZone, UserDefaultTimeZone, personal preferences and understand how cron, statistics and database timestamps behave.
-   :keywords: znuny time zone, otrstimezone, utc, userdefaulttimezone, statistics time zone, cron time zone, personal time zone
+   :description: Configure Znuny time zones — set ZnunyTimeZone, UserDefaultTimeZone, personal preferences and understand how cron, statistics and database timestamps behave.
+   :keywords: znuny time zone, znunytimezone, otrstimezone, utc, userdefaulttimezone, statistics time zone, cron time zone, personal time zone
 
 .. _Pagenavigation admin_systemconfiguration_timezones_index:
 
@@ -20,7 +20,11 @@ The following table information is always saved in UTC, regardless of other seti
 System Defaults
 ***************
 
-For best results, the system default - ``OTRSTimeZone``, should be set to the same time as your server time. We highly recommend using UTC for your application and servers.
+For best results, the system default - ``ZnunyTimeZone``, should be set to the same time as your server time. We highly recommend using UTC for your application and servers.
+
+.. versionchanged:: 7.5.1
+
+    The setting ``OTRSTimeZone`` has been renamed to ``ZnunyTimeZone``. The value is migrated during the update. If ``Kernel/Config.pm`` or custom code sets or reads ``OTRSTimeZone``, change it to ``ZnunyTimeZone``.
 
 Personal Settings
 *****************
@@ -38,7 +42,7 @@ Cron Schedules
 Application Crontab
 ===================
 
-You'll confront these configurations mostly when scheduling the daemon tasks in the system configuration. These run based on the OTRSTimeZone setting.
+You'll confront these configurations mostly when scheduling the daemon tasks in the system configuration. These run based on the ``ZnunyTimeZone`` setting.
 
 Cron scheduling, represented as follows, will be always run according to the system clock.
 
@@ -68,7 +72,7 @@ Each system calendar can be configured to use an individual time zone. This allo
 Example Setup
 *************
 
-- OTRSTimeZone = Europe/Berlin
+- ZnunyTimeZone = Europe/Berlin
 - UserDefaultTimeZone = UTC
 - Personal Setting = Europe/London
 - Report Configuration = America/New_York
